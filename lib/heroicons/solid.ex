@@ -5,6 +5,6 @@ defmodule Heroicons.Solid do
   For buttons, form elements, and to support text, designed to be rendered at 20x20.
   """
 
-  @icon_path "#{:code.priv_dir(:heroicons)}/solid/"
+  @icon_dir "solid/"
   @before_compile Heroicons
 end

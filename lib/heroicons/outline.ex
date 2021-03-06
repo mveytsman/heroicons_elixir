@@ -4,6 +4,6 @@ defmodule Heroicons.Outline do
 
   For primary navigation and marketing sections, designed to be rendered at 24x24.
   """
-  @icon_path "#{:code.priv_dir(:heroicons)}/outline/"
+  @icon_dir "outline/"
   @before_compile Heroicons
 end
