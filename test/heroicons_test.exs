@@ -1,28 +1,31 @@
 defmodule HeroiconsTest do
   use ExUnit.Case, async: true
 
-  @icon """
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
-  </svg>
-  """
+  test "generated function" do
+    academic_cap =
+      :code.priv_dir(:heroicons)
+      |> Path.join("outline/academic-cap.svg")
+      |> File.read!()
 
-  @tag :tmp_dir
-  test "generated function", %{tmp_dir: tmp_dir} do
-    Path.join(tmp_dir, "academic_cap.svg")
-    |> File.write(@icon)
-
-    quote do
-      defmodule TestIcons do
-        @icon_dir unquote(Path.absname(tmp_dir))
-        @before_compile Heroicons
-      end
-    end
-    |> Code.compile_quoted()
-
-    assert TestIcons.academic_cap() == @icon
+    assert Heroicons.Outline.academic_cap() == academic_cap
 
     assert TestIcons.academic_cap(class: "h-6 w-6 text-gray-500") =~
              ~s(class="h-6 w-6 text-gray-500")
+  end
+
+  test "generated docs" do
+    {:docs_v1, _annotation, _beam_language, _format, _module_doc,
+    _metadata, docs} = Code.fetch_docs(Heroicons.Outline)
+
+    doc = Enum.find_value(docs, fn {{:function, :academic_cap, 1}, _annotation, _signature, doc, _metadata} -> doc
+    _ -> nil end)
+
+    assert doc["en"] == """
+    ![](assets/outline/academic-cap.svg) {: width=24px}
+
+    ## Examples
+        iex> academic_cap()
+        iex> academic_cap(class: "h-6 w-6 text-gray-500")
+    """
   end
 end
