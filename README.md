@@ -30,4 +30,14 @@ and style it with some classes
 <%= Heroicons.Solid.cake(class: "h-6 w-6 text-gray-500") %>
 ```
 
+Note these functions return `Phoenix.HTML.Safe` iodata:
+```elixir
+iex(1)> Heroicons.Solid.academic_cap
+{:safe,
+ ["<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\"", #...
+
+iex(2)> Heroicons.Solid.academic_cap |> Phoenix.HTML.safe_to_string
+"<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\">\n  ..."
+```
+
 For a full list of icons see [the docs](https://hexdocs.pm/heroicons/api-reference.html) or [heroicons.com](https://heroicons.com/).

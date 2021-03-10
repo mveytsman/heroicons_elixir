@@ -48,11 +48,8 @@ defmodule Heroicons do
       @doc unquote(doc)
       @spec unquote(name)(keyword(binary)) :: binary
       def unquote(name)(opts \\ []) do
-        attrs =
-          opts
-          |> Enum.map_join(fn {k, v} -> ~s( #{k}="#{v}") end)
-
-        unquote(head) <> attrs <> unquote(tail)
+        attrs = for {k, v} <- opts, do: {:safe, [Phoenix.HTML.Safe.to_iodata(k), ?=, ?", Phoenix.HTML.Safe.to_iodata(v), ?"]}
+        {:safe, [unquote(head), Phoenix.HTML.Safe.to_iodata(attrs), unquote(tail)]}
       end
     end
   end
