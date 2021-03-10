@@ -31,6 +31,11 @@ defmodule Heroicons do
       |> String.replace("-", "_")
       |> String.to_atom()
 
+    icon = File.read!(path)
+    {i, _} = :binary.match(icon, ">")
+
+    {head, tail} = String.split_at(icon, i)
+
     doc = """
     ![](assets/#{Path.relative_to(path, :code.priv_dir(:heroicons))}) {: width=24px}
 
@@ -43,16 +48,11 @@ defmodule Heroicons do
       @doc unquote(doc)
       @spec unquote(name)(keyword(binary)) :: binary
       def unquote(name)(opts \\ []) do
-        icon = File.read!(unquote(path))
-        {i, _} = :binary.match(icon, ">")
-
-        {head, tail} = String.split_at(icon, i)
-
         attrs =
           opts
           |> Enum.map_join(fn {k, v} -> ~s( #{k}="#{v}") end)
 
-        head <> attrs <> tail
+        unquote(head) <> attrs <> unquote(tail)
       end
     end
   end
