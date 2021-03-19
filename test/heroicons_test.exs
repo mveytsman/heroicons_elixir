@@ -17,7 +17,15 @@ defmodule HeroiconsTest do
 
     assert Heroicons.Outline.academic_cap(class: "<> \" ")
            |> Phoenix.HTML.safe_to_string() =~
-             ~s(class="&lt;&gt; &quot;)
+             ~s(class="&lt;&gt; &quot; ")
+
+    assert Heroicons.Outline.academic_cap(foo: "bar")
+           |> Phoenix.HTML.safe_to_string() =~
+             ~s(foo="bar")
+
+    assert Heroicons.Outline.academic_cap(multiword_key: "foo")
+           |> Phoenix.HTML.safe_to_string() =~
+             ~s(multiword-key="foo")
   end
 
   test "generated docs" do

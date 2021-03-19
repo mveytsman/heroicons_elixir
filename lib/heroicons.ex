@@ -48,7 +48,15 @@ defmodule Heroicons do
       @doc unquote(doc)
       @spec unquote(name)(keyword(binary)) :: binary
       def unquote(name)(opts \\ []) do
-        attrs = for {k, v} <- opts, do: {:safe, [Phoenix.HTML.Safe.to_iodata(k), ?=, ?", Phoenix.HTML.Safe.to_iodata(v), ?"]}
+        attrs =
+          for {k, v} <- opts do
+            safe_k =
+              k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+            safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+            {:safe, [safe_k, ?=, ?", safe_v, ?"]}
+          end
+
         {:safe, [unquote(head), Phoenix.HTML.Safe.to_iodata(attrs), unquote(tail)]}
       end
     end
