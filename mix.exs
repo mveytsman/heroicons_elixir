@@ -4,7 +4,7 @@ defmodule HeroiconsElixir.MixProject do
   def project do
     [
       app: :heroicons,
-      version: "0.2.1",
+      version: "0.3.0",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -27,6 +27,8 @@ defmodule HeroiconsElixir.MixProject do
   defp deps do
     [
       {:phoenix_html, "~> 2.14"},
+      {:jason, "~> 1.2"},
+      {:phoenix_live_view, "~> 0.15.4"},
       {:ex_doc, "~> 0.23", only: :dev, runtime: false}
     ]
   end
