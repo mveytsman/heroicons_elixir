@@ -17,7 +17,7 @@ defmodule Heroicons.LiveComponent do
 
   def render(%{type: :outline, class: class, icon: icon} = assigns) do
     ~L"""
-    <%=  apply(Elixir.Heroicons.Outline, icon, [%{class: class}]) |> Phoenix.HTML.raw %>
+    <%=  apply(Elixir.Heroicons.Outline, icon, [%{class: class}]) %>
     """
   end
 
@@ -26,7 +26,7 @@ defmodule Heroicons.LiveComponent do
 
   def render(%{type: :solid, class: class, icon: icon} = assigns) do
     ~L"""
-    <%=  apply(Elixir.Heroicons.Solid, icon, [%{class: class}]) |> Phoenix.HTML.raw %>
+    <%=  apply(Elixir.Heroicons.Solid, icon, [%{class: class}]) %>
     """
   end
 end
