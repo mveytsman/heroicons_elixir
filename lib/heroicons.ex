@@ -13,6 +13,8 @@ defmodule Heroicons do
     end
 
     icon_dir = Module.get_attribute(module, :icon_dir)
+    default_attrs =  Module.get_attribute(module, :default_attrs)
+
 
     icon_paths =
       Path.absname(icon_dir, :code.priv_dir(:heroicons))
@@ -20,12 +22,12 @@ defmodule Heroicons do
       |> Path.wildcard()
 
     for path <- icon_paths do
-      generate_function(path)
+      generate_function(path, default_attrs)
     end
   end
 
   @doc false
-  def generate_function(path) do
+  def generate_function(path, default_attrs) do
     name =
       Path.basename(path, ".svg")
       |> String.replace("-", "_")
@@ -33,8 +35,7 @@ defmodule Heroicons do
 
     icon = File.read!(path)
     {i, _} = :binary.match(icon, ">")
-
-    {head, tail} = String.split_at(icon, i)
+    {_, body} = String.split_at(icon, i)
 
     doc = """
     ![](assets/#{Path.relative_to(path, :code.priv_dir(:heroicons))}) {: width=24px}
@@ -48,16 +49,17 @@ defmodule Heroicons do
       @doc unquote(doc)
       @spec unquote(name)(keyword(binary)) :: binary
       def unquote(name)(opts \\ []) do
+        opts = Keyword.merge(unquote(default_attrs), opts)
         attrs =
           for {k, v} <- opts do
             safe_k =
               k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
             safe_v = v |> Phoenix.HTML.Safe.to_iodata()
 
-            {:safe, [safe_k, ?=, ?", safe_v, ?"]}
+            {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
           end
 
-        {:safe, [unquote(head), Phoenix.HTML.Safe.to_iodata(attrs), unquote(tail)]}
+        {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), unquote(body)]}
       end
     end
   end

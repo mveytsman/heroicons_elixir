@@ -26,6 +26,14 @@ defmodule HeroiconsTest do
     assert Heroicons.Outline.academic_cap(multiword_key: "foo")
            |> Phoenix.HTML.safe_to_string() =~
              ~s(multiword-key="foo")
+
+    assert Heroicons.Outline.academic_cap(viewBox: "0 0 12 12")
+           |> Phoenix.HTML.safe_to_string() =~
+             ~s(viewBox=\"0 0 12 12\")
+
+    refute Heroicons.Outline.academic_cap(viewBox: "0 0 12 12")
+           |> Phoenix.HTML.safe_to_string() =~
+             ~s(viewBox=\"0 0 24 24\")
   end
 
   test "generated docs" do
