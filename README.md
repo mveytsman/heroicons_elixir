@@ -10,7 +10,7 @@ Add Heroicons to your `mix.exs`:
 
 defp deps do
   [
-    {:heroicons, "~> 0.1.0"}
+    {:heroicons, "~> 0.2.2"}
   ]
 end
 
