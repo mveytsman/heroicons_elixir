@@ -4,7 +4,7 @@ defmodule HeroiconsElixir.MixProject do
   def project do
     [
       app: :heroicons,
-      version: "0.2.2",
+      version: "0.2.3",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -26,7 +26,7 @@ defmodule HeroiconsElixir.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:phoenix_html, "~> 2.14"},
+      {:phoenix_html, "~> 2.14 or ~> 3.0"},
       {:ex_doc, "~> 0.23", only: :dev, runtime: false}
     ]
   end
