@@ -4,7 +4,7 @@ defmodule HeroiconsElixir.MixProject do
   def project do
     [
       app: :heroicons,
-      version: "0.2.3",
+      version: "0.2.4",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
