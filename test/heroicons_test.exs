@@ -1,6 +1,8 @@
 defmodule HeroiconsTest do
   use ExUnit.Case, async: true
 
+  import Phoenix.LiveViewTest
+
   test "generated function" do
     academic_cap =
       :code.priv_dir(:heroicons)
@@ -29,11 +31,18 @@ defmodule HeroiconsTest do
 
     assert Heroicons.Outline.academic_cap(viewBox: "0 0 12 12")
            |> Phoenix.HTML.safe_to_string() =~
-             ~s(viewBox=\"0 0 12 12\")
+             ~s(viewBox="0 0 12 12")
+  end
 
-    refute Heroicons.Outline.academic_cap(viewBox: "0 0 12 12")
-           |> Phoenix.HTML.safe_to_string() =~
-             ~s(viewBox=\"0 0 24 24\")
+  test "generated components" do
+    assert render_component(&Heroicons.Outline.academic_cap/1, assigns()) =~
+             ~s(<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">)
+
+    assert render_component(
+             &Heroicons.Outline.academic_cap/1,
+             assigns(class: "h-6 w-6 text-gray-500")
+           ) =~
+             ~s(class="h-6 w-6 text-gray-500")
   end
 
   test "generated docs" do
@@ -50,8 +59,23 @@ defmodule HeroiconsTest do
            ![](assets/outline/academic-cap.svg) {: width=24px}
 
            ## Examples
-               iex> academic_cap()
-               iex> academic_cap(class: "h-6 w-6 text-gray-500")
+
+           Use as a `Phoenix.Component`
+
+               <.academic_cap />
+
+               <.academic_cap class="h-6 w-6 text-gray-500" />
+
+           Can also be used as a function (deprecated)
+
+               <%= academic_cap() %>
+
+               <%= academic_cap(class: "h-6 w-6 text-gray-500") %>
            """
+  end
+
+  defp assigns(assgns \\ []) do
+    Map.new(assgns)
+    |> Map.put_new(:__changed__, %{})
   end
 end
