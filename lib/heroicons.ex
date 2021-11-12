@@ -1,18 +1,25 @@
 defmodule Heroicons do
   @moduledoc """
-  This library provides functions and components for every [Heroicon](https://github.com/tailwindlabs/heroicons).
+  This library provides Phoenix Components for every [Heroicon](https://github.com/tailwindlabs/heroicons).
+  See `Heroicons.Outline` and `Heroicons.Solid` for the two styles of icon.
 
-  Heroicons are provided as functions in `Heroicons.Outline` and `Heroicons.Solid`,
-  and as `Phoenix.Component`s in `Heroicons.Components.Outline` and `Heroicons.Components.Solid`.
+  ## Examples
+      <Heroicons.Outline.adjustments />
 
-  Note that components require your project to have `:phoenix_live_view` as a dependency.
+      <Heroicons.Solid.arrow_circle_right class="w-6 h-6" />
+
+  Functions are also provided but deprecated
+
+      <%= Heroicons.Outline.adjustments() %>
+
+      <%= Heroicons.Solid.arrow_circle_right(class: "w-6 h-6") />
 
   Heroicons are designed by [Steve Schoger](https://twitter.com/steveschoger)
   """
 
   defmodule Outline do
     @moduledoc """
-    Outline style icons drawn with a stroke, packaged as functions.
+    Outline style icons drawn with a stroke, packaged as Phoenix Components.
 
     For primary navigation and marketing sections, designed to be rendered at 24x24.
     """
@@ -22,7 +29,7 @@ defmodule Heroicons do
 
   defmodule Solid do
     @moduledoc """
-    Solid style icons drawn with fills,  packaged as functions.
+    Solid style icons drawn with fills, packaged as Phoenix Components.
 
     For buttons, form elements, and to support text, designed to be rendered at 20x20.
     """

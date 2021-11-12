@@ -24,16 +24,19 @@ defmodule Heroicons.Generator do
     doc = """
     ![](assets/#{Path.relative_to(path, :code.priv_dir(:heroicons))}) {: width=24px}
 
-    Use as a `Phoenix.Component`
-      <.#{name}>
+    ## Examples
 
-      <.#{name} class="h-6 w-6 text-gray-500">
+    Use as a `Phoenix.Component`
+
+        <.#{name} />
+
+        <.#{name} class="h-6 w-6 text-gray-500" />
 
     Can also be used as a function (deprecated)
 
-      <%= #{name}() %>
+        <%= #{name}() %>
 
-      <%= #{name}(class: "h-6 w-6 text-gray-500") %>
+        <%= #{name}(class: "h-6 w-6 text-gray-500") %>
     """
 
     quote do
@@ -61,8 +64,6 @@ defmodule Heroicons.Generator do
           "<%= #{unquote(name)}(class: \"...\" %> is deprecated, " <>
             "please use <.#{unquote(name)} class=\"...\" /> inside HEEx templates instead"
         )
-
-        #        opts = Keyword.merge(unquote(default_attrs), opts)
 
         attrs =
           for {k, v} <- opts do
