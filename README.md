@@ -8,36 +8,35 @@ Heroicons are designed by [Steve Schoger](https://twitter.com/steveschoger)
 
 Add Heroicons to your `mix.exs`:
 
+```elixir
 defp deps do
   [
-    {:heroicons, "~> 0.2.2"}
+    {:heroicons, "~> 0.3.0"}
   ]
 end
+```
 
 After that, run `mix deps.get`.
 
 ## Usage
 
-The icons are in `Heroicons.Solid` and `Heroicons.Outline`. You can get a heroicon by name
+The components are in `Heroicons.Solid` and `Heroicons.Outline`. Each icon is a Phoenix Component you can use in your HEEx templates.
 
 ```eex
-<%= Heroicons.Solid.cake() %>
+<Heroicons.Solid.cake />
 ```
 
 and style it with some classes
 
 ```eex
-<%= Heroicons.Solid.cake(class: "h-6 w-6 text-gray-500") %>
+<Heroicons.Solid.cake class="h-6 w-6 text-gray-500" />
 ```
 
-Note these functions return `Phoenix.HTML.Safe` iodata:
-```elixir
-iex(1)> Heroicons.Solid.academic_cap
-{:safe,
- ["<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\"", #...
+Note that if you are not using HEEx/LiveView, there are (deprecated) function versions of each component:
+```eex
+<%= Heroicons.Solid.cake() %>
 
-iex(2)> Heroicons.Solid.academic_cap |> Phoenix.HTML.safe_to_string
-"<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\">\n  ..."
+<%= Heroicons.Solid.cake(class: "h-6 w-6 text-gray-500") %>
 ```
 
 For a full list of icons see [the docs](https://hexdocs.pm/heroicons/api-reference.html) or [heroicons.com](https://heroicons.com/).
