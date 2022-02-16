@@ -66,7 +66,7 @@ defmodule HeroiconsTest do
 
                <.academic_cap class="h-6 w-6 text-gray-500" />
 
-           Can also be used as a function (deprecated)
+           or as a function
 
                <%= academic_cap() %>
 

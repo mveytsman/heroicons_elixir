@@ -8,7 +8,7 @@ defmodule Heroicons do
 
       <Heroicons.Solid.arrow_circle_right class="w-6 h-6" />
 
-  Functions are also provided but deprecated
+  Can also be used as a function
 
       <%= Heroicons.Outline.adjustments() %>
 

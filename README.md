@@ -32,7 +32,7 @@ and style it with some classes
 <Heroicons.Solid.cake class="h-6 w-6 text-gray-500" />
 ```
 
-Note that if you are not using HEEx/LiveView, there are (deprecated) function versions of each component:
+There are also function versions of each component:
 ```eex
 <%= Heroicons.Solid.cake() %>
 
