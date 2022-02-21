@@ -4,6 +4,8 @@
 
 Heroicons are designed by [Steve Schoger](https://twitter.com/steveschoger)
 
+Current Heroicons Version: **1.0.5**
+
 ## Installation
 
 Add Heroicons to your `mix.exs`:
@@ -11,7 +13,7 @@ Add Heroicons to your `mix.exs`:
 ```elixir
 defp deps do
   [
-    {:heroicons, "~> 0.3.1"}
+    {:heroicons, "~> 0.3.2"}
   ]
 end
 ```
