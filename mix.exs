@@ -10,7 +10,7 @@ defmodule HeroiconsElixir.MixProject do
       deps: deps(),
       name: "Heroicons",
       source_url: "https://github.com/mveytsman/heroicons_elixir",
-      description: "Include Heroicons as SVG-strings in your Elixir/Phoenix project!",
+      description: "Phoenix components for Heroicons!",
       docs: docs(),
       package: package()
     ]
