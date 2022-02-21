@@ -36,7 +36,7 @@ defmodule HeroiconsTest do
 
   test "generated components" do
     assert render_component(&Heroicons.Outline.academic_cap/1, assigns()) =~
-             ~s(<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">)
+             ~s(<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" aria-hidden=\"true\">)
 
     assert render_component(
              &Heroicons.Outline.academic_cap/1,
