@@ -29,20 +29,20 @@ After that, run `mix deps.get`.
 The components are in `Phosphoricons.Thin`, `Phosphoricons.Regular`, and so forth (check the Phosphoricons to know which weights exist). Each icon is a Phoenix Component you can use in your HEEx templates.
 
 ```eex
-<Phosphoricons.Fill.alarm />
+<Phosphoricons.Fill.A.alarm />
 ```
 
 and style it with some classes
 
 ```eex
-<Phosphoricons.Fill.alarm class="h-6 w-6 text-gray-500" />
+<Phosphoricons.Fill.A.alarm class="h-6 w-6 text-gray-500" />
 ```
 
 There are also function versions of each component:
 ```eex
-<%= Phosphoricons.Fill.alarm() %>
+<%= Phosphoricons.Fill.A.alarm() %>
 
-<%= Phosphoricons.Fill.alarm(class: "h-6 w-6 text-gray-500") %>
+<%= Phosphoricons.Fill.A.alarm(class: "h-6 w-6 text-gray-500") %>
 ```
 
 For a full list of icons see [the docs](https://hexdocs.pm/phosphoricons/api-reference.html) or [https://phosphoricons.com/](https://phosphoricons.com/).
