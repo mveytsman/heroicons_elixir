@@ -1,45 +1,45 @@
-defmodule HeroiconsTest do
+defmodule PhosphoriconsTest do
   use ExUnit.Case, async: true
 
   import Phoenix.LiveViewTest
 
   test "generated function" do
-    academic_cap =
-      :code.priv_dir(:heroicons)
-      |> Path.join("outline/academic-cap.svg")
+    alarm =
+      :code.priv_dir(:phosphoricons)
+      |> Path.join("Fill/alarm-fill.svg")
       |> File.read!()
 
-    assert Heroicons.Outline.academic_cap()
+    assert Phosphoricons.Fill.A.alarm()
            |> Phoenix.HTML.safe_to_string() ==
-             academic_cap
+             alarm
 
-    assert Heroicons.Outline.academic_cap(class: "h-6 w-6 text-gray-500")
+    assert Phosphoricons.Fill.A.alarm(class: "h-6 w-6 text-gray-500")
            |> Phoenix.HTML.safe_to_string() =~
              ~s(class="h-6 w-6 text-gray-500")
 
-    assert Heroicons.Outline.academic_cap(class: "<> \" ")
+    assert Phosphoricons.Fill.A.alarm(class: "<> \" ")
            |> Phoenix.HTML.safe_to_string() =~
              ~s(class="&lt;&gt; &quot; ")
 
-    assert Heroicons.Outline.academic_cap(foo: "bar")
+    assert Phosphoricons.Fill.A.alarm(foo: "bar")
            |> Phoenix.HTML.safe_to_string() =~
              ~s(foo="bar")
 
-    assert Heroicons.Outline.academic_cap(multiword_key: "foo")
+    assert Phosphoricons.Fill.A.alarm(multiword_key: "foo")
            |> Phoenix.HTML.safe_to_string() =~
              ~s(multiword-key="foo")
 
-    assert Heroicons.Outline.academic_cap(viewBox: "0 0 12 12")
+    assert Phosphoricons.Fill.A.alarm(viewBox: "0 0 12 12")
            |> Phoenix.HTML.safe_to_string() =~
              ~s(viewBox="0 0 12 12")
   end
 
   test "generated components" do
-    assert render_component(&Heroicons.Outline.academic_cap/1, assigns()) =~
-             ~s(<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" aria-hidden=\"true\">)
+    assert render_component(&Phosphoricons.Fill.A.alarm/1, assigns()) =~
+             ~s(<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\">)
 
     assert render_component(
-             &Heroicons.Outline.academic_cap/1,
+             &Phosphoricons.Fill.A.alarm/1,
              assigns(class: "h-6 w-6 text-gray-500")
            ) =~
              ~s(class="h-6 w-6 text-gray-500")
@@ -47,30 +47,30 @@ defmodule HeroiconsTest do
 
   test "generated docs" do
     {:docs_v1, _annotation, _beam_language, _format, _module_doc, _metadata, docs} =
-      Code.fetch_docs(Heroicons.Outline)
+      Code.fetch_docs(Phosphoricons.Fill.A)
 
     doc =
       Enum.find_value(docs, fn
-        {{:function, :academic_cap, 1}, _annotation, _signature, doc, _metadata} -> doc
+        {{:function, :alarm, 1}, _annotation, _signature, doc, _metadata} -> doc
         _ -> nil
       end)
 
     assert doc["en"] == """
-           ![](assets/outline/academic-cap.svg) {: width=24px}
+           ![](assets/Fill/alarm-fill.svg) {: width=24px}
 
            ## Examples
 
            Use as a `Phoenix.Component`
 
-               <.academic_cap />
+               <.alarm />
 
-               <.academic_cap class="h-6 w-6 text-gray-500" />
+               <.alarm class="h-6 w-6 text-gray-500" />
 
            or as a function
 
-               <%= academic_cap() %>
+               <%= alarm() %>
 
-               <%= academic_cap(class: "h-6 w-6 text-gray-500") %>
+               <%= alarm(class: "h-6 w-6 text-gray-500") %>
            """
   end
 

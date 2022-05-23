@@ -1,19 +1,23 @@
-# Heroicons
+# Phosphoricons
 
-[Heroicons](https://github.com/tailwindlabs/heroicons) are "a set of free MIT-licensed high-quality SVG icons for you to use in your web projects". This package gives you Elixir functions to drop Heroicons into your HTML, styled with arbitrary classes.
+[Phosphor](https://github.com/phosphor-icons/phosphor-home#phosphor-icons) is a flexible icon family for interfaces, diagrams, presentations, by [Tobias Fried](https://github.com/rektdeckard).
 
-Heroicons are designed by [Steve Schoger](https://twitter.com/steveschoger)
+1047 icons and counting
+6 weights: Thin, Light, Regular, Bold, Fill, and Duotone
+Designed at 16 x 16px to read well small and scale up big
+Raw stroke information retained to fine-tune the style
+More ways to use at [phosphoricons.com].
 
-Current Heroicons Version: **1.0.5**
+Current Phosphoricons Version: **1.4.0**
 
 ## Installation
 
-Add Heroicons to your `mix.exs`:
+Add Phosphoricons to your `mix.exs`:
 
 ```elixir
 defp deps do
   [
-    {:heroicons, "~> 0.3.2"}
+    {:phosphoricons, "~> 0.3.2"}
   ]
 end
 ```
@@ -22,23 +26,23 @@ After that, run `mix deps.get`.
 
 ## Usage
 
-The components are in `Heroicons.Solid` and `Heroicons.Outline`. Each icon is a Phoenix Component you can use in your HEEx templates.
+The components are in `Phosphoricons.Thin`, `Phosphoricons.Regular`, and so forth (check the Phosphoricons to know which weights exist). Each icon is a Phoenix Component you can use in your HEEx templates.
 
 ```eex
-<Heroicons.Solid.cake />
+<Phosphoricons.Fill.alarm />
 ```
 
 and style it with some classes
 
 ```eex
-<Heroicons.Solid.cake class="h-6 w-6 text-gray-500" />
+<Phosphoricons.Fill.alarm class="h-6 w-6 text-gray-500" />
 ```
 
 There are also function versions of each component:
 ```eex
-<%= Heroicons.Solid.cake() %>
+<%= Phosphoricons.Fill.alarm() %>
 
-<%= Heroicons.Solid.cake(class: "h-6 w-6 text-gray-500") %>
+<%= Phosphoricons.Fill.alarm(class: "h-6 w-6 text-gray-500") %>
 ```
 
-For a full list of icons see [the docs](https://hexdocs.pm/heroicons/api-reference.html) or [heroicons.com](https://heroicons.com/).
+For a full list of icons see [the docs](https://hexdocs.pm/phosphoricons/api-reference.html) or [https://phosphoricons.com/](https://phosphoricons.com/).

@@ -1,16 +1,16 @@
-defmodule HeroiconsElixir.MixProject do
+defmodule PhosphoriconsElixir.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :heroicons,
+      app: :phosphoricons,
       version: "0.3.2",
-      elixir: "~> 1.11",
+      elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      name: "Heroicons",
-      source_url: "https://github.com/mveytsman/heroicons_elixir",
-      description: "Phoenix components for Heroicons!",
+      name: "Phosphoricons",
+      source_url: "https://github.com/noozo/phosphoricons_elixir",
+      description: "Phoenix components for Phosphoricons!",
       docs: docs(),
       package: package()
     ]
@@ -28,14 +28,19 @@ defmodule HeroiconsElixir.MixProject do
     [
       {:phoenix_html, "~> 2.14 or ~> 3.0"},
       {:phoenix_live_view, ">= 0.16.0", optional: true},
-      {:ex_doc, "~> 0.23", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.23", only: :dev, runtime: false},
+      # Testing
+      {:mix_test_watch, "~> 1.1.0", only: [:dev, :test], runtime: false},
+      {:ex_unit_notifier, "~> 1.2.0", only: [:dev, :test], runtime: false},
+      {:credo, "1.6.4", only: [:dev, :test], runtime: false},
+      {:sobelow, "~> 0.11.0", only: [:dev, :test], runtime: false}
     ]
   end
 
   defp package do
     [
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/mveytsman/heroicons_elixir"}
+      links: %{"GitHub" => "https://github.com/noozo/phosphoricons_elixir"}
     ]
   end
 
