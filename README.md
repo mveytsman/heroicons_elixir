@@ -10,6 +10,8 @@ More ways to use at [phosphoricons.com].
 
 Current Phosphoricons Version: **1.4.0**
 
+This library was a modification of the excellent work by [Max Veytsman](https://github.com/mveytsman) for the Heroicons library at [https://github.com/mveytsman/heroicons_elixir]
+
 ## Installation
 
 Add Phosphoricons to your `mix.exs`:
