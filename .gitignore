@@ -22,6 +22,7 @@ erl_crash.dump
 # Ignore package tarball (built via "mix hex.build").
 phosphoricons-*.tar
 
-
 # Temporary files for e.g. tests
 /tmp
+
+*.code-workspace

@@ -33,7 +33,11 @@ defmodule Phosphoricons.IconGenerator do
       |> remove_appendix()
       |> String.to_atom()
 
-    icon = File.read!(path)
+    # Read file and replace all strokes with currentColor
+    icon = path
+    |> File.read!()
+    |> String.replace("stroke=\"#000\"", "stroke=\"currentColor\"")
+
     {i, _} = :binary.match(icon, ">")
     {head, body} = String.split_at(icon, i)
 
