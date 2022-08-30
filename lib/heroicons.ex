@@ -21,7 +21,8 @@ defmodule Heroicons do
     @moduledoc """
     Outline style icons drawn with a stroke, packaged as Phoenix Components.
 
-    For primary navigation and marketing sections, designed to be rendered at 24x24.
+    For primary navigation and marketing sections, with an outlined appearance,
+    designed to be rendered at 24x24.
     """
 
     use Heroicons.Generator, icon_dir: "outline/"
@@ -31,9 +32,21 @@ defmodule Heroicons do
     @moduledoc """
     Solid style icons drawn with fills, packaged as Phoenix Components.
 
-    For buttons, form elements, and to support text, designed to be rendered at 20x20.
+    For primary navigation and marketing sections, with a filled appearance,
+    designed to be rendered at 24x24.
     """
 
     use Heroicons.Generator, icon_dir: "solid/"
+  end
+
+  defmodule Mini do
+    @moduledoc """
+    Solid style icons drawn with fills, packaged as Phoenix Components.
+
+    For smaller elements like buttons, form elements, and to support text,
+    designed to be rendered at 20x20.
+    """
+
+    use Heroicons.Generator, icon_dir: "mini/"
   end
 end
