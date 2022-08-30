@@ -25,3 +25,7 @@ heroicons-*.tar
 
 # Temporary files for e.g. tests
 /tmp
+
+# Elixir deps
+.nix-mix/
+.nix-hex/
