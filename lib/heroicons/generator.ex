@@ -44,7 +44,7 @@ defmodule Heroicons.Generator do
       def unquote(name)(assigns_or_opts \\ [])
 
 
-      if function_exported?(Phoenix.Component, :assigns_to_attributes, 1) do
+      if function_exported?(Phoenix.Component, :assigns_to_attributes, 2) do
         @assigns_to_attrs_mod Phoenix.Component
       else
         @assigns_to_attrs_mod Phoenix.LiveView.Helpers
