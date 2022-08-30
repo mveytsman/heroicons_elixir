@@ -35,14 +35,19 @@ defmodule HeroiconsTest do
   end
 
   test "generated components" do
-    assert render_component(&Heroicons.Outline.academic_cap/1, assigns()) =~
-             ~s(<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" aria-hidden=\"true\">)
+    for mod <- [Heroicons.Outline, Heroicons.Solid] do
+      assert render_component(&mod.academic_cap/1, assigns()) =~
+               ~s(<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">)
 
-    assert render_component(
-             &Heroicons.Outline.academic_cap/1,
-             assigns(class: "h-6 w-6 text-gray-500")
-           ) =~
-             ~s(class="h-6 w-6 text-gray-500")
+      assert render_component(
+               &mod.academic_cap/1,
+               assigns(class: "h-6 w-6 text-gray-500")
+             ) =~
+               ~s(class="h-6 w-6 text-gray-500")
+    end
+
+    assert render_component(&Heroicons.Mini.academic_cap/1, assigns()) =~
+             ~s(<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">)
   end
 
   test "generated docs" do

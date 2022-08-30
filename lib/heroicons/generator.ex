@@ -5,6 +5,15 @@ defmodule Heroicons.Generator do
       |> Path.join("*.svg")
       |> Path.wildcard()
 
+    require Phoenix.Component
+    if function_exported?(Phoenix.Component, :assigns_to_attributes, 2) do
+      Module.put_attribute(__CALLER__.module, :assign_mod, Phoenix.Component)
+      Module.put_attribute(__CALLER__.module, :assigns_to_attrs_mod, Phoenix.Component)
+    else
+      Module.put_attribute(__CALLER__.module, :assign_mod, Phoenix.LiveView)
+      Module.put_attribute(__CALLER__.module, :assigns_to_attrs_mod, Phoenix.LiveView.Helpers)
+    end
+
     for path <- icon_paths do
       generate(path)
     end
@@ -44,9 +53,8 @@ defmodule Heroicons.Generator do
       def unquote(name)(assigns_or_opts \\ [])
 
       def unquote(name)(var!(assigns)) when is_map(var!(assigns)) do
-        var!(attrs) = Phoenix.LiveView.Helpers.assigns_to_attributes(var!(assigns))
-
-        var!(assigns) = Phoenix.LiveView.assign(var!(assigns), :attrs, var!(attrs))
+        var!(attrs) = @assigns_to_attrs_mod.assigns_to_attributes(var!(assigns))
+        var!(assigns) = @assign_mod.assign(var!(assigns), :attrs, var!(attrs))
 
         unquote(
           EEx.compile_string(head <> "{@attrs}" <> body,

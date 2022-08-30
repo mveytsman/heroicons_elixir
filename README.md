@@ -4,7 +4,7 @@
 
 Heroicons are designed by [Steve Schoger](https://twitter.com/steveschoger)
 
-Current Heroicons Version: **1.0.5**
+Current Heroicons Version: **2.0.0**
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add Heroicons to your `mix.exs`:
 ```elixir
 defp deps do
   [
-    {:heroicons, "~> 0.3.2"}
+    {:heroicons, "~> 0.4.0"}
   ]
 end
 ```
@@ -22,7 +22,7 @@ After that, run `mix deps.get`.
 
 ## Usage
 
-The components are in `Heroicons.Solid` and `Heroicons.Outline`. Each icon is a Phoenix Component you can use in your HEEx templates.
+The components are in `Heroicons.Solid`, `Heroicons.Outline`, and `Heroicons.Mini`. Each icon is a Phoenix Component you can use in your HEEx templates.
 
 ```eex
 <Heroicons.Solid.cake />
