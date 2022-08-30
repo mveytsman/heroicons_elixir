@@ -43,9 +43,15 @@ defmodule Heroicons.Generator do
       @doc unquote(doc)
       def unquote(name)(assigns_or_opts \\ [])
 
-      def unquote(name)(var!(assigns)) when is_map(var!(assigns)) do
-        var!(attrs) = Phoenix.LiveView.Helpers.assigns_to_attributes(var!(assigns))
 
+      if function_exported?(Phoenix.Component, :assigns_to_attributes, 1) do
+        @assigns_to_attrs_mod Phoenix.Component
+      else
+        @assigns_to_attrs_mod Phoenix.LiveView.Helpers
+      end
+
+      def unquote(name)(var!(assigns)) when is_map(var!(assigns)) do
+        var!(attrs) = @assigns_to_attrs_mod.assigns_to_attributes(var!(assigns))
         var!(assigns) = Phoenix.LiveView.assign(var!(assigns), :attrs, var!(attrs))
 
         unquote(
