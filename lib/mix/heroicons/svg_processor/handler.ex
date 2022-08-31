@@ -1,4 +1,4 @@
-defmodule Heroicons.SvgProcessor.Handler do
+defmodule Mix.Heroicons.SvgProcessor.Handler do
   @moduledoc false
 
   @behaviour Saxy.Handler
@@ -11,11 +11,18 @@ defmodule Heroicons.SvgProcessor.Handler do
   @impl Saxy.Handler
   def handle_event(:start_element, {"svg", attributes}, {stack, opts}) do
     attributes =
-      filter_attributes(attributes, opts)
-      |> add_attributes(opts)
-      |> sort_attributes(opts)
+      remove_dimensions(attributes, Keyword.get(opts, :remove_dimensions))
+      |> remove_attributes(Keyword.get(opts, :remove_attributes))
+      |> add_attributes(Keyword.get(opts, :add_attributes))
+      |> sort_attributes(Keyword.get(opts, :sort_attributes))
 
     tag = {"svg", attributes, []}
+    {:ok, {[tag | stack], opts}}
+  end
+
+  def handle_event(:start_element, {"path", attributes}, {stack, opts}) do
+    attributes = remove_attributes(attributes, Keyword.get(opts, :remove_path_attributes, []))
+    tag = {"path", attributes, []}
     {:ok, {[tag | stack], opts}}
   end
 
@@ -62,25 +69,39 @@ defmodule Heroicons.SvgProcessor.Handler do
     {:ok, stack}
   end
 
-  defp filter_attributes(attributes, opts) do
-    remove_dimensions = Keyword.get(opts, :remove_dimensions)
-    remove_attrs = Keyword.get(opts, :remove_attributes, [])
-
+  defp remove_dimensions(attributes, true) do
     Enum.reject(attributes, fn {attr, _value} ->
-      (remove_dimensions && (attr == "width" || attr == "height")) ||
-        attr in remove_attrs
+      attr == "width" || attr == "height"
     end)
   end
 
-  defp add_attributes(attributes, opts) do
-    attributes ++ Keyword.get(opts, :add_attributes, [])
+  defp remove_dimensions(attributes, _) do
+    attributes
   end
 
-  defp sort_attributes(attributes, opts) do
-    if Keyword.get(opts, :sort_attributes) do
-      Enum.sort_by(attributes, fn {attr, _value} -> attr end)
-    else
-      attributes
-    end
+  defp remove_attributes(attributes, nil) do
+    attributes
+  end
+
+  defp remove_attributes(attributes, remove_attrs) do
+    Enum.reject(attributes, fn {attr, _value} ->
+      attr in remove_attrs
+    end)
+  end
+
+  defp add_attributes(attributes, nil) do
+    attributes
+  end
+
+  defp add_attributes(attributes, add_attrs) do
+    attributes ++ add_attrs
+  end
+
+  defp sort_attributes(attributes, true) do
+    Enum.sort_by(attributes, fn {attr, _value} -> attr end)
+  end
+
+  defp sort_attributes(attributes, nil) do
+    attributes
   end
 end

@@ -1,4 +1,6 @@
-defmodule Heroicons.SvgProcessor do
+defmodule Mix.Heroicons.SvgProcessor do
+  alias Mix.Heroicons.SvgProcessor.Handler
+
   @moduledoc """
   An SVG parser loosly based on https://github.com/svg/svgo
 
@@ -12,7 +14,7 @@ defmodule Heroicons.SvgProcessor do
   """
 
   def process(svg, opts \\ []) do
-    {:ok, stack} = Saxy.parse_string(svg, Heroicons.SvgProcessor.Handler, {[], opts})
+    {:ok, stack} = Saxy.parse_string(svg, Handler, {[], opts})
     Saxy.encode!(stack)
   end
 end

@@ -29,7 +29,7 @@ defmodule HeroiconsElixir.MixProject do
       {:phoenix_html, "~> 2.14 or ~> 3.0"},
       {:phoenix_live_view, ">= 0.16.0", optional: true},
       {:ex_doc, "~> 0.23", only: :dev, runtime: false},
-      {:saxy, "~> 1.4"}
+      {:saxy, "~> 1.4", only: :dev}
     ]
   end
 

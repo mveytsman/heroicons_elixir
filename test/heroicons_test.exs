@@ -4,14 +4,9 @@ defmodule HeroiconsTest do
   import Phoenix.LiveViewTest
 
   test "generated function" do
-    academic_cap =
-      :code.priv_dir(:heroicons)
-      |> Path.join("outline/academic-cap.svg")
-      |> File.read!()
-
     assert Heroicons.Outline.academic_cap()
-           |> Phoenix.HTML.safe_to_string() ==
-             academic_cap
+           |> Phoenix.HTML.safe_to_string() =~
+             ~s(<svg aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\")
 
     assert Heroicons.Outline.academic_cap(class: "h-6 w-6 text-gray-500")
            |> Phoenix.HTML.safe_to_string() =~
@@ -35,19 +30,20 @@ defmodule HeroiconsTest do
   end
 
   test "generated components" do
-    for mod <- [Heroicons.Outline, Heroicons.Solid] do
-      assert render_component(&mod.academic_cap/1, assigns()) =~
-               ~s(<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">)
+    assert render_component(&Heroicons.Outline.academic_cap/1, assigns()) =~
+             ~s(<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24")
 
-      assert render_component(
-               &mod.academic_cap/1,
-               assigns(class: "h-6 w-6 text-gray-500")
-             ) =~
-               ~s(class="h-6 w-6 text-gray-500")
-    end
+    assert render_component(&Heroicons.Solid.academic_cap/1, assigns()) =~
+             ~s(<svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24")
+
+    assert render_component(
+             &Heroicons.Outline.academic_cap/1,
+             assigns(class: "h-6 w-6 text-gray-500")
+           ) =~
+             ~s(class="h-6 w-6 text-gray-500")
 
     assert render_component(&Heroicons.Mini.academic_cap/1, assigns()) =~
-             ~s(<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">)
+             ~s(<svg aria-hidden="true" fill="currentColor" viewBox="0 0 20 20")
   end
 
   test "generated docs" do
@@ -61,7 +57,7 @@ defmodule HeroiconsTest do
       end)
 
     assert doc["en"] == """
-           ![](assets/outline/academic-cap.svg) {: width=24px}
+           ![](assets/icons/outline/academic-cap.svg) {: width=24px}
 
            ## Examples
 
