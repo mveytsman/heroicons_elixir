@@ -1,11 +1,14 @@
 defmodule Heroicons.Generator do
-  defmacro __using__(icon_dir: icon_dir) do
+  alias Heroicons.SvgProcessor
+
+  defmacro __using__(icon_dir: icon_dir, svg_opts: svg_opts) do
     icon_paths =
       Path.absname(icon_dir, :code.priv_dir(:heroicons))
       |> Path.join("*.svg")
       |> Path.wildcard()
 
     require Phoenix.Component
+
     if function_exported?(Phoenix.Component, :assigns_to_attributes, 2) do
       Module.put_attribute(__CALLER__.module, :assign_mod, Phoenix.Component)
       Module.put_attribute(__CALLER__.module, :assigns_to_attrs_mod, Phoenix.Component)
@@ -15,20 +18,23 @@ defmodule Heroicons.Generator do
     end
 
     for path <- icon_paths do
-      generate(path)
+      generate(path, svg_opts)
     end
   end
 
   @doc false
-  def generate(path) do
+  def generate(path, svg_opts) do
     name =
       Path.basename(path, ".svg")
       |> String.replace("-", "_")
       |> String.to_atom()
 
-    icon = File.read!(path)
-    {i, _} = :binary.match(icon, ">")
-    {head, body} = String.split_at(icon, i)
+    icon =
+      File.read!(path)
+      |> SvgProcessor.process(svg_opts)
+
+    <<"<svg", body::binary>> = icon
+    head = "<svg "
 
     doc = """
     ![](assets/#{Path.relative_to(path, :code.priv_dir(:heroicons))}) {: width=24px}
