@@ -897,6 +897,50 @@ defmodule Heroicons.Outline do
   end
 
   @doc """
+  ![](assets/icons/outline/arrow-path-rounded-square.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.arrow_path_rounded_square />
+
+      <.arrow_path_rounded_square class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= arrow_path_rounded_square() %>
+
+      <%= arrow_path_rounded_square(class: "h-6 w-6 text-gray-500") %>
+  """
+  def arrow_path_rounded_square(assigns_or_opts \\ [])
+
+  def arrow_path_rounded_square(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3"/>
+    </svg>
+    """
+  end
+
+  def arrow_path_rounded_square(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3\"/>\n</svg>"]}
+  end
+
+  @doc """
   ![](assets/icons/outline/arrow-path.svg) {: width=24px}
 
   ## Examples
@@ -921,7 +965,7 @@ defmodule Heroicons.Outline do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12c0-1.232.046-2.453.138-3.662a4.006 4.006 0 013.7-3.7 48.678 48.678 0 017.324 0 4.006 4.006 0 013.7 3.7c.017.22.032.441.046.662M4.5 12l-3-3m3 3l3-3m12 3c0 1.232-.046 2.453-.138 3.662a4.006 4.006 0 01-3.7 3.7 48.657 48.657 0 01-7.324 0 4.006 4.006 0 01-3.7-3.7c-.017-.22-.032-.441-.046-.662M19.5 12l-3 3m3-3l3 3"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"/>
     </svg>
     """
   end
@@ -937,7 +981,7 @@ defmodule Heroicons.Outline do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4.5 12c0-1.232.046-2.453.138-3.662a4.006 4.006 0 013.7-3.7 48.678 48.678 0 017.324 0 4.006 4.006 0 013.7 3.7c.017.22.032.441.046.662M4.5 12l-3-3m3 3l3-3m12 3c0 1.232-.046 2.453-.138 3.662a4.006 4.006 0 01-3.7 3.7 48.657 48.657 0 01-7.324 0 4.006 4.006 0 01-3.7-3.7c-.017-.22-.032-.441-.046-.662M19.5 12l-3 3m3-3l3 3\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99\"/>\n</svg>"]}
   end
 
   @doc """
@@ -1070,6 +1114,182 @@ defmodule Heroicons.Outline do
       end
 
     {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/outline/arrow-small-down.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.arrow_small_down />
+
+      <.arrow_small_down class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= arrow_small_down() %>
+
+      <%= arrow_small_down(class: "h-6 w-6 text-gray-500") %>
+  """
+  def arrow_small_down(assigns_or_opts \\ [])
+
+  def arrow_small_down(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75"/>
+    </svg>
+    """
+  end
+
+  def arrow_small_down(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/outline/arrow-small-left.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.arrow_small_left />
+
+      <.arrow_small_left class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= arrow_small_left() %>
+
+      <%= arrow_small_left(class: "h-6 w-6 text-gray-500") %>
+  """
+  def arrow_small_left(assigns_or_opts \\ [])
+
+  def arrow_small_left(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"/>
+    </svg>
+    """
+  end
+
+  def arrow_small_left(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/outline/arrow-small-right.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.arrow_small_right />
+
+      <.arrow_small_right class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= arrow_small_right() %>
+
+      <%= arrow_small_right(class: "h-6 w-6 text-gray-500") %>
+  """
+  def arrow_small_right(assigns_or_opts \\ [])
+
+  def arrow_small_right(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/>
+    </svg>
+    """
+  end
+
+  def arrow_small_right(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/outline/arrow-small-up.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.arrow_small_up />
+
+      <.arrow_small_up class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= arrow_small_up() %>
+
+      <%= arrow_small_up(class: "h-6 w-6 text-gray-500") %>
+  """
+  def arrow_small_up(assigns_or_opts \\ [])
+
+  def arrow_small_up(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75"/>
+    </svg>
+    """
+  end
+
+  def arrow_small_up(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75\"/>\n</svg>"]}
   end
 
   @doc """
@@ -2302,6 +2522,226 @@ defmodule Heroicons.Outline do
       end
 
     {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/outline/bars-arrow-down.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.bars_arrow_down />
+
+      <.bars_arrow_down class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= bars_arrow_down() %>
+
+      <%= bars_arrow_down(class: "h-6 w-6 text-gray-500") %>
+  """
+  def bars_arrow_down(assigns_or_opts \\ [])
+
+  def bars_arrow_down(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25"/>
+    </svg>
+    """
+  end
+
+  def bars_arrow_down(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0l-3.75-3.75M17.25 21L21 17.25\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/outline/bars-arrow-up.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.bars_arrow_up />
+
+      <.bars_arrow_up class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= bars_arrow_up() %>
+
+      <%= bars_arrow_up(class: "h-6 w-6 text-gray-500") %>
+  """
+  def bars_arrow_up(assigns_or_opts \\ [])
+
+  def bars_arrow_up(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3 4.5h14.25M3 9h9.75M3 13.5h5.25m5.25-.75L17.25 9m0 0L21 12.75M17.25 9v12"/>
+    </svg>
+    """
+  end
+
+  def bars_arrow_up(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3 4.5h14.25M3 9h9.75M3 13.5h5.25m5.25-.75L17.25 9m0 0L21 12.75M17.25 9v12\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/outline/battery-0.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.battery_0 />
+
+      <.battery_0 class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= battery_0() %>
+
+      <%= battery_0(class: "h-6 w-6 text-gray-500") %>
+  """
+  def battery_0(assigns_or_opts \\ [])
+
+  def battery_0(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M3.75 18h15A2.25 2.25 0 0021 15.75v-6a2.25 2.25 0 00-2.25-2.25h-15A2.25 2.25 0 001.5 9.75v6A2.25 2.25 0 003.75 18z"/>
+    </svg>
+    """
+  end
+
+  def battery_0(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M3.75 18h15A2.25 2.25 0 0021 15.75v-6a2.25 2.25 0 00-2.25-2.25h-15A2.25 2.25 0 001.5 9.75v6A2.25 2.25 0 003.75 18z\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/outline/battery-100.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.battery_100 />
+
+      <.battery_100 class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= battery_100() %>
+
+      <%= battery_100(class: "h-6 w-6 text-gray-500") %>
+  """
+  def battery_100(assigns_or_opts \\ [])
+
+  def battery_100(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5H18V15H4.5v-4.5zM3.75 18h15A2.25 2.25 0 0021 15.75v-6a2.25 2.25 0 00-2.25-2.25h-15A2.25 2.25 0 001.5 9.75v6A2.25 2.25 0 003.75 18z"/>
+    </svg>
+    """
+  end
+
+  def battery_100(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5H18V15H4.5v-4.5zM3.75 18h15A2.25 2.25 0 0021 15.75v-6a2.25 2.25 0 00-2.25-2.25h-15A2.25 2.25 0 001.5 9.75v6A2.25 2.25 0 003.75 18z\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/outline/battery-50.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.battery_50 />
+
+      <.battery_50 class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= battery_50() %>
+
+      <%= battery_50(class: "h-6 w-6 text-gray-500") %>
+  """
+  def battery_50(assigns_or_opts \\ [])
+
+  def battery_50(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5h6.75V15H4.5v-4.5zM3.75 18h15A2.25 2.25 0 0021 15.75v-6a2.25 2.25 0 00-2.25-2.25h-15A2.25 2.25 0 001.5 9.75v6A2.25 2.25 0 003.75 18z"/>
+    </svg>
+    """
+  end
+
+  def battery_50(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5h6.75V15H4.5v-4.5zM3.75 18h15A2.25 2.25 0 0021 15.75v-6a2.25 2.25 0 00-2.25-2.25h-15A2.25 2.25 0 001.5 9.75v6A2.25 2.25 0 003.75 18z\"/>\n</svg>"]}
   end
 
   @doc """
@@ -3695,7 +4135,7 @@ defmodule Heroicons.Outline do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M14.563 9.75a12.014 12.014 0 00-3.427 5.136L9 12.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/>
     </svg>
     """
   end
@@ -3711,7 +4151,7 @@ defmodule Heroicons.Outline do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M14.563 9.75a12.014 12.014 0 00-3.427 5.136L9 12.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z\"/>\n</svg>"]}
   end
 
   @doc """
@@ -3739,7 +4179,7 @@ defmodule Heroicons.Outline do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M14.563 9.75a12.014 12.014 0 00-3.427 5.136L9 12.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
     </svg>
     """
   end
@@ -3755,7 +4195,7 @@ defmodule Heroicons.Outline do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M14.563 9.75a12.014 12.014 0 00-3.427 5.136L9 12.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/>\n</svg>"]}
   end
 
   @doc """
@@ -3783,7 +4223,7 @@ defmodule Heroicons.Outline do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.5l6.785 6.785A48.1 48.1 0 0121 4.143"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
     </svg>
     """
   end
@@ -3799,7 +4239,7 @@ defmodule Heroicons.Outline do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3 13.5l6.785 6.785A48.1 48.1 0 0121 4.143\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4.5 12.75l6 6 9-13.5\"/>\n</svg>"]}
   end
 
   @doc """
@@ -4111,6 +4551,50 @@ defmodule Heroicons.Outline do
   end
 
   @doc """
+  ![](assets/icons/outline/chevron-up-down.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.chevron_up_down />
+
+      <.chevron_up_down class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= chevron_up_down() %>
+
+      <%= chevron_up_down(class: "h-6 w-6 text-gray-500") %>
+  """
+  def chevron_up_down(assigns_or_opts \\ [])
+
+  def chevron_up_down(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"/>
+    </svg>
+    """
+  end
+
+  def chevron_up_down(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9\"/>\n</svg>"]}
+  end
+
+  @doc """
   ![](assets/icons/outline/chevron-up.svg) {: width=24px}
 
   ## Examples
@@ -4223,7 +4707,7 @@ defmodule Heroicons.Outline do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 18.75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-4.776 8.45a12.008 12.008 0 00-3.114 4.85L7.5 15.376m3.85-11.54c-.065.21-.1.433-.1.664v0c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v0a2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0118 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3l1.5 1.5 3-3.75"/>
     </svg>
     """
   end
@@ -4239,7 +4723,7 @@ defmodule Heroicons.Outline do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M15.75 18.75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-4.776 8.45a12.008 12.008 0 00-3.114 4.85L7.5 15.376m3.85-11.54c-.065.21-.1.433-.1.664v0c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v0a2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0118 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3l1.5 1.5 3-3.75\"/>\n</svg>"]}
   end
 
   @doc """
@@ -4949,6 +5433,50 @@ defmodule Heroicons.Outline do
   end
 
   @doc """
+  ![](assets/icons/outline/cube-transparent.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.cube_transparent />
+
+      <.cube_transparent class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= cube_transparent() %>
+
+      <%= cube_transparent(class: "h-6 w-6 text-gray-500") %>
+  """
+  def cube_transparent(assigns_or_opts \\ [])
+
+  def cube_transparent(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"/>
+    </svg>
+    """
+  end
+
+  def cube_transparent(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25\"/>\n</svg>"]}
+  end
+
+  @doc """
   ![](assets/icons/outline/cube.svg) {: width=24px}
 
   ## Examples
@@ -4990,6 +5518,50 @@ defmodule Heroicons.Outline do
       end
 
     {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/outline/currency-bangladeshi.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.currency_bangladeshi />
+
+      <.currency_bangladeshi class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= currency_bangladeshi() %>
+
+      <%= currency_bangladeshi(class: "h-6 w-6 text-gray-500") %>
+  """
+  def currency_bangladeshi(assigns_or_opts \\ [])
+
+  def currency_bangladeshi(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 7.5l.415-.207a.75.75 0 011.085.67V10.5m0 0h6m-6 0h-1.5m1.5 0v5.438c0 .354.161.697.473.865a3.751 3.751 0 005.452-2.553c.083-.409-.263-.75-.68-.75h-.745M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+    </svg>
+    """
+  end
+
+  def currency_bangladeshi(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M8.25 7.5l.415-.207a.75.75 0 011.085.67V10.5m0 0h6m-6 0h-1.5m1.5 0v5.438c0 .354.161.697.473.865a3.751 3.751 0 005.452-2.553c.083-.409-.263-.75-.68-.75h-.745M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/>\n</svg>"]}
   end
 
   @doc """
@@ -5545,7 +6117,7 @@ defmodule Heroicons.Outline do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M14.563 12a12.014 12.014 0 00-3.427 5.136L9 15m1.5-12.75H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12"/>
     </svg>
     """
   end
@@ -5561,7 +6133,7 @@ defmodule Heroicons.Outline do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M14.563 12a12.014 12.014 0 00-3.427 5.136L9 15m1.5-12.75H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12\"/>\n</svg>"]}
   end
 
   @doc """
@@ -6049,25 +6621,25 @@ defmodule Heroicons.Outline do
   end
 
   @doc """
-  ![](assets/icons/outline/exclaimation-circle.svg) {: width=24px}
+  ![](assets/icons/outline/exclamation-circle.svg) {: width=24px}
 
   ## Examples
 
   Use as a `Phoenix.Component`
 
-      <.exclaimation_circle />
+      <.exclamation_circle />
 
-      <.exclaimation_circle class="h-6 w-6 text-gray-500" />
+      <.exclamation_circle class="h-6 w-6 text-gray-500" />
 
   or as a function
 
-      <%= exclaimation_circle() %>
+      <%= exclamation_circle() %>
 
-      <%= exclaimation_circle(class: "h-6 w-6 text-gray-500") %>
+      <%= exclamation_circle(class: "h-6 w-6 text-gray-500") %>
   """
-  def exclaimation_circle(assigns_or_opts \\ [])
+  def exclamation_circle(assigns_or_opts \\ [])
 
-  def exclaimation_circle(assigns) when is_map(assigns) do
+  def exclamation_circle(assigns) when is_map(assigns) do
     attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
     assigns = @assign_mod.assign(assigns, :attrs, attrs)
 
@@ -6078,7 +6650,7 @@ defmodule Heroicons.Outline do
     """
   end
 
-  def exclaimation_circle(opts) when is_list(opts) do
+  def exclamation_circle(opts) when is_list(opts) do
     attrs =
       for {k, v} <- opts do
         safe_k =
@@ -6093,36 +6665,36 @@ defmodule Heroicons.Outline do
   end
 
   @doc """
-  ![](assets/icons/outline/exclaimation-triangle.svg) {: width=24px}
+  ![](assets/icons/outline/exclamation-triangle.svg) {: width=24px}
 
   ## Examples
 
   Use as a `Phoenix.Component`
 
-      <.exclaimation_triangle />
+      <.exclamation_triangle />
 
-      <.exclaimation_triangle class="h-6 w-6 text-gray-500" />
+      <.exclamation_triangle class="h-6 w-6 text-gray-500" />
 
   or as a function
 
-      <%= exclaimation_triangle() %>
+      <%= exclamation_triangle() %>
 
-      <%= exclaimation_triangle(class: "h-6 w-6 text-gray-500") %>
+      <%= exclamation_triangle(class: "h-6 w-6 text-gray-500") %>
   """
-  def exclaimation_triangle(assigns_or_opts \\ [])
+  def exclamation_triangle(assigns_or_opts \\ [])
 
-  def exclaimation_triangle(assigns) when is_map(assigns) do
+  def exclamation_triangle(assigns) when is_map(assigns) do
     attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
     assigns = @assign_mod.assign(assigns, :attrs, attrs)
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M12 10.5v3.75m-9.303 3.376C1.83 19.126 2.914 21 4.645 21h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 4.88c-.866-1.501-3.032-1.501-3.898 0L2.697 17.626zM12 17.25h.007v.008H12v-.008z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
     </svg>
     """
   end
 
-  def exclaimation_triangle(opts) when is_list(opts) do
+  def exclamation_triangle(opts) when is_list(opts) do
     attrs =
       for {k, v} <- opts do
         safe_k =
@@ -6133,7 +6705,7 @@ defmodule Heroicons.Outline do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 10.5v3.75m-9.303 3.376C1.83 19.126 2.914 21 4.645 21h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 4.88c-.866-1.501-3.032-1.501-3.898 0L2.697 17.626zM12 17.25h.007v.008H12v-.008z\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z\"/>\n</svg>"]}
   end
 
   @doc """
@@ -7175,7 +7747,7 @@ defmodule Heroicons.Outline do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M7.498 14.25H4.372c-1.026 0-1.945-.694-2.054-1.715a12.137 12.137 0 01-.068-1.285c0-2.848.992-5.464 2.649-7.521C5.287 3.247 5.886 3 6.504 3h4.016a4.5 4.5 0 011.423.23l3.114 1.04a4.5 4.5 0 001.423.23h1.294M7.498 14.25c.618 0 .991.724.725 1.282A7.471 7.471 0 007.5 18.75 2.25 2.25 0 009.75 21a.75.75 0 00.75-.75v-.633c0-.573.11-1.14.322-1.672.304-.76.93-1.33 1.653-1.715a9.04 9.04 0 002.86-2.4c.498-.634 1.226-1.08 2.032-1.08h.384m-10.253 1.5H9.7m8.075-9.75c.01.05.027.1.05.148.593 1.2.925 2.55.925 3.977 0 1.487-.36 2.89-.999 4.125m.023-8.25c-.076-.365.183-.75.575-.75h.908c.889 0 1.713.518 1.972 1.368.339 1.11.521 2.287.521 3.507 0 1.553-.295 3.036-.831 4.398-.306.774-1.086 1.227-1.918 1.227h-1.053c-.472 0-.745-.556-.5-.96a8.95 8.95 0 00.303-.54"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 15h2.25m8.024-9.75c.011.05.028.1.052.148.591 1.2.924 2.55.924 3.977a8.96 8.96 0 01-.999 4.125m.023-8.25c-.076-.365.183-.75.575-.75h.908c.889 0 1.713.518 1.972 1.368.339 1.11.521 2.287.521 3.507 0 1.553-.295 3.036-.831 4.398C20.613 14.547 19.833 15 19 15h-1.053c-.472 0-.745-.556-.5-.96a8.95 8.95 0 00.303-.54m.023-8.25H16.48a4.5 4.5 0 01-1.423-.23l-3.114-1.04a4.5 4.5 0 00-1.423-.23H6.504c-.618 0-1.217.247-1.605.729A11.95 11.95 0 002.25 12c0 .434.023.863.068 1.285C2.427 14.306 3.346 15 4.372 15h3.126c.618 0 .991.724.725 1.282A7.471 7.471 0 007.5 19.5a2.25 2.25 0 002.25 2.25.75.75 0 00.75-.75v-.633c0-.573.11-1.14.322-1.672.304-.76.93-1.33 1.653-1.715a9.04 9.04 0 002.86-2.4c.498-.634 1.226-1.08 2.032-1.08h.384"/>
     </svg>
     """
   end
@@ -7191,7 +7763,7 @@ defmodule Heroicons.Outline do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M7.498 14.25H4.372c-1.026 0-1.945-.694-2.054-1.715a12.137 12.137 0 01-.068-1.285c0-2.848.992-5.464 2.649-7.521C5.287 3.247 5.886 3 6.504 3h4.016a4.5 4.5 0 011.423.23l3.114 1.04a4.5 4.5 0 001.423.23h1.294M7.498 14.25c.618 0 .991.724.725 1.282A7.471 7.471 0 007.5 18.75 2.25 2.25 0 009.75 21a.75.75 0 00.75-.75v-.633c0-.573.11-1.14.322-1.672.304-.76.93-1.33 1.653-1.715a9.04 9.04 0 002.86-2.4c.498-.634 1.226-1.08 2.032-1.08h.384m-10.253 1.5H9.7m8.075-9.75c.01.05.027.1.05.148.593 1.2.925 2.55.925 3.977 0 1.487-.36 2.89-.999 4.125m.023-8.25c-.076-.365.183-.75.575-.75h.908c.889 0 1.713.518 1.972 1.368.339 1.11.521 2.287.521 3.507 0 1.553-.295 3.036-.831 4.398-.306.774-1.086 1.227-1.918 1.227h-1.053c-.472 0-.745-.556-.5-.96a8.95 8.95 0 00.303-.54\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M7.5 15h2.25m8.024-9.75c.011.05.028.1.052.148.591 1.2.924 2.55.924 3.977a8.96 8.96 0 01-.999 4.125m.023-8.25c-.076-.365.183-.75.575-.75h.908c.889 0 1.713.518 1.972 1.368.339 1.11.521 2.287.521 3.507 0 1.553-.295 3.036-.831 4.398C20.613 14.547 19.833 15 19 15h-1.053c-.472 0-.745-.556-.5-.96a8.95 8.95 0 00.303-.54m.023-8.25H16.48a4.5 4.5 0 01-1.423-.23l-3.114-1.04a4.5 4.5 0 00-1.423-.23H6.504c-.618 0-1.217.247-1.605.729A11.95 11.95 0 002.25 12c0 .434.023.863.068 1.285C2.427 14.306 3.346 15 4.372 15h3.126c.618 0 .991.724.725 1.282A7.471 7.471 0 007.5 19.5a2.25 2.25 0 002.25 2.25.75.75 0 00.75-.75v-.633c0-.573.11-1.14.322-1.672.304-.76.93-1.33 1.653-1.715a9.04 9.04 0 002.86-2.4c.498-.634 1.226-1.08 2.032-1.08h.384\"/>\n</svg>"]}
   end
 
   @doc """
@@ -7219,7 +7791,7 @@ defmodule Heroicons.Outline do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M5.383 12.25c.806 0 1.533-.446 2.031-1.08a9.04 9.04 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V4.75A.75.75 0 0113 4a2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H12.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H4.654m10.598-9.75H13M4.654 20.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368A12 12 0 011 17.125c0-1.553.295-3.036.831-4.398.306-.774 1.086-1.227 1.918-1.227h1.053c.472 0 .745.556.5.96A8.958 8.958 0 004 17.124c0 1.194.232 2.333.654 3.375z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z"/>
     </svg>
     """
   end
@@ -7235,7 +7807,7 @@ defmodule Heroicons.Outline do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5.383 12.25c.806 0 1.533-.446 2.031-1.08a9.04 9.04 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V4.75A.75.75 0 0113 4a2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H12.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H4.654m10.598-9.75H13M4.654 20.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368A12 12 0 011 17.125c0-1.553.295-3.036.831-4.398.306-.774 1.086-1.227 1.918-1.227h1.053c.472 0 .745.556.5.96A8.958 8.958 0 004 17.124c0 1.194.232 2.333.654 3.375z\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z\"/>\n</svg>"]}
   end
 
   @doc """
@@ -8384,6 +8956,50 @@ defmodule Heroicons.Outline do
   end
 
   @doc """
+  ![](assets/icons/outline/minus-small.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.minus_small />
+
+      <.minus_small class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= minus_small() %>
+
+      <%= minus_small(class: "h-6 w-6 text-gray-500") %>
+  """
+  def minus_small(assigns_or_opts \\ [])
+
+  def minus_small(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"/>
+    </svg>
+    """
+  end
+
+  def minus_small(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M18 12H6\"/>\n</svg>"]}
+  end
+
+  @doc """
   ![](assets/icons/outline/minus.svg) {: width=24px}
 
   ## Examples
@@ -8408,7 +9024,7 @@ defmodule Heroicons.Outline do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" d="M3 12h18"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15"/>
     </svg>
     """
   end
@@ -8424,7 +9040,7 @@ defmodule Heroicons.Outline do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" d=\"M3 12h18\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M19.5 12h-15\"/>\n</svg>"]}
   end
 
   @doc """
@@ -8601,6 +9217,50 @@ defmodule Heroicons.Outline do
       end
 
     {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/outline/paint-brush.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.paint_brush />
+
+      <.paint_brush class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= paint_brush() %>
+
+      <%= paint_brush(class: "h-6 w-6 text-gray-500") %>
+  """
+  def paint_brush(assigns_or_opts \\ [])
+
+  def paint_brush(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/>
+    </svg>
+    """
+  end
+
+  def paint_brush(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42\"/>\n</svg>"]}
   end
 
   @doc """
@@ -9176,6 +9836,50 @@ defmodule Heroicons.Outline do
   end
 
   @doc """
+  ![](assets/icons/outline/plus-small.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.plus_small />
+
+      <.plus_small class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= plus_small() %>
+
+      <%= plus_small(class: "h-6 w-6 text-gray-500") %>
+  """
+  def plus_small(assigns_or_opts \\ [])
+
+  def plus_small(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/>
+    </svg>
+    """
+  end
+
+  def plus_small(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 6v12m6-6H6\"/>\n</svg>"]}
+  end
+
+  @doc """
   ![](assets/icons/outline/plus.svg) {: width=24px}
 
   ## Examples
@@ -9200,7 +9904,7 @@ defmodule Heroicons.Outline do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
     </svg>
     """
   end
@@ -9216,7 +9920,7 @@ defmodule Heroicons.Outline do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 3v18m9-9H3\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 4.5v15m7.5-7.5h-15\"/>\n</svg>"]}
   end
 
   @doc """
@@ -9749,6 +10453,50 @@ defmodule Heroicons.Outline do
   end
 
   @doc """
+  ![](assets/icons/outline/rss.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.rss />
+
+      <.rss class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= rss() %>
+
+      <%= rss(class: "h-6 w-6 text-gray-500") %>
+  """
+  def rss(assigns_or_opts \\ [])
+
+  def rss(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 19.5v-.75a7.5 7.5 0 00-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/>
+    </svg>
+    """
+  end
+
+  def rss(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12.75 19.5v-.75a7.5 7.5 0 00-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z\"/>\n</svg>"]}
+  end
+
+  @doc """
   ![](assets/icons/outline/scale.svg) {: width=24px}
 
   ## Examples
@@ -9993,7 +10741,7 @@ defmodule Heroicons.Outline do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M14.563 9.75a12.014 12.014 0 00-3.427 5.136L9 12.75m3-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
     </svg>
     """
   end
@@ -10009,7 +10757,7 @@ defmodule Heroicons.Outline do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M14.563 9.75a12.014 12.014 0 00-3.427 5.136L9 12.75m3-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286z\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z\"/>\n</svg>"]}
   end
 
   @doc """
@@ -10982,6 +11730,50 @@ defmodule Heroicons.Outline do
   end
 
   @doc """
+  ![](assets/icons/outline/user-minus.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.user_minus />
+
+      <.user_minus class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= user_minus() %>
+
+      <%= user_minus(class: "h-6 w-6 text-gray-500") %>
+  """
+  def user_minus(assigns_or_opts \\ [])
+
+  def user_minus(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M22 10.5h-6m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z"/>
+    </svg>
+    """
+  end
+
+  def user_minus(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M22 10.5h-6m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z\"/>\n</svg>"]}
+  end
+
+  @doc """
   ![](assets/icons/outline/user-plus.svg) {: width=24px}
 
   ## Examples
@@ -11006,7 +11798,7 @@ defmodule Heroicons.Outline do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 019.374 21c-2.331 0-4.512-.645-6.374-1.766z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z"/>
     </svg>
     """
   end
@@ -11022,7 +11814,7 @@ defmodule Heroicons.Outline do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 019.374 21c-2.331 0-4.512-.645-6.374-1.766z\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z\"/>\n</svg>"]}
   end
 
   @doc """
@@ -11111,6 +11903,50 @@ defmodule Heroicons.Outline do
       end
 
     {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/outline/variable.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.variable />
+
+      <.variable class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= variable() %>
+
+      <%= variable(class: "h-6 w-6 text-gray-500") %>
+  """
+  def variable(assigns_or_opts \\ [])
+
+  def variable(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.745 3A23.933 23.933 0 003 12c0 3.183.62 6.22 1.745 9M19.5 3c.967 2.78 1.5 5.817 1.5 9s-.533 6.22-1.5 9M8.25 8.885l1.444-.89a.75.75 0 011.105.402l2.402 7.206a.75.75 0 001.104.401l1.445-.889m-8.25.75l.213.09a1.687 1.687 0 002.062-.617l4.45-6.676a1.688 1.688 0 012.062-.618l.213.09"/>
+    </svg>
+    """
+  end
+
+  def variable(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4.745 3A23.933 23.933 0 003 12c0 3.183.62 6.22 1.745 9M19.5 3c.967 2.78 1.5 5.817 1.5 9s-.533 6.22-1.5 9M8.25 8.885l1.444-.89a.75.75 0 011.105.402l2.402 7.206a.75.75 0 001.104.401l1.445-.889m-8.25.75l.213.09a1.687 1.687 0 002.062-.617l4.45-6.676a1.688 1.688 0 012.062-.618l.213.09\"/>\n</svg>"]}
   end
 
   @doc """
@@ -11243,6 +12079,50 @@ defmodule Heroicons.Outline do
       end
 
     {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125z\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/outline/wallet.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.wallet />
+
+      <.wallet class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= wallet() %>
+
+      <%= wallet(class: "h-6 w-6 text-gray-500") %>
+  """
+  def wallet(assigns_or_opts \\ [])
+
+  def wallet(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3"/>
+    </svg>
+    """
+  end
+
+  def wallet(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3\"/>\n</svg>"]}
   end
 
   @doc """
@@ -11447,7 +12327,7 @@ defmodule Heroicons.Outline do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m-15 0l15 15"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
     </svg>
     """
   end
@@ -11463,7 +12343,7 @@ defmodule Heroicons.Outline do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4.5 19.5l15-15m-15 0l15 15\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-width=\"1.5\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6 18L18 6M6 6l12 12\"/>\n</svg>"]}
   end
 
 end

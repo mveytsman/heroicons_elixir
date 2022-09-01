@@ -18,7 +18,7 @@ defmodule Heroicons do
   """
 
   # https://github.com/tailwindlabs/heroicons/releases
-  @latest_version "2.0.0"
+  @latest_version "2.0.10"
 
   @tmp_dir_name "heroicons-elixir"
 

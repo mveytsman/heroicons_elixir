@@ -903,6 +903,50 @@ defmodule Heroicons.Solid do
   end
 
   @doc """
+  ![](assets/icons/solid/arrow-path-rounded-square.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.arrow_path_rounded_square />
+
+      <.arrow_path_rounded_square class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= arrow_path_rounded_square() %>
+
+      <%= arrow_path_rounded_square(class: "h-6 w-6 text-gray-500") %>
+  """
+  def arrow_path_rounded_square(assigns_or_opts \\ [])
+
+  def arrow_path_rounded_square(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M12 5.25c1.213 0 2.415.046 3.605.135a3.256 3.256 0 013.01 3.01c.044.583.077 1.17.1 1.759L17.03 8.47a.75.75 0 10-1.06 1.06l3 3a.75.75 0 001.06 0l3-3a.75.75 0 00-1.06-1.06l-1.752 1.751c-.023-.65-.06-1.296-.108-1.939a4.756 4.756 0 00-4.392-4.392 49.422 49.422 0 00-7.436 0A4.756 4.756 0 003.89 8.282c-.017.224-.033.447-.046.672a.75.75 0 101.497.092c.013-.217.028-.434.044-.651a3.256 3.256 0 013.01-3.01c1.19-.09 2.392-.135 3.605-.135zm-6.97 6.22a.75.75 0 00-1.06 0l-3 3a.75.75 0 101.06 1.06l1.752-1.751c.023.65.06 1.296.108 1.939a4.756 4.756 0 004.392 4.392 49.413 49.413 0 007.436 0 4.756 4.756 0 004.392-4.392c.017-.223.032-.447.046-.672a.75.75 0 00-1.497-.092c-.013.217-.028.434-.044.651a3.256 3.256 0 01-3.01 3.01 47.953 47.953 0 01-7.21 0 3.256 3.256 0 01-3.01-3.01 47.759 47.759 0 01-.1-1.759L6.97 15.53a.75.75 0 001.06-1.06l-3-3z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def arrow_path_rounded_square(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M12 5.25c1.213 0 2.415.046 3.605.135a3.256 3.256 0 013.01 3.01c.044.583.077 1.17.1 1.759L17.03 8.47a.75.75 0 10-1.06 1.06l3 3a.75.75 0 001.06 0l3-3a.75.75 0 00-1.06-1.06l-1.752 1.751c-.023-.65-.06-1.296-.108-1.939a4.756 4.756 0 00-4.392-4.392 49.422 49.422 0 00-7.436 0A4.756 4.756 0 003.89 8.282c-.017.224-.033.447-.046.672a.75.75 0 101.497.092c.013-.217.028-.434.044-.651a3.256 3.256 0 013.01-3.01c1.19-.09 2.392-.135 3.605-.135zm-6.97 6.22a.75.75 0 00-1.06 0l-3 3a.75.75 0 101.06 1.06l1.752-1.751c.023.65.06 1.296.108 1.939a4.756 4.756 0 004.392 4.392 49.413 49.413 0 007.436 0 4.756 4.756 0 004.392-4.392c.017-.223.032-.447.046-.672a.75.75 0 00-1.497-.092c-.013.217-.028.434-.044.651a3.256 3.256 0 01-3.01 3.01 47.953 47.953 0 01-7.21 0 3.256 3.256 0 01-3.01-3.01 47.759 47.759 0 01-.1-1.759L6.97 15.53a.75.75 0 001.06-1.06l-3-3z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+  end
+
+  @doc """
   ![](assets/icons/solid/arrow-path.svg) {: width=24px}
 
   ## Examples
@@ -927,7 +971,7 @@ defmodule Heroicons.Solid do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M12 5.25c-1.213 0-2.415.046-3.605.135a3.256 3.256 0 00-3.01 3.01c-.044.583-.077 1.17-.1 1.759L6.97 8.47a.75.75 0 011.06 1.06l-3 3a.75.75 0 01-1.06 0l-3-3a.75.75 0 011.06-1.06l1.752 1.751c.023-.65.06-1.296.108-1.939A4.756 4.756 0 018.282 3.89a49.423 49.423 0 017.436 0 4.756 4.756 0 014.392 4.392c.017.224.032.447.046.672a.75.75 0 01-1.497.092 48.187 48.187 0 00-.044-.651 3.256 3.256 0 00-3.01-3.01A47.926 47.926 0 0012 5.25zm6.97 6.22a.75.75 0 011.06 0l3 3a.75.75 0 11-1.06 1.06l-1.752-1.751a49.25 49.25 0 01-.108 1.939 4.756 4.756 0 01-4.392 4.392 49.412 49.412 0 01-7.436 0 4.756 4.756 0 01-4.392-4.392 49.112 49.112 0 01-.046-.672.75.75 0 111.497-.092c.013.217.028.434.044.651a3.256 3.256 0 003.01 3.01 47.951 47.951 0 007.21 0 3.256 3.256 0 003.01-3.01c.044-.583.077-1.17.1-1.759L17.03 15.53a.75.75 0 11-1.06-1.06l3-3z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M4.755 10.059a7.5 7.5 0 0112.548-3.364l1.903 1.903h-3.183a.75.75 0 100 1.5h4.992a.75.75 0 00.75-.75V4.356a.75.75 0 00-1.5 0v3.18l-1.9-1.9A9 9 0 003.306 9.67a.75.75 0 101.45.388zm15.408 3.352a.75.75 0 00-.919.53 7.5 7.5 0 01-12.548 3.364l-1.902-1.903h3.183a.75.75 0 000-1.5H2.984a.75.75 0 00-.75.75v4.992a.75.75 0 001.5 0v-3.18l1.9 1.9a9 9 0 0015.059-4.035.75.75 0 00-.53-.918z" clip-rule="evenodd"/>
     </svg>
     """
   end
@@ -943,7 +987,7 @@ defmodule Heroicons.Solid do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M12 5.25c-1.213 0-2.415.046-3.605.135a3.256 3.256 0 00-3.01 3.01c-.044.583-.077 1.17-.1 1.759L6.97 8.47a.75.75 0 011.06 1.06l-3 3a.75.75 0 01-1.06 0l-3-3a.75.75 0 011.06-1.06l1.752 1.751c.023-.65.06-1.296.108-1.939A4.756 4.756 0 018.282 3.89a49.423 49.423 0 017.436 0 4.756 4.756 0 014.392 4.392c.017.224.032.447.046.672a.75.75 0 01-1.497.092 48.187 48.187 0 00-.044-.651 3.256 3.256 0 00-3.01-3.01A47.926 47.926 0 0012 5.25zm6.97 6.22a.75.75 0 011.06 0l3 3a.75.75 0 11-1.06 1.06l-1.752-1.751a49.25 49.25 0 01-.108 1.939 4.756 4.756 0 01-4.392 4.392 49.412 49.412 0 01-7.436 0 4.756 4.756 0 01-4.392-4.392 49.112 49.112 0 01-.046-.672.75.75 0 111.497-.092c.013.217.028.434.044.651a3.256 3.256 0 003.01 3.01 47.951 47.951 0 007.21 0 3.256 3.256 0 003.01-3.01c.044-.583.077-1.17.1-1.759L17.03 15.53a.75.75 0 11-1.06-1.06l3-3z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M4.755 10.059a7.5 7.5 0 0112.548-3.364l1.903 1.903h-3.183a.75.75 0 100 1.5h4.992a.75.75 0 00.75-.75V4.356a.75.75 0 00-1.5 0v3.18l-1.9-1.9A9 9 0 003.306 9.67a.75.75 0 101.45.388zm15.408 3.352a.75.75 0 00-.919.53 7.5 7.5 0 01-12.548 3.364l-1.902-1.903h3.183a.75.75 0 000-1.5H2.984a.75.75 0 00-.75.75v4.992a.75.75 0 001.5 0v-3.18l1.9 1.9a9 9 0 0015.059-4.035.75.75 0 00-.53-.918z\" clip-rule=\"evenodd\"/>\n</svg>"]}
   end
 
   @doc """
@@ -1076,6 +1120,182 @@ defmodule Heroicons.Solid do
       end
 
     {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/solid/arrow-small-down.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.arrow_small_down />
+
+      <.arrow_small_down class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= arrow_small_down() %>
+
+      <%= arrow_small_down(class: "h-6 w-6 text-gray-500") %>
+  """
+  def arrow_small_down(assigns_or_opts \\ [])
+
+  def arrow_small_down(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v13.19l5.47-5.47a.75.75 0 111.06 1.06l-6.75 6.75a.75.75 0 01-1.06 0l-6.75-6.75a.75.75 0 111.06-1.06l5.47 5.47V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def arrow_small_down(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M12 3.75a.75.75 0 01.75.75v13.19l5.47-5.47a.75.75 0 111.06 1.06l-6.75 6.75a.75.75 0 01-1.06 0l-6.75-6.75a.75.75 0 111.06-1.06l5.47 5.47V4.5a.75.75 0 01.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/solid/arrow-small-left.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.arrow_small_left />
+
+      <.arrow_small_left class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= arrow_small_left() %>
+
+      <%= arrow_small_left(class: "h-6 w-6 text-gray-500") %>
+  """
+  def arrow_small_left(assigns_or_opts \\ [])
+
+  def arrow_small_left(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M20.25 12a.75.75 0 01-.75.75H6.31l5.47 5.47a.75.75 0 11-1.06 1.06l-6.75-6.75a.75.75 0 010-1.06l6.75-6.75a.75.75 0 111.06 1.06l-5.47 5.47H19.5a.75.75 0 01.75.75z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def arrow_small_left(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M20.25 12a.75.75 0 01-.75.75H6.31l5.47 5.47a.75.75 0 11-1.06 1.06l-6.75-6.75a.75.75 0 010-1.06l6.75-6.75a.75.75 0 111.06 1.06l-5.47 5.47H19.5a.75.75 0 01.75.75z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/solid/arrow-small-right.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.arrow_small_right />
+
+      <.arrow_small_right class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= arrow_small_right() %>
+
+      <%= arrow_small_right(class: "h-6 w-6 text-gray-500") %>
+  """
+  def arrow_small_right(assigns_or_opts \\ [])
+
+  def arrow_small_right(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M3.75 12a.75.75 0 01.75-.75h13.19l-5.47-5.47a.75.75 0 011.06-1.06l6.75 6.75a.75.75 0 010 1.06l-6.75 6.75a.75.75 0 11-1.06-1.06l5.47-5.47H4.5a.75.75 0 01-.75-.75z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def arrow_small_right(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M3.75 12a.75.75 0 01.75-.75h13.19l-5.47-5.47a.75.75 0 011.06-1.06l6.75 6.75a.75.75 0 010 1.06l-6.75 6.75a.75.75 0 11-1.06-1.06l5.47-5.47H4.5a.75.75 0 01-.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/solid/arrow-small-up.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.arrow_small_up />
+
+      <.arrow_small_up class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= arrow_small_up() %>
+
+      <%= arrow_small_up(class: "h-6 w-6 text-gray-500") %>
+  """
+  def arrow_small_up(assigns_or_opts \\ [])
+
+  def arrow_small_up(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M12 20.25a.75.75 0 01-.75-.75V6.31l-5.47 5.47a.75.75 0 01-1.06-1.06l6.75-6.75a.75.75 0 011.06 0l6.75 6.75a.75.75 0 11-1.06 1.06l-5.47-5.47V19.5a.75.75 0 01-.75.75z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def arrow_small_up(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M12 20.25a.75.75 0 01-.75-.75V6.31l-5.47 5.47a.75.75 0 01-1.06-1.06l6.75-6.75a.75.75 0 011.06 0l6.75 6.75a.75.75 0 11-1.06 1.06l-5.47-5.47V19.5a.75.75 0 01-.75.75z\" clip-rule=\"evenodd\"/>\n</svg>"]}
   end
 
   @doc """
@@ -2311,6 +2531,227 @@ defmodule Heroicons.Solid do
       end
 
     {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M3 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 5.25zm0 4.5A.75.75 0 013.75 9h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/solid/bars-arrow-down.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.bars_arrow_down />
+
+      <.bars_arrow_down class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= bars_arrow_down() %>
+
+      <%= bars_arrow_down(class: "h-6 w-6 text-gray-500") %>
+  """
+  def bars_arrow_down(assigns_or_opts \\ [])
+
+  def bars_arrow_down(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.25 4.5A.75.75 0 013 3.75h14.25a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75zm0 4.5A.75.75 0 013 8.25h9.75a.75.75 0 010 1.5H3A.75.75 0 012.25 9zm15-.75A.75.75 0 0118 9v10.19l2.47-2.47a.75.75 0 111.06 1.06l-3.75 3.75a.75.75 0 01-1.06 0l-3.75-3.75a.75.75 0 111.06-1.06l2.47 2.47V9a.75.75 0 01.75-.75zm-15 5.25a.75.75 0 01.75-.75h9.75a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def bars_arrow_down(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M2.25 4.5A.75.75 0 013 3.75h14.25a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75zm0 4.5A.75.75 0 013 8.25h9.75a.75.75 0 010 1.5H3A.75.75 0 012.25 9zm15-.75A.75.75 0 0118 9v10.19l2.47-2.47a.75.75 0 111.06 1.06l-3.75 3.75a.75.75 0 01-1.06 0l-3.75-3.75a.75.75 0 111.06-1.06l2.47 2.47V9a.75.75 0 01.75-.75zm-15 5.25a.75.75 0 01.75-.75h9.75a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/solid/bars-arrow-up.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.bars_arrow_up />
+
+      <.bars_arrow_up class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= bars_arrow_up() %>
+
+      <%= bars_arrow_up(class: "h-6 w-6 text-gray-500") %>
+  """
+  def bars_arrow_up(assigns_or_opts \\ [])
+
+  def bars_arrow_up(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.25 4.5A.75.75 0 013 3.75h14.25a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75zm14.47 3.97a.75.75 0 011.06 0l3.75 3.75a.75.75 0 11-1.06 1.06L18 10.81V21a.75.75 0 01-1.5 0V10.81l-2.47 2.47a.75.75 0 11-1.06-1.06l3.75-3.75zM2.25 9A.75.75 0 013 8.25h9.75a.75.75 0 010 1.5H3A.75.75 0 012.25 9zm0 4.5a.75.75 0 01.75-.75h5.25a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def bars_arrow_up(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M2.25 4.5A.75.75 0 013 3.75h14.25a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75zm14.47 3.97a.75.75 0 011.06 0l3.75 3.75a.75.75 0 11-1.06 1.06L18 10.81V21a.75.75 0 01-1.5 0V10.81l-2.47 2.47a.75.75 0 11-1.06-1.06l3.75-3.75zM2.25 9A.75.75 0 013 8.25h9.75a.75.75 0 010 1.5H3A.75.75 0 012.25 9zm0 4.5a.75.75 0 01.75-.75h5.25a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/solid/battery-0.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.battery_0 />
+
+      <.battery_0 class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= battery_0() %>
+
+      <%= battery_0(class: "h-6 w-6 text-gray-500") %>
+  """
+  def battery_0(assigns_or_opts \\ [])
+
+  def battery_0(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M.75 9.75a3 3 0 013-3h15a3 3 0 013 3v.038c.856.173 1.5.93 1.5 1.837v2.25c0 .907-.644 1.664-1.5 1.838v.037a3 3 0 01-3 3h-15a3 3 0 01-3-3v-6zm19.5 0a1.5 1.5 0 00-1.5-1.5h-15a1.5 1.5 0 00-1.5 1.5v6a1.5 1.5 0 001.5 1.5h15a1.5 1.5 0 001.5-1.5v-6z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def battery_0(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M.75 9.75a3 3 0 013-3h15a3 3 0 013 3v.038c.856.173 1.5.93 1.5 1.837v2.25c0 .907-.644 1.664-1.5 1.838v.037a3 3 0 01-3 3h-15a3 3 0 01-3-3v-6zm19.5 0a1.5 1.5 0 00-1.5-1.5h-15a1.5 1.5 0 00-1.5 1.5v6a1.5 1.5 0 001.5 1.5h15a1.5 1.5 0 001.5-1.5v-6z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/solid/battery-100.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.battery_100 />
+
+      <.battery_100 class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= battery_100() %>
+
+      <%= battery_100(class: "h-6 w-6 text-gray-500") %>
+  """
+  def battery_100(assigns_or_opts \\ [])
+
+  def battery_100(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M3.75 6.75a3 3 0 00-3 3v6a3 3 0 003 3h15a3 3 0 003-3v-.037c.856-.174 1.5-.93 1.5-1.838v-2.25c0-.907-.644-1.664-1.5-1.837V9.75a3 3 0 00-3-3h-15zm15 1.5a1.5 1.5 0 011.5 1.5v6a1.5 1.5 0 01-1.5 1.5h-15a1.5 1.5 0 01-1.5-1.5v-6a1.5 1.5 0 011.5-1.5h15zM4.5 9.75a.75.75 0 00-.75.75V15c0 .414.336.75.75.75H18a.75.75 0 00.75-.75v-4.5a.75.75 0 00-.75-.75H4.5z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def battery_100(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M3.75 6.75a3 3 0 00-3 3v6a3 3 0 003 3h15a3 3 0 003-3v-.037c.856-.174 1.5-.93 1.5-1.838v-2.25c0-.907-.644-1.664-1.5-1.837V9.75a3 3 0 00-3-3h-15zm15 1.5a1.5 1.5 0 011.5 1.5v6a1.5 1.5 0 01-1.5 1.5h-15a1.5 1.5 0 01-1.5-1.5v-6a1.5 1.5 0 011.5-1.5h15zM4.5 9.75a.75.75 0 00-.75.75V15c0 .414.336.75.75.75H18a.75.75 0 00.75-.75v-4.5a.75.75 0 00-.75-.75H4.5z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/solid/battery-50.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.battery_50 />
+
+      <.battery_50 class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= battery_50() %>
+
+      <%= battery_50(class: "h-6 w-6 text-gray-500") %>
+  """
+  def battery_50(assigns_or_opts \\ [])
+
+  def battery_50(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4.5 9.75a.75.75 0 00-.75.75V15c0 .414.336.75.75.75h6.75A.75.75 0 0012 15v-4.5a.75.75 0 00-.75-.75H4.5z"/>
+      <path fill-rule="evenodd" d="M3.75 6.75a3 3 0 00-3 3v6a3 3 0 003 3h15a3 3 0 003-3v-.037c.856-.174 1.5-.93 1.5-1.838v-2.25c0-.907-.644-1.664-1.5-1.837V9.75a3 3 0 00-3-3h-15zm15 1.5a1.5 1.5 0 011.5 1.5v6a1.5 1.5 0 01-1.5 1.5h-15a1.5 1.5 0 01-1.5-1.5v-6a1.5 1.5 0 011.5-1.5h15z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def battery_50(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M4.5 9.75a.75.75 0 00-.75.75V15c0 .414.336.75.75.75h6.75A.75.75 0 0012 15v-4.5a.75.75 0 00-.75-.75H4.5z\"/>\n  <path fill-rule=\"evenodd\" d=\"M3.75 6.75a3 3 0 00-3 3v6a3 3 0 003 3h15a3 3 0 003-3v-.037c.856-.174 1.5-.93 1.5-1.838v-2.25c0-.907-.644-1.664-1.5-1.837V9.75a3 3 0 00-3-3h-15zm15 1.5a1.5 1.5 0 011.5 1.5v6a1.5 1.5 0 01-1.5 1.5h-15a1.5 1.5 0 01-1.5-1.5v-6a1.5 1.5 0 011.5-1.5h15z\" clip-rule=\"evenodd\"/>\n</svg>"]}
   end
 
   @doc """
@@ -3712,7 +4153,7 @@ defmodule Heroicons.Solid do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M12 2.25a4.49 4.49 0 00-3.397 1.549 4.49 4.49 0 00-3.497 1.307 4.49 4.49 0 00-1.307 3.497A4.49 4.49 0 002.25 12c0 1.357.6 2.573 1.548 3.397a4.491 4.491 0 001.307 3.498A4.49 4.49 0 008.603 20.2 4.49 4.49 0 0012 21.75a4.49 4.49 0 003.397-1.549 4.491 4.491 0 003.497-1.307 4.491 4.491 0 001.307-3.497A4.49 4.49 0 0021.75 12a4.49 4.49 0 00-1.548-3.397 4.491 4.491 0 00-1.307-3.497 4.49 4.49 0 00-3.498-1.307A4.49 4.49 0 0012 2.25zm3.059 8.062a.75.75 0 10-.993-1.124 12.785 12.785 0 00-3.209 4.358L9.53 12.22a.75.75 0 00-1.06 1.06l2.135 2.136a.75.75 0 001.24-.289 11.264 11.264 0 013.214-4.815z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"/>
     </svg>
     """
   end
@@ -3728,7 +4169,7 @@ defmodule Heroicons.Solid do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M12 2.25a4.49 4.49 0 00-3.397 1.549 4.49 4.49 0 00-3.497 1.307 4.49 4.49 0 00-1.307 3.497A4.49 4.49 0 002.25 12c0 1.357.6 2.573 1.548 3.397a4.491 4.491 0 001.307 3.498A4.49 4.49 0 008.603 20.2 4.49 4.49 0 0012 21.75a4.49 4.49 0 003.397-1.549 4.491 4.491 0 003.497-1.307 4.491 4.491 0 001.307-3.497A4.49 4.49 0 0021.75 12a4.49 4.49 0 00-1.548-3.397 4.491 4.491 0 00-1.307-3.497 4.49 4.49 0 00-3.498-1.307A4.49 4.49 0 0012 2.25zm3.059 8.062a.75.75 0 10-.993-1.124 12.785 12.785 0 00-3.209 4.358L9.53 12.22a.75.75 0 00-1.06 1.06l2.135 2.136a.75.75 0 001.24-.289 11.264 11.264 0 013.214-4.815z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z\" clip-rule=\"evenodd\"/>\n</svg>"]}
   end
 
   @doc """
@@ -3756,7 +4197,7 @@ defmodule Heroicons.Solid do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm3.059 8.062a.75.75 0 10-.993-1.124 12.785 12.785 0 00-3.209 4.358L9.53 12.22a.75.75 0 00-1.06 1.06l2.135 2.136a.75.75 0 001.24-.289 11.264 11.264 0 013.214-4.815z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"/>
     </svg>
     """
   end
@@ -3772,7 +4213,7 @@ defmodule Heroicons.Solid do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm3.059 8.062a.75.75 0 10-.993-1.124 12.785 12.785 0 00-3.209 4.358L9.53 12.22a.75.75 0 00-1.06 1.06l2.135 2.136a.75.75 0 001.24-.289 11.264 11.264 0 013.214-4.815z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z\" clip-rule=\"evenodd\"/>\n</svg>"]}
   end
 
   @doc """
@@ -3800,7 +4241,7 @@ defmodule Heroicons.Solid do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M21.545 3.627a.75.75 0 01-.03 1.06 47.349 47.349 0 00-11.04 15.89.75.75 0 01-1.22.238L2.47 14.03a.75.75 0 111.06-1.06l6.008 6.007A48.87 48.87 0 0120.484 3.598a.75.75 0 011.06.029z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clip-rule="evenodd"/>
     </svg>
     """
   end
@@ -3816,7 +4257,7 @@ defmodule Heroicons.Solid do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M21.545 3.627a.75.75 0 01-.03 1.06 47.349 47.349 0 00-11.04 15.89.75.75 0 01-1.22.238L2.47 14.03a.75.75 0 111.06-1.06l6.008 6.007A48.87 48.87 0 0120.484 3.598a.75.75 0 011.06.029z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z\" clip-rule=\"evenodd\"/>\n</svg>"]}
   end
 
   @doc """
@@ -4128,6 +4569,50 @@ defmodule Heroicons.Solid do
   end
 
   @doc """
+  ![](assets/icons/solid/chevron-up-down.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.chevron_up_down />
+
+      <.chevron_up_down class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= chevron_up_down() %>
+
+      <%= chevron_up_down(class: "h-6 w-6 text-gray-500") %>
+  """
+  def chevron_up_down(assigns_or_opts \\ [])
+
+  def chevron_up_down(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M11.47 4.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 01-1.06 1.06L12 6.31 8.78 9.53a.75.75 0 01-1.06-1.06l3.75-3.75zm-3.75 9.75a.75.75 0 011.06 0L12 17.69l3.22-3.22a.75.75 0 111.06 1.06l-3.75 3.75a.75.75 0 01-1.06 0l-3.75-3.75a.75.75 0 010-1.06z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def chevron_up_down(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M11.47 4.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 01-1.06 1.06L12 6.31 8.78 9.53a.75.75 0 01-1.06-1.06l3.75-3.75zm-3.75 9.75a.75.75 0 011.06 0L12 17.69l3.22-3.22a.75.75 0 111.06 1.06l-3.75 3.75a.75.75 0 01-1.06 0l-3.75-3.75a.75.75 0 010-1.06z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+  end
+
+  @doc """
   ![](assets/icons/solid/chevron-up.svg) {: width=24px}
 
   ## Examples
@@ -4243,8 +4728,8 @@ defmodule Heroicons.Solid do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M4.875 7.5C3.839 7.5 3 8.34 3 9.375v11.25c0 1.035.84 1.875 1.875 1.875h9.75c1.036 0 1.875-.84 1.875-1.875V9.375c0-1.036-.84-1.875-1.875-1.875h-9.75zm8.016 5.33a.75.75 0 10-1.032-1.089 12.778 12.778 0 00-2.877 4.055l-.952-.951a.75.75 0 00-1.06 1.06l1.76 1.761a.75.75 0 001.24-.289 11.258 11.258 0 012.92-4.547z" clip-rule="evenodd"/>
-      <path fill-rule="evenodd" d="M11.248 6H7.502c.052-1.46 1.16-2.706 2.662-2.831.224-.019.448-.036.673-.051A3 3 0 0113.5 1.5H15a3 3 0 012.663 1.618c.225.015.45.032.673.05C19.876 3.298 21 4.604 21 6.109v9.642a3 3 0 01-3 3V9.375A3.375 3.375 0 0014.63 6H11.248zM12 4.5A1.5 1.5 0 0113.5 3H15a1.5 1.5 0 011.5 1.5H12z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0118 9.375v9.375a3 3 0 003-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 00-.673-.05A3 3 0 0015 1.5h-1.5a3 3 0 00-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6zM13.5 3A1.5 1.5 0 0012 4.5h4.5A1.5 1.5 0 0015 3h-1.5z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 013 20.625V9.375zm9.586 4.594a.75.75 0 00-1.172-.938l-2.476 3.096-.908-.907a.75.75 0 00-1.06 1.06l1.5 1.5a.75.75 0 001.116-.062l3-3.75z" clip-rule="evenodd"/>
     </svg>
     """
   end
@@ -4260,7 +4745,7 @@ defmodule Heroicons.Solid do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M4.875 7.5C3.839 7.5 3 8.34 3 9.375v11.25c0 1.035.84 1.875 1.875 1.875h9.75c1.036 0 1.875-.84 1.875-1.875V9.375c0-1.036-.84-1.875-1.875-1.875h-9.75zm8.016 5.33a.75.75 0 10-1.032-1.089 12.778 12.778 0 00-2.877 4.055l-.952-.951a.75.75 0 00-1.06 1.06l1.76 1.761a.75.75 0 001.24-.289 11.258 11.258 0 012.92-4.547z\" clip-rule=\"evenodd\"/>\n  <path fill-rule=\"evenodd\" d=\"M11.248 6H7.502c.052-1.46 1.16-2.706 2.662-2.831.224-.019.448-.036.673-.051A3 3 0 0113.5 1.5H15a3 3 0 012.663 1.618c.225.015.45.032.673.05C19.876 3.298 21 4.604 21 6.109v9.642a3 3 0 01-3 3V9.375A3.375 3.375 0 0014.63 6H11.248zM12 4.5A1.5 1.5 0 0113.5 3H15a1.5 1.5 0 011.5 1.5H12z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M7.502 6h7.128A3.375 3.375 0 0118 9.375v9.375a3 3 0 003-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 00-.673-.05A3 3 0 0015 1.5h-1.5a3 3 0 00-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6zM13.5 3A1.5 1.5 0 0012 4.5h4.5A1.5 1.5 0 0015 3h-1.5z\" clip-rule=\"evenodd\"/>\n  <path fill-rule=\"evenodd\" d=\"M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 013 20.625V9.375zm9.586 4.594a.75.75 0 00-1.172-.938l-2.476 3.096-.908-.907a.75.75 0 00-1.06 1.06l1.5 1.5a.75.75 0 001.116-.062l3-3.75z\" clip-rule=\"evenodd\"/>\n</svg>"]}
   end
 
   @doc """
@@ -4575,25 +5060,25 @@ defmodule Heroicons.Solid do
   end
 
   @doc """
-  ![](assets/icons/solid/code-square.svg) {: width=24px}
+  ![](assets/icons/solid/code-bracket-square.svg) {: width=24px}
 
   ## Examples
 
   Use as a `Phoenix.Component`
 
-      <.code_square />
+      <.code_bracket_square />
 
-      <.code_square class="h-6 w-6 text-gray-500" />
+      <.code_bracket_square class="h-6 w-6 text-gray-500" />
 
   or as a function
 
-      <%= code_square() %>
+      <%= code_bracket_square() %>
 
-      <%= code_square(class: "h-6 w-6 text-gray-500") %>
+      <%= code_bracket_square(class: "h-6 w-6 text-gray-500") %>
   """
-  def code_square(assigns_or_opts \\ [])
+  def code_bracket_square(assigns_or_opts \\ [])
 
-  def code_square(assigns) when is_map(assigns) do
+  def code_bracket_square(assigns) when is_map(assigns) do
     attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
     assigns = @assign_mod.assign(assigns, :attrs, attrs)
 
@@ -4604,7 +5089,7 @@ defmodule Heroicons.Solid do
     """
   end
 
-  def code_square(opts) when is_list(opts) do
+  def code_bracket_square(opts) when is_list(opts) do
     attrs =
       for {k, v} <- opts do
         safe_k =
@@ -4619,25 +5104,25 @@ defmodule Heroicons.Solid do
   end
 
   @doc """
-  ![](assets/icons/solid/code.svg) {: width=24px}
+  ![](assets/icons/solid/code-bracket.svg) {: width=24px}
 
   ## Examples
 
   Use as a `Phoenix.Component`
 
-      <.code />
+      <.code_bracket />
 
-      <.code class="h-6 w-6 text-gray-500" />
+      <.code_bracket class="h-6 w-6 text-gray-500" />
 
   or as a function
 
-      <%= code() %>
+      <%= code_bracket() %>
 
-      <%= code(class: "h-6 w-6 text-gray-500") %>
+      <%= code_bracket(class: "h-6 w-6 text-gray-500") %>
   """
-  def code(assigns_or_opts \\ [])
+  def code_bracket(assigns_or_opts \\ [])
 
-  def code(assigns) when is_map(assigns) do
+  def code_bracket(assigns) when is_map(assigns) do
     attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
     assigns = @assign_mod.assign(assigns, :attrs, attrs)
 
@@ -4648,7 +5133,7 @@ defmodule Heroicons.Solid do
     """
   end
 
-  def code(opts) when is_list(opts) do
+  def code_bracket(opts) when is_list(opts) do
     attrs =
       for {k, v} <- opts do
         safe_k =
@@ -4974,6 +5459,50 @@ defmodule Heroicons.Solid do
   end
 
   @doc """
+  ![](assets/icons/solid/cube-transparent.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.cube_transparent />
+
+      <.cube_transparent class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= cube_transparent() %>
+
+      <%= cube_transparent(class: "h-6 w-6 text-gray-500") %>
+  """
+  def cube_transparent(assigns_or_opts \\ [])
+
+  def cube_transparent(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M11.622 1.602a.75.75 0 01.756 0l2.25 1.313a.75.75 0 01-.756 1.295L12 3.118 10.128 4.21a.75.75 0 11-.756-1.295l2.25-1.313zM5.898 5.81a.75.75 0 01-.27 1.025l-1.14.665 1.14.665a.75.75 0 11-.756 1.295L3.75 8.806v.944a.75.75 0 01-1.5 0V7.5a.75.75 0 01.372-.648l2.25-1.312a.75.75 0 011.026.27zm12.204 0a.75.75 0 011.026-.27l2.25 1.312a.75.75 0 01.372.648v2.25a.75.75 0 01-1.5 0v-.944l-1.122.654a.75.75 0 11-.756-1.295l1.14-.665-1.14-.665a.75.75 0 01-.27-1.025zm-9 5.25a.75.75 0 011.026-.27L12 11.882l1.872-1.092a.75.75 0 11.756 1.295l-1.878 1.096V15a.75.75 0 01-1.5 0v-1.82l-1.878-1.095a.75.75 0 01-.27-1.025zM3 13.5a.75.75 0 01.75.75v1.82l1.878 1.095a.75.75 0 11-.756 1.295l-2.25-1.312a.75.75 0 01-.372-.648v-2.25A.75.75 0 013 13.5zm18 0a.75.75 0 01.75.75v2.25a.75.75 0 01-.372.648l-2.25 1.312a.75.75 0 11-.756-1.295l1.878-1.096V14.25a.75.75 0 01.75-.75zm-9 5.25a.75.75 0 01.75.75v.944l1.122-.654a.75.75 0 11.756 1.295l-2.25 1.313a.75.75 0 01-.756 0l-2.25-1.313a.75.75 0 11.756-1.295l1.122.654V19.5a.75.75 0 01.75-.75z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def cube_transparent(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M11.622 1.602a.75.75 0 01.756 0l2.25 1.313a.75.75 0 01-.756 1.295L12 3.118 10.128 4.21a.75.75 0 11-.756-1.295l2.25-1.313zM5.898 5.81a.75.75 0 01-.27 1.025l-1.14.665 1.14.665a.75.75 0 11-.756 1.295L3.75 8.806v.944a.75.75 0 01-1.5 0V7.5a.75.75 0 01.372-.648l2.25-1.312a.75.75 0 011.026.27zm12.204 0a.75.75 0 011.026-.27l2.25 1.312a.75.75 0 01.372.648v2.25a.75.75 0 01-1.5 0v-.944l-1.122.654a.75.75 0 11-.756-1.295l1.14-.665-1.14-.665a.75.75 0 01-.27-1.025zm-9 5.25a.75.75 0 011.026-.27L12 11.882l1.872-1.092a.75.75 0 11.756 1.295l-1.878 1.096V15a.75.75 0 01-1.5 0v-1.82l-1.878-1.095a.75.75 0 01-.27-1.025zM3 13.5a.75.75 0 01.75.75v1.82l1.878 1.095a.75.75 0 11-.756 1.295l-2.25-1.312a.75.75 0 01-.372-.648v-2.25A.75.75 0 013 13.5zm18 0a.75.75 0 01.75.75v2.25a.75.75 0 01-.372.648l-2.25 1.312a.75.75 0 11-.756-1.295l1.878-1.096V14.25a.75.75 0 01.75-.75zm-9 5.25a.75.75 0 01.75.75v.944l1.122-.654a.75.75 0 11.756 1.295l-2.25 1.313a.75.75 0 01-.756 0l-2.25-1.313a.75.75 0 11.756-1.295l1.122.654V19.5a.75.75 0 01.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+  end
+
+  @doc """
   ![](assets/icons/solid/cube.svg) {: width=24px}
 
   ## Examples
@@ -5015,6 +5544,50 @@ defmodule Heroicons.Solid do
       end
 
     {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/solid/currency-bangladeshi.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.currency_bangladeshi />
+
+      <.currency_bangladeshi class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= currency_bangladeshi() %>
+
+      <%= currency_bangladeshi(class: "h-6 w-6 text-gray-500") %>
+  """
+  def currency_bangladeshi(assigns_or_opts \\ [])
+
+  def currency_bangladeshi(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M12 21.75c5.385 0 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25 2.25 6.615 2.25 12s4.365 9.75 9.75 9.75zM10.5 7.963a1.5 1.5 0 00-2.17-1.341l-.415.207a.75.75 0 00.67 1.342L9 7.963V9.75h-.75a.75.75 0 100 1.5H9v4.688c0 .563.26 1.198.867 1.525A4.501 4.501 0 0016.41 14.4c.199-.977-.636-1.649-1.415-1.649h-.745a.75.75 0 100 1.5h.656a3.002 3.002 0 01-4.327 1.893.113.113 0 01-.045-.051.336.336 0 01-.034-.154V11.25h5.25a.75.75 0 000-1.5H10.5V7.963z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def currency_bangladeshi(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M12 21.75c5.385 0 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25 2.25 6.615 2.25 12s4.365 9.75 9.75 9.75zM10.5 7.963a1.5 1.5 0 00-2.17-1.341l-.415.207a.75.75 0 00.67 1.342L9 7.963V9.75h-.75a.75.75 0 100 1.5H9v4.688c0 .563.26 1.198.867 1.525A4.501 4.501 0 0016.41 14.4c.199-.977-.636-1.649-1.415-1.649h-.745a.75.75 0 100 1.5h.656a3.002 3.002 0 01-4.327 1.893.113.113 0 01-.045-.051.336.336 0 01-.034-.154V11.25h5.25a.75.75 0 000-1.5H10.5V7.963z\" clip-rule=\"evenodd\"/>\n</svg>"]}
   end
 
   @doc """
@@ -5576,8 +6149,8 @@ defmodule Heroicons.Solid do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zm9.434 11.812a.75.75 0 10-.993-1.124 12.785 12.785 0 00-3.209 4.358L9.53 15.22a.75.75 0 00-1.06 1.06l2.135 2.136a.75.75 0 001.24-.289 11.264 11.264 0 013.214-4.815z" clip-rule="evenodd"/>
-      <path d="M14.25 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0016.5 7.5h-1.875a.375.375 0 01-.375-.375V5.25z"/>
+      <path fill-rule="evenodd" d="M9 1.5H5.625c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5zm6.61 10.936a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 14.47a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"/>
+      <path d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z"/>
     </svg>
     """
   end
@@ -5593,7 +6166,7 @@ defmodule Heroicons.Solid do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zm9.434 11.812a.75.75 0 10-.993-1.124 12.785 12.785 0 00-3.209 4.358L9.53 15.22a.75.75 0 00-1.06 1.06l2.135 2.136a.75.75 0 001.24-.289 11.264 11.264 0 013.214-4.815z\" clip-rule=\"evenodd\"/>\n  <path d=\"M14.25 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0016.5 7.5h-1.875a.375.375 0 01-.375-.375V5.25z\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M9 1.5H5.625c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5zm6.61 10.936a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 14.47a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z\" clip-rule=\"evenodd\"/>\n  <path d=\"M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z\"/>\n</svg>"]}
   end
 
   @doc """
@@ -6090,25 +6663,25 @@ defmodule Heroicons.Solid do
   end
 
   @doc """
-  ![](assets/icons/solid/exclaimation-circle.svg) {: width=24px}
+  ![](assets/icons/solid/exclamation-circle.svg) {: width=24px}
 
   ## Examples
 
   Use as a `Phoenix.Component`
 
-      <.exclaimation_circle />
+      <.exclamation_circle />
 
-      <.exclaimation_circle class="h-6 w-6 text-gray-500" />
+      <.exclamation_circle class="h-6 w-6 text-gray-500" />
 
   or as a function
 
-      <%= exclaimation_circle() %>
+      <%= exclamation_circle() %>
 
-      <%= exclaimation_circle(class: "h-6 w-6 text-gray-500") %>
+      <%= exclamation_circle(class: "h-6 w-6 text-gray-500") %>
   """
-  def exclaimation_circle(assigns_or_opts \\ [])
+  def exclamation_circle(assigns_or_opts \\ [])
 
-  def exclaimation_circle(assigns) when is_map(assigns) do
+  def exclamation_circle(assigns) when is_map(assigns) do
     attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
     assigns = @assign_mod.assign(assigns, :attrs, attrs)
 
@@ -6119,7 +6692,7 @@ defmodule Heroicons.Solid do
     """
   end
 
-  def exclaimation_circle(opts) when is_list(opts) do
+  def exclamation_circle(opts) when is_list(opts) do
     attrs =
       for {k, v} <- opts do
         safe_k =
@@ -6134,36 +6707,36 @@ defmodule Heroicons.Solid do
   end
 
   @doc """
-  ![](assets/icons/solid/exclaimation-triangle.svg) {: width=24px}
+  ![](assets/icons/solid/exclamation-triangle.svg) {: width=24px}
 
   ## Examples
 
   Use as a `Phoenix.Component`
 
-      <.exclaimation_triangle />
+      <.exclamation_triangle />
 
-      <.exclaimation_triangle class="h-6 w-6 text-gray-500" />
+      <.exclamation_triangle class="h-6 w-6 text-gray-500" />
 
   or as a function
 
-      <%= exclaimation_triangle() %>
+      <%= exclamation_triangle() %>
 
-      <%= exclaimation_triangle(class: "h-6 w-6 text-gray-500") %>
+      <%= exclamation_triangle(class: "h-6 w-6 text-gray-500") %>
   """
-  def exclaimation_triangle(assigns_or_opts \\ [])
+  def exclamation_triangle(assigns_or_opts \\ [])
 
-  def exclaimation_triangle(assigns) when is_map(assigns) do
+  def exclamation_triangle(assigns) when is_map(assigns) do
     attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
     assigns = @assign_mod.assign(assigns, :attrs, attrs)
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M9.401 4.504c1.155-2.001 4.043-2.001 5.197 0l7.355 12.747c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 4.504zM12 9.75a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V10.5a.75.75 0 01.75-.75zM12 18a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd"/>
     </svg>
     """
   end
 
-  def exclaimation_triangle(opts) when is_list(opts) do
+  def exclamation_triangle(opts) when is_list(opts) do
     attrs =
       for {k, v} <- opts do
         safe_k =
@@ -6174,7 +6747,7 @@ defmodule Heroicons.Solid do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M9.401 4.504c1.155-2.001 4.043-2.001 5.197 0l7.355 12.747c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 4.504zM12 9.75a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V10.5a.75.75 0 01.75-.75zM12 18a.75.75 0 100-1.5.75.75 0 000 1.5z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z\" clip-rule=\"evenodd\"/>\n</svg>"]}
   end
 
   @doc """
@@ -7219,7 +7792,7 @@ defmodule Heroicons.Solid do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15.73 4.5h1.035A7.465 7.465 0 0118 8.625a7.465 7.465 0 01-1.235 4.125h-.148c-.806 0-1.534.446-2.031 1.08a9.04 9.04 0 01-2.861 2.4c-.723.384-1.35.956-1.653 1.715a4.499 4.499 0 00-.322 1.672v.633A.75.75 0 019 21a2.25 2.25 0 01-2.25-2.25c0-1.152.26-2.243.723-3.218.266-.558-.107-1.282-.725-1.282H3.622c-1.026 0-1.945-.694-2.054-1.715A12.137 12.137 0 011.5 11.25c0-2.848.992-5.464 2.649-7.521C4.537 3.247 5.136 3 5.754 3H9.77a4.5 4.5 0 011.423.23l3.114 1.04a4.5 4.5 0 001.423.23zM21.669 13.023c.536-1.362.831-2.845.831-4.398 0-1.22-.182-2.398-.52-3.507-.26-.85-1.084-1.368-1.973-1.368H19.1c-.445 0-.72.498-.523.898.591 1.2.924 2.55.924 3.977a8.958 8.958 0 01-1.302 4.666c-.245.403.028.959.5.959h1.053c.832 0 1.612-.453 1.918-1.227z"/>
+      <path d="M15.73 5.25h1.035A7.465 7.465 0 0118 9.375a7.465 7.465 0 01-1.235 4.125h-.148c-.806 0-1.534.446-2.031 1.08a9.04 9.04 0 01-2.861 2.4c-.723.384-1.35.956-1.653 1.715a4.498 4.498 0 00-.322 1.672V21a.75.75 0 01-.75.75 2.25 2.25 0 01-2.25-2.25c0-1.152.26-2.243.723-3.218C7.74 15.724 7.366 15 6.748 15H3.622c-1.026 0-1.945-.694-2.054-1.715A12.134 12.134 0 011.5 12c0-2.848.992-5.464 2.649-7.521.388-.482.987-.729 1.605-.729H9.77a4.5 4.5 0 011.423.23l3.114 1.04a4.5 4.5 0 001.423.23zM21.669 13.773c.536-1.362.831-2.845.831-4.398 0-1.22-.182-2.398-.52-3.507-.26-.85-1.084-1.368-1.973-1.368H19.1c-.445 0-.72.498-.523.898.591 1.2.924 2.55.924 3.977a8.959 8.959 0 01-1.302 4.666c-.245.403.028.959.5.959h1.053c.832 0 1.612-.453 1.918-1.227z"/>
     </svg>
     """
   end
@@ -7235,7 +7808,7 @@ defmodule Heroicons.Solid do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M15.73 4.5h1.035A7.465 7.465 0 0118 8.625a7.465 7.465 0 01-1.235 4.125h-.148c-.806 0-1.534.446-2.031 1.08a9.04 9.04 0 01-2.861 2.4c-.723.384-1.35.956-1.653 1.715a4.499 4.499 0 00-.322 1.672v.633A.75.75 0 019 21a2.25 2.25 0 01-2.25-2.25c0-1.152.26-2.243.723-3.218.266-.558-.107-1.282-.725-1.282H3.622c-1.026 0-1.945-.694-2.054-1.715A12.137 12.137 0 011.5 11.25c0-2.848.992-5.464 2.649-7.521C4.537 3.247 5.136 3 5.754 3H9.77a4.5 4.5 0 011.423.23l3.114 1.04a4.5 4.5 0 001.423.23zM21.669 13.023c.536-1.362.831-2.845.831-4.398 0-1.22-.182-2.398-.52-3.507-.26-.85-1.084-1.368-1.973-1.368H19.1c-.445 0-.72.498-.523.898.591 1.2.924 2.55.924 3.977a8.958 8.958 0 01-1.302 4.666c-.245.403.028.959.5.959h1.053c.832 0 1.612-.453 1.918-1.227z\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M15.73 5.25h1.035A7.465 7.465 0 0118 9.375a7.465 7.465 0 01-1.235 4.125h-.148c-.806 0-1.534.446-2.031 1.08a9.04 9.04 0 01-2.861 2.4c-.723.384-1.35.956-1.653 1.715a4.498 4.498 0 00-.322 1.672V21a.75.75 0 01-.75.75 2.25 2.25 0 01-2.25-2.25c0-1.152.26-2.243.723-3.218C7.74 15.724 7.366 15 6.748 15H3.622c-1.026 0-1.945-.694-2.054-1.715A12.134 12.134 0 011.5 12c0-2.848.992-5.464 2.649-7.521.388-.482.987-.729 1.605-.729H9.77a4.5 4.5 0 011.423.23l3.114 1.04a4.5 4.5 0 001.423.23zM21.669 13.773c.536-1.362.831-2.845.831-4.398 0-1.22-.182-2.398-.52-3.507-.26-.85-1.084-1.368-1.973-1.368H19.1c-.445 0-.72.498-.523.898.591 1.2.924 2.55.924 3.977a8.959 8.959 0 01-1.302 4.666c-.245.403.028.959.5.959h1.053c.832 0 1.612-.453 1.918-1.227z\"/>\n</svg>"]}
   end
 
   @doc """
@@ -7263,7 +7836,7 @@ defmodule Heroicons.Solid do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M7.493 19.5c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 16.125c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3.75A.75.75 0 0115 3a2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 11.727a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507C2.28 20.482 3.105 21 3.994 21H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
+      <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z"/>
     </svg>
     """
   end
@@ -7279,7 +7852,7 @@ defmodule Heroicons.Solid do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M7.493 19.5c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 16.125c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3.75A.75.75 0 0115 3a2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 11.727a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507C2.28 20.482 3.105 21 3.994 21H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z\"/>\n</svg>"]}
   end
 
   @doc """
@@ -8434,6 +9007,50 @@ defmodule Heroicons.Solid do
   end
 
   @doc """
+  ![](assets/icons/solid/minus-small.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.minus_small />
+
+      <.minus_small class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= minus_small() %>
+
+      <%= minus_small(class: "h-6 w-6 text-gray-500") %>
+  """
+  def minus_small(assigns_or_opts \\ [])
+
+  def minus_small(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M5.25 12a.75.75 0 01.75-.75h12a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def minus_small(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M5.25 12a.75.75 0 01.75-.75h12a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+  end
+
+  @doc """
   ![](assets/icons/solid/minus.svg) {: width=24px}
 
   ## Examples
@@ -8458,7 +9075,7 @@ defmodule Heroicons.Solid do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M2.25 12a.75.75 0 01.75-.75h18a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M3.75 12a.75.75 0 01.75-.75h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75z" clip-rule="evenodd"/>
     </svg>
     """
   end
@@ -8474,7 +9091,7 @@ defmodule Heroicons.Solid do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M2.25 12a.75.75 0 01.75-.75h18a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M3.75 12a.75.75 0 01.75-.75h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>"]}
   end
 
   @doc """
@@ -8652,6 +9269,50 @@ defmodule Heroicons.Solid do
       end
 
     {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M6.72 5.66l11.62 11.62A8.25 8.25 0 006.72 5.66zm10.56 12.68L5.66 6.72a8.25 8.25 0 0011.62 11.62zM5.105 5.106c3.807-3.808 9.98-3.808 13.788 0 3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/solid/paint-brush.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.paint_brush />
+
+      <.paint_brush class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= paint_brush() %>
+
+      <%= paint_brush(class: "h-6 w-6 text-gray-500") %>
+  """
+  def paint_brush(assigns_or_opts \\ [])
+
+  def paint_brush(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M20.599 1.5c-.376 0-.743.111-1.055.32l-5.08 3.385a18.747 18.747 0 00-3.471 2.987 10.04 10.04 0 014.815 4.815 18.748 18.748 0 002.987-3.472l3.386-5.079A1.902 1.902 0 0020.599 1.5zm-8.3 14.025a18.76 18.76 0 001.896-1.207 8.026 8.026 0 00-4.513-4.513A18.75 18.75 0 008.475 11.7l-.278.5a5.26 5.26 0 013.601 3.602l.502-.278zM6.75 13.5A3.75 3.75 0 003 17.25a1.5 1.5 0 01-1.601 1.497.75.75 0 00-.7 1.123 5.25 5.25 0 009.8-2.62 3.75 3.75 0 00-3.75-3.75z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def paint_brush(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M20.599 1.5c-.376 0-.743.111-1.055.32l-5.08 3.385a18.747 18.747 0 00-3.471 2.987 10.04 10.04 0 014.815 4.815 18.748 18.748 0 002.987-3.472l3.386-5.079A1.902 1.902 0 0020.599 1.5zm-8.3 14.025a18.76 18.76 0 001.896-1.207 8.026 8.026 0 00-4.513-4.513A18.75 18.75 0 008.475 11.7l-.278.5a5.26 5.26 0 013.601 3.602l.502-.278zM6.75 13.5A3.75 3.75 0 003 17.25a1.5 1.5 0 01-1.601 1.497.75.75 0 00-.7 1.123 5.25 5.25 0 009.8-2.62 3.75 3.75 0 00-3.75-3.75z\" clip-rule=\"evenodd\"/>\n</svg>"]}
   end
 
   @doc """
@@ -9230,6 +9891,50 @@ defmodule Heroicons.Solid do
   end
 
   @doc """
+  ![](assets/icons/solid/plus-small.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.plus_small />
+
+      <.plus_small class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= plus_small() %>
+
+      <%= plus_small(class: "h-6 w-6 text-gray-500") %>
+  """
+  def plus_small(assigns_or_opts \\ [])
+
+  def plus_small(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M12 5.25a.75.75 0 01.75.75v5.25H18a.75.75 0 010 1.5h-5.25V18a.75.75 0 01-1.5 0v-5.25H6a.75.75 0 010-1.5h5.25V6a.75.75 0 01.75-.75z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def plus_small(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M12 5.25a.75.75 0 01.75.75v5.25H18a.75.75 0 010 1.5h-5.25V18a.75.75 0 01-1.5 0v-5.25H6a.75.75 0 010-1.5h5.25V6a.75.75 0 01.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+  end
+
+  @doc """
   ![](assets/icons/solid/plus.svg) {: width=24px}
 
   ## Examples
@@ -9254,7 +9959,7 @@ defmodule Heroicons.Solid do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v8.25H21a.75.75 0 010 1.5h-8.25V21a.75.75 0 01-1.5 0v-8.25H3a.75.75 0 010-1.5h8.25V3a.75.75 0 01.75-.75z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd"/>
     </svg>
     """
   end
@@ -9270,7 +9975,7 @@ defmodule Heroicons.Solid do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M12 2.25a.75.75 0 01.75.75v8.25H21a.75.75 0 010 1.5h-8.25V21a.75.75 0 01-1.5 0v-8.25H3a.75.75 0 010-1.5h8.25V3a.75.75 0 01.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>"]}
   end
 
   @doc """
@@ -9802,6 +10507,50 @@ defmodule Heroicons.Solid do
   end
 
   @doc """
+  ![](assets/icons/solid/rss.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.rss />
+
+      <.rss class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= rss() %>
+
+      <%= rss(class: "h-6 w-6 text-gray-500") %>
+  """
+  def rss(assigns_or_opts \\ [])
+
+  def rss(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M3.75 4.5a.75.75 0 01.75-.75h.75c8.284 0 15 6.716 15 15v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75C18 11.708 12.292 6 5.25 6H4.5a.75.75 0 01-.75-.75V4.5zm0 6.75a.75.75 0 01.75-.75h.75a8.25 8.25 0 018.25 8.25v.75a.75.75 0 01-.75.75H12a.75.75 0 01-.75-.75v-.75a6 6 0 00-6-6H4.5a.75.75 0 01-.75-.75v-.75zm0 7.5a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def rss(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M3.75 4.5a.75.75 0 01.75-.75h.75c8.284 0 15 6.716 15 15v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75C18 11.708 12.292 6 5.25 6H4.5a.75.75 0 01-.75-.75V4.5zm0 6.75a.75.75 0 01.75-.75h.75a8.25 8.25 0 018.25 8.25v.75a.75.75 0 01-.75.75H12a.75.75 0 01-.75-.75v-.75a6 6 0 00-6-6H4.5a.75.75 0 01-.75-.75v-.75zm0 7.5a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+  end
+
+  @doc """
   ![](assets/icons/solid/scale.svg) {: width=24px}
 
   ## Examples
@@ -10049,7 +10798,7 @@ defmodule Heroicons.Solid do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zm2.543 8.142a.75.75 0 10-.993-1.124 12.785 12.785 0 00-3.209 4.358L9.53 12.22a.75.75 0 00-1.06 1.06l2.135 2.136a.75.75 0 001.24-.289 11.264 11.264 0 013.214-4.815z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zm3.094 8.016a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"/>
     </svg>
     """
   end
@@ -10065,7 +10814,7 @@ defmodule Heroicons.Solid do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zm2.543 8.142a.75.75 0 10-.993-1.124 12.785 12.785 0 00-3.209 4.358L9.53 12.22a.75.75 0 00-1.06 1.06l2.135 2.136a.75.75 0 001.24-.289 11.264 11.264 0 013.214-4.815z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zm3.094 8.016a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z\" clip-rule=\"evenodd\"/>\n</svg>"]}
   end
 
   @doc """
@@ -11043,6 +11792,50 @@ defmodule Heroicons.Solid do
   end
 
   @doc """
+  ![](assets/icons/solid/user-minus.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.user_minus />
+
+      <.user_minus class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= user_minus() %>
+
+      <%= user_minus(class: "h-6 w-6 text-gray-500") %>
+  """
+  def user_minus(assigns_or_opts \\ [])
+
+  def user_minus(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10.375 2.25a4.125 4.125 0 100 8.25 4.125 4.125 0 000-8.25zM10.375 12a7.125 7.125 0 00-7.124 7.247.75.75 0 00.363.63 13.067 13.067 0 006.761 1.873c2.472 0 4.786-.684 6.76-1.873a.75.75 0 00.364-.63l.001-.12v-.002A7.125 7.125 0 0010.375 12zM16 9.75a.75.75 0 000 1.5h6a.75.75 0 000-1.5h-6z"/>
+    </svg>
+    """
+  end
+
+  def user_minus(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M10.375 2.25a4.125 4.125 0 100 8.25 4.125 4.125 0 000-8.25zM10.375 12a7.125 7.125 0 00-7.124 7.247.75.75 0 00.363.63 13.067 13.067 0 006.761 1.873c2.472 0 4.786-.684 6.76-1.873a.75.75 0 00.364-.63l.001-.12v-.002A7.125 7.125 0 0010.375 12zM16 9.75a.75.75 0 000 1.5h6a.75.75 0 000-1.5h-6z\"/>\n</svg>"]}
+  end
+
+  @doc """
   ![](assets/icons/solid/user-plus.svg) {: width=24px}
 
   ## Examples
@@ -11067,7 +11860,7 @@ defmodule Heroicons.Solid do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM2.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM18.75 7.5a.75.75 0 00-1.5 0v2.25H15a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H21a.75.75 0 000-1.5h-2.25V7.5z"/>
+      <path d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z"/>
     </svg>
     """
   end
@@ -11083,7 +11876,7 @@ defmodule Heroicons.Solid do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M5.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM2.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM18.75 7.5a.75.75 0 00-1.5 0v2.25H15a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H21a.75.75 0 000-1.5h-2.25V7.5z\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z\"/>\n</svg>"]}
   end
 
   @doc """
@@ -11172,6 +11965,50 @@ defmodule Heroicons.Solid do
       end
 
     {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/solid/variable.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.variable />
+
+      <.variable class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= variable() %>
+
+      <%= variable(class: "h-6 w-6 text-gray-500") %>
+  """
+  def variable(assigns_or_opts \\ [])
+
+  def variable(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M19.253 2.292a.75.75 0 01.955.461A28.123 28.123 0 0121.75 12c0 3.266-.547 6.388-1.542 9.247a.75.75 0 11-1.416-.494c.94-2.7 1.458-5.654 1.458-8.753s-.519-6.054-1.458-8.754a.75.75 0 01.461-.954zm-14.227.013a.75.75 0 01.414.976A23.183 23.183 0 003.75 12c0 3.085.6 6.027 1.69 8.718a.75.75 0 01-1.39.563c-1.161-2.867-1.8-6-1.8-9.281 0-3.28.639-6.414 1.8-9.281a.75.75 0 01.976-.414zm4.275 5.052a1.5 1.5 0 012.21.803l.716 2.148L13.6 8.246a2.438 2.438 0 012.978-.892l.213.09a.75.75 0 11-.584 1.381l-.214-.09a.937.937 0 00-1.145.343l-2.021 3.033 1.084 3.255 1.445-.89a.75.75 0 11.786 1.278l-1.444.889a1.5 1.5 0 01-2.21-.803l-.716-2.148-1.374 2.062a2.437 2.437 0 01-2.978.892l-.213-.09a.75.75 0 01.584-1.381l.214.09a.938.938 0 001.145-.344l2.021-3.032-1.084-3.255-1.445.89a.75.75 0 11-.786-1.278l1.444-.89z" clip-rule="evenodd"/>
+    </svg>
+    """
+  end
+
+  def variable(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M19.253 2.292a.75.75 0 01.955.461A28.123 28.123 0 0121.75 12c0 3.266-.547 6.388-1.542 9.247a.75.75 0 11-1.416-.494c.94-2.7 1.458-5.654 1.458-8.753s-.519-6.054-1.458-8.754a.75.75 0 01.461-.954zm-14.227.013a.75.75 0 01.414.976A23.183 23.183 0 003.75 12c0 3.085.6 6.027 1.69 8.718a.75.75 0 01-1.39.563c-1.161-2.867-1.8-6-1.8-9.281 0-3.28.639-6.414 1.8-9.281a.75.75 0 01.976-.414zm4.275 5.052a1.5 1.5 0 012.21.803l.716 2.148L13.6 8.246a2.438 2.438 0 012.978-.892l.213.09a.75.75 0 11-.584 1.381l-.214-.09a.937.937 0 00-1.145.343l-2.021 3.033 1.084 3.255 1.445-.89a.75.75 0 11.786 1.278l-1.444.889a1.5 1.5 0 01-2.21-.803l-.716-2.148-1.374 2.062a2.437 2.437 0 01-2.978.892l-.213-.09a.75.75 0 01.584-1.381l.214.09a.938.938 0 001.145-.344l2.021-3.032-1.084-3.255-1.445.89a.75.75 0 11-.786-1.278l1.444-.89z\" clip-rule=\"evenodd\"/>\n</svg>"]}
   end
 
   @doc """
@@ -11304,6 +12141,50 @@ defmodule Heroicons.Solid do
       end
 
     {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M15 3.75H9v16.5h6V3.75zM16.5 20.25h3.375c1.035 0 1.875-.84 1.875-1.875V5.625c0-1.036-.84-1.875-1.875-1.875H16.5v16.5zM4.125 3.75H7.5v16.5H4.125a1.875 1.875 0 01-1.875-1.875V5.625c0-1.036.84-1.875 1.875-1.875z\"/>\n</svg>"]}
+  end
+
+  @doc """
+  ![](assets/icons/solid/wallet.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+      <.wallet />
+
+      <.wallet class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+      <%= wallet() %>
+
+      <%= wallet(class: "h-6 w-6 text-gray-500") %>
+  """
+  def wallet(assigns_or_opts \\ [])
+
+  def wallet(assigns) when is_map(assigns) do
+    attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
+    assigns = @assign_mod.assign(assigns, :attrs, attrs)
+
+    ~H"""
+    <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2.273 5.625A4.483 4.483 0 015.25 4.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0018.75 3H5.25a3 3 0 00-2.977 2.625zM2.273 8.625A4.483 4.483 0 015.25 7.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0018.75 6H5.25a3 3 0 00-2.977 2.625zM5.25 9a3 3 0 00-3 3v6a3 3 0 003 3h13.5a3 3 0 003-3v-6a3 3 0 00-3-3H15a.75.75 0 00-.75.75 2.25 2.25 0 01-4.5 0A.75.75 0 009 9H5.25z"/>
+    </svg>
+    """
+  end
+
+  def wallet(opts) when is_list(opts) do
+    attrs =
+      for {k, v} <- opts do
+        safe_k =
+          k |> Atom.to_string() |> String.replace("_", "-") |> Phoenix.HTML.Safe.to_iodata()
+
+        safe_v = v |> Phoenix.HTML.Safe.to_iodata()
+
+        {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
+      end
+
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M2.273 5.625A4.483 4.483 0 015.25 4.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0018.75 3H5.25a3 3 0 00-2.977 2.625zM2.273 8.625A4.483 4.483 0 015.25 7.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0018.75 6H5.25a3 3 0 00-2.977 2.625zM5.25 9a3 3 0 00-3 3v6a3 3 0 003 3h13.5a3 3 0 003-3v-6a3 3 0 00-3-3H15a.75.75 0 00-.75.75 2.25 2.25 0 01-4.5 0A.75.75 0 009 9H5.25z\"/>\n</svg>"]}
   end
 
   @doc """
@@ -11509,7 +12390,7 @@ defmodule Heroicons.Solid do
 
     ~H"""
     <svg {@attrs} aria-hidden="true" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" d="M3.97 3.97a.75.75 0 011.06 0L12 10.94l6.97-6.97a.75.75 0 111.06 1.06L13.06 12l6.97 6.97a.75.75 0 11-1.06 1.06L12 13.06l-6.97 6.97a.75.75 0 01-1.06-1.06L10.94 12 3.97 5.03a.75.75 0 010-1.06z" clip-rule="evenodd"/>
+      <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd"/>
     </svg>
     """
   end
@@ -11525,7 +12406,7 @@ defmodule Heroicons.Solid do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
-    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M3.97 3.97a.75.75 0 011.06 0L12 10.94l6.97-6.97a.75.75 0 111.06 1.06L13.06 12l6.97 6.97a.75.75 0 11-1.06 1.06L12 13.06l-6.97 6.97a.75.75 0 01-1.06-1.06L10.94 12 3.97 5.03a.75.75 0 010-1.06z\" clip-rule=\"evenodd\"/>\n</svg>"]}
+    {:safe, ["<svg", Phoenix.HTML.Safe.to_iodata(attrs), " aria-hidden=\"true\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" d=\"M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z\" clip-rule=\"evenodd\"/>\n</svg>"]}
   end
 
 end
