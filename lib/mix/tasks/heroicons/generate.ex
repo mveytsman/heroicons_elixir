@@ -16,11 +16,8 @@ defmodule Mix.Tasks.Heroicons.Generate do
         remove_dimensions: true,
         sort_attributes: true,
         remove_attributes: ["stroke"],
-        remove_path_attributes: ["stroke-width"],
         add_attributes: [
-          {"stroke-width", "1.5"},
-          {"stroke", "currentColor"},
-          {"aria-hidden", "true"}
+          {"stroke", "currentColor"}
         ]
       ]
     },
@@ -36,8 +33,7 @@ defmodule Mix.Tasks.Heroicons.Generate do
         sort_attributes: true,
         remove_attributes: ["fill"],
         add_attributes: [
-          {"fill", "currentColor"},
-          {"aria-hidden", "true"}
+          {"fill", "currentColor"}
         ]
       ]
     },
@@ -53,8 +49,7 @@ defmodule Mix.Tasks.Heroicons.Generate do
         sort_attributes: true,
         remove_attributes: ["fill"],
         add_attributes: [
-          {"fill", "currentColor"},
-          {"aria-hidden", "true"}
+          {"fill", "currentColor"}
         ]
       ]
     }
