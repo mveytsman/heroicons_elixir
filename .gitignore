@@ -1,3 +1,6 @@
+# Downloaded icons
+/priv/icons/
+
 # MacOS
 .DS_Store
 .AppleDouble
@@ -30,6 +33,6 @@ heroicons-*.tar
 # Temporary files for e.g. tests
 /tmp
 
-# Elixir deps
+# Nix deps
 .nix-mix/
 .nix-hex/
