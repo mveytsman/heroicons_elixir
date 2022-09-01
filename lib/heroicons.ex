@@ -38,11 +38,10 @@ defmodule Heroicons do
   @doc false
   def svgs_path, do: Path.join(:code.priv_dir(:heroicons), "icons")
 
-  def icons_path(style), do: Path.join(svgs_path(), style)
-
   def update do
     version = configured_version()
     tmp_dir = Path.join(System.tmp_dir!(), @tmp_dir_name)
+    svgs_dir = Path.join([tmp_dir, "heroicons-#{version}", "optimized"])
 
     File.rm_rf!(tmp_dir)
     File.mkdir_p!(tmp_dir)
@@ -56,22 +55,27 @@ defmodule Heroicons do
     end
 
     # Copy icon styles, mini, outline and solid, to priv folder
-    Path.join([tmp_dir, "heroicons-#{version}", "optimized"])
+    svgs_dir
     |> File.ls!()
     |> Enum.each(fn size ->
       case size do
-        "20" -> copy_svg_files(size, "solid", "mini")
-        "24" -> Enum.each(File.ls!(), fn style -> copy_svg_files(size, style, style) end)
-        _ -> true
+        "20" ->
+          copy_svg_files(Path.join([svgs_dir, size, "solid"]), "mini")
+
+        "24" ->
+          Path.join(svgs_dir, size)
+          |> File.ls!()
+          |> Enum.each(fn style -> copy_svg_files(Path.join([svgs_dir, size, style]), style) end)
+
+        _ ->
+          true
       end
     end)
   end
 
-  defp copy_svg_files(icons_size, src_dir_name, output_dir_name) do
-    tmp_dir = Path.join(System.tmp_dir!(), @tmp_dir_name)
-    svgs_temp_dir = Path.join([tmp_dir, "heroicons-#{configured_version()}", "optimized"])
-
-    File.cp_r!(Path.join([svgs_temp_dir, icons_size, src_dir_name]), icons_path(output_dir_name))
+  defp copy_svg_files(src_dir, style) do
+    dest_dir = Path.join(svgs_path(), style)
+    File.cp_r!(src_dir, dest_dir)
   end
 
   defp fetch_body!(url) do
