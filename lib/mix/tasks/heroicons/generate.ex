@@ -2,6 +2,8 @@ defmodule Mix.Tasks.Heroicons.Generate do
   use Mix.Task
   import Mix.Heroicons.GeneratorHelpers
 
+  @shortdoc "Generate heroicons"
+
   @icon_sets [
     %{
       module: Heroicons.Outline,
@@ -42,7 +44,8 @@ defmodule Mix.Tasks.Heroicons.Generate do
     %{
       module: Heroicons.Mini,
       path: "lib/heroicons/mini.ex",
-      moduledoc: "Solid style icons drawn with fills, packaged as Phoenix Components.\n\n  For smaller elements like buttons, form elements, and to support text,\n  designed to be rendered at 20x20.",
+      moduledoc:
+        "Solid style icons drawn with fills, packaged as Phoenix Components.\n\n  For smaller elements like buttons, form elements, and to support text,\n  designed to be rendered at 20x20.",
       icon_dir: "icons/mini/",
       # Following https://github.com/tailwindlabs/heroicons/blob/b933d51df1f27c35414389fea185e9bac0097481/svgo.20.solid.yaml
       svg_opts: [
@@ -59,13 +62,18 @@ defmodule Mix.Tasks.Heroicons.Generate do
 
   @impl Mix.Task
   def run(_args) do
-    for %{module: module, path: path, moduledoc: moduledoc, icon_dir: icon_dir, svg_opts: svg_opts} <-
+    for %{
+          module: module,
+          path: path,
+          moduledoc: moduledoc,
+          icon_dir: icon_dir,
+          svg_opts: svg_opts
+        } <-
           @icon_sets do
       icon_paths =
         Path.absname(icon_dir, :code.priv_dir(:heroicons))
         |> Path.join("*.svg")
         |> Path.wildcard()
-
 
       Mix.Generator.create_file(
         path,
