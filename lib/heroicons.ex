@@ -75,6 +75,7 @@ defmodule Heroicons do
 
   defp copy_svg_files(src_dir, style) do
     dest_dir = Path.join(svgs_path(), style)
+    File.mkdir_p!(dest_dir)
     File.cp_r!(src_dir, dest_dir)
   end
 
