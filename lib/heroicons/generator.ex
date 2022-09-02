@@ -9,7 +9,8 @@ defmodule Heroicons.Generator do
     require Phoenix.Component
 
     for path <- icon_paths do
-      generate(path)
+      relative_path = Path.relative_to(path, :code.priv_dir(:heroicons))
+      generate(relative_path)
     end
   end
 
@@ -18,7 +19,7 @@ defmodule Heroicons.Generator do
     name = Heroicons.Generator.name(path)
 
     quote do
-      @doc Heroicons.Generator.doc(unquote(path))
+      @doc Heroicons.Generator.doc(unquote(name), unquote(path))
       def unquote(name)(assigns_or_opts \\ [])
 
       def unquote(name)(assigns) when is_map(assigns) do
@@ -39,18 +40,16 @@ defmodule Heroicons.Generator do
   end
 
   @doc false
-  def doc(path) do
-    name = name(path)
-
+  def doc(name, path) do
     """
-    ![](assets/#{Path.relative_to(path, :code.priv_dir(:heroicons))}) {: width=24px}
+    ![](assets/#{path}) {: width=24px}
 
     ## Examples
 
     Use as a `Phoenix.Component`
 
         <.#{name} />
-        <.#{name} class="h-6 w-6 text-gray-500" />
+        <.#{name} class="w-6 h-6 text-gray-500" />
 
     or as a function
 

@@ -69,7 +69,9 @@ defmodule Heroicons.Cache do
   end
 
   defp read_body(path) do
-    icon = File.read!(path)
+    icon =
+      Path.join(:code.priv_dir(:heroicons), path)
+      |> File.read!()
 
     <<"<svg ", body::binary>> = icon
 
