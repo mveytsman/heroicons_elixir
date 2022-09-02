@@ -1,25 +1,33 @@
 defmodule Heroicons do
+  @latest_version "2.0.10"
+
   @moduledoc """
   This library provides Phoenix Components for every [Heroicon](https://github.com/tailwindlabs/heroicons).
-  See `Heroicons.Outline` and `Heroicons.Solid` for the two styles of icon.
+  See `Heroicons.Outline`, `Heroicons.Solid` and `Heroicons.Mini` for the three styles of icon.
 
   ## Examples
-      <Heroicons.Outline.adjustments />
+      <Heroicons.Outline.adjustments_vertical />
 
-      <Heroicons.Solid.arrow_circle_right class="w-6 h-6" />
+      <Heroicons.Solid.arrow_right_circle class="w-6 h-6" />
+
+      <Heroicons.Mini.bell class="w-4 h-4" />
 
   Can also be used as a function
 
-      <%= Heroicons.Outline.adjustments() %>
+      <%= Heroicons.Outline.adjustments_vertical() %>
 
-      <%= Heroicons.Solid.arrow_circle_right(class: "w-6 h-6") />
+      <%= Heroicons.Solid.arrow_right_circle(class: "w-6 h-6") />
+
+      <%= Heroicons.Mini.bell(class: "w-4 h-4") />
+
+
+  This library comes pre-packaged with the icons from Heroicons version `#{@latest_version}`,
+  but can be locally configured and updated. See `Mix.Tasks.Heroicons.Update` for details
 
   Heroicons are designed by [Steve Schoger](https://twitter.com/steveschoger)
   """
 
   # https://github.com/tailwindlabs/heroicons/releases
-
-  @latest_version "2.0.10"
 
   @tmp_dir_name "heroicons-elixir"
   use Application
@@ -28,7 +36,7 @@ defmodule Heroicons do
   @doc false
   def start(_type, _args) do
     children = [
-      {Heroicons.IconCache, []}
+      {Heroicons.Cache, []}
     ]
 
     opts = [strategy: :one_for_one, name: Heroicons.Supervisor]

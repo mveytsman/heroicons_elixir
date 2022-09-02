@@ -1,4 +1,5 @@
 defmodule Heroicons.Generator do
+  @moduledoc false
   defmacro __using__(icon_dir: icon_dir) do
     icon_paths =
       Path.absname(icon_dir, :code.priv_dir(:heroicons))
@@ -73,7 +74,7 @@ defmodule Heroicons.Generator do
 
     {component, _binding} =
       Code.eval_quoted(
-        Heroicons.IconCache.fetch_component(path),
+        Heroicons.Cache.fetch_component(path),
         assigns: assigns
       )
 
@@ -97,7 +98,7 @@ defmodule Heroicons.Generator do
        "<svg",
        Phoenix.HTML.Safe.to_iodata(attrs),
        " ",
-       Heroicons.IconCache.fetch_body(path)
+       Heroicons.Cache.fetch_body(path)
      ]}
   end
 end

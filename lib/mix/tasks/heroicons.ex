@@ -1,7 +1,9 @@
 defmodule Mix.Tasks.Heroicons do
   @moduledoc """
   Invokes heroicons mix utilities.
+
   Usage:
+
       $ mix heroicons
   """
 

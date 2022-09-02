@@ -2,9 +2,13 @@
 
 [Heroicons](https://github.com/tailwindlabs/heroicons) are "a set of free MIT-licensed high-quality SVG icons for you to use in your web projects". This package gives you Elixir functions to drop Heroicons into your HTML, styled with arbitrary classes.
 
+This library provides optimized svgs for each Heroicon packaged as a Phoenix Component (and as a function for backwards-compatibility).
+
+In order to provide the best balance of fast compilation times and run-time performance, Phoenix Components are just-in-time compiled on first use and then cached in an ETS-backed cache.
+
 Heroicons are designed by [Steve Schoger](https://twitter.com/steveschoger)
 
-Current Heroicons Version: **2.0.0**
+Current Heroicons Version: **2.0.10**. It's possible to configure a different Heroicon version locally, see [mix heroicons.update](https://hexdocs.pm/heroicons/Mix.Tasks.Heroicons.Update.html)
 
 ## Installation
 
@@ -31,7 +35,7 @@ The components are in `Heroicons.Solid`, `Heroicons.Outline`, and `Heroicons.Min
 and style it with some classes
 
 ```eex
-<Heroicons.Solid.cake class="h-6 w-6 text-gray-500" />
+<Heroicons.Solid.cake class="w-6 h-6 text-gray-500" />
 ```
 
 There are also function versions of each component:

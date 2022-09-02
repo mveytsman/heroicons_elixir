@@ -1,11 +1,18 @@
-defmodule Heroicons.IconCache do
-  @doc "Get's an icon's body from the filesystem"
+defmodule Heroicons.Cache do
+  @moduledoc """
+  An ETS-backed cache for icons. We cache both pre-compiled Phoenix Components and icon bodies as strings.
+
+  Uses the icon's path on disk as a key.
+  """
+
   use GenServer
 
   @name __MODULE__
 
+  @doc false
   def start_link(_), do: GenServer.start_link(__MODULE__, [], name: @name)
 
+  @doc "Fetch a pre-compiled Phoenix Component from the cache or disk, given a `path`"
   def fetch_component(path) do
     case :ets.lookup(@name.Components, path) do
       [{^path, component}] ->
@@ -16,6 +23,7 @@ defmodule Heroicons.IconCache do
     end
   end
 
+  @doc "Fetch a icon's body from the cache or disk, given a `path`"
   def fetch_body(path) do
     case :ets.lookup(@name, path) do
       [{^path, body}] ->
@@ -26,6 +34,7 @@ defmodule Heroicons.IconCache do
     end
   end
 
+  @impl true
   def init(_) do
     :ets.new(@name, [:set, :protected, :named_table])
     :ets.new(@name.Components, [:set, :protected, :named_table])
@@ -33,6 +42,7 @@ defmodule Heroicons.IconCache do
     {:ok, []}
   end
 
+  @impl true
   def handle_call({:cache_body, path}, _ref, state) do
     body = read_body(path)
 
