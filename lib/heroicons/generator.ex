@@ -43,11 +43,16 @@ defmodule Heroicons.Generator do
 
     """
     ![](assets/#{Path.relative_to(path, :code.priv_dir(:heroicons))}) {: width=24px}
+
     ## Examples
+
     Use as a `Phoenix.Component`
+
         <.#{name} />
         <.#{name} class="h-6 w-6 text-gray-500" />
+
     or as a function
+
         <%= #{name}() %>
         <%= #{name}(class: "h-6 w-6 text-gray-500") %>
     """

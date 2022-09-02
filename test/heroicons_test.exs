@@ -4,9 +4,13 @@ defmodule HeroiconsTest do
   import Phoenix.LiveViewTest
 
   test "generated function" do
-    assert Heroicons.Outline.academic_cap()
-           |> Phoenix.HTML.safe_to_string() =~
-             ~s(<svg aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\")
+    result = Phoenix.HTML.safe_to_string(Heroicons.Outline.academic_cap())
+    assert result =~ ~s(<svg )
+    assert result =~ ~s(aria-hidden="true")
+    assert result =~ ~s(fill="none")
+    assert result =~ ~s(stroke="currentColor")
+    assert result =~ ~s(stroke-width="1.5")
+    assert result =~ ~s(viewBox="0 0 24 24")
 
     assert Heroicons.Outline.academic_cap(class: "h-6 w-6 text-gray-500")
            |> Phoenix.HTML.safe_to_string() =~
@@ -30,11 +34,19 @@ defmodule HeroiconsTest do
   end
 
   test "generated components" do
-    assert render_component(&Heroicons.Outline.academic_cap/1, assigns()) =~
-             ~s(<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24")
+    outline = render_component(&Heroicons.Outline.academic_cap/1, assigns())
+    assert outline =~ ~s(<svg )
+    assert outline =~ ~s(aria-hidden="true")
+    assert outline =~ ~s(fill="none")
+    assert outline =~ ~s(stroke="currentColor")
+    assert outline =~ ~s(stroke-width="1.5")
+    assert outline =~ ~s(viewBox="0 0 24 24")
 
-    assert render_component(&Heroicons.Solid.academic_cap/1, assigns()) =~
-             ~s(<svg aria-hidden="true" fill="currentColor" viewBox="0 0 24 24")
+    solid = render_component(&Heroicons.Solid.academic_cap/1, assigns())
+    assert solid =~ ~s(<svg )
+    assert solid =~ ~s(aria-hidden="true")
+    assert solid =~ ~s(fill="currentColor")
+    assert solid =~ ~s(viewBox="0 0 24 24")
 
     assert render_component(
              &Heroicons.Outline.academic_cap/1,
@@ -42,8 +54,11 @@ defmodule HeroiconsTest do
            ) =~
              ~s(class="h-6 w-6 text-gray-500")
 
-    assert render_component(&Heroicons.Mini.academic_cap/1, assigns()) =~
-             ~s(<svg aria-hidden="true" fill="currentColor" viewBox="0 0 20 20")
+    mini = render_component(&Heroicons.Mini.academic_cap/1, assigns())
+    assert solid =~ ~s(<svg )
+    assert solid =~ ~s(aria-hidden="true")
+    assert solid =~ ~s(fill="currentColor")
+    assert solid =~ ~s(viewBox="0 0 24 24")
   end
 
   test "generated docs" do
@@ -64,13 +79,11 @@ defmodule HeroiconsTest do
            Use as a `Phoenix.Component`
 
                <.academic_cap />
-
                <.academic_cap class="h-6 w-6 text-gray-500" />
 
            or as a function
 
                <%= academic_cap() %>
-
                <%= academic_cap(class: "h-6 w-6 text-gray-500") %>
            """
   end
