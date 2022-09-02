@@ -15,8 +15,12 @@ defmodule Mix.Tasks.Heroicons.Update do
     {_opts, args} = OptionParser.parse!(args, strict: [])
 
     case args do
-      [] -> Heroicons.update()
-      _ -> Mix.raise("Invalid arguments, expected: mix heroicons.update")
+      [] ->
+        Heroicons.update()
+        Mix.Task.run("deps.compile", [:heroicons, "--force"])
+
+      _ ->
+        Mix.raise("Invalid arguments, expected: mix heroicons.update")
     end
   end
 end
