@@ -54,7 +54,7 @@ defmodule Heroicons.Generator do
     or as a function
 
         <%= #{name}() %>
-        <%= #{name}(class: "h-6 w-6 text-gray-500") %>
+        <%= #{name}(class: "w-6 h-6 text-gray-500") %>
     """
   end
 

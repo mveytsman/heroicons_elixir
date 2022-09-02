@@ -42,7 +42,7 @@ There are also function versions of each component:
 ```eex
 <%= Heroicons.Solid.cake() %>
 
-<%= Heroicons.Solid.cake(class: "h-6 w-6 text-gray-500") %>
+<%= Heroicons.Solid.cake(class: "w-6 h-6 text-gray-500") %>
 ```
 
 For a full list of icons see [the docs](https://hexdocs.pm/heroicons/api-reference.html) or [heroicons.com](https://heroicons.com/).

@@ -12,9 +12,9 @@ defmodule HeroiconsTest do
     assert result =~ ~s(stroke-width="1.5")
     assert result =~ ~s(viewBox="0 0 24 24")
 
-    assert Heroicons.Outline.academic_cap(class: "h-6 w-6 text-gray-500")
+    assert Heroicons.Outline.academic_cap(class: "w-6 h-6 text-gray-500")
            |> Phoenix.HTML.safe_to_string() =~
-             ~s(class="h-6 w-6 text-gray-500")
+             ~s(class="w-6 h-6 text-gray-500")
 
     assert Heroicons.Outline.academic_cap(class: "<> \" ")
            |> Phoenix.HTML.safe_to_string() =~
@@ -50,9 +50,9 @@ defmodule HeroiconsTest do
 
     assert render_component(
              &Heroicons.Outline.academic_cap/1,
-             assigns(class: "h-6 w-6 text-gray-500")
+             assigns(class: "w-6 h-6 text-gray-500")
            ) =~
-             ~s(class="h-6 w-6 text-gray-500")
+             ~s(class="w-6 h-6 text-gray-500")
 
     mini = render_component(&Heroicons.Mini.academic_cap/1, assigns())
     assert solid =~ ~s(<svg )
@@ -79,12 +79,12 @@ defmodule HeroiconsTest do
            Use as a `Phoenix.Component`
 
                <.academic_cap />
-               <.academic_cap class="h-6 w-6 text-gray-500" />
+               <.academic_cap class="w-6 h-6 text-gray-500" />
 
            or as a function
 
                <%= academic_cap() %>
-               <%= academic_cap(class: "h-6 w-6 text-gray-500") %>
+               <%= academic_cap(class: "w-6 h-6 text-gray-500") %>
            """
   end
 
