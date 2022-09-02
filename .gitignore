@@ -1,3 +1,11 @@
+# Downloaded icons
+/priv/icons/
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
 # The directory Mix will write compiled artifacts to.
 /_build/
 
@@ -22,10 +30,9 @@ erl_crash.dump
 # Ignore package tarball (built via "mix hex.build").
 heroicons-*.tar
 
-
 # Temporary files for e.g. tests
 /tmp
 
-# Elixir deps
+# Nix deps
 .nix-mix/
 .nix-hex/

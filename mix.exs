@@ -12,7 +12,8 @@ defmodule HeroiconsElixir.MixProject do
       source_url: "https://github.com/mveytsman/heroicons_elixir",
       description: "Phoenix components for Heroicons!",
       docs: docs(),
-      package: package()
+      package: package(),
+      xref: [exclude: [:httpc, :public_key]]
     ]
   end
 
@@ -29,7 +30,8 @@ defmodule HeroiconsElixir.MixProject do
       {:phoenix_html, "~> 2.14 or ~> 3.0"},
       {:phoenix_live_view, ">= 0.16.0", optional: true},
       {:ex_doc, "~> 0.23", only: :dev, runtime: false},
-      {:saxy, "~> 1.4", only: [:dev, :test]}
+      {:saxy, "~> 1.4", only: [:dev, :test]},
+      {:castore, ">= 0.0.0"}
     ]
   end
 
