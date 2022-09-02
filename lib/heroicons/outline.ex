@@ -6,5 +6,5 @@ defmodule Heroicons.Outline do
   designed to be rendered at 24x24.
   """
 
-  use Heroicons.Generator, icon_dir: "icons/solid/"
+  use Heroicons.Generator, icon_dir: "icons/outline/"
 end
