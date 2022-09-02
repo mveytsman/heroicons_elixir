@@ -66,14 +66,13 @@ defmodule Heroicons.Generator do
     attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
     assigns = @assign_mod.assign(assigns, :attrs, attrs)
 
-    EEx.compile_string("<svg {@attrs}" <> Heroicons.IconCache.icon_body(path),
-      engine: Phoenix.LiveView.HTMLEngine,
-      file: __ENV__.file,
-      line: __ENV__.line + 1,
-      module: __ENV__.module,
-      indentation: 0,
-      assigns: assigns
-    )
+    {component, _binding} =
+      Code.eval_quoted(
+        Heroicons.IconCache.fetch_component(path),
+        assigns: assigns
+      )
+
+    component
   end
 
   @doc false
@@ -93,7 +92,7 @@ defmodule Heroicons.Generator do
        "<svg",
        Phoenix.HTML.Safe.to_iodata(attrs),
        " ",
-       Heroicons.IconCache.icon_body(path)
+       Heroicons.IconCache.fetch_body(path)
      ]}
   end
 end

@@ -18,11 +18,22 @@ defmodule Heroicons do
   """
 
   # https://github.com/tailwindlabs/heroicons/releases
+
   @latest_version "2.0.10"
 
   @tmp_dir_name "heroicons-elixir"
-
+  use Application
   require Logger
+
+  @doc false
+  def start(_type, _args) do
+    children = [
+      {Heroicons.IconCache, []}
+    ]
+
+    opts = [strategy: :one_for_one, name: Heroicons.Supervisor]
+    Supervisor.start_link(children, opts)
+  end
 
   @doc false
   # Latest known version at the time of publishing.
