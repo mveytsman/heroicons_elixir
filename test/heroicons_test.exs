@@ -55,10 +55,10 @@ defmodule HeroiconsTest do
              ~s(class="w-6 h-6 text-gray-500")
 
     mini = render_component(&Heroicons.Mini.academic_cap/1, assigns())
-    assert solid =~ ~s(<svg )
-    assert solid =~ ~s(aria-hidden="true")
-    assert solid =~ ~s(fill="currentColor")
-    assert solid =~ ~s(viewBox="0 0 24 24")
+    assert mini =~ ~s(<svg )
+    assert mini =~ ~s(aria-hidden="true")
+    assert mini =~ ~s(fill="currentColor")
+    assert mini =~ ~s(viewBox="0 0 20 20")
   end
 
   test "generated docs" do
