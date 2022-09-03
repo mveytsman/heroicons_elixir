@@ -1,8 +1,11 @@
 # Changelog
 
+## 0.4.1
+### Enchancements
+- Further optimize the JIT Phoenix Component compiler
+
 ## 0.4.0
 ### Enchancements
-
 - Update to Heroicons 2 (https://github.com/mveytsman/heroicons_elixir/pull/12)
 - Add update task and generate optimized version of icons (https://github.com/mveytsman/heroicons_elixir/pull/13)
 - Optimize compile times by no longer reading every icon during compliation.

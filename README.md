@@ -17,7 +17,7 @@ Add Heroicons to your `mix.exs`:
 ```elixir
 defp deps do
   [
-    {:heroicons, "~> 0.4.0"}
+    {:heroicons, "~> 0.4.1"}
   ]
 end
 ```
