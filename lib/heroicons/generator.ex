@@ -71,13 +71,33 @@ defmodule Heroicons.Generator do
     attrs = @assigns_to_attrs_mod.assigns_to_attributes(assigns)
     assigns = @assign_mod.assign(assigns, :attrs, attrs)
 
-    {component, _binding} =
-      Code.eval_quoted(
-        Heroicons.Cache.fetch_component(path),
-        assigns: assigns
-      )
+    dynamic = fn track_changes? ->
+      changed =
+        case assigns do
+          %{__changed__: changed} when track_changes? -> changed
+          _ -> nil
+        end
 
-    component
+      attrs =
+        case Phoenix.LiveView.Engine.changed_assign?(changed, :attrs) do
+          true -> elem(Phoenix.HTML.attributes_escape(assigns.attrs), 1)
+          false -> nil
+        end
+
+      [attrs]
+    end
+
+    {icon_body, fingerprint} = Heroicons.Cache.fetch_icon(path)
+
+    %Phoenix.LiveView.Rendered{
+      static: [
+        "<svg",
+        icon_body
+      ],
+      dynamic: dynamic,
+      fingerprint: fingerprint,
+      root: true
+    }
   end
 
   @doc false
@@ -92,12 +112,13 @@ defmodule Heroicons.Generator do
         {:safe, [?\s, safe_k, ?=, ?", safe_v, ?"]}
       end
 
+    {icon_body, _fingerprint} = Heroicons.Cache.fetch_icon(path)
+
     {:safe,
      [
        "<svg",
        Phoenix.HTML.Safe.to_iodata(attrs),
-       " ",
-       Heroicons.Cache.fetch_body(path)
+       icon_body
      ]}
   end
 end
