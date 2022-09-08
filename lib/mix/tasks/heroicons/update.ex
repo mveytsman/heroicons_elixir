@@ -25,7 +25,6 @@ defmodule Mix.Tasks.Heroicons.Update do
     case args do
       [] ->
         Heroicons.update()
-        Mix.Task.run("deps.compile", [:heroicons, "--force"])
 
       _ ->
         Mix.raise("Invalid arguments, expected: mix heroicons.update")

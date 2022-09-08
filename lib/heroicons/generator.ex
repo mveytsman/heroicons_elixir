@@ -8,17 +8,35 @@ defmodule Heroicons.Generator do
 
     require Phoenix.Component
 
-    for path <- icon_paths do
-      relative_path = Path.relative_to(path, :code.priv_dir(:heroicons))
-      generate(relative_path)
-    end
+    recompile_quoted =
+      quote do
+        @paths_hash :erlang.md5(unquote(icon_paths))
+        def __mix_recompile__?() do
+          icon_paths =
+            Path.absname(unquote(icon_dir), :code.priv_dir(:heroicons))
+            |> Path.join("*.svg")
+            |> Path.wildcard()
+
+          :erlang.md5(icon_paths) != @paths_hash
+        end
+      end
+
+    icons_quoted =
+      for path <- icon_paths do
+        generate(path)
+      end
+
+    [recompile_quoted | icons_quoted]
   end
 
   @doc false
-  def generate(path) do
+  def generate(absolute_path) do
+    path = Path.relative_to(absolute_path, :code.priv_dir(:heroicons))
     name = Heroicons.Generator.name(path)
 
     quote do
+      @external_resource unquote(absolute_path)
+
       @doc Heroicons.Generator.doc(unquote(name), unquote(path))
       def unquote(name)(assigns_or_opts \\ [])
 
