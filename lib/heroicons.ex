@@ -1,5 +1,5 @@
 defmodule Heroicons do
-  @latest_version "2.0.10"
+  @latest_version "2.0.11"
 
   @moduledoc """
   This library provides Phoenix Components for every [Heroicon](https://github.com/tailwindlabs/heroicons).
