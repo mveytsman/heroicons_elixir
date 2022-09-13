@@ -8,7 +8,7 @@ In order to provide the best balance of fast compilation times and run-time perf
 
 Heroicons are designed by [Steve Schoger](https://twitter.com/steveschoger)
 
-Current Heroicons Version: **2.0.10**. It's possible to configure a different Heroicon version locally, see [mix heroicons.update](https://hexdocs.pm/heroicons/Mix.Tasks.Heroicons.Update.html)
+Current Heroicons Version: **2.0.11**. It's possible to configure a different Heroicon version locally, see [mix heroicons.update](https://hexdocs.pm/heroicons/Mix.Tasks.Heroicons.Update.html)
 
 ## Installation
 
@@ -17,7 +17,7 @@ Add Heroicons to your `mix.exs`:
 ```elixir
 defp deps do
   [
-    {:heroicons, "~> 0.4.1"}
+    {:heroicons, "~> 0.4.2"}
   ]
 end
 ```
@@ -39,6 +39,7 @@ and style it with some classes
 ```
 
 There are also function versions of each component:
+
 ```eex
 <%= Heroicons.Solid.cake() %>
 
