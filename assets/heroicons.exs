@@ -69,7 +69,7 @@ defmodule Heroicons do
 
   defp svg_solid(assigns) do
     ~H"""
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" {@rest}>
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" {@rest}>
       <%%= {:safe, @paths} %>
     </svg>
     """
