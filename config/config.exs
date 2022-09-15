@@ -1,7 +1,4 @@
 import Config
 
-config :heroicons,
-  version: "2.0.10",
-  another: [
-    args: ["--version"]
-  ]
+# silence phoenix warnings
+config :phoenix, :json_library, Heroicons
