@@ -1,11 +1,24 @@
 # Changelog
 
+## 0.5.0
+
+### Backwards incompatible changes
+- Render icons outside HEEx function components has been dropped. Use the function component syntax instead: `<Heroicons.cake />`
+- The separate modules `Heroicons.Outline|Solid|Mini` have been dropped in favor of a single `Heroicons` module.
+  By default, this module renders the outline style, but a `solid` or `mini` attribute can be provided to
+  select styling.
+
+### Enhancements
+- Provide unified interface with `solid`, and `mini` attributes for styling.
+- Optimize svg generation for LiveView diffing.
+
 ## 0.4.1
-### Enchancements
+
+### Enhancements
 - Further optimize the JIT Phoenix Component compiler
 
 ## 0.4.0
-### Enchancements
+### Enhancements
 - Update to Heroicons 2 (https://github.com/mveytsman/heroicons_elixir/pull/12)
 - Add update task and generate optimized version of icons (https://github.com/mveytsman/heroicons_elixir/pull/13)
 - Optimize compile times by no longer reading every icon during compliation.
@@ -13,7 +26,7 @@
 
 ## 0.3.2 (2022-02-21)
 
-### Enchancements
+### Enhancements
   - Update heroicons to 1.0.5 (https://github.com/mveytsman/heroicons_elixir/pull/8)
 
 
