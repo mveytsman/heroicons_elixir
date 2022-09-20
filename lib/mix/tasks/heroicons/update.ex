@@ -3,7 +3,7 @@ defmodule Mix.Tasks.Heroicons.Update do
   @moduledoc false
   @shortdoc false
 
-  @vsn "2.0.10"
+  @vsn "2.0.11"
   @tmp_dir_name "heroicons-elixir"
 
   # Updates the icons in the assets/icons directory
