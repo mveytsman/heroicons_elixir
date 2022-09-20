@@ -24,7 +24,7 @@ After that, run `mix deps.get`.
 
 ## Usage
 
-The components are provided by the  `Heroicons`  module. Each icon is a Phoenix Component you can use in your HEEx templates.
+The components are provided by the `Heroicons` module. Each icon is a Phoenix Component you can use in your HEEx templates.
 
 By default the outline style is used:
 
