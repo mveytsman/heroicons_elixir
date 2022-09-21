@@ -11,6 +11,7 @@
 ### Enhancements
 - Provide unified interface with `solid`, and `mini` attributes for styling.
 - Optimize svg generation for LiveView diffing.
+- Update to Heroicons 2.11
 
 ## 0.4.1
 
