@@ -1,6 +1,6 @@
 # Heroicons
 
-[Heroicons](heroicons.com) are "a set of free MIT-licensed high-quality SVG icons for you to use in your web projects". This package gives you Elixir functions to drop Heroicons into your HTML, styled with arbitrary classes.
+[Heroicons](https://heroicons.com) are "a set of free MIT-licensed high-quality SVG icons for you to use in your web projects". This package gives you Elixir functions to drop Heroicons into your HTML, styled with arbitrary classes.
 
 This library provides optimized svgs for each Heroicon packaged as a Phoenix Component.
 
