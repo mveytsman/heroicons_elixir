@@ -26,17 +26,20 @@ After that, run `mix deps.get`.
 
 The components are provided by the `Heroicons` module. Each icon is a Phoenix Component you can use in your HEEx templates.
 
-By default the outline style is used:
+By default, the icon components will use the outline style, but the `solid` or
+`mini` attributes may be passed to select styling, for example:
 
 ```eex
-<Heroicons.Solid.cake />
+<Heroicons.cake />
+<Heroicons.cake solid />
+<Heroicons.cake mini />
 ```
 
-You can render the solid or mini styles by providing the `solid` or `mini` flags:
+You can also pass arbitrary HTML attributes to the components:
 
-```eex
-<Heroicons.Solid.cake solid />
-<Heroicons.Solid.cake mini />
+ ```eex
+<Heroicons.cake class="w-2 h-2" />
+<Heroicons.cake solid class="w-2 h-2" />
 ```
 
 You can also provide arbitrary HTML attributes to the svg tag, such as classes:
