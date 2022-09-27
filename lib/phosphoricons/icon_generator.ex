@@ -65,9 +65,9 @@ defmodule Phosphoricons.IconGenerator do
       def unquote(name)(assigns_or_opts \\ [])
 
       def unquote(name)(var!(assigns)) when is_map(var!(assigns)) do
-        var!(attrs) = Phoenix.LiveView.Helpers.assigns_to_attributes(var!(assigns))
+        var!(attrs) = Phoenix.Component.assigns_to_attributes(var!(assigns))
 
-        var!(assigns) = Phoenix.LiveView.assign(var!(assigns), :attrs, var!(attrs))
+        var!(assigns) = Phoenix.Component.assign(var!(assigns), :attrs, var!(attrs))
 
         unquote(
           EEx.compile_string(head <> "{@attrs}" <> body,
