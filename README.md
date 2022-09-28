@@ -35,17 +35,11 @@ By default, the icon components will use the outline style, but the `solid` or
 <Heroicons.cake mini />
 ```
 
-You can also pass arbitrary HTML attributes to the components:
+You can also pass arbitrary HTML attributes to the components, such as classes:
 
  ```eex
 <Heroicons.cake class="w-2 h-2" />
-<Heroicons.cake solid class="w-2 h-2" />
-```
-
-You can also provide arbitrary HTML attributes to the svg tag, such as classes:
-
-```eex
-<Heroicons.cake class="w-6 h-6 text-gray-500" />
+<Heroicons.cake solid class="w-2 h-2 text-gray-500" />
 ```
 
 For a full list of icons see [the docs](https://hexdocs.pm/heroicons/api-reference.html) or [heroicons.com](https://heroicons.com/).
