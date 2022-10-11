@@ -1,6 +1,6 @@
 defmodule Heroicons do
   @moduledoc """
-  Provides precompiled icon compiles from [heroicons.com v2.0.11](https://heroicons.com).
+  Provides precompiled icon compiles from [heroicons.com v2.0.11](heroicons.com).
 
   Heroicons are designed by [Steve Schoger](https://twitter.com/steveschoger)
 
@@ -118,9 +118,11 @@ defmodule Heroicons do
   <Heroicons.swatch class="w-4 h-4" />
   <Heroicons.swatch solid />
   <Heroicons.swatch mini />
+  <Heroicons.swatch outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -148,9 +150,11 @@ defmodule Heroicons do
   <Heroicons.photo class="w-4 h-4" />
   <Heroicons.photo solid />
   <Heroicons.photo mini />
+  <Heroicons.photo outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -178,9 +182,11 @@ defmodule Heroicons do
   <Heroicons.arrow_down_left class="w-4 h-4" />
   <Heroicons.arrow_down_left solid />
   <Heroicons.arrow_down_left mini />
+  <Heroicons.arrow_down_left outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -208,9 +214,11 @@ defmodule Heroicons do
   <Heroicons.folder_plus class="w-4 h-4" />
   <Heroicons.folder_plus solid />
   <Heroicons.folder_plus mini />
+  <Heroicons.folder_plus outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -238,9 +246,11 @@ defmodule Heroicons do
   <Heroicons.arrow_down_tray class="w-4 h-4" />
   <Heroicons.arrow_down_tray solid />
   <Heroicons.arrow_down_tray mini />
+  <Heroicons.arrow_down_tray outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -268,9 +278,11 @@ defmodule Heroicons do
   <Heroicons.cpu_chip class="w-4 h-4" />
   <Heroicons.cpu_chip solid />
   <Heroicons.cpu_chip mini />
+  <Heroicons.cpu_chip outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -298,9 +310,11 @@ defmodule Heroicons do
   <Heroicons.chat_bubble_bottom_center class="w-4 h-4" />
   <Heroicons.chat_bubble_bottom_center solid />
   <Heroicons.chat_bubble_bottom_center mini />
+  <Heroicons.chat_bubble_bottom_center outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -328,9 +342,11 @@ defmodule Heroicons do
   <Heroicons.globe_europe_africa class="w-4 h-4" />
   <Heroicons.globe_europe_africa solid />
   <Heroicons.globe_europe_africa mini />
+  <Heroicons.globe_europe_africa outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -358,9 +374,11 @@ defmodule Heroicons do
   <Heroicons.inbox_arrow_down class="w-4 h-4" />
   <Heroicons.inbox_arrow_down solid />
   <Heroicons.inbox_arrow_down mini />
+  <Heroicons.inbox_arrow_down outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -388,9 +406,11 @@ defmodule Heroicons do
   <Heroicons.bars_3_bottom_right class="w-4 h-4" />
   <Heroicons.bars_3_bottom_right solid />
   <Heroicons.bars_3_bottom_right mini />
+  <Heroicons.bars_3_bottom_right outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -418,9 +438,11 @@ defmodule Heroicons do
   <Heroicons.arrow_uturn_up class="w-4 h-4" />
   <Heroicons.arrow_uturn_up solid />
   <Heroicons.arrow_uturn_up mini />
+  <Heroicons.arrow_uturn_up outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -448,9 +470,11 @@ defmodule Heroicons do
   <Heroicons.arrow_left_circle class="w-4 h-4" />
   <Heroicons.arrow_left_circle solid />
   <Heroicons.arrow_left_circle mini />
+  <Heroicons.arrow_left_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -478,9 +502,11 @@ defmodule Heroicons do
   <Heroicons.phone_arrow_down_left class="w-4 h-4" />
   <Heroicons.phone_arrow_down_left solid />
   <Heroicons.phone_arrow_down_left mini />
+  <Heroicons.phone_arrow_down_left outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -508,9 +534,11 @@ defmodule Heroicons do
   <Heroicons.speaker_x_mark class="w-4 h-4" />
   <Heroicons.speaker_x_mark solid />
   <Heroicons.speaker_x_mark mini />
+  <Heroicons.speaker_x_mark outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -538,9 +566,11 @@ defmodule Heroicons do
   <Heroicons.currency_rupee class="w-4 h-4" />
   <Heroicons.currency_rupee solid />
   <Heroicons.currency_rupee mini />
+  <Heroicons.currency_rupee outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -568,9 +598,11 @@ defmodule Heroicons do
   <Heroicons.document_minus class="w-4 h-4" />
   <Heroicons.document_minus solid />
   <Heroicons.document_minus mini />
+  <Heroicons.document_minus outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -598,9 +630,11 @@ defmodule Heroicons do
   <Heroicons.calendar_days class="w-4 h-4" />
   <Heroicons.calendar_days solid />
   <Heroicons.calendar_days mini />
+  <Heroicons.calendar_days outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -628,9 +662,11 @@ defmodule Heroicons do
   <Heroicons.chat_bubble_left_ellipsis class="w-4 h-4" />
   <Heroicons.chat_bubble_left_ellipsis solid />
   <Heroicons.chat_bubble_left_ellipsis mini />
+  <Heroicons.chat_bubble_left_ellipsis outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -658,9 +694,11 @@ defmodule Heroicons do
   <Heroicons.share class="w-4 h-4" />
   <Heroicons.share solid />
   <Heroicons.share mini />
+  <Heroicons.share outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -688,9 +726,11 @@ defmodule Heroicons do
   <Heroicons.minus_circle class="w-4 h-4" />
   <Heroicons.minus_circle solid />
   <Heroicons.minus_circle mini />
+  <Heroicons.minus_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -718,9 +758,11 @@ defmodule Heroicons do
   <Heroicons.briefcase class="w-4 h-4" />
   <Heroicons.briefcase solid />
   <Heroicons.briefcase mini />
+  <Heroicons.briefcase outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -748,9 +790,11 @@ defmodule Heroicons do
   <Heroicons.chevron_right class="w-4 h-4" />
   <Heroicons.chevron_right solid />
   <Heroicons.chevron_right mini />
+  <Heroicons.chevron_right outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -778,9 +822,11 @@ defmodule Heroicons do
   <Heroicons.check class="w-4 h-4" />
   <Heroicons.check solid />
   <Heroicons.check mini />
+  <Heroicons.check outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -808,9 +854,11 @@ defmodule Heroicons do
   <Heroicons.arrow_up_circle class="w-4 h-4" />
   <Heroicons.arrow_up_circle solid />
   <Heroicons.arrow_up_circle mini />
+  <Heroicons.arrow_up_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -838,9 +886,11 @@ defmodule Heroicons do
   <Heroicons.map_pin class="w-4 h-4" />
   <Heroicons.map_pin solid />
   <Heroicons.map_pin mini />
+  <Heroicons.map_pin outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -868,9 +918,11 @@ defmodule Heroicons do
   <Heroicons.rss class="w-4 h-4" />
   <Heroicons.rss solid />
   <Heroicons.rss mini />
+  <Heroicons.rss outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -898,9 +950,11 @@ defmodule Heroicons do
   <Heroicons.calendar class="w-4 h-4" />
   <Heroicons.calendar solid />
   <Heroicons.calendar mini />
+  <Heroicons.calendar outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -928,9 +982,11 @@ defmodule Heroicons do
   <Heroicons.clipboard_document class="w-4 h-4" />
   <Heroicons.clipboard_document solid />
   <Heroicons.clipboard_document mini />
+  <Heroicons.clipboard_document outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -958,9 +1014,11 @@ defmodule Heroicons do
   <Heroicons.chevron_up class="w-4 h-4" />
   <Heroicons.chevron_up solid />
   <Heroicons.chevron_up mini />
+  <Heroicons.chevron_up outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -988,9 +1046,11 @@ defmodule Heroicons do
   <Heroicons.arrow_right class="w-4 h-4" />
   <Heroicons.arrow_right solid />
   <Heroicons.arrow_right mini />
+  <Heroicons.arrow_right outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1018,9 +1078,11 @@ defmodule Heroicons do
   <Heroicons.arrow_down class="w-4 h-4" />
   <Heroicons.arrow_down solid />
   <Heroicons.arrow_down mini />
+  <Heroicons.arrow_down outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1048,9 +1110,11 @@ defmodule Heroicons do
   <Heroicons.hashtag class="w-4 h-4" />
   <Heroicons.hashtag solid />
   <Heroicons.hashtag mini />
+  <Heroicons.hashtag outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1078,9 +1142,11 @@ defmodule Heroicons do
   <Heroicons.chat_bubble_left class="w-4 h-4" />
   <Heroicons.chat_bubble_left solid />
   <Heroicons.chat_bubble_left mini />
+  <Heroicons.chat_bubble_left outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1108,9 +1174,11 @@ defmodule Heroicons do
   <Heroicons.rectangle_group class="w-4 h-4" />
   <Heroicons.rectangle_group solid />
   <Heroicons.rectangle_group mini />
+  <Heroicons.rectangle_group outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1138,9 +1206,11 @@ defmodule Heroicons do
   <Heroicons.paint_brush class="w-4 h-4" />
   <Heroicons.paint_brush solid />
   <Heroicons.paint_brush mini />
+  <Heroicons.paint_brush outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1168,9 +1238,11 @@ defmodule Heroicons do
   <Heroicons.moon class="w-4 h-4" />
   <Heroicons.moon solid />
   <Heroicons.moon mini />
+  <Heroicons.moon outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1198,9 +1270,11 @@ defmodule Heroicons do
   <Heroicons.arrow_path class="w-4 h-4" />
   <Heroicons.arrow_path solid />
   <Heroicons.arrow_path mini />
+  <Heroicons.arrow_path outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1228,9 +1302,11 @@ defmodule Heroicons do
   <Heroicons.arrow_up_on_square class="w-4 h-4" />
   <Heroicons.arrow_up_on_square solid />
   <Heroicons.arrow_up_on_square mini />
+  <Heroicons.arrow_up_on_square outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1258,9 +1334,11 @@ defmodule Heroicons do
   <Heroicons.qr_code class="w-4 h-4" />
   <Heroicons.qr_code solid />
   <Heroicons.qr_code mini />
+  <Heroicons.qr_code outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1288,9 +1366,11 @@ defmodule Heroicons do
   <Heroicons.arrow_right_on_rectangle class="w-4 h-4" />
   <Heroicons.arrow_right_on_rectangle solid />
   <Heroicons.arrow_right_on_rectangle mini />
+  <Heroicons.arrow_right_on_rectangle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1318,9 +1398,11 @@ defmodule Heroicons do
   <Heroicons.backspace class="w-4 h-4" />
   <Heroicons.backspace solid />
   <Heroicons.backspace mini />
+  <Heroicons.backspace outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1348,9 +1430,11 @@ defmodule Heroicons do
   <Heroicons.bars_3_center_left class="w-4 h-4" />
   <Heroicons.bars_3_center_left solid />
   <Heroicons.bars_3_center_left mini />
+  <Heroicons.bars_3_center_left outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1378,9 +1462,11 @@ defmodule Heroicons do
   <Heroicons.trophy class="w-4 h-4" />
   <Heroicons.trophy solid />
   <Heroicons.trophy mini />
+  <Heroicons.trophy outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1408,9 +1494,11 @@ defmodule Heroicons do
   <Heroicons.user_group class="w-4 h-4" />
   <Heroicons.user_group solid />
   <Heroicons.user_group mini />
+  <Heroicons.user_group outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1438,9 +1526,11 @@ defmodule Heroicons do
   <Heroicons.radio class="w-4 h-4" />
   <Heroicons.radio solid />
   <Heroicons.radio mini />
+  <Heroicons.radio outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1468,9 +1558,11 @@ defmodule Heroicons do
   <Heroicons.arrow_trending_up class="w-4 h-4" />
   <Heroicons.arrow_trending_up solid />
   <Heroicons.arrow_trending_up mini />
+  <Heroicons.arrow_trending_up outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1498,9 +1590,11 @@ defmodule Heroicons do
   <Heroicons.currency_dollar class="w-4 h-4" />
   <Heroicons.currency_dollar solid />
   <Heroicons.currency_dollar mini />
+  <Heroicons.currency_dollar outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1528,9 +1622,11 @@ defmodule Heroicons do
   <Heroicons.arrow_long_up class="w-4 h-4" />
   <Heroicons.arrow_long_up solid />
   <Heroicons.arrow_long_up mini />
+  <Heroicons.arrow_long_up outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1558,9 +1654,11 @@ defmodule Heroicons do
   <Heroicons.plus_small class="w-4 h-4" />
   <Heroicons.plus_small solid />
   <Heroicons.plus_small mini />
+  <Heroicons.plus_small outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1588,9 +1686,11 @@ defmodule Heroicons do
   <Heroicons.face_smile class="w-4 h-4" />
   <Heroicons.face_smile solid />
   <Heroicons.face_smile mini />
+  <Heroicons.face_smile outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1618,9 +1718,11 @@ defmodule Heroicons do
   <Heroicons.map class="w-4 h-4" />
   <Heroicons.map solid />
   <Heroicons.map mini />
+  <Heroicons.map outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1648,9 +1750,11 @@ defmodule Heroicons do
   <Heroicons.currency_euro class="w-4 h-4" />
   <Heroicons.currency_euro solid />
   <Heroicons.currency_euro mini />
+  <Heroicons.currency_euro outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1678,9 +1782,11 @@ defmodule Heroicons do
   <Heroicons.building_office_2 class="w-4 h-4" />
   <Heroicons.building_office_2 solid />
   <Heroicons.building_office_2 mini />
+  <Heroicons.building_office_2 outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1708,9 +1814,11 @@ defmodule Heroicons do
   <Heroicons.document_chart_bar class="w-4 h-4" />
   <Heroicons.document_chart_bar solid />
   <Heroicons.document_chart_bar mini />
+  <Heroicons.document_chart_bar outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1738,9 +1846,11 @@ defmodule Heroicons do
   <Heroicons.plus class="w-4 h-4" />
   <Heroicons.plus solid />
   <Heroicons.plus mini />
+  <Heroicons.plus outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1768,9 +1878,11 @@ defmodule Heroicons do
   <Heroicons.identification class="w-4 h-4" />
   <Heroicons.identification solid />
   <Heroicons.identification mini />
+  <Heroicons.identification outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1798,9 +1910,11 @@ defmodule Heroicons do
   <Heroicons.cloud_arrow_down class="w-4 h-4" />
   <Heroicons.cloud_arrow_down solid />
   <Heroicons.cloud_arrow_down mini />
+  <Heroicons.cloud_arrow_down outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1828,9 +1942,11 @@ defmodule Heroicons do
   <Heroicons.megaphone class="w-4 h-4" />
   <Heroicons.megaphone solid />
   <Heroicons.megaphone mini />
+  <Heroicons.megaphone outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1858,9 +1974,11 @@ defmodule Heroicons do
   <Heroicons.chat_bubble_bottom_center_text class="w-4 h-4" />
   <Heroicons.chat_bubble_bottom_center_text solid />
   <Heroicons.chat_bubble_bottom_center_text mini />
+  <Heroicons.chat_bubble_bottom_center_text outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1888,9 +2006,11 @@ defmodule Heroicons do
   <Heroicons.tv class="w-4 h-4" />
   <Heroicons.tv solid />
   <Heroicons.tv mini />
+  <Heroicons.tv outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1918,9 +2038,11 @@ defmodule Heroicons do
   <Heroicons.adjustments_horizontal class="w-4 h-4" />
   <Heroicons.adjustments_horizontal solid />
   <Heroicons.adjustments_horizontal mini />
+  <Heroicons.adjustments_horizontal outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1948,9 +2070,11 @@ defmodule Heroicons do
   <Heroicons.device_tablet class="w-4 h-4" />
   <Heroicons.device_tablet solid />
   <Heroicons.device_tablet mini />
+  <Heroicons.device_tablet outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -1978,9 +2102,11 @@ defmodule Heroicons do
   <Heroicons.queue_list class="w-4 h-4" />
   <Heroicons.queue_list solid />
   <Heroicons.queue_list mini />
+  <Heroicons.queue_list outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2008,9 +2134,11 @@ defmodule Heroicons do
   <Heroicons.power class="w-4 h-4" />
   <Heroicons.power solid />
   <Heroicons.power mini />
+  <Heroicons.power outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2038,9 +2166,11 @@ defmodule Heroicons do
   <Heroicons.building_storefront class="w-4 h-4" />
   <Heroicons.building_storefront solid />
   <Heroicons.building_storefront mini />
+  <Heroicons.building_storefront outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2068,9 +2198,11 @@ defmodule Heroicons do
   <Heroicons.globe_americas class="w-4 h-4" />
   <Heroicons.globe_americas solid />
   <Heroicons.globe_americas mini />
+  <Heroicons.globe_americas outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2098,9 +2230,11 @@ defmodule Heroicons do
   <Heroicons.video_camera_slash class="w-4 h-4" />
   <Heroicons.video_camera_slash solid />
   <Heroicons.video_camera_slash mini />
+  <Heroicons.video_camera_slash outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2128,9 +2262,11 @@ defmodule Heroicons do
   <Heroicons.play class="w-4 h-4" />
   <Heroicons.play solid />
   <Heroicons.play mini />
+  <Heroicons.play outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2158,9 +2294,11 @@ defmodule Heroicons do
   <Heroicons.link class="w-4 h-4" />
   <Heroicons.link solid />
   <Heroicons.link mini />
+  <Heroicons.link outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2188,9 +2326,11 @@ defmodule Heroicons do
   <Heroicons.finger_print class="w-4 h-4" />
   <Heroicons.finger_print solid />
   <Heroicons.finger_print mini />
+  <Heroicons.finger_print outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2218,9 +2358,11 @@ defmodule Heroicons do
   <Heroicons.cog_8_tooth class="w-4 h-4" />
   <Heroicons.cog_8_tooth solid />
   <Heroicons.cog_8_tooth mini />
+  <Heroicons.cog_8_tooth outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2248,9 +2390,11 @@ defmodule Heroicons do
   <Heroicons.home_modern class="w-4 h-4" />
   <Heroicons.home_modern solid />
   <Heroicons.home_modern mini />
+  <Heroicons.home_modern outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2278,9 +2422,11 @@ defmodule Heroicons do
   <Heroicons.inbox class="w-4 h-4" />
   <Heroicons.inbox solid />
   <Heroicons.inbox mini />
+  <Heroicons.inbox outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2308,9 +2454,11 @@ defmodule Heroicons do
   <Heroicons.folder_open class="w-4 h-4" />
   <Heroicons.folder_open solid />
   <Heroicons.folder_open mini />
+  <Heroicons.folder_open outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2338,9 +2486,11 @@ defmodule Heroicons do
   <Heroicons.minus_small class="w-4 h-4" />
   <Heroicons.minus_small solid />
   <Heroicons.minus_small mini />
+  <Heroicons.minus_small outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2368,9 +2518,11 @@ defmodule Heroicons do
   <Heroicons.phone_x_mark class="w-4 h-4" />
   <Heroicons.phone_x_mark solid />
   <Heroicons.phone_x_mark mini />
+  <Heroicons.phone_x_mark outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2398,9 +2550,11 @@ defmodule Heroicons do
   <Heroicons.paper_airplane class="w-4 h-4" />
   <Heroicons.paper_airplane solid />
   <Heroicons.paper_airplane mini />
+  <Heroicons.paper_airplane outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2428,9 +2582,11 @@ defmodule Heroicons do
   <Heroicons.archive_box_x_mark class="w-4 h-4" />
   <Heroicons.archive_box_x_mark solid />
   <Heroicons.archive_box_x_mark mini />
+  <Heroicons.archive_box_x_mark outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2458,9 +2614,11 @@ defmodule Heroicons do
   <Heroicons.bookmark_square class="w-4 h-4" />
   <Heroicons.bookmark_square solid />
   <Heroicons.bookmark_square mini />
+  <Heroicons.bookmark_square outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2488,9 +2646,11 @@ defmodule Heroicons do
   <Heroicons.square_2_stack class="w-4 h-4" />
   <Heroicons.square_2_stack solid />
   <Heroicons.square_2_stack mini />
+  <Heroicons.square_2_stack outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2518,9 +2678,11 @@ defmodule Heroicons do
   <Heroicons.bell class="w-4 h-4" />
   <Heroicons.bell solid />
   <Heroicons.bell mini />
+  <Heroicons.bell outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2548,9 +2710,11 @@ defmodule Heroicons do
   <Heroicons.chat_bubble_oval_left class="w-4 h-4" />
   <Heroicons.chat_bubble_oval_left solid />
   <Heroicons.chat_bubble_oval_left mini />
+  <Heroicons.chat_bubble_oval_left outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2578,9 +2742,11 @@ defmodule Heroicons do
   <Heroicons.bars_arrow_down class="w-4 h-4" />
   <Heroicons.bars_arrow_down solid />
   <Heroicons.bars_arrow_down mini />
+  <Heroicons.bars_arrow_down outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2608,9 +2774,11 @@ defmodule Heroicons do
   <Heroicons.banknotes class="w-4 h-4" />
   <Heroicons.banknotes solid />
   <Heroicons.banknotes mini />
+  <Heroicons.banknotes outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2638,9 +2806,11 @@ defmodule Heroicons do
   <Heroicons.sun class="w-4 h-4" />
   <Heroicons.sun solid />
   <Heroicons.sun mini />
+  <Heroicons.sun outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2668,9 +2838,11 @@ defmodule Heroicons do
   <Heroicons.eye_dropper class="w-4 h-4" />
   <Heroicons.eye_dropper solid />
   <Heroicons.eye_dropper mini />
+  <Heroicons.eye_dropper outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2698,9 +2870,11 @@ defmodule Heroicons do
   <Heroicons.hand_thumb_down class="w-4 h-4" />
   <Heroicons.hand_thumb_down solid />
   <Heroicons.hand_thumb_down mini />
+  <Heroicons.hand_thumb_down outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2728,9 +2902,11 @@ defmodule Heroicons do
   <Heroicons.bolt class="w-4 h-4" />
   <Heroicons.bolt solid />
   <Heroicons.bolt mini />
+  <Heroicons.bolt outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2758,9 +2934,11 @@ defmodule Heroicons do
   <Heroicons.command_line class="w-4 h-4" />
   <Heroicons.command_line solid />
   <Heroicons.command_line mini />
+  <Heroicons.command_line outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2788,9 +2966,11 @@ defmodule Heroicons do
   <Heroicons.funnel class="w-4 h-4" />
   <Heroicons.funnel solid />
   <Heroicons.funnel mini />
+  <Heroicons.funnel outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2818,9 +2998,11 @@ defmodule Heroicons do
   <Heroicons.cake class="w-4 h-4" />
   <Heroicons.cake solid />
   <Heroicons.cake mini />
+  <Heroicons.cake outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2848,9 +3030,11 @@ defmodule Heroicons do
   <Heroicons.stop class="w-4 h-4" />
   <Heroicons.stop solid />
   <Heroicons.stop mini />
+  <Heroicons.stop outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2878,9 +3062,11 @@ defmodule Heroicons do
   <Heroicons.exclamation_triangle class="w-4 h-4" />
   <Heroicons.exclamation_triangle solid />
   <Heroicons.exclamation_triangle mini />
+  <Heroicons.exclamation_triangle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2908,9 +3094,11 @@ defmodule Heroicons do
   <Heroicons.chart_bar class="w-4 h-4" />
   <Heroicons.chart_bar solid />
   <Heroicons.chart_bar mini />
+  <Heroicons.chart_bar outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2938,9 +3126,11 @@ defmodule Heroicons do
   <Heroicons.forward class="w-4 h-4" />
   <Heroicons.forward solid />
   <Heroicons.forward mini />
+  <Heroicons.forward outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2968,9 +3158,11 @@ defmodule Heroicons do
   <Heroicons.chevron_up_down class="w-4 h-4" />
   <Heroicons.chevron_up_down solid />
   <Heroicons.chevron_up_down mini />
+  <Heroicons.chevron_up_down outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -2998,9 +3190,11 @@ defmodule Heroicons do
   <Heroicons.calculator class="w-4 h-4" />
   <Heroicons.calculator solid />
   <Heroicons.calculator mini />
+  <Heroicons.calculator outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3028,9 +3222,11 @@ defmodule Heroicons do
   <Heroicons.ticket class="w-4 h-4" />
   <Heroicons.ticket solid />
   <Heroicons.ticket mini />
+  <Heroicons.ticket outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3058,9 +3254,11 @@ defmodule Heroicons do
   <Heroicons.circle_stack class="w-4 h-4" />
   <Heroicons.circle_stack solid />
   <Heroicons.circle_stack mini />
+  <Heroicons.circle_stack outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3088,9 +3286,11 @@ defmodule Heroicons do
   <Heroicons.printer class="w-4 h-4" />
   <Heroicons.printer solid />
   <Heroicons.printer mini />
+  <Heroicons.printer outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3118,9 +3318,11 @@ defmodule Heroicons do
   <Heroicons.home class="w-4 h-4" />
   <Heroicons.home solid />
   <Heroicons.home mini />
+  <Heroicons.home outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3148,9 +3350,11 @@ defmodule Heroicons do
   <Heroicons.credit_card class="w-4 h-4" />
   <Heroicons.credit_card solid />
   <Heroicons.credit_card mini />
+  <Heroicons.credit_card outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3178,9 +3382,11 @@ defmodule Heroicons do
   <Heroicons.no_symbol class="w-4 h-4" />
   <Heroicons.no_symbol solid />
   <Heroicons.no_symbol mini />
+  <Heroicons.no_symbol outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3208,9 +3414,11 @@ defmodule Heroicons do
   <Heroicons.server_stack class="w-4 h-4" />
   <Heroicons.server_stack solid />
   <Heroicons.server_stack mini />
+  <Heroicons.server_stack outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3238,9 +3446,11 @@ defmodule Heroicons do
   <Heroicons.clock class="w-4 h-4" />
   <Heroicons.clock solid />
   <Heroicons.clock mini />
+  <Heroicons.clock outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3268,9 +3478,11 @@ defmodule Heroicons do
   <Heroicons.pause_circle class="w-4 h-4" />
   <Heroicons.pause_circle solid />
   <Heroicons.pause_circle mini />
+  <Heroicons.pause_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3298,9 +3510,11 @@ defmodule Heroicons do
   <Heroicons.globe_asia_australia class="w-4 h-4" />
   <Heroicons.globe_asia_australia solid />
   <Heroicons.globe_asia_australia mini />
+  <Heroicons.globe_asia_australia outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3328,9 +3542,11 @@ defmodule Heroicons do
   <Heroicons.cog class="w-4 h-4" />
   <Heroicons.cog solid />
   <Heroicons.cog mini />
+  <Heroicons.cog outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3358,9 +3574,11 @@ defmodule Heroicons do
   <Heroicons.squares_plus class="w-4 h-4" />
   <Heroicons.squares_plus solid />
   <Heroicons.squares_plus mini />
+  <Heroicons.squares_plus outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3388,9 +3606,11 @@ defmodule Heroicons do
   <Heroicons.gif class="w-4 h-4" />
   <Heroicons.gif solid />
   <Heroicons.gif mini />
+  <Heroicons.gif outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3418,9 +3638,11 @@ defmodule Heroicons do
   <Heroicons.minus class="w-4 h-4" />
   <Heroicons.minus solid />
   <Heroicons.minus mini />
+  <Heroicons.minus outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3448,9 +3670,11 @@ defmodule Heroicons do
   <Heroicons.plus_circle class="w-4 h-4" />
   <Heroicons.plus_circle solid />
   <Heroicons.plus_circle mini />
+  <Heroicons.plus_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3478,9 +3702,11 @@ defmodule Heroicons do
   <Heroicons.cloud_arrow_up class="w-4 h-4" />
   <Heroicons.cloud_arrow_up solid />
   <Heroicons.cloud_arrow_up mini />
+  <Heroicons.cloud_arrow_up outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3508,9 +3734,11 @@ defmodule Heroicons do
   <Heroicons.arrow_uturn_down class="w-4 h-4" />
   <Heroicons.arrow_uturn_down solid />
   <Heroicons.arrow_uturn_down mini />
+  <Heroicons.arrow_uturn_down outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3538,9 +3766,11 @@ defmodule Heroicons do
   <Heroicons.truck class="w-4 h-4" />
   <Heroicons.truck solid />
   <Heroicons.truck mini />
+  <Heroicons.truck outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3568,9 +3798,11 @@ defmodule Heroicons do
   <Heroicons.rocket_launch class="w-4 h-4" />
   <Heroicons.rocket_launch solid />
   <Heroicons.rocket_launch mini />
+  <Heroicons.rocket_launch outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3598,9 +3830,11 @@ defmodule Heroicons do
   <Heroicons.camera class="w-4 h-4" />
   <Heroicons.camera solid />
   <Heroicons.camera mini />
+  <Heroicons.camera outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3628,9 +3862,11 @@ defmodule Heroicons do
   <Heroicons.arrow_top_right_on_square class="w-4 h-4" />
   <Heroicons.arrow_top_right_on_square solid />
   <Heroicons.arrow_top_right_on_square mini />
+  <Heroicons.arrow_top_right_on_square outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3658,9 +3894,11 @@ defmodule Heroicons do
   <Heroicons.hand_raised class="w-4 h-4" />
   <Heroicons.hand_raised solid />
   <Heroicons.hand_raised mini />
+  <Heroicons.hand_raised outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3688,9 +3926,11 @@ defmodule Heroicons do
   <Heroicons.document_text class="w-4 h-4" />
   <Heroicons.document_text solid />
   <Heroicons.document_text mini />
+  <Heroicons.document_text outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3718,9 +3958,11 @@ defmodule Heroicons do
   <Heroicons.bars_2 class="w-4 h-4" />
   <Heroicons.bars_2 solid />
   <Heroicons.bars_2 mini />
+  <Heroicons.bars_2 outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3748,9 +3990,11 @@ defmodule Heroicons do
   <Heroicons.video_camera class="w-4 h-4" />
   <Heroicons.video_camera solid />
   <Heroicons.video_camera mini />
+  <Heroicons.video_camera outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3778,9 +4022,11 @@ defmodule Heroicons do
   <Heroicons.bug_ant class="w-4 h-4" />
   <Heroicons.bug_ant solid />
   <Heroicons.bug_ant mini />
+  <Heroicons.bug_ant outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3808,9 +4054,11 @@ defmodule Heroicons do
   <Heroicons.chevron_double_left class="w-4 h-4" />
   <Heroicons.chevron_double_left solid />
   <Heroicons.chevron_double_left mini />
+  <Heroicons.chevron_double_left outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3838,9 +4086,11 @@ defmodule Heroicons do
   <Heroicons.envelope class="w-4 h-4" />
   <Heroicons.envelope solid />
   <Heroicons.envelope mini />
+  <Heroicons.envelope outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3868,9 +4118,11 @@ defmodule Heroicons do
   <Heroicons.arrow_small_left class="w-4 h-4" />
   <Heroicons.arrow_small_left solid />
   <Heroicons.arrow_small_left mini />
+  <Heroicons.arrow_small_left outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3898,9 +4150,11 @@ defmodule Heroicons do
   <Heroicons.musical_note class="w-4 h-4" />
   <Heroicons.musical_note solid />
   <Heroicons.musical_note mini />
+  <Heroicons.musical_note outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3928,9 +4182,11 @@ defmodule Heroicons do
   <Heroicons.tag class="w-4 h-4" />
   <Heroicons.tag solid />
   <Heroicons.tag mini />
+  <Heroicons.tag outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3958,9 +4214,11 @@ defmodule Heroicons do
   <Heroicons.chat_bubble_left_right class="w-4 h-4" />
   <Heroicons.chat_bubble_left_right solid />
   <Heroicons.chat_bubble_left_right mini />
+  <Heroicons.chat_bubble_left_right outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -3988,9 +4246,11 @@ defmodule Heroicons do
   <Heroicons.battery_100 class="w-4 h-4" />
   <Heroicons.battery_100 solid />
   <Heroicons.battery_100 mini />
+  <Heroicons.battery_100 outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4018,9 +4278,11 @@ defmodule Heroicons do
   <Heroicons.chevron_double_right class="w-4 h-4" />
   <Heroicons.chevron_double_right solid />
   <Heroicons.chevron_double_right mini />
+  <Heroicons.chevron_double_right outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4048,9 +4310,11 @@ defmodule Heroicons do
   <Heroicons.bars_4 class="w-4 h-4" />
   <Heroicons.bars_4 solid />
   <Heroicons.bars_4 mini />
+  <Heroicons.bars_4 outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4078,9 +4342,11 @@ defmodule Heroicons do
   <Heroicons.chart_pie class="w-4 h-4" />
   <Heroicons.chart_pie solid />
   <Heroicons.chart_pie mini />
+  <Heroicons.chart_pie outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4108,9 +4374,11 @@ defmodule Heroicons do
   <Heroicons.trash class="w-4 h-4" />
   <Heroicons.trash solid />
   <Heroicons.trash mini />
+  <Heroicons.trash outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4138,9 +4406,11 @@ defmodule Heroicons do
   <Heroicons.magnifying_glass_minus class="w-4 h-4" />
   <Heroicons.magnifying_glass_minus solid />
   <Heroicons.magnifying_glass_minus mini />
+  <Heroicons.magnifying_glass_minus outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4168,9 +4438,11 @@ defmodule Heroicons do
   <Heroicons.ellipsis_horizontal_circle class="w-4 h-4" />
   <Heroicons.ellipsis_horizontal_circle solid />
   <Heroicons.ellipsis_horizontal_circle mini />
+  <Heroicons.ellipsis_horizontal_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4198,9 +4470,11 @@ defmodule Heroicons do
   <Heroicons.information_circle class="w-4 h-4" />
   <Heroicons.information_circle solid />
   <Heroicons.information_circle mini />
+  <Heroicons.information_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4228,9 +4502,11 @@ defmodule Heroicons do
   <Heroicons.user_minus class="w-4 h-4" />
   <Heroicons.user_minus solid />
   <Heroicons.user_minus mini />
+  <Heroicons.user_minus outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4258,9 +4534,11 @@ defmodule Heroicons do
   <Heroicons.phone class="w-4 h-4" />
   <Heroicons.phone solid />
   <Heroicons.phone mini />
+  <Heroicons.phone outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4288,9 +4566,11 @@ defmodule Heroicons do
   <Heroicons.bell_snooze class="w-4 h-4" />
   <Heroicons.bell_snooze solid />
   <Heroicons.bell_snooze mini />
+  <Heroicons.bell_snooze outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4318,9 +4598,11 @@ defmodule Heroicons do
   <Heroicons.arrow_long_down class="w-4 h-4" />
   <Heroicons.arrow_long_down solid />
   <Heroicons.arrow_long_down mini />
+  <Heroicons.arrow_long_down outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4348,9 +4630,11 @@ defmodule Heroicons do
   <Heroicons.arrows_pointing_in class="w-4 h-4" />
   <Heroicons.arrows_pointing_in solid />
   <Heroicons.arrows_pointing_in mini />
+  <Heroicons.arrows_pointing_in outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4378,9 +4662,11 @@ defmodule Heroicons do
   <Heroicons.chart_bar_square class="w-4 h-4" />
   <Heroicons.chart_bar_square solid />
   <Heroicons.chart_bar_square mini />
+  <Heroicons.chart_bar_square outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4408,9 +4694,11 @@ defmodule Heroicons do
   <Heroicons.signal class="w-4 h-4" />
   <Heroicons.signal solid />
   <Heroicons.signal mini />
+  <Heroicons.signal outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4438,9 +4726,11 @@ defmodule Heroicons do
   <Heroicons.user_plus class="w-4 h-4" />
   <Heroicons.user_plus solid />
   <Heroicons.user_plus mini />
+  <Heroicons.user_plus outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4468,9 +4758,11 @@ defmodule Heroicons do
   <Heroicons.eye class="w-4 h-4" />
   <Heroicons.eye solid />
   <Heroicons.eye mini />
+  <Heroicons.eye outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4498,9 +4790,11 @@ defmodule Heroicons do
   <Heroicons.chevron_left class="w-4 h-4" />
   <Heroicons.chevron_left solid />
   <Heroicons.chevron_left mini />
+  <Heroicons.chevron_left outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4528,9 +4822,11 @@ defmodule Heroicons do
   <Heroicons.chevron_down class="w-4 h-4" />
   <Heroicons.chevron_down solid />
   <Heroicons.chevron_down mini />
+  <Heroicons.chevron_down outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4558,9 +4854,11 @@ defmodule Heroicons do
   <Heroicons.exclamation_circle class="w-4 h-4" />
   <Heroicons.exclamation_circle solid />
   <Heroicons.exclamation_circle mini />
+  <Heroicons.exclamation_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4588,9 +4886,11 @@ defmodule Heroicons do
   <Heroicons.x_mark class="w-4 h-4" />
   <Heroicons.x_mark solid />
   <Heroicons.x_mark mini />
+  <Heroicons.x_mark outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4618,9 +4918,11 @@ defmodule Heroicons do
   <Heroicons.pencil_square class="w-4 h-4" />
   <Heroicons.pencil_square solid />
   <Heroicons.pencil_square mini />
+  <Heroicons.pencil_square outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4648,9 +4950,11 @@ defmodule Heroicons do
   <Heroicons.wrench_screwdriver class="w-4 h-4" />
   <Heroicons.wrench_screwdriver solid />
   <Heroicons.wrench_screwdriver mini />
+  <Heroicons.wrench_screwdriver outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4678,9 +4982,11 @@ defmodule Heroicons do
   <Heroicons.arrow_down_on_square_stack class="w-4 h-4" />
   <Heroicons.arrow_down_on_square_stack solid />
   <Heroicons.arrow_down_on_square_stack mini />
+  <Heroicons.arrow_down_on_square_stack outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4708,9 +5014,11 @@ defmodule Heroicons do
   <Heroicons.wrench class="w-4 h-4" />
   <Heroicons.wrench solid />
   <Heroicons.wrench mini />
+  <Heroicons.wrench outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4738,9 +5046,11 @@ defmodule Heroicons do
   <Heroicons.wallet class="w-4 h-4" />
   <Heroicons.wallet solid />
   <Heroicons.wallet mini />
+  <Heroicons.wallet outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4768,9 +5078,11 @@ defmodule Heroicons do
   <Heroicons.x_circle class="w-4 h-4" />
   <Heroicons.x_circle solid />
   <Heroicons.x_circle mini />
+  <Heroicons.x_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4798,9 +5110,11 @@ defmodule Heroicons do
   <Heroicons.archive_box class="w-4 h-4" />
   <Heroicons.archive_box solid />
   <Heroicons.archive_box mini />
+  <Heroicons.archive_box outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4828,9 +5142,11 @@ defmodule Heroicons do
   <Heroicons.bell_slash class="w-4 h-4" />
   <Heroicons.bell_slash solid />
   <Heroicons.bell_slash mini />
+  <Heroicons.bell_slash outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4858,9 +5174,11 @@ defmodule Heroicons do
   <Heroicons.bars_3_bottom_left class="w-4 h-4" />
   <Heroicons.bars_3_bottom_left solid />
   <Heroicons.bars_3_bottom_left mini />
+  <Heroicons.bars_3_bottom_left outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4888,9 +5206,11 @@ defmodule Heroicons do
   <Heroicons.cube class="w-4 h-4" />
   <Heroicons.cube solid />
   <Heroicons.cube mini />
+  <Heroicons.cube outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4918,9 +5238,11 @@ defmodule Heroicons do
   <Heroicons.shopping_cart class="w-4 h-4" />
   <Heroicons.shopping_cart solid />
   <Heroicons.shopping_cart mini />
+  <Heroicons.shopping_cart outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4948,9 +5270,11 @@ defmodule Heroicons do
   <Heroicons.arrow_small_up class="w-4 h-4" />
   <Heroicons.arrow_small_up solid />
   <Heroicons.arrow_small_up mini />
+  <Heroicons.arrow_small_up outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -4978,9 +5302,11 @@ defmodule Heroicons do
   <Heroicons.heart class="w-4 h-4" />
   <Heroicons.heart solid />
   <Heroicons.heart mini />
+  <Heroicons.heart outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5008,9 +5334,11 @@ defmodule Heroicons do
   <Heroicons.check_badge class="w-4 h-4" />
   <Heroicons.check_badge solid />
   <Heroicons.check_badge mini />
+  <Heroicons.check_badge outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5038,9 +5366,11 @@ defmodule Heroicons do
   <Heroicons.table_cells class="w-4 h-4" />
   <Heroicons.table_cells solid />
   <Heroicons.table_cells mini />
+  <Heroicons.table_cells outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5068,9 +5398,11 @@ defmodule Heroicons do
   <Heroicons.variable class="w-4 h-4" />
   <Heroicons.variable solid />
   <Heroicons.variable mini />
+  <Heroicons.variable outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5098,9 +5430,11 @@ defmodule Heroicons do
   <Heroicons.play_circle class="w-4 h-4" />
   <Heroicons.play_circle solid />
   <Heroicons.play_circle mini />
+  <Heroicons.play_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5128,9 +5462,11 @@ defmodule Heroicons do
   <Heroicons.document_arrow_down class="w-4 h-4" />
   <Heroicons.document_arrow_down solid />
   <Heroicons.document_arrow_down mini />
+  <Heroicons.document_arrow_down outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5158,9 +5494,11 @@ defmodule Heroicons do
   <Heroicons.arrow_up class="w-4 h-4" />
   <Heroicons.arrow_up solid />
   <Heroicons.arrow_up mini />
+  <Heroicons.arrow_up outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5188,9 +5526,11 @@ defmodule Heroicons do
   <Heroicons.face_frown class="w-4 h-4" />
   <Heroicons.face_frown solid />
   <Heroicons.face_frown mini />
+  <Heroicons.face_frown outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5218,9 +5558,11 @@ defmodule Heroicons do
   <Heroicons.arrow_down_circle class="w-4 h-4" />
   <Heroicons.arrow_down_circle solid />
   <Heroicons.arrow_down_circle mini />
+  <Heroicons.arrow_down_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5248,9 +5590,11 @@ defmodule Heroicons do
   <Heroicons.chevron_double_down class="w-4 h-4" />
   <Heroicons.chevron_double_down solid />
   <Heroicons.chevron_double_down mini />
+  <Heroicons.chevron_double_down outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5278,9 +5622,11 @@ defmodule Heroicons do
   <Heroicons.magnifying_glass class="w-4 h-4" />
   <Heroicons.magnifying_glass solid />
   <Heroicons.magnifying_glass mini />
+  <Heroicons.magnifying_glass outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5308,9 +5654,11 @@ defmodule Heroicons do
   <Heroicons.chevron_double_up class="w-4 h-4" />
   <Heroicons.chevron_double_up solid />
   <Heroicons.chevron_double_up mini />
+  <Heroicons.chevron_double_up outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5338,9 +5686,11 @@ defmodule Heroicons do
   <Heroicons.ellipsis_horizontal class="w-4 h-4" />
   <Heroicons.ellipsis_horizontal solid />
   <Heroicons.ellipsis_horizontal mini />
+  <Heroicons.ellipsis_horizontal outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5368,9 +5718,11 @@ defmodule Heroicons do
   <Heroicons.language class="w-4 h-4" />
   <Heroicons.language solid />
   <Heroicons.language mini />
+  <Heroicons.language outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5398,9 +5750,11 @@ defmodule Heroicons do
   <Heroicons.currency_pound class="w-4 h-4" />
   <Heroicons.currency_pound solid />
   <Heroicons.currency_pound mini />
+  <Heroicons.currency_pound outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5428,9 +5782,11 @@ defmodule Heroicons do
   <Heroicons.adjustments_vertical class="w-4 h-4" />
   <Heroicons.adjustments_vertical solid />
   <Heroicons.adjustments_vertical mini />
+  <Heroicons.adjustments_vertical outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5458,9 +5814,11 @@ defmodule Heroicons do
   <Heroicons.newspaper class="w-4 h-4" />
   <Heroicons.newspaper solid />
   <Heroicons.newspaper mini />
+  <Heroicons.newspaper outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5488,9 +5846,11 @@ defmodule Heroicons do
   <Heroicons.receipt_refund class="w-4 h-4" />
   <Heroicons.receipt_refund solid />
   <Heroicons.receipt_refund mini />
+  <Heroicons.receipt_refund outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5518,9 +5878,11 @@ defmodule Heroicons do
   <Heroicons.chat_bubble_oval_left_ellipsis class="w-4 h-4" />
   <Heroicons.chat_bubble_oval_left_ellipsis solid />
   <Heroicons.chat_bubble_oval_left_ellipsis mini />
+  <Heroicons.chat_bubble_oval_left_ellipsis outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5548,9 +5910,11 @@ defmodule Heroicons do
   <Heroicons.beaker class="w-4 h-4" />
   <Heroicons.beaker solid />
   <Heroicons.beaker mini />
+  <Heroicons.beaker outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5578,9 +5942,11 @@ defmodule Heroicons do
   <Heroicons.arrow_up_right class="w-4 h-4" />
   <Heroicons.arrow_up_right solid />
   <Heroicons.arrow_up_right mini />
+  <Heroicons.arrow_up_right outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5608,9 +5974,11 @@ defmodule Heroicons do
   <Heroicons.arrow_small_down class="w-4 h-4" />
   <Heroicons.arrow_small_down solid />
   <Heroicons.arrow_small_down mini />
+  <Heroicons.arrow_small_down outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5638,9 +6006,11 @@ defmodule Heroicons do
   <Heroicons.square_3_stack_3d class="w-4 h-4" />
   <Heroicons.square_3_stack_3d solid />
   <Heroicons.square_3_stack_3d mini />
+  <Heroicons.square_3_stack_3d outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5668,9 +6038,11 @@ defmodule Heroicons do
   <Heroicons.squares_2x2 class="w-4 h-4" />
   <Heroicons.squares_2x2 solid />
   <Heroicons.squares_2x2 mini />
+  <Heroicons.squares_2x2 outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5698,9 +6070,11 @@ defmodule Heroicons do
   <Heroicons.arrow_path_rounded_square class="w-4 h-4" />
   <Heroicons.arrow_path_rounded_square solid />
   <Heroicons.arrow_path_rounded_square mini />
+  <Heroicons.arrow_path_rounded_square outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5728,9 +6102,11 @@ defmodule Heroicons do
   <Heroicons.arrow_up_left class="w-4 h-4" />
   <Heroicons.arrow_up_left solid />
   <Heroicons.arrow_up_left mini />
+  <Heroicons.arrow_up_left outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5758,9 +6134,11 @@ defmodule Heroicons do
   <Heroicons.pause class="w-4 h-4" />
   <Heroicons.pause solid />
   <Heroicons.pause mini />
+  <Heroicons.pause outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5788,9 +6166,11 @@ defmodule Heroicons do
   <Heroicons.arrow_trending_down class="w-4 h-4" />
   <Heroicons.arrow_trending_down solid />
   <Heroicons.arrow_trending_down mini />
+  <Heroicons.arrow_trending_down outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5818,9 +6198,11 @@ defmodule Heroicons do
   <Heroicons.bars_3 class="w-4 h-4" />
   <Heroicons.bars_3 solid />
   <Heroicons.bars_3 mini />
+  <Heroicons.bars_3 outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5848,9 +6230,11 @@ defmodule Heroicons do
   <Heroicons.shield_check class="w-4 h-4" />
   <Heroicons.shield_check solid />
   <Heroicons.shield_check mini />
+  <Heroicons.shield_check outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5878,9 +6262,11 @@ defmodule Heroicons do
   <Heroicons.magnifying_glass_plus class="w-4 h-4" />
   <Heroicons.magnifying_glass_plus solid />
   <Heroicons.magnifying_glass_plus mini />
+  <Heroicons.magnifying_glass_plus outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5908,9 +6294,11 @@ defmodule Heroicons do
   <Heroicons.at_symbol class="w-4 h-4" />
   <Heroicons.at_symbol solid />
   <Heroicons.at_symbol mini />
+  <Heroicons.at_symbol outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5938,9 +6326,11 @@ defmodule Heroicons do
   <Heroicons.arrows_up_down class="w-4 h-4" />
   <Heroicons.arrows_up_down solid />
   <Heroicons.arrows_up_down mini />
+  <Heroicons.arrows_up_down outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5968,9 +6358,11 @@ defmodule Heroicons do
   <Heroicons.paper_clip class="w-4 h-4" />
   <Heroicons.paper_clip solid />
   <Heroicons.paper_clip mini />
+  <Heroicons.paper_clip outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -5998,9 +6390,11 @@ defmodule Heroicons do
   <Heroicons.cog_6_tooth class="w-4 h-4" />
   <Heroicons.cog_6_tooth solid />
   <Heroicons.cog_6_tooth mini />
+  <Heroicons.cog_6_tooth outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6028,9 +6422,11 @@ defmodule Heroicons do
   <Heroicons.book_open class="w-4 h-4" />
   <Heroicons.book_open solid />
   <Heroicons.book_open mini />
+  <Heroicons.book_open outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6058,9 +6454,11 @@ defmodule Heroicons do
   <Heroicons.microphone class="w-4 h-4" />
   <Heroicons.microphone solid />
   <Heroicons.microphone mini />
+  <Heroicons.microphone outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6088,9 +6486,11 @@ defmodule Heroicons do
   <Heroicons.puzzle_piece class="w-4 h-4" />
   <Heroicons.puzzle_piece solid />
   <Heroicons.puzzle_piece mini />
+  <Heroicons.puzzle_piece outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6118,9 +6518,11 @@ defmodule Heroicons do
   <Heroicons.currency_bangladeshi class="w-4 h-4" />
   <Heroicons.currency_bangladeshi solid />
   <Heroicons.currency_bangladeshi mini />
+  <Heroicons.currency_bangladeshi outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6148,9 +6550,11 @@ defmodule Heroicons do
   <Heroicons.bell_alert class="w-4 h-4" />
   <Heroicons.bell_alert solid />
   <Heroicons.bell_alert mini />
+  <Heroicons.bell_alert outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6178,9 +6582,11 @@ defmodule Heroicons do
   <Heroicons.lock_closed class="w-4 h-4" />
   <Heroicons.lock_closed solid />
   <Heroicons.lock_closed mini />
+  <Heroicons.lock_closed outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6208,9 +6614,11 @@ defmodule Heroicons do
   <Heroicons.arrow_left class="w-4 h-4" />
   <Heroicons.arrow_left solid />
   <Heroicons.arrow_left mini />
+  <Heroicons.arrow_left outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6238,9 +6646,11 @@ defmodule Heroicons do
   <Heroicons.presentation_chart_bar class="w-4 h-4" />
   <Heroicons.presentation_chart_bar solid />
   <Heroicons.presentation_chart_bar mini />
+  <Heroicons.presentation_chart_bar outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6268,9 +6678,11 @@ defmodule Heroicons do
   <Heroicons.battery_50 class="w-4 h-4" />
   <Heroicons.battery_50 solid />
   <Heroicons.battery_50 mini />
+  <Heroicons.battery_50 outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6298,9 +6710,11 @@ defmodule Heroicons do
   <Heroicons.gift class="w-4 h-4" />
   <Heroicons.gift solid />
   <Heroicons.gift mini />
+  <Heroicons.gift outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6328,9 +6742,11 @@ defmodule Heroicons do
   <Heroicons.arrows_pointing_out class="w-4 h-4" />
   <Heroicons.arrows_pointing_out solid />
   <Heroicons.arrows_pointing_out mini />
+  <Heroicons.arrows_pointing_out outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6358,9 +6774,11 @@ defmodule Heroicons do
   <Heroicons.wifi class="w-4 h-4" />
   <Heroicons.wifi solid />
   <Heroicons.wifi mini />
+  <Heroicons.wifi outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6388,9 +6806,11 @@ defmodule Heroicons do
   <Heroicons.clipboard class="w-4 h-4" />
   <Heroicons.clipboard solid />
   <Heroicons.clipboard mini />
+  <Heroicons.clipboard outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6418,9 +6838,11 @@ defmodule Heroicons do
   <Heroicons.envelope_open class="w-4 h-4" />
   <Heroicons.envelope_open solid />
   <Heroicons.envelope_open mini />
+  <Heroicons.envelope_open outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6448,9 +6870,11 @@ defmodule Heroicons do
   <Heroicons.fire class="w-4 h-4" />
   <Heroicons.fire solid />
   <Heroicons.fire mini />
+  <Heroicons.fire outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6478,9 +6902,11 @@ defmodule Heroicons do
   <Heroicons.view_columns class="w-4 h-4" />
   <Heroicons.view_columns solid />
   <Heroicons.view_columns mini />
+  <Heroicons.view_columns outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6508,9 +6934,11 @@ defmodule Heroicons do
   <Heroicons.play_pause class="w-4 h-4" />
   <Heroicons.play_pause solid />
   <Heroicons.play_pause mini />
+  <Heroicons.play_pause outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6538,9 +6966,11 @@ defmodule Heroicons do
   <Heroicons.code_bracket class="w-4 h-4" />
   <Heroicons.code_bracket solid />
   <Heroicons.code_bracket mini />
+  <Heroicons.code_bracket outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6568,9 +6998,11 @@ defmodule Heroicons do
   <Heroicons.code_bracket_square class="w-4 h-4" />
   <Heroicons.code_bracket_square solid />
   <Heroicons.code_bracket_square mini />
+  <Heroicons.code_bracket_square outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6598,9 +7030,11 @@ defmodule Heroicons do
   <Heroicons.device_phone_mobile class="w-4 h-4" />
   <Heroicons.device_phone_mobile solid />
   <Heroicons.device_phone_mobile mini />
+  <Heroicons.device_phone_mobile outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6628,9 +7062,11 @@ defmodule Heroicons do
   <Heroicons.server class="w-4 h-4" />
   <Heroicons.server solid />
   <Heroicons.server mini />
+  <Heroicons.server outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6658,9 +7094,11 @@ defmodule Heroicons do
   <Heroicons.arrow_long_right class="w-4 h-4" />
   <Heroicons.arrow_long_right solid />
   <Heroicons.arrow_long_right mini />
+  <Heroicons.arrow_long_right outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6688,9 +7126,11 @@ defmodule Heroicons do
   <Heroicons.academic_cap class="w-4 h-4" />
   <Heroicons.academic_cap solid />
   <Heroicons.academic_cap mini />
+  <Heroicons.academic_cap outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6718,9 +7158,11 @@ defmodule Heroicons do
   <Heroicons.window class="w-4 h-4" />
   <Heroicons.window solid />
   <Heroicons.window mini />
+  <Heroicons.window outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6748,9 +7190,11 @@ defmodule Heroicons do
   <Heroicons.bolt_slash class="w-4 h-4" />
   <Heroicons.bolt_slash solid />
   <Heroicons.bolt_slash mini />
+  <Heroicons.bolt_slash outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6778,9 +7222,11 @@ defmodule Heroicons do
   <Heroicons.star class="w-4 h-4" />
   <Heroicons.star solid />
   <Heroicons.star mini />
+  <Heroicons.star outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6808,9 +7254,11 @@ defmodule Heroicons do
   <Heroicons.document_check class="w-4 h-4" />
   <Heroicons.document_check solid />
   <Heroicons.document_check mini />
+  <Heroicons.document_check outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6838,9 +7286,11 @@ defmodule Heroicons do
   <Heroicons.question_mark_circle class="w-4 h-4" />
   <Heroicons.question_mark_circle solid />
   <Heroicons.question_mark_circle mini />
+  <Heroicons.question_mark_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6868,9 +7318,11 @@ defmodule Heroicons do
   <Heroicons.presentation_chart_line class="w-4 h-4" />
   <Heroicons.presentation_chart_line solid />
   <Heroicons.presentation_chart_line mini />
+  <Heroicons.presentation_chart_line outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6898,9 +7350,11 @@ defmodule Heroicons do
   <Heroicons.key class="w-4 h-4" />
   <Heroicons.key solid />
   <Heroicons.key mini />
+  <Heroicons.key outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6928,9 +7382,11 @@ defmodule Heroicons do
   <Heroicons.eye_slash class="w-4 h-4" />
   <Heroicons.eye_slash solid />
   <Heroicons.eye_slash mini />
+  <Heroicons.eye_slash outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6958,9 +7414,11 @@ defmodule Heroicons do
   <Heroicons.user class="w-4 h-4" />
   <Heroicons.user solid />
   <Heroicons.user mini />
+  <Heroicons.user outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -6988,9 +7446,11 @@ defmodule Heroicons do
   <Heroicons.scale class="w-4 h-4" />
   <Heroicons.scale solid />
   <Heroicons.scale mini />
+  <Heroicons.scale outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7018,9 +7478,11 @@ defmodule Heroicons do
   <Heroicons.clipboard_document_list class="w-4 h-4" />
   <Heroicons.clipboard_document_list solid />
   <Heroicons.clipboard_document_list mini />
+  <Heroicons.clipboard_document_list outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7048,9 +7510,11 @@ defmodule Heroicons do
   <Heroicons.folder class="w-4 h-4" />
   <Heroicons.folder solid />
   <Heroicons.folder mini />
+  <Heroicons.folder outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7078,9 +7542,11 @@ defmodule Heroicons do
   <Heroicons.arrow_down_on_square class="w-4 h-4" />
   <Heroicons.arrow_down_on_square solid />
   <Heroicons.arrow_down_on_square mini />
+  <Heroicons.arrow_down_on_square outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7108,9 +7574,11 @@ defmodule Heroicons do
   <Heroicons.bookmark class="w-4 h-4" />
   <Heroicons.bookmark solid />
   <Heroicons.bookmark mini />
+  <Heroicons.bookmark outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7138,9 +7606,11 @@ defmodule Heroicons do
   <Heroicons.arrow_small_right class="w-4 h-4" />
   <Heroicons.arrow_small_right solid />
   <Heroicons.arrow_small_right mini />
+  <Heroicons.arrow_small_right outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7168,9 +7638,11 @@ defmodule Heroicons do
   <Heroicons.clipboard_document_check class="w-4 h-4" />
   <Heroicons.clipboard_document_check solid />
   <Heroicons.clipboard_document_check mini />
+  <Heroicons.clipboard_document_check outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7198,9 +7670,11 @@ defmodule Heroicons do
   <Heroicons.document_magnifying_glass class="w-4 h-4" />
   <Heroicons.document_magnifying_glass solid />
   <Heroicons.document_magnifying_glass mini />
+  <Heroicons.document_magnifying_glass outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7228,9 +7702,11 @@ defmodule Heroicons do
   <Heroicons.bars_arrow_up class="w-4 h-4" />
   <Heroicons.bars_arrow_up solid />
   <Heroicons.bars_arrow_up mini />
+  <Heroicons.bars_arrow_up outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7258,9 +7734,11 @@ defmodule Heroicons do
   <Heroicons.sparkles class="w-4 h-4" />
   <Heroicons.sparkles solid />
   <Heroicons.sparkles mini />
+  <Heroicons.sparkles outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7288,9 +7766,11 @@ defmodule Heroicons do
   <Heroicons.computer_desktop class="w-4 h-4" />
   <Heroicons.computer_desktop solid />
   <Heroicons.computer_desktop mini />
+  <Heroicons.computer_desktop outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7318,9 +7798,11 @@ defmodule Heroicons do
   <Heroicons.shield_exclamation class="w-4 h-4" />
   <Heroicons.shield_exclamation solid />
   <Heroicons.shield_exclamation mini />
+  <Heroicons.shield_exclamation outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7348,9 +7830,11 @@ defmodule Heroicons do
   <Heroicons.arrow_up_on_square_stack class="w-4 h-4" />
   <Heroicons.arrow_up_on_square_stack solid />
   <Heroicons.arrow_up_on_square_stack mini />
+  <Heroicons.arrow_up_on_square_stack outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7378,9 +7862,11 @@ defmodule Heroicons do
   <Heroicons.lifebuoy class="w-4 h-4" />
   <Heroicons.lifebuoy solid />
   <Heroicons.lifebuoy mini />
+  <Heroicons.lifebuoy outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7408,9 +7894,11 @@ defmodule Heroicons do
   <Heroicons.ellipsis_vertical class="w-4 h-4" />
   <Heroicons.ellipsis_vertical solid />
   <Heroicons.ellipsis_vertical mini />
+  <Heroicons.ellipsis_vertical outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7438,9 +7926,11 @@ defmodule Heroicons do
   <Heroicons.lock_open class="w-4 h-4" />
   <Heroicons.lock_open solid />
   <Heroicons.lock_open mini />
+  <Heroicons.lock_open outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7468,9 +7958,11 @@ defmodule Heroicons do
   <Heroicons.arrow_long_left class="w-4 h-4" />
   <Heroicons.arrow_long_left solid />
   <Heroicons.arrow_long_left mini />
+  <Heroicons.arrow_long_left outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7498,9 +7990,11 @@ defmodule Heroicons do
   <Heroicons.hand_thumb_up class="w-4 h-4" />
   <Heroicons.hand_thumb_up solid />
   <Heroicons.hand_thumb_up mini />
+  <Heroicons.hand_thumb_up outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7528,9 +8022,11 @@ defmodule Heroicons do
   <Heroicons.light_bulb class="w-4 h-4" />
   <Heroicons.light_bulb solid />
   <Heroicons.light_bulb mini />
+  <Heroicons.light_bulb outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7558,9 +8054,11 @@ defmodule Heroicons do
   <Heroicons.users class="w-4 h-4" />
   <Heroicons.users solid />
   <Heroicons.users mini />
+  <Heroicons.users outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7588,9 +8086,11 @@ defmodule Heroicons do
   <Heroicons.arrow_left_on_rectangle class="w-4 h-4" />
   <Heroicons.arrow_left_on_rectangle solid />
   <Heroicons.arrow_left_on_rectangle mini />
+  <Heroicons.arrow_left_on_rectangle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7618,9 +8118,11 @@ defmodule Heroicons do
   <Heroicons.check_circle class="w-4 h-4" />
   <Heroicons.check_circle solid />
   <Heroicons.check_circle mini />
+  <Heroicons.check_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7648,9 +8150,11 @@ defmodule Heroicons do
   <Heroicons.user_circle class="w-4 h-4" />
   <Heroicons.user_circle solid />
   <Heroicons.user_circle mini />
+  <Heroicons.user_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7678,9 +8182,11 @@ defmodule Heroicons do
   <Heroicons.list_bullet class="w-4 h-4" />
   <Heroicons.list_bullet solid />
   <Heroicons.list_bullet mini />
+  <Heroicons.list_bullet outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7708,9 +8214,11 @@ defmodule Heroicons do
   <Heroicons.arrow_down_right class="w-4 h-4" />
   <Heroicons.arrow_down_right solid />
   <Heroicons.arrow_down_right mini />
+  <Heroicons.arrow_down_right outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7738,9 +8246,11 @@ defmodule Heroicons do
   <Heroicons.magnifying_glass_circle class="w-4 h-4" />
   <Heroicons.magnifying_glass_circle solid />
   <Heroicons.magnifying_glass_circle mini />
+  <Heroicons.magnifying_glass_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7768,9 +8278,11 @@ defmodule Heroicons do
   <Heroicons.speaker_wave class="w-4 h-4" />
   <Heroicons.speaker_wave solid />
   <Heroicons.speaker_wave mini />
+  <Heroicons.speaker_wave outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7798,9 +8310,11 @@ defmodule Heroicons do
   <Heroicons.flag class="w-4 h-4" />
   <Heroicons.flag solid />
   <Heroicons.flag mini />
+  <Heroicons.flag outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7828,9 +8342,11 @@ defmodule Heroicons do
   <Heroicons.rectangle_stack class="w-4 h-4" />
   <Heroicons.rectangle_stack solid />
   <Heroicons.rectangle_stack mini />
+  <Heroicons.rectangle_stack outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7858,9 +8374,11 @@ defmodule Heroicons do
   <Heroicons.cube_transparent class="w-4 h-4" />
   <Heroicons.cube_transparent solid />
   <Heroicons.cube_transparent mini />
+  <Heroicons.cube_transparent outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7888,9 +8406,11 @@ defmodule Heroicons do
   <Heroicons.film class="w-4 h-4" />
   <Heroicons.film solid />
   <Heroicons.film mini />
+  <Heroicons.film outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7918,9 +8438,11 @@ defmodule Heroicons do
   <Heroicons.cursor_arrow_ripple class="w-4 h-4" />
   <Heroicons.cursor_arrow_ripple solid />
   <Heroicons.cursor_arrow_ripple mini />
+  <Heroicons.cursor_arrow_ripple outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7948,9 +8470,11 @@ defmodule Heroicons do
   <Heroicons.gift_top class="w-4 h-4" />
   <Heroicons.gift_top solid />
   <Heroicons.gift_top mini />
+  <Heroicons.gift_top outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -7978,9 +8502,11 @@ defmodule Heroicons do
   <Heroicons.stop_circle class="w-4 h-4" />
   <Heroicons.stop_circle solid />
   <Heroicons.stop_circle mini />
+  <Heroicons.stop_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8008,9 +8534,11 @@ defmodule Heroicons do
   <Heroicons.cursor_arrow_rays class="w-4 h-4" />
   <Heroicons.cursor_arrow_rays solid />
   <Heroicons.cursor_arrow_rays mini />
+  <Heroicons.cursor_arrow_rays outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8038,9 +8566,11 @@ defmodule Heroicons do
   <Heroicons.arrow_uturn_left class="w-4 h-4" />
   <Heroicons.arrow_uturn_left solid />
   <Heroicons.arrow_uturn_left mini />
+  <Heroicons.arrow_uturn_left outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8068,9 +8598,11 @@ defmodule Heroicons do
   <Heroicons.scissors class="w-4 h-4" />
   <Heroicons.scissors solid />
   <Heroicons.scissors mini />
+  <Heroicons.scissors outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8098,9 +8630,11 @@ defmodule Heroicons do
   <Heroicons.document_plus class="w-4 h-4" />
   <Heroicons.document_plus solid />
   <Heroicons.document_plus mini />
+  <Heroicons.document_plus outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8128,9 +8662,11 @@ defmodule Heroicons do
   <Heroicons.viewfinder_circle class="w-4 h-4" />
   <Heroicons.viewfinder_circle solid />
   <Heroicons.viewfinder_circle mini />
+  <Heroicons.viewfinder_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8158,9 +8694,11 @@ defmodule Heroicons do
   <Heroicons.arrow_uturn_right class="w-4 h-4" />
   <Heroicons.arrow_uturn_right solid />
   <Heroicons.arrow_uturn_right mini />
+  <Heroicons.arrow_uturn_right outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8188,9 +8726,11 @@ defmodule Heroicons do
   <Heroicons.shopping_bag class="w-4 h-4" />
   <Heroicons.shopping_bag solid />
   <Heroicons.shopping_bag mini />
+  <Heroicons.shopping_bag outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8218,9 +8758,11 @@ defmodule Heroicons do
   <Heroicons.folder_arrow_down class="w-4 h-4" />
   <Heroicons.folder_arrow_down solid />
   <Heroicons.folder_arrow_down mini />
+  <Heroicons.folder_arrow_down outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8248,9 +8790,11 @@ defmodule Heroicons do
   <Heroicons.cloud class="w-4 h-4" />
   <Heroicons.cloud solid />
   <Heroicons.cloud mini />
+  <Heroicons.cloud outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8278,9 +8822,11 @@ defmodule Heroicons do
   <Heroicons.receipt_percent class="w-4 h-4" />
   <Heroicons.receipt_percent solid />
   <Heroicons.receipt_percent mini />
+  <Heroicons.receipt_percent outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8308,9 +8854,11 @@ defmodule Heroicons do
   <Heroicons.arrow_up_tray class="w-4 h-4" />
   <Heroicons.arrow_up_tray solid />
   <Heroicons.arrow_up_tray mini />
+  <Heroicons.arrow_up_tray outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8338,9 +8886,11 @@ defmodule Heroicons do
   <Heroicons.inbox_stack class="w-4 h-4" />
   <Heroicons.inbox_stack solid />
   <Heroicons.inbox_stack mini />
+  <Heroicons.inbox_stack outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8368,9 +8918,11 @@ defmodule Heroicons do
   <Heroicons.bookmark_slash class="w-4 h-4" />
   <Heroicons.bookmark_slash solid />
   <Heroicons.bookmark_slash mini />
+  <Heroicons.bookmark_slash outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8398,9 +8950,11 @@ defmodule Heroicons do
   <Heroicons.archive_box_arrow_down class="w-4 h-4" />
   <Heroicons.archive_box_arrow_down solid />
   <Heroicons.archive_box_arrow_down mini />
+  <Heroicons.archive_box_arrow_down outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8428,9 +8982,11 @@ defmodule Heroicons do
   <Heroicons.document class="w-4 h-4" />
   <Heroicons.document solid />
   <Heroicons.document mini />
+  <Heroicons.document outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8458,9 +9014,11 @@ defmodule Heroicons do
   <Heroicons.battery_0 class="w-4 h-4" />
   <Heroicons.battery_0 solid />
   <Heroicons.battery_0 mini />
+  <Heroicons.battery_0 outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8488,9 +9046,11 @@ defmodule Heroicons do
   <Heroicons.backward class="w-4 h-4" />
   <Heroicons.backward solid />
   <Heroicons.backward mini />
+  <Heroicons.backward outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8518,9 +9078,11 @@ defmodule Heroicons do
   <Heroicons.pencil class="w-4 h-4" />
   <Heroicons.pencil solid />
   <Heroicons.pencil mini />
+  <Heroicons.pencil outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8548,9 +9110,11 @@ defmodule Heroicons do
   <Heroicons.arrows_right_left class="w-4 h-4" />
   <Heroicons.arrows_right_left solid />
   <Heroicons.arrows_right_left mini />
+  <Heroicons.arrows_right_left outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8578,9 +9142,11 @@ defmodule Heroicons do
   <Heroicons.folder_minus class="w-4 h-4" />
   <Heroicons.folder_minus solid />
   <Heroicons.folder_minus mini />
+  <Heroicons.folder_minus outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8608,9 +9174,11 @@ defmodule Heroicons do
   <Heroicons.document_duplicate class="w-4 h-4" />
   <Heroicons.document_duplicate solid />
   <Heroicons.document_duplicate mini />
+  <Heroicons.document_duplicate outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8638,9 +9206,11 @@ defmodule Heroicons do
   <Heroicons.globe_alt class="w-4 h-4" />
   <Heroicons.globe_alt solid />
   <Heroicons.globe_alt mini />
+  <Heroicons.globe_alt outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8668,9 +9238,11 @@ defmodule Heroicons do
   <Heroicons.currency_yen class="w-4 h-4" />
   <Heroicons.currency_yen solid />
   <Heroicons.currency_yen mini />
+  <Heroicons.currency_yen outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8698,9 +9270,11 @@ defmodule Heroicons do
   <Heroicons.phone_arrow_up_right class="w-4 h-4" />
   <Heroicons.phone_arrow_up_right solid />
   <Heroicons.phone_arrow_up_right mini />
+  <Heroicons.phone_arrow_up_right outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8728,9 +9302,11 @@ defmodule Heroicons do
   <Heroicons.document_arrow_up class="w-4 h-4" />
   <Heroicons.document_arrow_up solid />
   <Heroicons.document_arrow_up mini />
+  <Heroicons.document_arrow_up outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8758,9 +9334,11 @@ defmodule Heroicons do
   <Heroicons.building_library class="w-4 h-4" />
   <Heroicons.building_library solid />
   <Heroicons.building_library mini />
+  <Heroicons.building_library outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8788,9 +9366,11 @@ defmodule Heroicons do
   <Heroicons.building_office class="w-4 h-4" />
   <Heroicons.building_office solid />
   <Heroicons.building_office mini />
+  <Heroicons.building_office outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8818,9 +9398,11 @@ defmodule Heroicons do
   <Heroicons.arrow_right_circle class="w-4 h-4" />
   <Heroicons.arrow_right_circle solid />
   <Heroicons.arrow_right_circle mini />
+  <Heroicons.arrow_right_circle outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
@@ -8848,9 +9430,11 @@ defmodule Heroicons do
   <Heroicons.signal_slash class="w-4 h-4" />
   <Heroicons.signal_slash solid />
   <Heroicons.signal_slash mini />
+  <Heroicons.signal_slash outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 

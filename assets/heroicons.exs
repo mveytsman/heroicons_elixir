@@ -99,9 +99,11 @@ defmodule Heroicons do
   <Heroicons.<%= func %> class="w-4 h-4" />
   <Heroicons.<%= func %> solid />
   <Heroicons.<%= func %> mini />
+  <Heroicons.<%= func %> outline />
   ```
   """
   attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
