@@ -6,7 +6,7 @@ This library provides optimized svgs for each Heroicon packaged as a Phoenix Com
 
 Heroicons are designed by [Steve Schoger](https://twitter.com/steveschoger)
 
-Current Heroicons Version: **2.0.11**.
+Current Heroicons Version: **2.0.12**.
 
 ## Installation
 
