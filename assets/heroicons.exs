@@ -50,35 +50,45 @@ defmodule Heroicons do
   """
   use Phoenix.Component
 
-  defp svg(assigns, outline, solid, mini) do
+  defp svg(assigns) do
     case assigns do
-      %{mini: false, solid: false} -> svg_outline(assign(assigns, paths: outline))
-      %{solid: true, mini: false} -> svg_solid(assign(assigns, paths: solid))
-      %{mini: true, solid: false} -> svg_mini(assign(assigns, paths: mini))
+      %{mini: false, solid: false} ->
+        ~H"<.svg_outline {@rest}><%%= {:safe, @paths[:outline]} %></.svg_outline>"
+      %{solid: true, mini: false} ->
+        ~H"<.svg_solid {@rest}><%%= {:safe, @paths[:solid]} %></.svg_solid>"
+      %{mini: true, solid: false} ->
+        ~H"<.svg_mini {@rest}><%%= {:safe, @paths[:mini]} %></.svg_mini>"
       %{} -> raise ArgumentError, "expected either mini or solid, but got both."
     end
   end
 
+
+  attr :rest, :global, default: %{"aria-hidden": "true", fill: "none", viewBox: "0 0 24 24", "stroke-width": "1.5", stroke: "currentColor"}
+  slot :inner_block, required: true
   defp svg_outline(assigns) do
     ~H"""
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" {@rest}>
-      <%%= {:safe, @paths} %>
+    <svg xmlns="http://www.w3.org/2000/svg" {@rest}>
+      <%%= render_slot(@inner_block) %>
     </svg>
     """
   end
 
+  attr :rest, :global, default: %{"aria-hidden": "true", viewBox: "0 0 24 24", fill: "currentColor"}
+  slot :inner_block, required: true
   defp svg_solid(assigns) do
     ~H"""
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" {@rest}>
-      <%%= {:safe, @paths} %>
+    <svg xmlns="http://www.w3.org/2000/svg" {@rest}>
+      <%%= render_slot(@inner_block) %>
     </svg>
     """
   end
 
+  attr :rest, :global, default: %{"aria-hidden": "true", viewBox: "0 0 20 20", fill: "currentColor"}
+  slot :inner_block, required: true
   defp svg_mini(assigns) do
     ~H"""
-    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 20 20" fill="currentColor" {@rest}>
-      <%%= {:safe, @paths} %>
+    <svg xmlns="http://www.w3.org/2000/svg"{@rest}>
+      <%%= render_slot(@inner_block) %>
     </svg>
     """
   end
@@ -102,13 +112,13 @@ defmodule Heroicons do
   <Heroicons.<%= func %> outline />
   ```
   """
-  attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container"
+  attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container", include: ~w(fill stroke stroke-width)
   attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
 
   def <%= func %>(assigns) do
-    svg(assigns, ~S|<%= outline %>|, ~S|<%= solid %>|, ~S|<%= mini %>|)
+    svg(assign(assigns, paths: %{outline: ~S|<%= outline %>|, solid: ~S|<%= solid %>|, mini: ~S|<%= mini %>|}))
   end
   <% end %>
 end
