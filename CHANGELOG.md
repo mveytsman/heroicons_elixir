@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.1
+### Enhancements
+- Add a `:outline` attribute to specify outline explicitly
+- Allow `fill`, `stroke`, and `stroke-width` to be user specified.
+
 ## 0.5.0
 
 ### Backwards incompatible changes
