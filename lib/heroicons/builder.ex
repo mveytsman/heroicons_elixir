@@ -83,14 +83,15 @@ defmodule Heroicons.Builder do
           <Heroicons.#{unquote(fn_name)} mini />
           <Heroicons.#{unquote(fn_name)} outline />
           ```
-
-          ## Attributes
-
-          * `rest` (`:global`) - the arbitrary HTML attributes for the svg container. Supports all globals plus: `["fill", "stroke", "stroke-width"]`.
-          * `outline` (`:boolean`) - Defaults to `true`.
-          * `solid` (`:boolean`) - Defaults to `false`.
-          * `mini` (`:boolean`) - Defaults to `false`.
           """
+          attr :rest, :global,
+            doc: "the arbitrary HTML attributes for the svg container",
+            include: ~w(fill stroke stroke-width)
+
+          attr :outline, :boolean, default: true
+          attr :solid, :boolean, default: false
+          attr :mini, :boolean, default: false
+
           def unquote(fn_name)(assigns) when is_default_variant(assigns) do
             svg(assign(assigns, type: unquote(type), paths: unquote(paths)))
           end
@@ -99,7 +100,11 @@ defmodule Heroicons.Builder do
 
     quote do
       def unquote(fn_name)(%{unquote(type) => true} = assigns) do
-        svg(assign(assigns, type: unquote(type), paths: unquote(paths)))
+        assigns
+        # replace *type* => true with type: *type* for simpler matching
+        |> Map.drop([unquote(type)])
+        |> assign(type: unquote(type), paths: unquote(paths))
+        |> svg()
       end
 
       unquote(default)

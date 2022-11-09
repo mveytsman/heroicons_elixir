@@ -53,13 +53,7 @@ defmodule Heroicons do
 
   attr :type, :atom
   attr :paths, :string
-  attr :outline, :boolean
-  attr :solid, :boolean
-  attr :mini, :boolean
-
-  attr :rest, :global,
-    doc: "the arbitrary HTML attributes for the svg container",
-    include: ~w(fill stroke stroke-width)
+  attr :rest, :global
 
   defp svg(assigns) do
     case assigns.type do
