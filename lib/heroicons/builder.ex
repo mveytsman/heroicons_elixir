@@ -7,9 +7,13 @@ defmodule Heroicons.Builder do
 
   import SweetXml
 
-  @heroicons_repository Application.compile_env(:heroicons, :heroicons_repository)
-  @heroicons_version Application.compile_env(:heroicons, :heroicons_version)
-  @allowed_types Application.compile_env(:heroicons, :allowed_types)
+  @heroicons_repository Application.compile_env(
+                          :heroicons,
+                          :heroicons_repository,
+                          "tailwindlabs/heroicons"
+                        )
+  @heroicons_version Application.compile_env(:heroicons, :heroicons_version, :latest)
+  @allowed_types Application.compile_env(:heroicons, :allowed_types, ["solid", "outline"])
 
   defmacro __using__(_) do
     quote do
@@ -53,9 +57,8 @@ defmodule Heroicons.Builder do
     end
   end
 
-  defp build_icon_def({size, type, fn_name}, content) do
+  defp build_icon_def({type, fn_name}, content) do
     paths = extract_icon_paths(content)
-    type = if size == 20, do: :mini, else: type
 
     quote do
       @doc """
@@ -84,9 +87,13 @@ defmodule Heroicons.Builder do
 
   defp extract_icon_attributes(filename) when is_list(filename) do
     case Regex.scan(~r/\/([^\/.]+)/, to_string(filename), capture: :all_but_first) do
-      [["optimized"], [size], [type], [name]] when type in @allowed_types ->
+      [["optimized"], ["20"], _, [name]] ->
         fn_name = name |> String.replace("-", "_") |> String.to_atom()
-        {String.to_integer(size), String.to_atom(type), fn_name}
+        {:mini, fn_name}
+
+      [["optimized"], _, [type], [name]] when type in @allowed_types ->
+        fn_name = name |> String.replace("-", "_") |> String.to_atom()
+        {String.to_atom(type), fn_name}
 
       _ ->
         nil
