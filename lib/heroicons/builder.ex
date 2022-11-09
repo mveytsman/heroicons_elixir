@@ -60,28 +60,49 @@ defmodule Heroicons.Builder do
   defp build_icon_def({type, fn_name}, content) do
     paths = extract_icon_paths(content)
 
+    default =
+      if type == :outline do
+        quote do
+          defguardp is_default_variant(assigns)
+                    when not is_map_key(assigns, :solid) and not is_map_key(assigns, :mini)
+
+          @doc """
+          Renders the `#{unquote(fn_name)}` icon.
+
+          By default, the outlined (24x24) component is used, but the `solid` or `mini`
+          attributes can be provided for alternative styles.
+
+          You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+          ## Examples
+
+          ```heex
+          <Heroicons.#{unquote(fn_name)} />
+          <Heroicons.#{unquote(fn_name)} class="w-4 h-4" />
+          <Heroicons.#{unquote(fn_name)} solid />
+          <Heroicons.#{unquote(fn_name)} mini />
+          <Heroicons.#{unquote(fn_name)} outline />
+          ```
+
+          ## Attributes
+
+          * `rest` (`:global`) - the arbitrary HTML attributes for the svg container. Supports all globals plus: `["fill", "stroke", "stroke-width"]`.
+          * `outline` (`:boolean`) - Defaults to `true`.
+          * `solid` (`:boolean`) - Defaults to `false`.
+          * `mini` (`:boolean`) - Defaults to `false`.
+          """
+          def unquote(fn_name)(assigns) when is_default_variant(assigns) do
+            svg(assign(assigns, type: unquote(type), paths: unquote(paths)))
+          end
+        end
+      end
+
     quote do
-      @doc """
-      Renders the `#{unquote(fn_name)}` icon.
-
-      By default, the outlined (24x24) component is used, but the `solid` or `mini`
-      attributes can be provided for alternative styles.
-
-      You may also pass arbitrary HTML attributes to be applied to the svg tag.
-
-      ## Examples
-
-      ```heex
-      <Heroicons.#{unquote(fn_name)} />
-      <Heroicons.#{unquote(fn_name)} class="w-4 h-4" />
-      <Heroicons.#{unquote(fn_name)} solid />
-      <Heroicons.#{unquote(fn_name)} mini />
-      <Heroicons.#{unquote(fn_name)} outline />
-      ```
-      """
       def unquote(fn_name)(%{unquote(type) => true} = assigns) do
         svg(assign(assigns, type: unquote(type), paths: unquote(paths)))
       end
+
+      unquote(default)
     end
   end
 
@@ -103,7 +124,22 @@ defmodule Heroicons.Builder do
   defp extract_icon_attributes(_), do: nil
 
   defp extract_icon_paths(content) when is_binary(content) do
-    xpath(content, ~x"//svg/child::node()")
+    content
+    |> xpath(~x"//svg/*"l)
+    |> Enum.map_join("", fn node ->
+      name = xmlElement(node, :name)
+
+      attrs =
+        node
+        |> xmlElement(:attributes)
+        |> Enum.map_join(" ", fn attr ->
+          name = xmlAttribute(attr, :name)
+          value = xmlAttribute(attr, :value)
+          ~s|#{name}="#{value}"|
+        end)
+
+      ~s|<#{name} #{attrs}/>|
+    end)
   end
 
   defp simple_get_request!(url, retry \\ 0) do

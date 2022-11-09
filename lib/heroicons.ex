@@ -51,19 +51,21 @@ defmodule Heroicons do
   use Phoenix.Component
   use Heroicons.Builder
 
+  attr :type, :atom
+  attr :paths, :string
+  attr :outline, :boolean
+  attr :solid, :boolean
+  attr :mini, :boolean
+
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
   defp svg(assigns) do
     case assigns.type do
-      :outline ->
-        ~H"<.svg_outline {@rest}><%= {:safe, @paths[:outline]} %></.svg_outline>"
-
-      :solid ->
-        ~H"<.svg_solid {@rest}><%= {:safe, @paths[:solid]} %></.svg_solid>"
-
-      :mini ->
-        ~H"<.svg_mini {@rest}><%= {:safe, @paths[:mini]} %></.svg_mini>"
-
-      other ->
-        raise ArgumentError, "unexpected type #{other}."
+      :outline -> ~H"<.svg_outline {@rest}><%= {:safe, @paths} %></.svg_outline>"
+      :solid -> ~H"<.svg_solid {@rest}><%= {:safe, @paths} %></.svg_solid>"
+      :mini -> ~H"<.svg_mini {@rest}><%= {:safe, @paths} %></.svg_mini>"
     end
   end
 
