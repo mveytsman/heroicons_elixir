@@ -51,10 +51,6 @@ defmodule Heroicons do
   use Phoenix.Component
   use Heroicons.Builder
 
-  attr :type, :atom
-  attr :paths, :string
-  attr :rest, :global
-
   defp svg(assigns) do
     case assigns.type do
       :outline -> ~H"<.svg_outline {@rest}><%= {:safe, @paths} %></.svg_outline>"
@@ -74,33 +70,23 @@ defmodule Heroicons do
 
   slot(:inner_block, required: true)
 
-  defp svg_outline(assigns) do
-    ~H"""
-    <svg xmlns="http://www.w3.org/2000/svg" {@rest}>
-      <%= render_slot(@inner_block) %>
-    </svg>
-    """
-  end
+  defp svg_outline(assigns), do: generic_svg(assigns)
 
   attr :rest, :global,
     default: %{"aria-hidden": "true", viewBox: "0 0 24 24", fill: "currentColor"}
 
   slot(:inner_block, required: true)
 
-  defp svg_solid(assigns) do
-    ~H"""
-    <svg xmlns="http://www.w3.org/2000/svg" {@rest}>
-      <%= render_slot(@inner_block) %>
-    </svg>
-    """
-  end
+  defp svg_solid(assigns), do: generic_svg(assigns)
 
   attr :rest, :global,
     default: %{"aria-hidden": "true", viewBox: "0 0 20 20", fill: "currentColor"}
 
   slot(:inner_block, required: true)
 
-  defp svg_mini(assigns) do
+  defp svg_mini(assigns), do: generic_svg(assigns)
+
+  defp generic_svg(assigns) do
     ~H"""
     <svg xmlns="http://www.w3.org/2000/svg" {@rest}>
       <%= render_slot(@inner_block) %>

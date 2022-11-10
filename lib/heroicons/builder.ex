@@ -16,24 +16,24 @@ defmodule Heroicons.Builder do
   @allowed_types Application.compile_env(:heroicons, :allowed_types, ["solid", "outline"])
 
   defmacro __using__(_) do
-    quote do
-      @before_compile Heroicons.Builder
-    end
+    Module.put_attribute(__CALLER__.module, :before_compile, __MODULE__)
+    Module.register_attribute(__CALLER__.module, :icons, accumulate: true)
   end
 
   defmacro __before_compile__(_env) do
     Application.ensure_all_started(:hackney)
 
-    %{"tag_name" => tag_name, "tarball_url" => tarball_url} = get_release_data(@heroicons_version)
+    %{"tag_name" => tag_name, "tarball_url" => tarball_url} =
+      get_release_data!(@heroicons_version)
 
     Logger.info("Building Heroicons library #{tag_name}")
 
     tarball_url
-    |> simple_get_request!()
-    |> process_archive()
+    |> get_url!()
+    |> process_archive(__CALLER__.module)
   end
 
-  defp get_release_data(release_tag) do
+  defp get_release_data!(release_tag) do
     release =
       if release_tag == :latest do
         "latest"
@@ -43,83 +43,100 @@ defmodule Heroicons.Builder do
 
     ["https://api.github.com", "repos", @heroicons_repository, "releases", release]
     |> Path.join()
-    |> simple_get_request!()
+    |> get_url!()
     |> Jason.decode!()
   end
 
-  defp process_archive(binary) do
+  defp process_archive(binary, module) do
     with {:ok, files} <- :erl_tar.extract({:binary, binary}, [:memory, :compressed]) do
       for {filename, content} <- files,
           props = extract_icon_attributes(filename),
           !is_nil(props) do
-        build_icon_def(props, content)
+        build_icon_def(props, content, module)
       end
     end
   end
 
-  defp build_icon_def({type, fn_name}, content) do
+  defp build_icon_def({type, icon_name}, content, module) do
+    Module.put_attribute(module, :icons, icon_name)
+
     paths = extract_icon_paths(content)
 
-    default =
-      if type == :outline do
-        quote do
-          defguardp is_default_variant(assigns)
-                    when not is_map_key(assigns, :solid) and not is_map_key(assigns, :mini)
+    fn_count =
+      module
+      |> Module.get_attribute(:icons)
+      |> Enum.count(&(&1 == icon_name))
 
-          @doc """
-          Renders the `#{unquote(fn_name)}` icon.
+    is_first_def? = fn_count == 1
+    is_last_def? = fn_count == 3
 
-          By default, the outlined (24x24) component is used, but the `solid` or `mini`
-          attributes can be provided for alternative styles.
+    # we have to render default fn to a module attribute and inject it after last specific clause
+    if type == :outline do
+      outline_ast = get_icon_def(icon_name, type, paths, Macro.escape(%{}))
+      Module.put_attribute(module, icon_name, outline_ast)
+    end
 
-          You may also pass arbitrary HTML attributes to be applied to the svg tag.
+    variant = get_icon_def(icon_name, type, paths, Macro.escape(%{type => true}))
+    decorator = if is_first_def?, do: get_icon_docs(icon_name)
+    default = if is_last_def?, do: Module.get_attribute(module, icon_name)
 
-          ## Examples
+    Enum.reject([decorator, variant, default], &is_nil/1)
+  end
 
-          ```heex
-          <Heroicons.#{unquote(fn_name)} />
-          <Heroicons.#{unquote(fn_name)} class="w-4 h-4" />
-          <Heroicons.#{unquote(fn_name)} solid />
-          <Heroicons.#{unquote(fn_name)} mini />
-          <Heroicons.#{unquote(fn_name)} outline />
-          ```
-          """
-          attr :rest, :global,
-            doc: "the arbitrary HTML attributes for the svg container",
-            include: ~w(fill stroke stroke-width)
+  def get_icon_docs(icon_name) do
+    quote do
+      @doc """
+      Renders the `#{unquote(icon_name)}` icon.
 
-          attr :outline, :boolean, default: true
-          attr :solid, :boolean, default: false
-          attr :mini, :boolean, default: false
+      By default, the outlined (24x24) component is used, but the `solid` or `mini`
+      attributes can be provided for alternative styles.
 
-          def unquote(fn_name)(assigns) when is_default_variant(assigns) do
-            svg(assign(assigns, type: unquote(type), paths: unquote(paths)))
-          end
-        end
-      end
+      You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+      ## Examples
+
+      ```heex
+      <Heroicons.#{unquote(icon_name)} />
+      <Heroicons.#{unquote(icon_name)} class="w-4 h-4" />
+      <Heroicons.#{unquote(icon_name)} solid />
+      <Heroicons.#{unquote(icon_name)} mini />
+      <Heroicons.#{unquote(icon_name)} outline />
+      ```
+      """
+      attr :rest, :global,
+        doc: "the arbitrary HTML attributes for the svg container",
+        include: ~w(fill stroke stroke-width)
+
+      attr :outline, :boolean, default: false
+      attr :solid, :boolean, default: false
+      attr :mini, :boolean, default: false
+    end
+  end
+
+  defp get_icon_def(icon_name, type, paths, assigns_pattern) do
+    import Kernel, except: [def: 2]
+    import Phoenix.Component.Declarative, only: [def: 2]
 
     quote do
-      def unquote(fn_name)(%{unquote(type) => true} = assigns) do
+      def unquote(icon_name)(unquote(assigns_pattern) = assigns) do
         assigns
         # replace *type* => true with type: *type* for simpler matching
         |> Map.drop([unquote(type)])
         |> assign(type: unquote(type), paths: unquote(paths))
         |> svg()
       end
-
-      unquote(default)
     end
   end
 
   defp extract_icon_attributes(filename) when is_list(filename) do
     case Regex.scan(~r/\/([^\/.]+)/, to_string(filename), capture: :all_but_first) do
       [["optimized"], ["20"], _, [name]] ->
-        fn_name = name |> String.replace("-", "_") |> String.to_atom()
-        {:mini, fn_name}
+        icon_name = name |> String.replace("-", "_") |> String.to_atom()
+        {:mini, icon_name}
 
       [["optimized"], _, [type], [name]] when type in @allowed_types ->
-        fn_name = name |> String.replace("-", "_") |> String.to_atom()
-        {String.to_atom(type), fn_name}
+        icon_name = name |> String.replace("-", "_") |> String.to_atom()
+        {String.to_atom(type), icon_name}
 
       _ ->
         nil
@@ -131,7 +148,7 @@ defmodule Heroicons.Builder do
   defp extract_icon_paths(content) when is_binary(content) do
     content
     |> xpath(~x"//svg/*"l)
-    |> Enum.map_join("", fn node ->
+    |> Enum.map(fn node ->
       name = xmlElement(node, :name)
 
       attrs =
@@ -147,7 +164,7 @@ defmodule Heroicons.Builder do
     end)
   end
 
-  defp simple_get_request!(url, retry \\ 0) do
+  defp get_url!(url, retry \\ 0) do
     with(
       {:ok, 200, _, client} <-
         :hackney.request(:get, url, [], "", follow_redirect: true, max_redirect: 3),
@@ -156,7 +173,7 @@ defmodule Heroicons.Builder do
       body
     else
       {:error, :timeout} when retry < 3 ->
-        simple_get_request!(url, retry + 1)
+        get_url!(url, retry + 1)
 
       _ ->
         raise "Failed to get data from #{url}"
