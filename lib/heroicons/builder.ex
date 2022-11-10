@@ -5,8 +5,6 @@ defmodule Heroicons.Builder do
 
   require Logger
 
-  import SweetXml
-
   @heroicons_repository Application.compile_env(
                           :heroicons,
                           :heroicons_repository,
@@ -21,7 +19,8 @@ defmodule Heroicons.Builder do
   end
 
   defmacro __before_compile__(_env) do
-    Application.ensure_all_started(:hackney)
+    Application.ensure_all_started(:inets)
+    Application.ensure_all_started(:ssl)
 
     %{"tag_name" => tag_name, "tarball_url" => tarball_url} =
       get_release_data!(@heroicons_version)
@@ -44,16 +43,22 @@ defmodule Heroicons.Builder do
     ["https://api.github.com", "repos", @heroicons_repository, "releases", release]
     |> Path.join()
     |> get_url!()
-    |> Jason.decode!()
+    |> Phoenix.json_library().decode!()
   end
 
   defp process_archive(binary, module) do
     with {:ok, files} <- :erl_tar.extract({:binary, binary}, [:memory, :compressed]) do
-      for {filename, content} <- files,
-          props = extract_icon_attributes(filename),
-          !is_nil(props) do
-        build_icon_def(props, content, module)
-      end
+      Task.async_stream(
+        files,
+        fn {filename, content} ->
+          case extract_icon_attributes(filename) do
+            nil -> nil
+            props -> build_icon_def(props, content, module)
+          end
+        end,
+        ordered: false
+      )
+      |> Enum.reject(&is_nil/1)
     end
   end
 
@@ -146,37 +151,52 @@ defmodule Heroicons.Builder do
   defp extract_icon_attributes(_), do: nil
 
   defp extract_icon_paths(content) when is_binary(content) do
-    content
-    |> xpath(~x"//svg/*"l)
-    |> Enum.map(fn node ->
-      name = xmlElement(node, :name)
-
-      attrs =
-        node
-        |> xmlElement(:attributes)
-        |> Enum.map_join(" ", fn attr ->
-          name = xmlAttribute(attr, :name)
-          value = xmlAttribute(attr, :value)
-          ~s|#{name}="#{value}"|
-        end)
-
-      ~s|<#{name} #{attrs}/>|
-    end)
+    for path <- String.split(content, "\n"),
+        path = String.trim(path),
+        String.starts_with?(path, "<path"),
+        do: path
   end
 
   defp get_url!(url, retry \\ 0) do
-    with(
-      {:ok, 200, _, client} <-
-        :hackney.request(:get, url, [], "", follow_redirect: true, max_redirect: 3),
-      {:ok, body} <- :hackney.body(client)
-    ) do
-      body
-    else
-      {:error, :timeout} when retry < 3 ->
+    if proxy = System.get_env("HTTP_PROXY") || System.get_env("http_proxy") do
+      Logger.debug("Using HTTP_PROXY: #{proxy}")
+      %{host: host, port: port} = URI.parse(proxy)
+      :httpc.set_options([{:proxy, {{String.to_charlist(host), port}, []}}])
+    end
+
+    # https://erlef.github.io/security-wg/secure_coding_and_deployment_hardening/inets
+    cacertfile = CAStore.file_path() |> String.to_charlist()
+
+    request = {url, [{'User-Agent', 'Elixir'}]}
+
+    http_options = [
+      timeout: 5_000,
+      ssl: [
+        verify: :verify_peer,
+        cacertfile: cacertfile,
+        depth: 2,
+        customize_hostname_check: [
+          match_fun: :public_key.pkix_verify_hostname_match_fun(:https)
+        ],
+        versions: protocol_versions()
+      ]
+    ]
+
+    case :httpc.request(:get, request, http_options, body_format: :binary) do
+      {:ok, {{_, 200, 'OK'}, _headers, body}} ->
+        body
+
+      {:error, {:failed_connect, [_, {_, _, :timeout}]}} when retry < 3 ->
         get_url!(url, retry + 1)
 
       _ ->
         raise "Failed to get data from #{url}"
     end
   end
+
+  defp protocol_versions do
+    if otp_version() < 25, do: [:"tlsv1.2"], else: [:"tlsv1.2", :"tlsv1.3"]
+  end
+
+  defp otp_version, do: :erlang.system_info(:otp_release) |> List.to_integer()
 end
