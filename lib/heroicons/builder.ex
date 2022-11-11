@@ -1,7 +1,5 @@
 defmodule Heroicons.Builder do
-  @moduledoc """
-  Documentation for `Heroicons.Builder`.
-  """
+  @moduledoc false
 
   require Logger
 
@@ -11,7 +9,9 @@ defmodule Heroicons.Builder do
                           "tailwindlabs/heroicons"
                         )
   @heroicons_version Application.compile_env(:heroicons, :heroicons_version, :latest)
+  # this one needs to have strings because check is done before creation of atom
   @allowed_types Application.compile_env(:heroicons, :allowed_types, ["solid", "outline"])
+  @default_type Application.compile_env(:heroicons, :default_type, :outline)
 
   defmacro __using__(_) do
     Module.put_attribute(__CALLER__.module, :before_compile, __MODULE__)
@@ -21,18 +21,10 @@ defmodule Heroicons.Builder do
   defmacro __before_compile__(_env) do
     Application.ensure_all_started(:inets)
     Application.ensure_all_started(:ssl)
-
-    %{"tag_name" => tag_name, "tarball_url" => tarball_url} =
-      get_release_data!(@heroicons_version)
-
-    Logger.info("Building Heroicons library #{tag_name}")
-
-    tarball_url
-    |> get_url!()
-    |> process_archive(__CALLER__.module)
+    build_heroicons_defs!(@heroicons_version, __CALLER__.module)
   end
 
-  defp get_release_data!(release_tag) do
+  defp build_heroicons_defs!(release_tag, module) do
     release =
       if release_tag == :latest do
         "latest"
@@ -40,10 +32,19 @@ defmodule Heroicons.Builder do
         "tags/#{release_tag}"
       end
 
-    ["https://api.github.com", "repos", @heroicons_repository, "releases", release]
-    |> Path.join()
-    |> get_url!()
-    |> Phoenix.json_library().decode!()
+    with(
+      url <-
+        Path.join(["https://api.github.com", "repos", @heroicons_repository, "releases", release]),
+      {:ok, body} <- get_url(url),
+      {:ok, %{"tag_name" => tag_name, "tarball_url" => tarball_url}} <-
+        Phoenix.json_library().decode(body),
+      {:ok, binary} <- get_url(tarball_url)
+    ) do
+      Logger.info("Building Heroicons library #{tag_name}")
+      process_archive(binary, module)
+    else
+      _ -> fallback_to_local_icons(module)
+    end
   end
 
   defp process_archive(binary, module) do
@@ -62,6 +63,17 @@ defmodule Heroicons.Builder do
     end
   end
 
+  defp fallback_to_local_icons(module) do
+    # keep whitespace at start for nice formatting
+    Logger.warn(
+      " Failed to fetch icons archive. Using bundled version (2.0.13)\n\t\t\tTry rebuilding :heroicons later"
+    )
+
+    fallback_archive()
+    |> File.read!()
+    |> process_archive(module)
+  end
+
   defp build_icon_def({type, icon_name}, content, module) do
     Module.put_attribute(module, :icons, icon_name)
 
@@ -76,19 +88,24 @@ defmodule Heroicons.Builder do
     is_last_def? = fn_count == 3
 
     # we have to render default fn to a module attribute and inject it after last specific clause
-    if type == :outline do
-      outline_ast = get_icon_def(icon_name, type, paths, Macro.escape(%{}))
-      Module.put_attribute(module, icon_name, outline_ast)
+    if type == @default_type do
+      default_ast = get_icon_def(icon_name, type, paths, Macro.escape(%{}))
+      Module.put_attribute(module, icon_name, default_ast)
     end
 
-    variant = get_icon_def(icon_name, type, paths, Macro.escape(%{type => true}))
-    decorator = if is_first_def?, do: get_icon_docs(icon_name)
+    # default variant will be defined at the end, no need for duplicate definitions
+    variant =
+      unless type == @default_type do
+        get_icon_def(icon_name, type, paths, Macro.escape(%{type => true}))
+      end
+
+    decorator = if is_first_def?, do: get_icon_docs(icon_name, @default_type)
     default = if is_last_def?, do: Module.get_attribute(module, icon_name)
 
     Enum.reject([decorator, variant, default], &is_nil/1)
   end
 
-  def get_icon_docs(icon_name) do
+  def get_icon_docs(icon_name, default_type) do
     quote do
       @doc """
       Renders the `#{unquote(icon_name)}` icon.
@@ -112,9 +129,9 @@ defmodule Heroicons.Builder do
         doc: "the arbitrary HTML attributes for the svg container",
         include: ~w(fill stroke stroke-width)
 
-      attr :outline, :boolean, default: false
-      attr :solid, :boolean, default: false
-      attr :mini, :boolean, default: false
+      attr :outline, :boolean, default: unquote(default_type) == :outline
+      attr :solid, :boolean, default: unquote(default_type) == :solid
+      attr :mini, :boolean, default: unquote(default_type) == :mini
     end
   end
 
@@ -157,7 +174,7 @@ defmodule Heroicons.Builder do
         do: path
   end
 
-  defp get_url!(url, retry \\ 0) do
+  defp get_url(url, retry \\ 0) do
     if proxy = System.get_env("HTTP_PROXY") || System.get_env("http_proxy") do
       Logger.debug("Using HTTP_PROXY: #{proxy}")
       %{host: host, port: port} = URI.parse(proxy)
@@ -184,13 +201,13 @@ defmodule Heroicons.Builder do
 
     case :httpc.request(:get, request, http_options, body_format: :binary) do
       {:ok, {{_, 200, 'OK'}, _headers, body}} ->
-        body
+        {:ok, body}
 
       {:error, {:failed_connect, [_, {_, _, :timeout}]}} when retry < 3 ->
-        get_url!(url, retry + 1)
+        get_url(url, retry + 1)
 
-      _ ->
-        raise "Failed to get data from #{url}"
+      err ->
+        {:error, err}
     end
   end
 
@@ -199,4 +216,6 @@ defmodule Heroicons.Builder do
   end
 
   defp otp_version, do: :erlang.system_info(:otp_release) |> List.to_integer()
+
+  defp fallback_archive, do: Path.join("assets", "heroicons-2.0.13.tar")
 end

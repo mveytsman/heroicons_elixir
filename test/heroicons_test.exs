@@ -87,7 +87,7 @@ defmodule HeroiconsTest do
            ## Attributes
 
            * `rest` (`:global`) - the arbitrary HTML attributes for the svg container. Supports all globals plus: `["fill", "stroke", "stroke-width"]`.
-           * `outline` (`:boolean`) - Defaults to `false`.
+           * `outline` (`:boolean`) - Defaults to `true`.
            * `solid` (`:boolean`) - Defaults to `false`.
            * `mini` (`:boolean`) - Defaults to `false`.
            """
