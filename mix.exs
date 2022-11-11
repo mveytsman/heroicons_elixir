@@ -28,7 +28,7 @@ defmodule HeroiconsElixir.MixProject do
   defp deps do
     [
       {:phoenix_live_view, "~> 0.18.2"},
-      {:jason, "~> 1.2", runtime: false},
+      {:jason, "~> 1.2", optional: true, runtime: false},
       {:ex_doc, "~> 0.23", only: :dev, runtime: false},
       {:castore, ">= 0.0.0"}
     ]
