@@ -187,7 +187,7 @@ defmodule Heroicons.Builder do
     request = {url, [{'User-Agent', 'Elixir'}]}
 
     http_options = [
-      timeout: 5_000,
+      timeout: 3_000,
       ssl: [
         verify: :verify_peer,
         cacertfile: cacertfile,
@@ -203,11 +203,10 @@ defmodule Heroicons.Builder do
       {:ok, {{_, 200, 'OK'}, _headers, body}} ->
         {:ok, body}
 
-      {:error, {:failed_connect, [_, {_, _, :timeout}]}} when retry < 3 ->
+      {:error, {:failed_connect, [_, {_, _, :timeout}]}} when retry < 2 ->
         get_url(url, retry + 1)
 
-      err ->
-        {:error, err}
+      err -> err
     end
   end
 
