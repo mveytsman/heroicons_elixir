@@ -217,5 +217,5 @@ defmodule Heroicons.Builder do
 
   defp otp_version, do: :erlang.system_info(:otp_release) |> List.to_integer()
 
-  defp fallback_archive, do: Path.join("assets", "heroicons-2.0.13.tar")
+  defp fallback_archive, do: Path.join("assets", "heroicons-2.0.13.tar.gz")
 end
