@@ -24,6 +24,20 @@ defmodule Heroicons do
   <Heroicons.cake solid class="w-2 h-2" />
   ```
 
+  ## Staying up-to-data
+
+  This Library can provide any version of Heroicons. The default setting is tu use the latest one.
+  To update icons with the latest release of Heroicons you should simply recompile
+  this dependency: `mix deps.compile heroicons --force`
+
+  If you want to stay on specific version you can take advantage of config.
+  For example: `config :heroicons, heroicons_version: "v2.0.10"` (version must be an existing git tag)
+
+  There are other settings available (for more advanced use):
+  `:heroicons_repository` - Allows to override repository used by this library (useful when you maintain your own fork of Heroicons)
+  `:allowed_types` - Allows advanced configuration of icon variants that should be available for use
+  `:default_type` - Use in conjunction with `:allowed_types` to tune how the library behaves
+
   ## Heroicons License Attribution
 
   MIT License
@@ -53,9 +67,12 @@ defmodule Heroicons do
 
   defp svg(assigns) do
     case assigns.type do
-      :outline -> ~H"<.svg_outline {@rest}><%= {:safe, @paths} %></.svg_outline>"
-      :solid -> ~H"<.svg_solid {@rest}><%= {:safe, @paths} %></.svg_solid>"
-      :mini -> ~H"<.svg_mini {@rest}><%= {:safe, @paths} %></.svg_mini>"
+      :outline -> ~H"<.svg_outline {@rest}><%= {:safe, @paths} %></.svg_outline>
+"
+      :solid -> ~H"<.svg_solid {@rest}><%= {:safe, @paths} %></.svg_solid>
+"
+      :mini -> ~H"<.svg_mini {@rest}><%= {:safe, @paths} %></.svg_mini>
+"
     end
   end
 
