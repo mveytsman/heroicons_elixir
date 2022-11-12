@@ -67,12 +67,9 @@ defmodule Heroicons do
 
   defp svg(assigns) do
     case assigns.type do
-      :outline -> ~H"<.svg_outline {@rest}><%= {:safe, @paths} %></.svg_outline>
-"
-      :solid -> ~H"<.svg_solid {@rest}><%= {:safe, @paths} %></.svg_solid>
-"
-      :mini -> ~H"<.svg_mini {@rest}><%= {:safe, @paths} %></.svg_mini>
-"
+      :outline -> ~H"<.svg_outline {@rest}><%= {:safe, @paths} %></.svg_outline>"
+      :solid -> ~H"<.svg_solid {@rest}><%= {:safe, @paths} %></.svg_solid>"
+      :mini -> ~H"<.svg_mini {@rest}><%= {:safe, @paths} %></.svg_mini>"
     end
   end
 
