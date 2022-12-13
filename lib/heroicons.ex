@@ -1,6 +1,6 @@
 defmodule Heroicons do
   @moduledoc """
-  Provides precompiled icon compiles from [heroicons.com v2.0.12](heroicons.com).
+  Provides precompiled icon compiles from [heroicons.com v2.0.13](heroicons.com).
 
   Heroicons are designed by [Steve Schoger](https://twitter.com/steveschoger)
 
@@ -4652,7 +4652,7 @@ defmodule Heroicons do
           solid:
             ~S|<path fill-rule="evenodd" d="M3.75 12a.75.75 0 01.75-.75h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75z" clip-rule="evenodd"/>|,
           mini:
-            ~S|<path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H3.75A.75.75 0 013 10z" clip-rule="evenodd"/>|
+            ~S|<path fill-rule="evenodd" d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z" clip-rule="evenodd"/>|
         }
       )
     )
