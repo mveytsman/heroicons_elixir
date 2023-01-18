@@ -19,7 +19,7 @@ Add Phosphoricons to your `mix.exs`:
 ```elixir
 defp deps do
   [
-    {:phosphoricons, "~> 0.0.2"}
+    {:phosphoricons, "~> 0.1.0"}
   ]
 end
 ```
