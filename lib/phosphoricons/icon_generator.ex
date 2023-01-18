@@ -1,15 +1,9 @@
 defmodule Phosphoricons.IconGenerator do
-  defmacro __using__(icon_dir: icon_dir, prefix: prefix) do
+  defmacro __using__(icon_dir: icon_dir) do
     icon_paths =
       Path.absname(icon_dir, :code.priv_dir(:phosphoricons))
       |> Path.join("*.svg")
       |> Path.wildcard()
-      |> Enum.filter(fn path ->
-        path
-        |> String.split("/")
-        |> List.last()
-        |> String.starts_with?(prefix)
-      end)
 
     for path <- icon_paths do
       generate(path)
@@ -79,7 +73,7 @@ defmodule Phosphoricons.IconGenerator do
             module: __ENV__.module,
             indentation: 0
           )
-        )
+        )|> IO.inspect()
       end
 
       def unquote(name)(opts) when is_list(opts) do

@@ -12,15 +12,13 @@ defmodule Phosphoricons.Generator do
   """
   defmacro __using__(_opts) do
     for weight <- ["Thin", "Light", "Regular", "Bold", "Fill", "Duotone"] do
-      for letter <- ?a..?z do
-        letter = <<letter::utf8>>
-        module_name = Code.string_to_quoted!("#{weight}.#{String.upcase(letter)}")
-        icon_dir = "#{weight}/"
+      module_name = Code.string_to_quoted!(weight)
+      icon_dir = "#{weight}/"
 
-        quote do
-          defmodule unquote(module_name) do
-            use Phosphoricons.IconGenerator, icon_dir: unquote(icon_dir), prefix: unquote(letter)
-          end
+      quote do
+        IO.inspect(unquote(module_name))
+        defmodule unquote(module_name) do
+          use Phosphoricons.IconGenerator, icon_dir: unquote(icon_dir)
         end
       end
     end
