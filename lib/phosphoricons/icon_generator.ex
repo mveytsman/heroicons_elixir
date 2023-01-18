@@ -71,6 +71,8 @@ defmodule Phosphoricons.IconGenerator do
 
         unquote(
           EEx.compile_string(head <> "{@attrs}" <> body,
+            caller: __MODULE__,
+            source: __MODULE__,
             engine: Phoenix.LiveView.HTMLEngine,
             file: __ENV__.file,
             line: __ENV__.line + 1,
