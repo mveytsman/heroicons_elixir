@@ -1,9 +1,8 @@
 # Changelog
 
-## 0.6.0
-
-### Backwards incompatible changes
- - Updated LiveView to 0.19
+## 0.5.2
+### Enhancements
+ - Added support for LiveView 0.19
 
 ## 0.5.1
 ### Enhancements
