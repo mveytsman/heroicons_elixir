@@ -75,7 +75,7 @@ defmodule Heroicons do
       stroke: "currentColor"
     }
 
-  slot(:inner_block, required: true)
+  slot :inner_block, required: true
 
   defp svg_outline(assigns) do
     ~H"""
@@ -88,7 +88,7 @@ defmodule Heroicons do
   attr :rest, :global,
     default: %{"aria-hidden": "true", viewBox: "0 0 24 24", fill: "currentColor"}
 
-  slot(:inner_block, required: true)
+  slot :inner_block, required: true
 
   defp svg_solid(assigns) do
     ~H"""
@@ -101,7 +101,7 @@ defmodule Heroicons do
   attr :rest, :global,
     default: %{"aria-hidden": "true", viewBox: "0 0 20 20", fill: "currentColor"}
 
-  slot(:inner_block, required: true)
+  slot :inner_block, required: true
 
   defp svg_mini(assigns) do
     ~H"""

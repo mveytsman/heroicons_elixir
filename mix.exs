@@ -27,7 +27,7 @@ defmodule HeroiconsElixir.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:phoenix_live_view, "~> 0.18.2"},
+      {:phoenix_live_view, "~> 0.19"},
       {:ex_doc, "~> 0.23", only: :dev, runtime: false},
       {:castore, ">= 0.0.0"}
     ]
