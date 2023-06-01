@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.0
+
+### Backwards incompatible changes
+ - Updated LiveView to 0.19
+
 ## 0.5.1
 ### Enhancements
 - Add a `:outline` attribute to specify outline explicitly
