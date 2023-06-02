@@ -1,4 +1,8 @@
 defmodule Phosphoricons.Helpers do
+  @moduledoc """
+    Helper module for Phosphoricons
+  """
+
   @doc "Removes the suffix type from an icon name"
   def remove_appendix(str) do
     str

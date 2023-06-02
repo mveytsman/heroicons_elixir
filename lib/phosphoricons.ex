@@ -23,35 +23,53 @@ defmodule Phosphoricons do
   """
   alias Phosphoricons.Helpers
 
-  icons = for weight <- ["thin", "light", "regular", "bold", "fill", "duotone"] do
-    icon_dir = "#{String.capitalize(weight)}/"
+  icons =
+    for weight <- ["thin", "light", "regular", "bold", "fill", "duotone"] do
+      icon_paths =
+        Path.absname("#{weight}/", :code.priv_dir(:phosphoricons))
+        |> Path.join("*.svg")
+        |> Path.wildcard()
 
-    icon_paths =
-      Path.absname(icon_dir, :code.priv_dir(:phosphoricons))
-      |> Path.join("*.svg")
-      |> Path.wildcard()
+      weight_icons =
+        for path <- icon_paths do
+          name =
+            Path.basename(path, ".svg")
+            |> String.replace("-", "_")
+            |> Helpers.remove_appendix()
 
-    weight_icons = for path <- icon_paths do
-      name =
-        Path.basename(path, ".svg")
-        |> String.replace("-", "_")
-        |> Helpers.remove_appendix()
+          # Read file and replace all strokes with currentColor
+          icon =
+            path
+            |> File.read!()
+            |> String.replace("stroke=\"#000\"", "stroke=\"currentColor\"")
 
-      # Read file and replace all strokes with currentColor
-      icon =
-        path
-        |> File.read!()
-        |> String.replace("stroke=\"#000\"", "stroke=\"currentColor\"")
+          {i, _} = :binary.match(icon, ">")
+          {name, String.split_at(icon, i)}
+        end
+        |> Map.new()
 
-      {i, _} = :binary.match(icon, ">")
-      {name, String.split_at(icon, i)}
+      {weight, weight_icons}
     end
-    |> Map.new()
 
-    {weight, weight_icons}
-  end
   @icons Map.new(icons)
 
+  @doc """
+  ![](assets/Fill/alarm-fill.svg) {: width=24px}
+
+  ## Examples
+
+  Use as a `Phoenix.Component`
+
+    <.icon name="alarm" />
+
+    <.icon name="alarm" class="h-6 w-6 text-gray-500" />
+
+  or as a function
+
+    <%= icon("alarm") %>
+
+    <%= icon("alarm", class: "h-6 w-6 text-gray-500") %>
+  """
   def icon(name, opts \\ []) do
     {type, opts} = Keyword.pop(opts, :type, default_type())
     attrs = Helpers.opts_to_attrs(opts)
@@ -69,5 +87,7 @@ defmodule Phosphoricons do
   def default_type, do: "regular"
 
   defp maybe_convert_to_string(value) when is_binary(value), do: String.downcase(value)
-  defp maybe_convert_to_string(value) when is_atom(value), do: value |> Atom.to_string() |> String.downcase()
+
+  defp maybe_convert_to_string(value) when is_atom(value),
+    do: value |> Atom.to_string() |> String.downcase()
 end
