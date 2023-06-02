@@ -1,8 +1,12 @@
 # Changelog
 
-## 0.5.2
+## 0.5.3
 ### Enhancements
  - Added support for LiveView 0.19
+
+## 0.5.2
+### Enhancements
+ -  Update heroicons to 2.0.13
 
 ## 0.5.1
 ### Enhancements
