@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.4
+### Enhancements
+ - Added support for LiveView 0.20
+   
 ## 0.5.3
 ### Enhancements
  - Added support for LiveView 0.19
