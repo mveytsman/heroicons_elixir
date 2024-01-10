@@ -12,7 +12,8 @@ defmodule Mix.Tasks.Heroicons.Build do
     outlined = Path.wildcard(Path.join(svgs_path, "outline/**/*.svg"))
     solid = Path.wildcard(Path.join(svgs_path, "solid/**/*.svg"))
     mini = Path.wildcard(Path.join(svgs_path, "mini/**/*.svg"))
-    ordered_icons = outlined ++ solid ++ mini
+    micro = Path.wildcard(Path.join(svgs_path, "micro/**/*.svg"))
+    ordered_icons = outlined ++ solid ++ mini ++ micro
 
     icons =
       Enum.group_by(ordered_icons, &function_name(&1), fn file ->
@@ -21,6 +22,8 @@ defmodule Mix.Tasks.Heroicons.Build do
             String.starts_with?(path, "<path"),
             do: path
       end)
+
+    IO.inspect(icons, label: "icons")
 
     Mix.Generator.copy_template("assets/heroicons.exs", @target_file, %{icons: icons, vsn: vsn},
       force: true
