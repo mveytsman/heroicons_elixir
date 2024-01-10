@@ -3,7 +3,7 @@ defmodule Mix.Tasks.Heroicons.Update do
   @moduledoc false
   @shortdoc false
 
-  @vsn "2.0.13"
+  @vsn "2.1.0"
   @tmp_dir_name "heroicons-elixir"
 
   # Updates the icons in the assets/icons directory
@@ -36,7 +36,11 @@ defmodule Mix.Tasks.Heroicons.Update do
     svgs_dir
     |> File.ls!()
     |> Enum.each(fn size ->
+      IO.inspect(size, label: "size")
       case size do
+        "16" ->
+          copy_svg_files(Path.join([svgs_dir, size, "solid"]), "micro")
+
         "20" ->
           copy_svg_files(Path.join([svgs_dir, size, "solid"]), "mini")
 
