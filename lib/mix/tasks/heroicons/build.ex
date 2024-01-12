@@ -23,8 +23,6 @@ defmodule Mix.Tasks.Heroicons.Build do
             do: path
       end)
 
-    IO.inspect(icons, label: "icons")
-
     Mix.Generator.copy_template("assets/heroicons.exs", @target_file, %{icons: icons, vsn: vsn},
       force: true
     )

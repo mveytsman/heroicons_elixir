@@ -113,9 +113,11 @@ defmodule Heroicons do
   <%= for  {func, [outline, solid, mini, micro]} = icon when not is_nil(micro) <- @icons do %>
   @doc """
   Renders the `<%= func %>` icon.
-  By default, the outlined (24x24) component is used, but the `solid` or `mini`
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
+
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
   ## Examples
   ```heex
   <Heroicons.<%= func %> />
@@ -136,13 +138,18 @@ defmodule Heroicons do
     svg(assign(assigns, paths: %{outline: ~S|<%= outline %>|, solid: ~S|<%= solid %>|, mini: ~S|<%= mini %>|, micro: ~S|<%= micro %>|}))
   end
   <% end %>
+
   <%= for  {func, [outline, solid, mini]} = icon  <- @icons do %>
   @doc """
   Renders the `<%= func %>` icon.
+
   By default, the outlined (24x24) component is used, but the `solid` or `mini`
   attributes can be provided for alternative styles.
+
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
   ## Examples
+
   ```heex
   <Heroicons.<%= func %> />
   <Heroicons.<%= func %> class="w-4 h-4" />
