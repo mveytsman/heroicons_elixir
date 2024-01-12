@@ -110,7 +110,7 @@ defmodule Heroicons do
     """
   end
 
-  <%= for icon <- @icons, {func, [outline, solid, mini]} = icon do %>
+  <%= for  {func, [outline, solid, mini, micro]} = icon when not is_nil(micro) <- @icons do %>
   @doc """
   Renders the `<%= func %>` icon.
 
@@ -138,6 +138,35 @@ defmodule Heroicons do
 
   def <%= func %>(assigns) do
     svg(assign(assigns, paths: %{outline: ~S|<%= outline %>|, solid: ~S|<%= solid %>|, mini: ~S|<%= mini %>|, micro: ~S|<%= micro %>|}))
+  end
+  <% end %>
+
+  <%= for  {func, [outline, solid, mini]} = icon  <- @icons do %>
+  @doc """
+  Renders the `<%= func %>` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid` or `mini`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.<%= func %> />
+  <Heroicons.<%= func %> class="w-4 h-4" />
+  <Heroicons.<%= func %> solid />
+  <Heroicons.<%= func %> mini />
+  <Heroicons.<%= func %> outline />
+  ```
+  """
+  attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container", include: ~w(fill stroke stroke-width)
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+
+  def <%= func %>(assigns) do
+    svg(assign(assigns, paths: %{outline: ~S|<%= outline %>|, solid: ~S|<%= solid %>|, mini: ~S|<%= mini %>|}))
   end
   <% end %>
 end

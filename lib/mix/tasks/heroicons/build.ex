@@ -22,7 +22,17 @@ defmodule Mix.Tasks.Heroicons.Build do
             String.starts_with?(path, "<path"),
             do: path
       end)
-    IO.inspect(icons, label: "icons")
+
+    Enum.each(icons, fn {func, _} = icon ->
+      if func == "arrow_right_on_rectangle" do
+        IO.inspect(icon, label: "icon", pretty: true)
+      end
+    end)
+
+    # Enum.map(icons, fn {func, [outline, solid, mini, micro]} = icon ->
+    #   IO.inspect(icon, label: "icon", pretty: true)
+    # end)
+
     Mix.Generator.copy_template("assets/heroicons.exs", @target_file, %{icons: icons, vsn: vsn},
       force: true
     )
