@@ -3,7 +3,7 @@ defmodule Mix.Tasks.Heroicons.Update do
   @moduledoc false
   @shortdoc false
 
-  @vsn "2.0.13"
+  @vsn "2.1.1"
   @tmp_dir_name "heroicons-elixir"
 
   # Updates the icons in the assets/icons directory
@@ -62,8 +62,13 @@ defmodule Mix.Tasks.Heroicons.Update do
     url = String.to_charlist(url)
     Logger.debug("Downloading heroicons from #{url}")
 
-    {:ok, _} = Application.ensure_all_started(:inets)
-    {:ok, _} = Application.ensure_all_started(:ssl)
+    if function_exported?(Mix, :ensure_application!, 1) do
+      Mix.ensure_application!(:inets)
+      Mix.ensure_application!(:ssl)
+    else
+      {:ok, _} = Application.ensure_all_started(:inets)
+      {:ok, _} = Application.ensure_all_started(:ssl)
+    end
 
     if proxy = System.get_env("HTTP_PROXY") || System.get_env("http_proxy") do
       Logger.debug("Using HTTP_PROXY: #{proxy}")
