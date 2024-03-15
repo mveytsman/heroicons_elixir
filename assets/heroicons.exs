@@ -6,15 +6,16 @@ defmodule Heroicons do
 
   ## Usage
 
-  Hero icons come in three styles – outline (`24x24`), solid (`24x24`), and mini (`20x20`).
+  Hero icons come in four styles – outline (`24x24`), solid (`24x24`), mini (`20x20`) and micro(`16x16`).
 
-  By default, the icon components will use the outline style, but the `solid` or
-  `mini` attributes may be passed to select styling, for example:
+  By default, the icon components will use the outline style, but the `solid`,
+  `mini` or micro attributes may be passed to select styling, for example:
 
   ```heex
   <Heroicons.cake />
   <Heroicons.cake solid />
   <Heroicons.cake mini />
+  <Heroicons.cake micro />
   ```
 
   You can also pass arbitrary HTML attributes to the components:
@@ -52,12 +53,18 @@ defmodule Heroicons do
 
   defp svg(assigns) do
     case assigns do
-      %{mini: false, solid: false} ->
+      %{mini: false, solid: false, micro: false} ->
         ~H"<.svg_outline {@rest}><%%= {:safe, @paths[:outline]} %></.svg_outline>"
-      %{solid: true, mini: false} ->
+
+      %{solid: true, mini: false, micro: false} ->
         ~H"<.svg_solid {@rest}><%%= {:safe, @paths[:solid]} %></.svg_solid>"
-      %{mini: true, solid: false} ->
+
+      %{mini: true, solid: false, micro: false} ->
         ~H"<.svg_mini {@rest}><%%= {:safe, @paths[:mini]} %></.svg_mini>"
+
+      %{micro: true, solid: false, mini: false} ->
+        ~H"<.svg_micro {@rest}><%%= {:safe, @paths[:micro]} %></.svg_micro>"
+
       %{} -> raise ArgumentError, "expected either mini or solid, but got both."
     end
   end
@@ -87,13 +94,54 @@ defmodule Heroicons do
   slot :inner_block, required: true
   defp svg_mini(assigns) do
     ~H"""
-    <svg xmlns="http://www.w3.org/2000/svg"{@rest}>
+    <svg xmlns="http://www.w3.org/2000/svg" {@rest}>
       <%%= render_slot(@inner_block) %>
     </svg>
     """
   end
 
-  <%= for icon <- @icons, {func, [outline, solid, mini]} = icon do %>
+  attr :rest, :global, default: %{"aria-hidden": "true", viewBox: "0 0 16 16", fill: "currentColor"}
+  slot :inner_block, required: true
+  defp svg_micro(assigns) do
+    ~H"""
+    <svg xmlns="http://www.w3.org/2000/svg" {@rest}>
+      <%%= render_slot(@inner_block) %>
+    </svg>
+    """
+  end
+
+  <%= for  {func, [outline, solid, mini, micro]} = icon when not is_nil(micro) <- @icons do %>
+  @doc """
+  Renders the `<%= func %>` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.<%= func %> />
+  <Heroicons.<%= func %> class="w-4 h-4" />
+  <Heroicons.<%= func %> solid />
+  <Heroicons.<%= func %> mini />
+  <Heroicons.<%= func %> micro />
+  <Heroicons.<%= func %> outline />
+  ```
+  """
+  attr :rest, :global, doc: "the arbitrary HTML attributes for the svg container", include: ~w(fill stroke stroke-width)
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def <%= func %>(assigns) do
+    svg(assign(assigns, paths: %{outline: ~S|<%= outline %>|, solid: ~S|<%= solid %>|, mini: ~S|<%= mini %>|, micro: ~S|<%= micro %>|}))
+  end
+  <% end %>
+
+  <%= for  {func, [outline, solid, mini]} = icon  <- @icons do %>
   @doc """
   Renders the `<%= func %>` icon.
 
@@ -116,7 +164,6 @@ defmodule Heroicons do
   attr :outline, :boolean, default: true
   attr :solid, :boolean, default: false
   attr :mini, :boolean, default: false
-
   def <%= func %>(assigns) do
     svg(assign(assigns, paths: %{outline: ~S|<%= outline %>|, solid: ~S|<%= solid %>|, mini: ~S|<%= mini %>|}))
   end

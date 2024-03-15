@@ -37,6 +37,9 @@ defmodule Mix.Tasks.Heroicons.Update do
     |> File.ls!()
     |> Enum.each(fn size ->
       case size do
+        "16" ->
+          copy_svg_files(Path.join([svgs_dir, size, "solid"]), "micro")
+
         "20" ->
           copy_svg_files(Path.join([svgs_dir, size, "solid"]), "mini")
 

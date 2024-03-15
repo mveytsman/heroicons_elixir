@@ -1,4 +1,7 @@
 # Changelog
+## 0.5.4
+### Enhancements
+ -  Update heroicons to 2.1.1 []
 
 ## 0.5.3
 ### Enhancements
