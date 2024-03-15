@@ -1,7 +1,8 @@
 # Changelog
 ## 0.5.4
 ### Enhancements
- -  Update heroicons to 2.1.1 []
+ -  Update heroicons to 2.1.1
+ -  Add support for `micro` icons
 
 ## 0.5.3
 ### Enhancements
