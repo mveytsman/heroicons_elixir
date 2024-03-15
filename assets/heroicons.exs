@@ -94,7 +94,7 @@ defmodule Heroicons do
   slot :inner_block, required: true
   defp svg_mini(assigns) do
     ~H"""
-    <svg xmlns="http://www.w3.org/2000/svg"{@rest}>
+    <svg xmlns="http://www.w3.org/2000/svg" {@rest}>
       <%%= render_slot(@inner_block) %>
     </svg>
     """
@@ -104,7 +104,7 @@ defmodule Heroicons do
   slot :inner_block, required: true
   defp svg_micro(assigns) do
     ~H"""
-    <svg xmlns="http://www.w3.org/2000/svg"{@rest}>
+    <svg xmlns="http://www.w3.org/2000/svg" {@rest}>
       <%%= render_slot(@inner_block) %>
     </svg>
     """
@@ -113,12 +113,14 @@ defmodule Heroicons do
   <%= for  {func, [outline, solid, mini, micro]} = icon when not is_nil(micro) <- @icons do %>
   @doc """
   Renders the `<%= func %>` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.<%= func %> />
   <Heroicons.<%= func %> class="w-4 h-4" />

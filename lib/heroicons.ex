@@ -130,12 +130,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `swatch` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.swatch />
   <Heroicons.swatch class="w-4 h-4" />
@@ -173,12 +175,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `photo` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.photo />
   <Heroicons.photo class="w-4 h-4" />
@@ -216,12 +220,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_down_left` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_down_left />
   <Heroicons.arrow_down_left class="w-4 h-4" />
@@ -259,12 +265,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_right_end_on_rectangle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_right_end_on_rectangle />
   <Heroicons.arrow_right_end_on_rectangle class="w-4 h-4" />
@@ -302,12 +310,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `folder_plus` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.folder_plus />
   <Heroicons.folder_plus class="w-4 h-4" />
@@ -345,12 +355,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_down_tray` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_down_tray />
   <Heroicons.arrow_down_tray class="w-4 h-4" />
@@ -388,12 +400,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `cpu_chip` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.cpu_chip />
   <Heroicons.cpu_chip class="w-4 h-4" />
@@ -431,12 +445,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chat_bubble_bottom_center` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chat_bubble_bottom_center />
   <Heroicons.chat_bubble_bottom_center class="w-4 h-4" />
@@ -474,12 +490,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `globe_europe_africa` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.globe_europe_africa />
   <Heroicons.globe_europe_africa class="w-4 h-4" />
@@ -517,12 +535,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `inbox_arrow_down` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.inbox_arrow_down />
   <Heroicons.inbox_arrow_down class="w-4 h-4" />
@@ -560,12 +580,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bars_3_bottom_right` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bars_3_bottom_right />
   <Heroicons.bars_3_bottom_right class="w-4 h-4" />
@@ -603,12 +625,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_uturn_up` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_uturn_up />
   <Heroicons.arrow_uturn_up class="w-4 h-4" />
@@ -646,12 +670,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_left_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_left_circle />
   <Heroicons.arrow_left_circle class="w-4 h-4" />
@@ -689,12 +715,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `phone_arrow_down_left` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.phone_arrow_down_left />
   <Heroicons.phone_arrow_down_left class="w-4 h-4" />
@@ -732,12 +760,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `speaker_x_mark` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.speaker_x_mark />
   <Heroicons.speaker_x_mark class="w-4 h-4" />
@@ -775,12 +805,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `currency_rupee` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.currency_rupee />
   <Heroicons.currency_rupee class="w-4 h-4" />
@@ -818,12 +850,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `document_minus` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.document_minus />
   <Heroicons.document_minus class="w-4 h-4" />
@@ -861,12 +895,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `calendar_days` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.calendar_days />
   <Heroicons.calendar_days class="w-4 h-4" />
@@ -904,12 +940,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chat_bubble_left_ellipsis` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chat_bubble_left_ellipsis />
   <Heroicons.chat_bubble_left_ellipsis class="w-4 h-4" />
@@ -947,12 +985,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `share` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.share />
   <Heroicons.share class="w-4 h-4" />
@@ -990,12 +1030,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `minus_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.minus_circle />
   <Heroicons.minus_circle class="w-4 h-4" />
@@ -1033,12 +1075,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `briefcase` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.briefcase />
   <Heroicons.briefcase class="w-4 h-4" />
@@ -1076,12 +1120,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chevron_right` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chevron_right />
   <Heroicons.chevron_right class="w-4 h-4" />
@@ -1119,12 +1165,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `check` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.check />
   <Heroicons.check class="w-4 h-4" />
@@ -1162,12 +1210,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_up_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_up_circle />
   <Heroicons.arrow_up_circle class="w-4 h-4" />
@@ -1205,12 +1255,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `map_pin` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.map_pin />
   <Heroicons.map_pin class="w-4 h-4" />
@@ -1248,12 +1300,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `rss` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.rss />
   <Heroicons.rss class="w-4 h-4" />
@@ -1291,12 +1345,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `calendar` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.calendar />
   <Heroicons.calendar class="w-4 h-4" />
@@ -1334,12 +1390,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `clipboard_document` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.clipboard_document />
   <Heroicons.clipboard_document class="w-4 h-4" />
@@ -1377,12 +1435,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chevron_up` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chevron_up />
   <Heroicons.chevron_up class="w-4 h-4" />
@@ -1420,12 +1480,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_right` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_right />
   <Heroicons.arrow_right class="w-4 h-4" />
@@ -1463,12 +1525,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_down` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_down />
   <Heroicons.arrow_down class="w-4 h-4" />
@@ -1506,12 +1570,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `hashtag` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.hashtag />
   <Heroicons.hashtag class="w-4 h-4" />
@@ -1549,12 +1615,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chat_bubble_left` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chat_bubble_left />
   <Heroicons.chat_bubble_left class="w-4 h-4" />
@@ -1592,12 +1660,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `rectangle_group` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.rectangle_group />
   <Heroicons.rectangle_group class="w-4 h-4" />
@@ -1635,12 +1705,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `paint_brush` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.paint_brush />
   <Heroicons.paint_brush class="w-4 h-4" />
@@ -1678,12 +1750,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `moon` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.moon />
   <Heroicons.moon class="w-4 h-4" />
@@ -1721,12 +1795,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_path` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_path />
   <Heroicons.arrow_path class="w-4 h-4" />
@@ -1764,12 +1840,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_up_on_square` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_up_on_square />
   <Heroicons.arrow_up_on_square class="w-4 h-4" />
@@ -1807,12 +1885,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `qr_code` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.qr_code />
   <Heroicons.qr_code class="w-4 h-4" />
@@ -1850,12 +1930,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `backspace` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.backspace />
   <Heroicons.backspace class="w-4 h-4" />
@@ -1893,12 +1975,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bars_3_center_left` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bars_3_center_left />
   <Heroicons.bars_3_center_left class="w-4 h-4" />
@@ -1936,12 +2020,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `trophy` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.trophy />
   <Heroicons.trophy class="w-4 h-4" />
@@ -1979,12 +2065,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `user_group` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.user_group />
   <Heroicons.user_group class="w-4 h-4" />
@@ -2022,12 +2110,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `radio` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.radio />
   <Heroicons.radio class="w-4 h-4" />
@@ -2065,12 +2155,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_left_start_on_rectangle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_left_start_on_rectangle />
   <Heroicons.arrow_left_start_on_rectangle class="w-4 h-4" />
@@ -2108,12 +2200,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_trending_up` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_trending_up />
   <Heroicons.arrow_trending_up class="w-4 h-4" />
@@ -2151,12 +2245,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `currency_dollar` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.currency_dollar />
   <Heroicons.currency_dollar class="w-4 h-4" />
@@ -2194,12 +2290,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_long_up` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_long_up />
   <Heroicons.arrow_long_up class="w-4 h-4" />
@@ -2237,12 +2335,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `face_smile` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.face_smile />
   <Heroicons.face_smile class="w-4 h-4" />
@@ -2280,12 +2380,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `map` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.map />
   <Heroicons.map class="w-4 h-4" />
@@ -2323,12 +2425,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `currency_euro` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.currency_euro />
   <Heroicons.currency_euro class="w-4 h-4" />
@@ -2366,12 +2470,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `building_office_2` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.building_office_2 />
   <Heroicons.building_office_2 class="w-4 h-4" />
@@ -2409,12 +2515,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `document_chart_bar` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.document_chart_bar />
   <Heroicons.document_chart_bar class="w-4 h-4" />
@@ -2452,12 +2560,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `plus` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.plus />
   <Heroicons.plus class="w-4 h-4" />
@@ -2495,12 +2605,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `identification` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.identification />
   <Heroicons.identification class="w-4 h-4" />
@@ -2538,12 +2650,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `cloud_arrow_down` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.cloud_arrow_down />
   <Heroicons.cloud_arrow_down class="w-4 h-4" />
@@ -2581,12 +2695,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `megaphone` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.megaphone />
   <Heroicons.megaphone class="w-4 h-4" />
@@ -2624,12 +2740,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chat_bubble_bottom_center_text` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chat_bubble_bottom_center_text />
   <Heroicons.chat_bubble_bottom_center_text class="w-4 h-4" />
@@ -2667,12 +2785,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `tv` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.tv />
   <Heroicons.tv class="w-4 h-4" />
@@ -2710,12 +2830,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `adjustments_horizontal` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.adjustments_horizontal />
   <Heroicons.adjustments_horizontal class="w-4 h-4" />
@@ -2753,12 +2875,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `device_tablet` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.device_tablet />
   <Heroicons.device_tablet class="w-4 h-4" />
@@ -2796,12 +2920,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `queue_list` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.queue_list />
   <Heroicons.queue_list class="w-4 h-4" />
@@ -2839,12 +2965,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `power` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.power />
   <Heroicons.power class="w-4 h-4" />
@@ -2882,12 +3010,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `building_storefront` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.building_storefront />
   <Heroicons.building_storefront class="w-4 h-4" />
@@ -2925,12 +3055,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `globe_americas` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.globe_americas />
   <Heroicons.globe_americas class="w-4 h-4" />
@@ -2968,12 +3100,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `video_camera_slash` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.video_camera_slash />
   <Heroicons.video_camera_slash class="w-4 h-4" />
@@ -3011,12 +3145,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `play` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.play />
   <Heroicons.play class="w-4 h-4" />
@@ -3054,12 +3190,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `link` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.link />
   <Heroicons.link class="w-4 h-4" />
@@ -3097,12 +3235,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `finger_print` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.finger_print />
   <Heroicons.finger_print class="w-4 h-4" />
@@ -3140,12 +3280,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `cog_8_tooth` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.cog_8_tooth />
   <Heroicons.cog_8_tooth class="w-4 h-4" />
@@ -3183,12 +3325,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `home_modern` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.home_modern />
   <Heroicons.home_modern class="w-4 h-4" />
@@ -3226,12 +3370,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `inbox` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.inbox />
   <Heroicons.inbox class="w-4 h-4" />
@@ -3269,12 +3415,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `folder_open` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.folder_open />
   <Heroicons.folder_open class="w-4 h-4" />
@@ -3312,12 +3460,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `phone_x_mark` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.phone_x_mark />
   <Heroicons.phone_x_mark class="w-4 h-4" />
@@ -3355,12 +3505,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `paper_airplane` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.paper_airplane />
   <Heroicons.paper_airplane class="w-4 h-4" />
@@ -3398,12 +3550,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `archive_box_x_mark` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.archive_box_x_mark />
   <Heroicons.archive_box_x_mark class="w-4 h-4" />
@@ -3441,12 +3595,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bookmark_square` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bookmark_square />
   <Heroicons.bookmark_square class="w-4 h-4" />
@@ -3484,12 +3640,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `square_2_stack` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.square_2_stack />
   <Heroicons.square_2_stack class="w-4 h-4" />
@@ -3527,12 +3685,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bell` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bell />
   <Heroicons.bell class="w-4 h-4" />
@@ -3570,12 +3730,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chat_bubble_oval_left` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chat_bubble_oval_left />
   <Heroicons.chat_bubble_oval_left class="w-4 h-4" />
@@ -3613,12 +3775,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_right_start_on_rectangle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_right_start_on_rectangle />
   <Heroicons.arrow_right_start_on_rectangle class="w-4 h-4" />
@@ -3656,12 +3820,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bars_arrow_down` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bars_arrow_down />
   <Heroicons.bars_arrow_down class="w-4 h-4" />
@@ -3699,12 +3865,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `banknotes` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.banknotes />
   <Heroicons.banknotes class="w-4 h-4" />
@@ -3742,12 +3910,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `sun` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.sun />
   <Heroicons.sun class="w-4 h-4" />
@@ -3785,12 +3955,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `eye_dropper` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.eye_dropper />
   <Heroicons.eye_dropper class="w-4 h-4" />
@@ -3828,12 +4000,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `hand_thumb_down` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.hand_thumb_down />
   <Heroicons.hand_thumb_down class="w-4 h-4" />
@@ -3871,12 +4045,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bolt` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bolt />
   <Heroicons.bolt class="w-4 h-4" />
@@ -3914,12 +4090,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `command_line` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.command_line />
   <Heroicons.command_line class="w-4 h-4" />
@@ -3957,12 +4135,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `funnel` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.funnel />
   <Heroicons.funnel class="w-4 h-4" />
@@ -4000,12 +4180,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `cake` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.cake />
   <Heroicons.cake class="w-4 h-4" />
@@ -4043,12 +4225,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `stop` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.stop />
   <Heroicons.stop class="w-4 h-4" />
@@ -4085,12 +4269,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `exclamation_triangle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.exclamation_triangle />
   <Heroicons.exclamation_triangle class="w-4 h-4" />
@@ -4128,12 +4314,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chart_bar` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chart_bar />
   <Heroicons.chart_bar class="w-4 h-4" />
@@ -4171,12 +4359,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `forward` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.forward />
   <Heroicons.forward class="w-4 h-4" />
@@ -4214,12 +4404,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chevron_up_down` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chevron_up_down />
   <Heroicons.chevron_up_down class="w-4 h-4" />
@@ -4257,12 +4449,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `calculator` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.calculator />
   <Heroicons.calculator class="w-4 h-4" />
@@ -4300,12 +4494,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `ticket` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.ticket />
   <Heroicons.ticket class="w-4 h-4" />
@@ -4343,12 +4539,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `circle_stack` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.circle_stack />
   <Heroicons.circle_stack class="w-4 h-4" />
@@ -4386,12 +4584,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `printer` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.printer />
   <Heroicons.printer class="w-4 h-4" />
@@ -4429,12 +4629,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `home` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.home />
   <Heroicons.home class="w-4 h-4" />
@@ -4472,12 +4674,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `credit_card` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.credit_card />
   <Heroicons.credit_card class="w-4 h-4" />
@@ -4515,12 +4719,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `no_symbol` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.no_symbol />
   <Heroicons.no_symbol class="w-4 h-4" />
@@ -4558,12 +4764,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `server_stack` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.server_stack />
   <Heroicons.server_stack class="w-4 h-4" />
@@ -4601,12 +4809,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `clock` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.clock />
   <Heroicons.clock class="w-4 h-4" />
@@ -4644,12 +4854,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `pause_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.pause_circle />
   <Heroicons.pause_circle class="w-4 h-4" />
@@ -4687,12 +4899,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `globe_asia_australia` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.globe_asia_australia />
   <Heroicons.globe_asia_australia class="w-4 h-4" />
@@ -4730,12 +4944,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `cog` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.cog />
   <Heroicons.cog class="w-4 h-4" />
@@ -4773,12 +4989,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `squares_plus` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.squares_plus />
   <Heroicons.squares_plus class="w-4 h-4" />
@@ -4816,12 +5034,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `gif` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.gif />
   <Heroicons.gif class="w-4 h-4" />
@@ -4859,12 +5079,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `minus` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.minus />
   <Heroicons.minus class="w-4 h-4" />
@@ -4900,12 +5122,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `plus_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.plus_circle />
   <Heroicons.plus_circle class="w-4 h-4" />
@@ -4943,12 +5167,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `cloud_arrow_up` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.cloud_arrow_up />
   <Heroicons.cloud_arrow_up class="w-4 h-4" />
@@ -4986,12 +5212,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_uturn_down` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_uturn_down />
   <Heroicons.arrow_uturn_down class="w-4 h-4" />
@@ -5029,12 +5257,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `truck` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.truck />
   <Heroicons.truck class="w-4 h-4" />
@@ -5072,12 +5302,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `rocket_launch` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.rocket_launch />
   <Heroicons.rocket_launch class="w-4 h-4" />
@@ -5115,12 +5347,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `camera` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.camera />
   <Heroicons.camera class="w-4 h-4" />
@@ -5158,12 +5392,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_top_right_on_square` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_top_right_on_square />
   <Heroicons.arrow_top_right_on_square class="w-4 h-4" />
@@ -5201,12 +5437,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `hand_raised` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.hand_raised />
   <Heroicons.hand_raised class="w-4 h-4" />
@@ -5244,12 +5482,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `document_text` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.document_text />
   <Heroicons.document_text class="w-4 h-4" />
@@ -5287,12 +5527,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bars_2` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bars_2 />
   <Heroicons.bars_2 class="w-4 h-4" />
@@ -5330,12 +5572,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `video_camera` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.video_camera />
   <Heroicons.video_camera class="w-4 h-4" />
@@ -5373,12 +5617,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bug_ant` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bug_ant />
   <Heroicons.bug_ant class="w-4 h-4" />
@@ -5416,12 +5662,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chevron_double_left` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chevron_double_left />
   <Heroicons.chevron_double_left class="w-4 h-4" />
@@ -5459,12 +5707,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `envelope` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.envelope />
   <Heroicons.envelope class="w-4 h-4" />
@@ -5502,12 +5752,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `musical_note` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.musical_note />
   <Heroicons.musical_note class="w-4 h-4" />
@@ -5545,12 +5797,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `tag` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.tag />
   <Heroicons.tag class="w-4 h-4" />
@@ -5588,12 +5842,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chat_bubble_left_right` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chat_bubble_left_right />
   <Heroicons.chat_bubble_left_right class="w-4 h-4" />
@@ -5631,12 +5887,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `battery_100` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.battery_100 />
   <Heroicons.battery_100 class="w-4 h-4" />
@@ -5674,12 +5932,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chevron_double_right` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chevron_double_right />
   <Heroicons.chevron_double_right class="w-4 h-4" />
@@ -5717,12 +5977,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bars_4` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bars_4 />
   <Heroicons.bars_4 class="w-4 h-4" />
@@ -5760,12 +6022,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chart_pie` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chart_pie />
   <Heroicons.chart_pie class="w-4 h-4" />
@@ -5803,12 +6067,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `trash` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.trash />
   <Heroicons.trash class="w-4 h-4" />
@@ -5846,12 +6112,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `magnifying_glass_minus` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.magnifying_glass_minus />
   <Heroicons.magnifying_glass_minus class="w-4 h-4" />
@@ -5889,12 +6157,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `ellipsis_horizontal_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.ellipsis_horizontal_circle />
   <Heroicons.ellipsis_horizontal_circle class="w-4 h-4" />
@@ -5932,12 +6202,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `information_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.information_circle />
   <Heroicons.information_circle class="w-4 h-4" />
@@ -5975,12 +6247,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `user_minus` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.user_minus />
   <Heroicons.user_minus class="w-4 h-4" />
@@ -6018,12 +6292,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `phone` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.phone />
   <Heroicons.phone class="w-4 h-4" />
@@ -6061,12 +6337,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bell_snooze` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bell_snooze />
   <Heroicons.bell_snooze class="w-4 h-4" />
@@ -6104,12 +6382,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_long_down` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_long_down />
   <Heroicons.arrow_long_down class="w-4 h-4" />
@@ -6147,12 +6427,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrows_pointing_in` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrows_pointing_in />
   <Heroicons.arrows_pointing_in class="w-4 h-4" />
@@ -6190,12 +6472,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chart_bar_square` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chart_bar_square />
   <Heroicons.chart_bar_square class="w-4 h-4" />
@@ -6233,12 +6517,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `signal` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.signal />
   <Heroicons.signal class="w-4 h-4" />
@@ -6276,12 +6562,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `user_plus` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.user_plus />
   <Heroicons.user_plus class="w-4 h-4" />
@@ -6319,12 +6607,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `eye` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.eye />
   <Heroicons.eye class="w-4 h-4" />
@@ -6362,12 +6652,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chevron_left` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chevron_left />
   <Heroicons.chevron_left class="w-4 h-4" />
@@ -6405,12 +6697,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chevron_down` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chevron_down />
   <Heroicons.chevron_down class="w-4 h-4" />
@@ -6448,12 +6742,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_left_end_on_rectangle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_left_end_on_rectangle />
   <Heroicons.arrow_left_end_on_rectangle class="w-4 h-4" />
@@ -6491,12 +6787,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `exclamation_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.exclamation_circle />
   <Heroicons.exclamation_circle class="w-4 h-4" />
@@ -6534,12 +6832,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `x_mark` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.x_mark />
   <Heroicons.x_mark class="w-4 h-4" />
@@ -6577,12 +6877,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `pencil_square` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.pencil_square />
   <Heroicons.pencil_square class="w-4 h-4" />
@@ -6620,12 +6922,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `wrench_screwdriver` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.wrench_screwdriver />
   <Heroicons.wrench_screwdriver class="w-4 h-4" />
@@ -6663,12 +6967,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_down_on_square_stack` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_down_on_square_stack />
   <Heroicons.arrow_down_on_square_stack class="w-4 h-4" />
@@ -6706,12 +7012,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `wrench` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.wrench />
   <Heroicons.wrench class="w-4 h-4" />
@@ -6749,12 +7057,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `wallet` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.wallet />
   <Heroicons.wallet class="w-4 h-4" />
@@ -6792,12 +7102,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `x_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.x_circle />
   <Heroicons.x_circle class="w-4 h-4" />
@@ -6835,12 +7147,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `archive_box` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.archive_box />
   <Heroicons.archive_box class="w-4 h-4" />
@@ -6878,12 +7192,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bell_slash` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bell_slash />
   <Heroicons.bell_slash class="w-4 h-4" />
@@ -6921,12 +7237,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bars_3_bottom_left` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bars_3_bottom_left />
   <Heroicons.bars_3_bottom_left class="w-4 h-4" />
@@ -6964,12 +7282,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `cube` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.cube />
   <Heroicons.cube class="w-4 h-4" />
@@ -7007,12 +7327,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `shopping_cart` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.shopping_cart />
   <Heroicons.shopping_cart class="w-4 h-4" />
@@ -7050,12 +7372,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `heart` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.heart />
   <Heroicons.heart class="w-4 h-4" />
@@ -7093,12 +7417,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `check_badge` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.check_badge />
   <Heroicons.check_badge class="w-4 h-4" />
@@ -7136,12 +7462,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `table_cells` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.table_cells />
   <Heroicons.table_cells class="w-4 h-4" />
@@ -7179,12 +7507,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `variable` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.variable />
   <Heroicons.variable class="w-4 h-4" />
@@ -7222,12 +7552,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `play_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.play_circle />
   <Heroicons.play_circle class="w-4 h-4" />
@@ -7265,12 +7597,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `document_arrow_down` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.document_arrow_down />
   <Heroicons.document_arrow_down class="w-4 h-4" />
@@ -7308,12 +7642,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_up` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_up />
   <Heroicons.arrow_up class="w-4 h-4" />
@@ -7351,12 +7687,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `face_frown` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.face_frown />
   <Heroicons.face_frown class="w-4 h-4" />
@@ -7394,12 +7732,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_down_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_down_circle />
   <Heroicons.arrow_down_circle class="w-4 h-4" />
@@ -7437,12 +7777,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chevron_double_down` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chevron_double_down />
   <Heroicons.chevron_double_down class="w-4 h-4" />
@@ -7480,12 +7822,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `magnifying_glass` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.magnifying_glass />
   <Heroicons.magnifying_glass class="w-4 h-4" />
@@ -7523,12 +7867,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chevron_double_up` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chevron_double_up />
   <Heroicons.chevron_double_up class="w-4 h-4" />
@@ -7566,12 +7912,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `ellipsis_horizontal` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.ellipsis_horizontal />
   <Heroicons.ellipsis_horizontal class="w-4 h-4" />
@@ -7609,12 +7957,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `language` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.language />
   <Heroicons.language class="w-4 h-4" />
@@ -7652,12 +8002,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `currency_pound` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.currency_pound />
   <Heroicons.currency_pound class="w-4 h-4" />
@@ -7695,12 +8047,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `adjustments_vertical` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.adjustments_vertical />
   <Heroicons.adjustments_vertical class="w-4 h-4" />
@@ -7738,12 +8092,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `newspaper` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.newspaper />
   <Heroicons.newspaper class="w-4 h-4" />
@@ -7781,12 +8137,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `receipt_refund` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.receipt_refund />
   <Heroicons.receipt_refund class="w-4 h-4" />
@@ -7824,12 +8182,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `chat_bubble_oval_left_ellipsis` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.chat_bubble_oval_left_ellipsis />
   <Heroicons.chat_bubble_oval_left_ellipsis class="w-4 h-4" />
@@ -7867,12 +8227,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `beaker` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.beaker />
   <Heroicons.beaker class="w-4 h-4" />
@@ -7910,12 +8272,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_up_right` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_up_right />
   <Heroicons.arrow_up_right class="w-4 h-4" />
@@ -7953,12 +8317,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `square_3_stack_3d` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.square_3_stack_3d />
   <Heroicons.square_3_stack_3d class="w-4 h-4" />
@@ -7996,12 +8362,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `squares_2x2` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.squares_2x2 />
   <Heroicons.squares_2x2 class="w-4 h-4" />
@@ -8039,12 +8407,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_path_rounded_square` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_path_rounded_square />
   <Heroicons.arrow_path_rounded_square class="w-4 h-4" />
@@ -8082,12 +8452,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_up_left` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_up_left />
   <Heroicons.arrow_up_left class="w-4 h-4" />
@@ -8125,12 +8497,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `pause` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.pause />
   <Heroicons.pause class="w-4 h-4" />
@@ -8168,12 +8542,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_trending_down` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_trending_down />
   <Heroicons.arrow_trending_down class="w-4 h-4" />
@@ -8211,12 +8587,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bars_3` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bars_3 />
   <Heroicons.bars_3 class="w-4 h-4" />
@@ -8254,12 +8632,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `shield_check` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.shield_check />
   <Heroicons.shield_check class="w-4 h-4" />
@@ -8297,12 +8677,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `magnifying_glass_plus` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.magnifying_glass_plus />
   <Heroicons.magnifying_glass_plus class="w-4 h-4" />
@@ -8340,12 +8722,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `at_symbol` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.at_symbol />
   <Heroicons.at_symbol class="w-4 h-4" />
@@ -8383,12 +8767,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrows_up_down` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrows_up_down />
   <Heroicons.arrows_up_down class="w-4 h-4" />
@@ -8426,12 +8812,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `paper_clip` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.paper_clip />
   <Heroicons.paper_clip class="w-4 h-4" />
@@ -8469,12 +8857,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `cog_6_tooth` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.cog_6_tooth />
   <Heroicons.cog_6_tooth class="w-4 h-4" />
@@ -8512,12 +8902,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `book_open` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.book_open />
   <Heroicons.book_open class="w-4 h-4" />
@@ -8555,12 +8947,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `microphone` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.microphone />
   <Heroicons.microphone class="w-4 h-4" />
@@ -8598,12 +8992,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `puzzle_piece` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.puzzle_piece />
   <Heroicons.puzzle_piece class="w-4 h-4" />
@@ -8641,12 +9037,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `currency_bangladeshi` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.currency_bangladeshi />
   <Heroicons.currency_bangladeshi class="w-4 h-4" />
@@ -8684,12 +9082,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bell_alert` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bell_alert />
   <Heroicons.bell_alert class="w-4 h-4" />
@@ -8727,12 +9127,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `lock_closed` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.lock_closed />
   <Heroicons.lock_closed class="w-4 h-4" />
@@ -8770,12 +9172,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_left` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_left />
   <Heroicons.arrow_left class="w-4 h-4" />
@@ -8813,12 +9217,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `presentation_chart_bar` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.presentation_chart_bar />
   <Heroicons.presentation_chart_bar class="w-4 h-4" />
@@ -8856,12 +9262,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `battery_50` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.battery_50 />
   <Heroicons.battery_50 class="w-4 h-4" />
@@ -8899,12 +9307,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `gift` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.gift />
   <Heroicons.gift class="w-4 h-4" />
@@ -8942,12 +9352,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrows_pointing_out` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrows_pointing_out />
   <Heroicons.arrows_pointing_out class="w-4 h-4" />
@@ -8985,12 +9397,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `wifi` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.wifi />
   <Heroicons.wifi class="w-4 h-4" />
@@ -9028,12 +9442,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `clipboard` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.clipboard />
   <Heroicons.clipboard class="w-4 h-4" />
@@ -9071,12 +9487,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `envelope_open` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.envelope_open />
   <Heroicons.envelope_open class="w-4 h-4" />
@@ -9114,12 +9532,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `fire` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.fire />
   <Heroicons.fire class="w-4 h-4" />
@@ -9157,12 +9577,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `view_columns` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.view_columns />
   <Heroicons.view_columns class="w-4 h-4" />
@@ -9200,12 +9622,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `play_pause` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.play_pause />
   <Heroicons.play_pause class="w-4 h-4" />
@@ -9243,12 +9667,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `code_bracket` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.code_bracket />
   <Heroicons.code_bracket class="w-4 h-4" />
@@ -9286,12 +9712,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `code_bracket_square` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.code_bracket_square />
   <Heroicons.code_bracket_square class="w-4 h-4" />
@@ -9329,12 +9757,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `device_phone_mobile` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.device_phone_mobile />
   <Heroicons.device_phone_mobile class="w-4 h-4" />
@@ -9372,12 +9802,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `server` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.server />
   <Heroicons.server class="w-4 h-4" />
@@ -9415,12 +9847,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_long_right` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_long_right />
   <Heroicons.arrow_long_right class="w-4 h-4" />
@@ -9458,12 +9892,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `academic_cap` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.academic_cap />
   <Heroicons.academic_cap class="w-4 h-4" />
@@ -9501,12 +9937,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `window` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.window />
   <Heroicons.window class="w-4 h-4" />
@@ -9544,12 +9982,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bolt_slash` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bolt_slash />
   <Heroicons.bolt_slash class="w-4 h-4" />
@@ -9587,12 +10027,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `star` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.star />
   <Heroicons.star class="w-4 h-4" />
@@ -9630,12 +10072,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `document_check` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.document_check />
   <Heroicons.document_check class="w-4 h-4" />
@@ -9673,12 +10117,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `question_mark_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.question_mark_circle />
   <Heroicons.question_mark_circle class="w-4 h-4" />
@@ -9716,12 +10162,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `presentation_chart_line` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.presentation_chart_line />
   <Heroicons.presentation_chart_line class="w-4 h-4" />
@@ -9759,12 +10207,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `key` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.key />
   <Heroicons.key class="w-4 h-4" />
@@ -9802,12 +10252,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `eye_slash` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.eye_slash />
   <Heroicons.eye_slash class="w-4 h-4" />
@@ -9845,12 +10297,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `user` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.user />
   <Heroicons.user class="w-4 h-4" />
@@ -9888,12 +10342,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `scale` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.scale />
   <Heroicons.scale class="w-4 h-4" />
@@ -9931,12 +10387,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `clipboard_document_list` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.clipboard_document_list />
   <Heroicons.clipboard_document_list class="w-4 h-4" />
@@ -9974,12 +10432,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `folder` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.folder />
   <Heroicons.folder class="w-4 h-4" />
@@ -10017,12 +10477,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_down_on_square` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_down_on_square />
   <Heroicons.arrow_down_on_square class="w-4 h-4" />
@@ -10060,12 +10522,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bookmark` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bookmark />
   <Heroicons.bookmark class="w-4 h-4" />
@@ -10103,12 +10567,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `clipboard_document_check` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.clipboard_document_check />
   <Heroicons.clipboard_document_check class="w-4 h-4" />
@@ -10146,12 +10612,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `document_magnifying_glass` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.document_magnifying_glass />
   <Heroicons.document_magnifying_glass class="w-4 h-4" />
@@ -10189,12 +10657,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bars_arrow_up` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bars_arrow_up />
   <Heroicons.bars_arrow_up class="w-4 h-4" />
@@ -10232,12 +10702,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `sparkles` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.sparkles />
   <Heroicons.sparkles class="w-4 h-4" />
@@ -10275,12 +10747,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `computer_desktop` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.computer_desktop />
   <Heroicons.computer_desktop class="w-4 h-4" />
@@ -10318,12 +10792,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `shield_exclamation` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.shield_exclamation />
   <Heroicons.shield_exclamation class="w-4 h-4" />
@@ -10361,12 +10837,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_up_on_square_stack` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_up_on_square_stack />
   <Heroicons.arrow_up_on_square_stack class="w-4 h-4" />
@@ -10404,12 +10882,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `lifebuoy` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.lifebuoy />
   <Heroicons.lifebuoy class="w-4 h-4" />
@@ -10447,12 +10927,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `ellipsis_vertical` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.ellipsis_vertical />
   <Heroicons.ellipsis_vertical class="w-4 h-4" />
@@ -10490,12 +10972,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `lock_open` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.lock_open />
   <Heroicons.lock_open class="w-4 h-4" />
@@ -10533,12 +11017,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_long_left` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_long_left />
   <Heroicons.arrow_long_left class="w-4 h-4" />
@@ -10576,12 +11062,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `hand_thumb_up` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.hand_thumb_up />
   <Heroicons.hand_thumb_up class="w-4 h-4" />
@@ -10619,12 +11107,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `light_bulb` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.light_bulb />
   <Heroicons.light_bulb class="w-4 h-4" />
@@ -10662,12 +11152,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `users` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.users />
   <Heroicons.users class="w-4 h-4" />
@@ -10705,12 +11197,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `check_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.check_circle />
   <Heroicons.check_circle class="w-4 h-4" />
@@ -10748,12 +11242,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `user_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.user_circle />
   <Heroicons.user_circle class="w-4 h-4" />
@@ -10791,12 +11287,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `list_bullet` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.list_bullet />
   <Heroicons.list_bullet class="w-4 h-4" />
@@ -10834,12 +11332,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_down_right` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_down_right />
   <Heroicons.arrow_down_right class="w-4 h-4" />
@@ -10877,12 +11377,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `magnifying_glass_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.magnifying_glass_circle />
   <Heroicons.magnifying_glass_circle class="w-4 h-4" />
@@ -10920,12 +11422,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `speaker_wave` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.speaker_wave />
   <Heroicons.speaker_wave class="w-4 h-4" />
@@ -10963,12 +11467,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `flag` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.flag />
   <Heroicons.flag class="w-4 h-4" />
@@ -11006,12 +11512,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `rectangle_stack` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.rectangle_stack />
   <Heroicons.rectangle_stack class="w-4 h-4" />
@@ -11049,12 +11557,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `cube_transparent` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.cube_transparent />
   <Heroicons.cube_transparent class="w-4 h-4" />
@@ -11092,12 +11602,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `film` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.film />
   <Heroicons.film class="w-4 h-4" />
@@ -11135,12 +11647,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `cursor_arrow_ripple` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.cursor_arrow_ripple />
   <Heroicons.cursor_arrow_ripple class="w-4 h-4" />
@@ -11178,12 +11692,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `gift_top` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.gift_top />
   <Heroicons.gift_top class="w-4 h-4" />
@@ -11221,12 +11737,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `stop_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.stop_circle />
   <Heroicons.stop_circle class="w-4 h-4" />
@@ -11264,12 +11782,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `cursor_arrow_rays` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.cursor_arrow_rays />
   <Heroicons.cursor_arrow_rays class="w-4 h-4" />
@@ -11307,12 +11827,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_uturn_left` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_uturn_left />
   <Heroicons.arrow_uturn_left class="w-4 h-4" />
@@ -11350,12 +11872,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `scissors` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.scissors />
   <Heroicons.scissors class="w-4 h-4" />
@@ -11393,12 +11917,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `document_plus` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.document_plus />
   <Heroicons.document_plus class="w-4 h-4" />
@@ -11436,12 +11962,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `viewfinder_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.viewfinder_circle />
   <Heroicons.viewfinder_circle class="w-4 h-4" />
@@ -11479,12 +12007,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_uturn_right` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_uturn_right />
   <Heroicons.arrow_uturn_right class="w-4 h-4" />
@@ -11522,12 +12052,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `shopping_bag` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.shopping_bag />
   <Heroicons.shopping_bag class="w-4 h-4" />
@@ -11565,12 +12097,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `folder_arrow_down` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.folder_arrow_down />
   <Heroicons.folder_arrow_down class="w-4 h-4" />
@@ -11608,12 +12142,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `cloud` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.cloud />
   <Heroicons.cloud class="w-4 h-4" />
@@ -11651,12 +12187,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `receipt_percent` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.receipt_percent />
   <Heroicons.receipt_percent class="w-4 h-4" />
@@ -11694,12 +12232,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_up_tray` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_up_tray />
   <Heroicons.arrow_up_tray class="w-4 h-4" />
@@ -11737,12 +12277,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `inbox_stack` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.inbox_stack />
   <Heroicons.inbox_stack class="w-4 h-4" />
@@ -11780,12 +12322,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `bookmark_slash` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.bookmark_slash />
   <Heroicons.bookmark_slash class="w-4 h-4" />
@@ -11823,12 +12367,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `archive_box_arrow_down` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.archive_box_arrow_down />
   <Heroicons.archive_box_arrow_down class="w-4 h-4" />
@@ -11866,12 +12412,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `document` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.document />
   <Heroicons.document class="w-4 h-4" />
@@ -11909,12 +12457,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `battery_0` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.battery_0 />
   <Heroicons.battery_0 class="w-4 h-4" />
@@ -11952,12 +12502,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `backward` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.backward />
   <Heroicons.backward class="w-4 h-4" />
@@ -11995,12 +12547,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `pencil` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.pencil />
   <Heroicons.pencil class="w-4 h-4" />
@@ -12038,12 +12592,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrows_right_left` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrows_right_left />
   <Heroicons.arrows_right_left class="w-4 h-4" />
@@ -12081,12 +12637,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `folder_minus` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.folder_minus />
   <Heroicons.folder_minus class="w-4 h-4" />
@@ -12124,12 +12682,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `document_duplicate` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.document_duplicate />
   <Heroicons.document_duplicate class="w-4 h-4" />
@@ -12167,12 +12727,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `globe_alt` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.globe_alt />
   <Heroicons.globe_alt class="w-4 h-4" />
@@ -12210,12 +12772,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `currency_yen` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.currency_yen />
   <Heroicons.currency_yen class="w-4 h-4" />
@@ -12253,12 +12817,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `phone_arrow_up_right` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.phone_arrow_up_right />
   <Heroicons.phone_arrow_up_right class="w-4 h-4" />
@@ -12296,12 +12862,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `document_arrow_up` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.document_arrow_up />
   <Heroicons.document_arrow_up class="w-4 h-4" />
@@ -12339,12 +12907,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `building_library` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.building_library />
   <Heroicons.building_library class="w-4 h-4" />
@@ -12382,12 +12952,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `building_office` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.building_office />
   <Heroicons.building_office class="w-4 h-4" />
@@ -12425,12 +12997,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `arrow_right_circle` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.arrow_right_circle />
   <Heroicons.arrow_right_circle class="w-4 h-4" />
@@ -12468,12 +13042,14 @@ defmodule Heroicons do
 
   @doc """
   Renders the `signal_slash` icon.
+
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
   attributes can be provided for alternative styles.
 
   You may also pass arbitrary HTML attributes to be applied to the svg tag.
 
   ## Examples
+
   ```heex
   <Heroicons.signal_slash />
   <Heroicons.signal_slash class="w-4 h-4" />
