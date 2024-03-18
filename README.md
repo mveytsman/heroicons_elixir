@@ -6,7 +6,7 @@ This library provides optimized svgs for each Heroicon packaged as a Phoenix Com
 
 Heroicons are designed by [Steve Schoger](https://twitter.com/steveschoger)
 
-Current Heroicons Version: **2.0.13**.
+Current Heroicons Version: **2.1.1**.
 
 ## Installation
 
@@ -15,7 +15,7 @@ Add Heroicons to your `mix.exs`:
 ```elixir
 defp deps do
   [
-    {:heroicons, "~> 0.5.0"}
+    {:heroicons, "~> 0.5.5"}
   ]
 end
 ```
