@@ -52,7 +52,9 @@ defmodule Heroicons do
   use Phoenix.Component
 
   defp svg(assigns) do
-    case assigns do
+    # Not all styles have the micro attribute
+    Map.merge(%{micro: false}, assigns)
+    |> case do
       %{mini: false, solid: false, micro: false} ->
         ~H"<.svg_outline {@rest}><%%= {:safe, @paths[:outline]} %></.svg_outline>"
 
