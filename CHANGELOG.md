@@ -4,6 +4,9 @@
  -  Update heroicons to 2.1.1
  -  Add support for `micro` icons
 
+## 0.5.4
+**RETIRED** due to https://github.com/mveytsman/heroicons_elixir/issues/35
+
 ## 0.5.3
 ### Enhancements
  - Added support for LiveView 0.19
