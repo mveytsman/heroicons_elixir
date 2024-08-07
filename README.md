@@ -6,7 +6,7 @@ This library provides optimized svgs for each Heroicon packaged as a Phoenix Com
 
 Heroicons are designed by [Steve Schoger](https://twitter.com/steveschoger)
 
-Current Heroicons Version: **2.1.1**.
+Current Heroicons Version: **2.1.5**.
 
 ## Installation
 
@@ -26,7 +26,7 @@ After that, run `mix deps.get`.
 
 The components are provided by the `Heroicons` module. Each icon is a Phoenix Component you can use in your HEEx templates.
 
-By default, the icon components will use the outline style, but the `solid`, 
+By default, the icon components will use the outline style, but the `solid`,
 `mini` or `micro` attributes may be passed to select styling, for example:
 
 ```eex
@@ -38,7 +38,7 @@ By default, the icon components will use the outline style, but the `solid`,
 
 You can also pass arbitrary HTML attributes to the components, such as classes:
 
- ```eex
+```eex
 <Heroicons.cake class="w-2 h-2" />
 <Heroicons.cake solid class="w-2 h-2 text-gray-500" />
 ```
