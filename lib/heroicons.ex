@@ -1,6 +1,6 @@
 defmodule Heroicons do
   @moduledoc """
-  Provides precompiled icon compiles from [heroicons.com v2.1.1](heroicons.com).
+  Provides precompiled icon compiles from [heroicons.com v2.1.5](heroicons.com).
 
   Heroicons are designed by [Steve Schoger](https://twitter.com/steveschoger)
 
@@ -1616,6 +1616,96 @@ defmodule Heroicons do
   end
 
   @doc """
+  Renders the `document_currency_yen` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.document_currency_yen />
+  <Heroicons.document_currency_yen class="w-4 h-4" />
+  <Heroicons.document_currency_yen solid />
+  <Heroicons.document_currency_yen mini />
+  <Heroicons.document_currency_yen micro />
+  <Heroicons.document_currency_yen outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def document_currency_yen(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m1.5 9 2.25 3m0 0 2.25-3m-2.25 3v4.5M9.75 15h4.5m-4.5 2.25h4.5m-3.75-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M3.75 3.375c0-1.036.84-1.875 1.875-1.875H9a3.75 3.75 0 0 1 3.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 0 1 3.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 0 1-1.875-1.875V3.375Zm10.5 1.875a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 16.5 7.5h-1.875a.375.375 0 0 1-.375-.375V5.25Zm-3.9 5.55a.75.75 0 0 0-1.2.9l1.912 2.55H9.75a.75.75 0 0 0 0 1.5h1.5v.75h-1.5a.75.75 0 0 0 0 1.5h1.5v.75a.75.75 0 1 0 1.5 0V18h1.5a.75.75 0 1 0 0-1.5h-1.5v-.75h1.5a.75.75 0 1 0 0-1.5h-1.313l1.913-2.55a.75.75 0 1 0-1.2-.9L12 13l-1.65-2.2Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5Zm3.846 4.294a.75.75 0 0 0-1.192.912L9.056 10H6.75a.75.75 0 0 0 0 1.5h2.5v1h-2.5a.75.75 0 0 0 0 1.5h2.5v1.25a.75.75 0 1 0 1.5 0V14h2.5a.75.75 0 1 0 0-1.5h-2.5v-1h2.5a.75.75 0 1 0 0-1.5h-2.306l1.902-2.794a.75.75 0 0 0-1.192-.912L10 8.765l-1.654-2.47Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M2.5 3.5A1.5 1.5 0 0 1 4 2h4.879a1.5 1.5 0 0 1 1.06.44l3.122 3.12a1.5 1.5 0 0 1 .439 1.061V12.5A1.5 1.5 0 0 1 12 14H4a1.5 1.5 0 0 1-1.5-1.5v-9Zm3.663 1.801a.75.75 0 1 0-1.2.9L6.313 8H5a.75.75 0 0 0 0 1.5h2.25v1H5A.75.75 0 0 0 5 12h2.25v.25a.75.75 0 0 0 1.5 0V12H11a.75.75 0 0 0 0-1.5H8.75v-1H11A.75.75 0 0 0 11 8H9.687l1.35-1.799a.75.75 0 0 0-1.2-.9L8 7.75 6.163 5.3Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
+  Renders the `percent_badge` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.percent_badge />
+  <Heroicons.percent_badge class="w-4 h-4" />
+  <Heroicons.percent_badge solid />
+  <Heroicons.percent_badge mini />
+  <Heroicons.percent_badge micro />
+  <Heroicons.percent_badge outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def percent_badge(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="m8.99 14.993 6-6m6 3.001c0 1.268-.63 2.39-1.593 3.069a3.746 3.746 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043 3.745 3.745 0 0 1-3.068 1.593c-1.268 0-2.39-.63-3.068-1.593a3.745 3.745 0 0 1-3.296-1.043 3.746 3.746 0 0 1-1.043-3.297 3.746 3.746 0 0 1-1.593-3.068c0-1.268.63-2.39 1.593-3.068a3.746 3.746 0 0 1 1.043-3.297 3.745 3.745 0 0 1 3.296-1.042 3.745 3.745 0 0 1 3.068-1.594c1.268 0 2.39.63 3.068 1.593a3.745 3.745 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.297 3.746 3.746 0 0 1 1.593 3.068ZM9.74 9.743h.008v.007H9.74v-.007Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm4.125 4.5h.008v.008h-.008v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M11.99 2.243a4.49 4.49 0 0 0-3.398 1.55 4.49 4.49 0 0 0-3.497 1.306 4.491 4.491 0 0 0-1.307 3.498 4.491 4.491 0 0 0-1.548 3.397c0 1.357.6 2.573 1.548 3.397a4.491 4.491 0 0 0 1.307 3.498 4.49 4.49 0 0 0 3.498 1.307 4.49 4.49 0 0 0 3.397 1.549 4.49 4.49 0 0 0 3.397-1.549 4.49 4.49 0 0 0 3.497-1.307 4.491 4.491 0 0 0 1.306-3.497 4.491 4.491 0 0 0 1.55-3.398c0-1.357-.601-2.573-1.549-3.397a4.491 4.491 0 0 0-1.307-3.498 4.49 4.49 0 0 0-3.498-1.307 4.49 4.49 0 0 0-3.396-1.549Zm3.53 7.28a.75.75 0 0 0-1.06-1.06l-6 6a.75.75 0 1 0 1.06 1.06l6-6Zm-5.78-.905a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Zm4.5 4.5a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M3.597 7.348a3 3 0 0 0 0 5.304 3 3 0 0 0 3.75 3.751 3 3 0 0 0 5.305 0 3 3 0 0 0 3.751-3.75 3 3 0 0 0 0-5.305 3 3 0 0 0-3.75-3.751 3 3 0 0 0-5.305 0 3 3 0 0 0-3.751 3.75Zm9.933.182a.75.75 0 0 0-1.06-1.06l-6 6a.75.75 0 1 0 1.06 1.06l6-6Zm.47 5.22a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0ZM7.25 8.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M3.396 6.093a2 2 0 0 0 0 3.814 2 2 0 0 0 2.697 2.697 2 2 0 0 0 3.814 0 2.001 2.001 0 0 0 2.698-2.697 2 2 0 0 0-.001-3.814 2.001 2.001 0 0 0-2.697-2.698 2 2 0 0 0-3.814.001 2 2 0 0 0-2.697 2.697ZM6 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm3.47-1.53a.75.75 0 1 1 1.06 1.06l-4 4a.75.75 0 1 1-1.06-1.06l4-4ZM11 10a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
   Renders the `chat_bubble_left` icon.
 
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
@@ -2066,6 +2156,51 @@ defmodule Heroicons do
   end
 
   @doc """
+  Renders the `arrow_turn_up_left` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.arrow_turn_up_left />
+  <Heroicons.arrow_turn_up_left class="w-4 h-4" />
+  <Heroicons.arrow_turn_up_left solid />
+  <Heroicons.arrow_turn_up_left mini />
+  <Heroicons.arrow_turn_up_left micro />
+  <Heroicons.arrow_turn_up_left outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def arrow_turn_up_left(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M7.49 12 3.74 8.248m0 0 3.75-3.75m-3.75 3.75h16.5V19.5"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M20.239 20.25a.75.75 0 0 1-.75-.75V8.999H5.549l2.47 2.47a.75.75 0 0 1-1.06 1.06l-3.75-3.75a.75.75 0 0 1 0-1.06l3.75-3.75a.75.75 0 1 1 1.06 1.06l-2.47 2.47h14.69a.75.75 0 0 1 .75.75V19.5a.75.75 0 0 1-.75.75Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M16.25 17a.75.75 0 0 1-.75-.75v-7.5H4.56l1.97 1.97a.75.75 0 1 1-1.06 1.06L2.22 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 1.06L4.56 7.25h11.69A.75.75 0 0 1 17 8v8.25a.75.75 0 0 1-.75.75Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M13.25 14a.75.75 0 0 1-.75-.75v-6.5H4.56l.97.97a.75.75 0 0 1-1.06 1.06L2.22 6.53a.75.75 0 0 1 0-1.06l2.25-2.25a.75.75 0 0 1 1.06 1.06l-.97.97h8.69A.75.75 0 0 1 14 6v7.25a.75.75 0 0 1-.75.75Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
   Renders the `user_group` icon.
 
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
@@ -2381,6 +2516,51 @@ defmodule Heroicons do
   end
 
   @doc """
+  Renders the `document_currency_euro` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.document_currency_euro />
+  <Heroicons.document_currency_euro class="w-4 h-4" />
+  <Heroicons.document_currency_euro solid />
+  <Heroicons.document_currency_euro mini />
+  <Heroicons.document_currency_euro micro />
+  <Heroicons.document_currency_euro outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def document_currency_euro(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 11.625h4.5m-4.5 2.25h4.5m2.121 1.527c-1.171 1.464-3.07 1.464-4.242 0-1.172-1.465-1.172-3.84 0-5.304 1.171-1.464 3.07-1.464 4.242 0M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M3.75 3.375c0-1.036.84-1.875 1.875-1.875H9a3.75 3.75 0 0 1 3.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 0 1 3.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 0 1-1.875-1.875V3.375Zm7.464 9.442c.459-.573 1.019-.817 1.536-.817.517 0 1.077.244 1.536.817a.75.75 0 1 0 1.171-.937c-.713-.892-1.689-1.38-2.707-1.38-1.018 0-1.994.488-2.707 1.38a4.61 4.61 0 0 0-.705 1.245H8.25a.75.75 0 0 0 0 1.5h.763c-.017.25-.017.5 0 .75H8.25a.75.75 0 0 0 0 1.5h1.088c.17.449.406.87.705 1.245.713.892 1.689 1.38 2.707 1.38 1.018 0 1.994-.488 2.707-1.38a.75.75 0 0 0-1.171-.937c-.459.573-1.019.817-1.536.817-.517 0-1.077-.244-1.536-.817-.078-.098-.15-.2-.215-.308h1.751a.75.75 0 0 0 0-1.5h-2.232a3.965 3.965 0 0 1 0-.75h2.232a.75.75 0 0 0 0-1.5H11c.065-.107.136-.21.214-.308Z" clip-rule="evenodd"/><path d="M14.25 5.25a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 16.5 7.5h-1.875a.375.375 0 0 1-.375-.375V5.25Z"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5Zm4.298 6.45c.512-.67 1.135-.95 1.702-.95s1.19.28 1.702.95a.75.75 0 0 0 1.192-.91C12.637 6.55 11.596 6 10.5 6s-2.137.55-2.894 1.54A5.205 5.205 0 0 0 6.83 9H5.75a.75.75 0 0 0 0 1.5h.77a6.333 6.333 0 0 0 0 1h-.77a.75.75 0 0 0 0 1.5h1.08c.183.528.442 1.023.776 1.46.757.99 1.798 1.54 2.894 1.54s2.137-.55 2.894-1.54a.75.75 0 0 0-1.192-.91c-.512.67-1.135.95-1.702.95s-1.19-.28-1.702-.95a3.505 3.505 0 0 1-.343-.55h1.795a.75.75 0 0 0 0-1.5H8.026a4.835 4.835 0 0 1 0-1h2.224a.75.75 0 0 0 0-1.5H8.455c.098-.195.212-.38.343-.55Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M2.5 3.5A1.5 1.5 0 0 1 4 2h4.879a1.5 1.5 0 0 1 1.06.44l3.122 3.12a1.5 1.5 0 0 1 .439 1.061V12.5A1.5 1.5 0 0 1 12 14H4a1.5 1.5 0 0 1-1.5-1.5v-9Zm4.552 2.734c.354-.59.72-.734.948-.734.228 0 .594.145.948.734a.75.75 0 1 0 1.286-.772C9.71 4.588 8.924 4 8 4c-.924 0-1.71.588-2.234 1.462-.192.32-.346.67-.464 1.038H4.75a.75.75 0 0 0 0 1.5h.268a7.003 7.003 0 0 0 0 1H4.75a.75.75 0 0 0 0 1.5h.552c.118.367.272.717.464 1.037C6.29 12.412 7.076 13 8 13c.924 0 1.71-.588 2.234-1.463a.75.75 0 0 0-1.286-.771c-.354.59-.72.734-.948.734-.228 0-.594-.145-.948-.734a3.078 3.078 0 0 1-.142-.266h.34a.75.75 0 0 0 0-1.5h-.727a5.496 5.496 0 0 1 0-1h.727a.75.75 0 0 0 0-1.5h-.34a3.08 3.08 0 0 1 .142-.266Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
   Renders the `map` icon.
 
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
@@ -2471,6 +2651,51 @@ defmodule Heroicons do
   end
 
   @doc """
+  Renders the `equals` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.equals />
+  <Heroicons.equals class="w-4 h-4" />
+  <Heroicons.equals solid />
+  <Heroicons.equals mini />
+  <Heroicons.equals micro />
+  <Heroicons.equals outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def equals(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M4.499 8.248h15m-15 7.501h15"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M3.748 8.248a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75ZM3.748 15.75a.75.75 0 0 1 .75-.751h15a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path d="M3.75 6a.75.75 0 0 0 0 1.5h12.5a.75.75 0 0 0 0-1.5H3.75ZM3.75 13.5a.75.75 0 0 0 0 1.5h12.5a.75.75 0 0 0 0-1.5H3.75Z"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M2 4.75A.75.75 0 0 1 2.75 4h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 11.25a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
   Renders the `building_office_2` icon.
 
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
@@ -2510,6 +2735,51 @@ defmodule Heroicons do
             ~S|<path fill-rule="evenodd" d="M1 2.75A.75.75 0 0 1 1.75 2h10.5a.75.75 0 0 1 0 1.5H12v13.75a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1-.75-.75v-2.5a.75.75 0 0 0-.75-.75h-2.5a.75.75 0 0 0-.75.75v2.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5H2v-13h-.25A.75.75 0 0 1 1 2.75ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM8 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM8.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM14.25 6a.75.75 0 0 0-.75.75V17a1 1 0 0 0 1 1h3.75a.75.75 0 0 0 0-1.5H18v-9h.25a.75.75 0 0 0 0-1.5h-4Zm.5 3.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm.5 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z" clip-rule="evenodd"/>|,
           micro:
             ~S|<path fill-rule="evenodd" d="M1.75 2a.75.75 0 0 0 0 1.5H2v9h-.25a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 .75-.75v-1.5a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 .75.75v1.5c0 .414.336.75.75.75h.5a.75.75 0 0 0 .75-.75V3.5h.25a.75.75 0 0 0 0-1.5h-7.5ZM3.5 5.5A.5.5 0 0 1 4 5h.5a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5v-.5Zm.5 2a.5.5 0 0 0-.5.5v.5A.5.5 0 0 0 4 9h.5a.5.5 0 0 0 .5-.5V8a.5.5 0 0 0-.5-.5H4Zm2-2a.5.5 0 0 1 .5-.5H7a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-.5.5h-.5A.5.5 0 0 1 6 6v-.5Zm.5 2A.5.5 0 0 0 6 8v.5a.5.5 0 0 0 .5.5H7a.5.5 0 0 0 .5-.5V8a.5.5 0 0 0-.5-.5h-.5ZM11.5 6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.75a.75.75 0 0 0 0-1.5H14v-5h.25a.75.75 0 0 0 0-1.5H11.5Zm.5 1.5h.5a.5.5 0 0 1 .5.5v.5a.5.5 0 0 1-.5.5H12a.5.5 0 0 1-.5-.5V8a.5.5 0 0 1 .5-.5Zm0 2.5a.5.5 0 0 0-.5.5v.5a.5.5 0 0 0 .5.5h.5a.5.5 0 0 0 .5-.5v-.5a.5.5 0 0 0-.5-.5H12Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
+  Renders the `h2` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.h2 />
+  <Heroicons.h2 class="w-4 h-4" />
+  <Heroicons.h2 solid />
+  <Heroicons.h2 mini />
+  <Heroicons.h2 micro />
+  <Heroicons.h2 outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def h2(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 19.5H16.5v-1.609a2.25 2.25 0 0 1 1.244-2.012l2.89-1.445c.651-.326 1.116-.955 1.116-1.683 0-.498-.04-.987-.118-1.463-.135-.825-.835-1.422-1.668-1.489a15.202 15.202 0 0 0-3.464.12M2.243 4.492v7.5m0 0v7.502m0-7.501h10.5m0-7.5v7.5m0 0v7.501"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M2.246 3.743a.75.75 0 0 1 .75.75v6.75h9v-6.75a.75.75 0 0 1 1.5 0v15.002a.75.75 0 1 1-1.5 0v-6.751h-9v6.75a.75.75 0 1 1-1.5 0v-15a.75.75 0 0 1 .75-.75ZM18.75 10.5c-.727 0-1.441.054-2.138.16a.75.75 0 1 1-.223-1.484 15.867 15.867 0 0 1 3.635-.125c1.149.092 2.153.923 2.348 2.115.084.516.128 1.045.128 1.584 0 1.065-.676 1.927-1.531 2.354l-2.89 1.445a1.5 1.5 0 0 0-.829 1.342v.86h4.5a.75.75 0 1 1 0 1.5H16.5a.75.75 0 0 1-.75-.75v-1.61a3 3 0 0 1 1.659-2.684l2.89-1.445c.447-.223.701-.62.701-1.012a8.32 8.32 0 0 0-.108-1.342c-.075-.457-.47-.82-.987-.862a14.45 14.45 0 0 0-1.155-.046Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M2.75 4a.75.75 0 0 1 .75.75v4.5h5v-4.5a.75.75 0 0 1 1.5 0v10.5a.75.75 0 0 1-1.5 0v-4.5h-5v4.5a.75.75 0 0 1-1.5 0V4.75A.75.75 0 0 1 2.75 4ZM15 9.5c-.729 0-1.445.051-2.146.15a.75.75 0 0 1-.208-1.486 16.887 16.887 0 0 1 3.824-.1c.855.074 1.512.78 1.527 1.637a17.476 17.476 0 0 1-.009.931 1.713 1.713 0 0 1-1.18 1.556l-2.453.818a1.25 1.25 0 0 0-.855 1.185v.309h3.75a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75v-1.059a2.75 2.75 0 0 1 1.88-2.608l2.454-.818c.102-.034.153-.117.155-.188a15.556 15.556 0 0 0 .009-.85.171.171 0 0 0-.158-.169A15.458 15.458 0 0 0 15 9.5Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M1.75 3a.75.75 0 0 1 .75.75v3.5h4v-3.5a.75.75 0 0 1 1.5 0v8.5a.75.75 0 0 1-1.5 0v-3.5h-4v3.5a.75.75 0 0 1-1.5 0v-8.5A.75.75 0 0 1 1.75 3ZM12.5 7.5c-.558 0-1.106.04-1.642.119a.75.75 0 0 1-.216-1.484 12.848 12.848 0 0 1 2.836-.098A1.629 1.629 0 0 1 14.99 7.58a8.884 8.884 0 0 1-.021 1.166c-.06.702-.553 1.24-1.159 1.441l-2.14.713a.25.25 0 0 0-.17.237v.363h2.75a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1-.75-.75v-1.113a1.75 1.75 0 0 1 1.197-1.66l2.139-.713c.1-.033.134-.103.138-.144a7.344 7.344 0 0 0 .018-.97c-.003-.052-.046-.111-.128-.117A11.417 11.417 0 0 0 12.5 7.5Z" clip-rule="evenodd"/>|
         }
       )
     )
@@ -2600,6 +2870,51 @@ defmodule Heroicons do
             ~S|<path d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z"/>|,
           micro:
             ~S|<path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
+  Renders the `document_currency_dollar` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.document_currency_dollar />
+  <Heroicons.document_currency_dollar class="w-4 h-4" />
+  <Heroicons.document_currency_dollar solid />
+  <Heroicons.document_currency_dollar mini />
+  <Heroicons.document_currency_dollar micro />
+  <Heroicons.document_currency_dollar outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def document_currency_dollar(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m3.75 9v7.5m2.25-6.466a9.016 9.016 0 0 0-3.461-.203c-.536.072-.974.478-1.021 1.017a4.559 4.559 0 0 0-.018.402c0 .464.336.844.775.994l2.95 1.012c.44.15.775.53.775.994 0 .136-.006.27-.018.402-.047.539-.485.945-1.021 1.017a9.077 9.077 0 0 1-3.461-.203M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M3.75 3.375c0-1.036.84-1.875 1.875-1.875H9a3.75 3.75 0 0 1 3.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 0 1 3.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 0 1-1.875-1.875V3.375Zm10.5 1.875a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 16.5 7.5h-1.875a.375.375 0 0 1-.375-.375V5.25ZM12 10.5a.75.75 0 0 1 .75.75v.028a9.727 9.727 0 0 1 1.687.28.75.75 0 1 1-.374 1.452 8.207 8.207 0 0 0-1.313-.226v1.68l.969.332c.67.23 1.281.85 1.281 1.704 0 .158-.007.314-.02.468-.083.931-.83 1.582-1.669 1.695a9.776 9.776 0 0 1-.561.059v.028a.75.75 0 0 1-1.5 0v-.029a9.724 9.724 0 0 1-1.687-.278.75.75 0 0 1 .374-1.453c.425.11.864.186 1.313.226v-1.68l-.968-.332C9.612 14.974 9 14.354 9 13.5c0-.158.007-.314.02-.468.083-.931.831-1.582 1.67-1.694.185-.025.372-.045.56-.06v-.028a.75.75 0 0 1 .75-.75Zm-1.11 2.324c.119-.016.239-.03.36-.04v1.166l-.482-.165c-.208-.072-.268-.211-.268-.285 0-.113.005-.225.015-.336.013-.146.14-.309.374-.34Zm1.86 4.392V16.05l.482.165c.208.072.268.211.268.285 0 .113-.005.225-.015.336-.012.146-.14.309-.374.34-.12.016-.24.03-.361.04Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5Zm6.25 3.75a.75.75 0 0 0-1.5 0v.272c-.418.024-.831.069-1.238.132-.962.15-1.807.882-1.95 1.928-.04.3-.062.607-.062.918 0 1.044.83 1.759 1.708 1.898l1.542.243v2.334a11.214 11.214 0 0 1-2.297-.392.75.75 0 0 0-.405 1.444c.867.243 1.772.397 2.702.451v.272a.75.75 0 0 0 1.5 0v-.272c.419-.024.832-.069 1.239-.132.961-.15 1.807-.882 1.95-1.928.04-.3.061-.607.061-.918 0-1.044-.83-1.759-1.708-1.898L10.75 9.86V7.525c.792.052 1.56.185 2.297.392a.75.75 0 0 0 .406-1.444 12.723 12.723 0 0 0-2.703-.451V5.75ZM8.244 7.636c.33-.052.666-.09 1.006-.111v2.097l-1.308-.206C7.635 9.367 7.5 9.156 7.5 9c0-.243.017-.482.049-.716.042-.309.305-.587.695-.648Zm2.506 5.84v-2.098l1.308.206c.307.049.442.26.442.416 0 .243-.016.482-.048.716-.042.309-.306.587-.695.648-.331.052-.667.09-1.007.111Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path d="M6.621 6.584c.208-.026.418-.046.629-.06v1.034l-.598-.138a.227.227 0 0 1-.116-.065.094.094 0 0 1-.028-.06 5.345 5.345 0 0 1 .002-.616.082.082 0 0 1 .025-.055.144.144 0 0 1 .086-.04ZM8.75 10.475V9.443l.594.137a.227.227 0 0 1 .116.065.094.094 0 0 1 .028.06 5.355 5.355 0 0 1-.002.616.082.082 0 0 1-.025.055.144.144 0 0 1-.086.04c-.207.026-.415.045-.625.06Z"/><path fill-rule="evenodd" d="M2.5 3.5A1.5 1.5 0 0 1 4 2h4.879a1.5 1.5 0 0 1 1.06.44l3.122 3.12a1.5 1.5 0 0 1 .439 1.061V12.5A1.5 1.5 0 0 1 12 14H4a1.5 1.5 0 0 1-1.5-1.5v-9Zm6.25 1.25a.75.75 0 0 0-1.5 0v.272c-.273.016-.543.04-.81.073-.748.09-1.38.689-1.428 1.494a6.836 6.836 0 0 0-.002.789c.044.785.635 1.348 1.305 1.503l.935.216v1.379a11.27 11.27 0 0 1-1.36-.173.75.75 0 1 0-.28 1.474c.536.102 1.084.17 1.64.202v.271a.75.75 0 0 0 1.5 0v-.272c.271-.016.54-.04.807-.073.747-.09 1.378-.689 1.427-1.494a6.843 6.843 0 0 0 .002-.789c-.044-.785-.635-1.348-1.305-1.503l-.931-.215v-1.38c.46.03.913.089 1.356.173a.75.75 0 0 0 .28-1.474 12.767 12.767 0 0 0-1.636-.201V4.75Z" clip-rule="evenodd"/>|
         }
       )
     )
@@ -2915,6 +3230,51 @@ defmodule Heroicons do
             ~S|<path fill-rule="evenodd" d="M5 1a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H5ZM3.5 4A1.5 1.5 0 0 1 5 2.5h10A1.5 1.5 0 0 1 16.5 4v12a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 16V4Zm5.25 11.5a.75.75 0 0 0 0 1.5h2.5a.75.75 0 0 0 0-1.5h-2.5Z" clip-rule="evenodd"/>|,
           micro:
             ~S|<path d="M7.25 11.5a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5h-1.5Z"/><path fill-rule="evenodd" d="M2 3.5A2.5 2.5 0 0 1 4.5 1h7A2.5 2.5 0 0 1 14 3.5v9a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 12.5v-9Zm2.5-1h7a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
+  Renders the `calendar_date_range` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.calendar_date_range />
+  <Heroicons.calendar_date_range class="w-4 h-4" />
+  <Heroicons.calendar_date_range solid />
+  <Heroicons.calendar_date_range mini />
+  <Heroicons.calendar_date_range micro />
+  <Heroicons.calendar_date_range outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def calendar_date_range(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 2.994v2.25m10.5-2.25v2.25m-14.252 13.5V7.491a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v11.251m-18 0a2.25 2.25 0 0 0 2.25 2.25h13.5a2.25 2.25 0 0 0 2.25-2.25m-18 0v-7.5a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5m-6.75-6h2.25m-9 2.25h4.5m.002-2.25h.005v.006H12v-.006Zm-.001 4.5h.006v.006h-.006v-.005Zm-2.25.001h.005v.006H9.75v-.006Zm-2.25 0h.005v.005h-.006v-.005Zm6.75-2.247h.005v.005h-.005v-.005Zm0 2.247h.006v.006h-.006v-.006Zm2.25-2.248h.006V15H16.5v-.005Z"/>|,
+          solid:
+            ~S|<path d="M12 11.993a.75.75 0 0 0-.75.75v.006c0 .414.336.75.75.75h.006a.75.75 0 0 0 .75-.75v-.006a.75.75 0 0 0-.75-.75H12ZM12 16.494a.75.75 0 0 0-.75.75v.005c0 .414.335.75.75.75h.005a.75.75 0 0 0 .75-.75v-.005a.75.75 0 0 0-.75-.75H12ZM8.999 17.244a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.006a.75.75 0 0 1-.75.75h-.006a.75.75 0 0 1-.75-.75v-.006ZM7.499 16.494a.75.75 0 0 0-.75.75v.005c0 .414.336.75.75.75h.005a.75.75 0 0 0 .75-.75v-.005a.75.75 0 0 0-.75-.75H7.5ZM13.499 14.997a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.005a.75.75 0 0 1-.75.75h-.006a.75.75 0 0 1-.75-.75v-.005ZM14.25 16.494a.75.75 0 0 0-.75.75v.006c0 .414.335.75.75.75h.005a.75.75 0 0 0 .75-.75v-.006a.75.75 0 0 0-.75-.75h-.005ZM15.75 14.995a.75.75 0 0 1 .75-.75h.005a.75.75 0 0 1 .75.75v.006a.75.75 0 0 1-.75.75H16.5a.75.75 0 0 1-.75-.75v-.006ZM13.498 12.743a.75.75 0 0 1 .75-.75h2.25a.75.75 0 1 1 0 1.5h-2.25a.75.75 0 0 1-.75-.75ZM6.748 14.993a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Z"/><path fill-rule="evenodd" d="M18 2.993a.75.75 0 0 0-1.5 0v1.5h-9V2.994a.75.75 0 1 0-1.5 0v1.497h-.752a3 3 0 0 0-3 3v11.252a3 3 0 0 0 3 3h13.5a3 3 0 0 0 3-3V7.492a3 3 0 0 0-3-3H18V2.993ZM3.748 18.743v-7.5a1.5 1.5 0 0 1 1.5-1.5h13.5a1.5 1.5 0 0 1 1.5 1.5v7.5a1.5 1.5 0 0 1-1.5 1.5h-13.5a1.5 1.5 0 0 1-1.5-1.5Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path d="M10 9.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V10a.75.75 0 0 0-.75-.75H10ZM6 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75H6ZM8 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75H8ZM9.25 14a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H10a.75.75 0 0 1-.75-.75V14ZM12 11.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V12a.75.75 0 0 0-.75-.75H12ZM12 13.25a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 0 0 .75-.75V14a.75.75 0 0 0-.75-.75H12ZM13.25 12a.75.75 0 0 1 .75-.75h.01a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75H14a.75.75 0 0 1-.75-.75V12ZM11.25 10.005c0-.417.338-.755.755-.755h2a.755.755 0 1 1 0 1.51h-2a.755.755 0 0 1-.755-.755ZM6.005 11.25a.755.755 0 1 0 0 1.51h4a.755.755 0 1 0 0-1.51h-4Z"/><path fill-rule="evenodd" d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2Zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path d="M5.75 7.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM7.25 8.25A.75.75 0 0 1 8 7.5h2.25a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75ZM5.75 9.5a.75.75 0 0 0 0 1.5H8a.75.75 0 0 0 0-1.5H5.75Z"/><path fill-rule="evenodd" d="M4.75 1a.75.75 0 0 0-.75.75V3a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2V1.75a.75.75 0 0 0-1.5 0V3h-5V1.75A.75.75 0 0 0 4.75 1ZM3.5 7a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v4.5a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V7Z" clip-rule="evenodd"/>|
         }
       )
     )
@@ -3860,6 +4220,51 @@ defmodule Heroicons do
             ~S|<path fill-rule="evenodd" d="M2 3.75A.75.75 0 0 1 2.75 3h11.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75ZM2 7.5a.75.75 0 0 1 .75-.75h7.508a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.5ZM14 7a.75.75 0 0 1 .75.75v6.59l1.95-2.1a.75.75 0 1 1 1.1 1.02l-3.25 3.5a.75.75 0 0 1-1.1 0l-3.25-3.5a.75.75 0 1 1 1.1-1.02l1.95 2.1V7.75A.75.75 0 0 1 14 7ZM2 11.25a.75.75 0 0 1 .75-.75h4.562a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>|,
           micro:
             ~S|<path fill-rule="evenodd" d="M2 2.75A.75.75 0 0 1 2.75 2h9.5a.75.75 0 0 1 0 1.5h-9.5A.75.75 0 0 1 2 2.75ZM2 6.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 0 1.5h-5.5A.75.75 0 0 1 2 6.25Zm0 3.5A.75.75 0 0 1 2.75 9h3.5a.75.75 0 0 1 0 1.5h-3.5A.75.75 0 0 1 2 9.75ZM14.78 11.47a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l.97.97V6.75a.75.75 0 0 1 1.5 0v5.69l.97-.97a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
+  Renders the `numbered_list` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.numbered_list />
+  <Heroicons.numbered_list class="w-4 h-4" />
+  <Heroicons.numbered_list solid />
+  <Heroicons.numbered_list mini />
+  <Heroicons.numbered_list micro />
+  <Heroicons.numbered_list outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def numbered_list(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M8.242 5.992h12m-12 6.003H20.24m-12 5.999h12M4.117 7.495v-3.75H2.99m1.125 3.75H2.99m1.125 0H5.24m-1.92 2.577a1.125 1.125 0 1 1 1.591 1.59l-1.83 1.83h2.16M2.99 15.745h1.125a1.125 1.125 0 0 1 0 2.25H3.74m0-.002h.375a1.125 1.125 0 0 1 0 2.25H2.99"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M7.491 5.992a.75.75 0 0 1 .75-.75h12a.75.75 0 1 1 0 1.5h-12a.75.75 0 0 1-.75-.75ZM7.49 11.995a.75.75 0 0 1 .75-.75h12a.75.75 0 0 1 0 1.5h-12a.75.75 0 0 1-.75-.75ZM7.491 17.994a.75.75 0 0 1 .75-.75h12a.75.75 0 1 1 0 1.5h-12a.75.75 0 0 1-.75-.75ZM2.24 3.745a.75.75 0 0 1 .75-.75h1.125a.75.75 0 0 1 .75.75v3h.375a.75.75 0 0 1 0 1.5H2.99a.75.75 0 0 1 0-1.5h.375v-2.25H2.99a.75.75 0 0 1-.75-.75ZM2.79 10.602a.75.75 0 0 1 0-1.06 1.875 1.875 0 1 1 2.652 2.651l-.55.55h.35a.75.75 0 0 1 0 1.5h-2.16a.75.75 0 0 1-.53-1.281l1.83-1.83a.375.375 0 0 0-.53-.53.75.75 0 0 1-1.062 0ZM2.24 15.745a.75.75 0 0 1 .75-.75h1.125a1.875 1.875 0 0 1 1.501 2.999 1.875 1.875 0 0 1-1.501 3H2.99a.75.75 0 0 1 0-1.501h1.125a.375.375 0 0 0 .036-.748H3.74a.75.75 0 0 1-.75-.75v-.002a.75.75 0 0 1 .75-.75h.411a.375.375 0 0 0-.036-.748H2.99a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path d="M3 1.25a.75.75 0 0 0 0 1.5h.25v2.5a.75.75 0 0 0 1.5 0V2A.75.75 0 0 0 4 1.25H3ZM2.97 8.654a3.5 3.5 0 0 1 1.524-.12.034.034 0 0 1-.012.012L2.415 9.579A.75.75 0 0 0 2 10.25v1c0 .414.336.75.75.75h2.5a.75.75 0 0 0 0-1.5H3.927l1.225-.613c.52-.26.848-.79.848-1.371 0-.647-.429-1.327-1.193-1.451a5.03 5.03 0 0 0-2.277.155.75.75 0 0 0 .44 1.434ZM7.75 3a.75.75 0 0 0 0 1.5h9.5a.75.75 0 0 0 0-1.5h-9.5ZM7.75 9.25a.75.75 0 0 0 0 1.5h9.5a.75.75 0 0 0 0-1.5h-9.5ZM7.75 15.5a.75.75 0 0 0 0 1.5h9.5a.75.75 0 0 0 0-1.5h-9.5ZM2.625 13.875a.75.75 0 0 0 0 1.5h1.5a.125.125 0 0 1 0 .25H3.5a.75.75 0 0 0 0 1.5h.625a.125.125 0 0 1 0 .25h-1.5a.75.75 0 0 0 0 1.5h1.5a1.625 1.625 0 0 0 1.37-2.5 1.625 1.625 0 0 0-1.37-2.5h-1.5Z"/>|,
+          micro:
+            ~S|<path d="M2.995 1a.625.625 0 1 0 0 1.25h.38v2.125a.625.625 0 1 0 1.25 0v-2.75A.625.625 0 0 0 4 1H2.995ZM3.208 7.385a2.37 2.37 0 0 1 1.027-.124L2.573 8.923a.625.625 0 0 0 .439 1.067l1.987.011a.625.625 0 0 0 .006-1.25l-.49-.003.777-.776c.215-.215.335-.506.335-.809 0-.465-.297-.957-.842-1.078a3.636 3.636 0 0 0-1.993.121.625.625 0 1 0 .416 1.179ZM2.625 11a.625.625 0 1 0 0 1.25H4.25a.125.125 0 0 1 0 .25H3.5a.625.625 0 1 0 0 1.25h.75a.125.125 0 0 1 0 .25H2.625a.625.625 0 1 0 0 1.25H4.25a1.375 1.375 0 0 0 1.153-2.125A1.375 1.375 0 0 0 4.25 11H2.625ZM7.25 2a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5h-6ZM7.25 7.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5h-6ZM6.5 13.25a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5h-6a.75.75 0 0 1-.75-.75Z"/>|
         }
       )
     )
@@ -5035,6 +5440,51 @@ defmodule Heroicons do
   end
 
   @doc """
+  Renders the `link_slash` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.link_slash />
+  <Heroicons.link_slash class="w-4 h-4" />
+  <Heroicons.link_slash solid />
+  <Heroicons.link_slash mini />
+  <Heroicons.link_slash micro />
+  <Heroicons.link_slash outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def link_slash(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M13.181 8.68a4.503 4.503 0 0 1 1.903 6.405m-9.768-2.782L3.56 14.06a4.5 4.5 0 0 0 6.364 6.365l3.129-3.129m5.614-5.615 1.757-1.757a4.5 4.5 0 0 0-6.364-6.365l-4.5 4.5c-.258.26-.479.541-.661.84m1.903 6.405a4.495 4.495 0 0 1-1.242-.88 4.483 4.483 0 0 1-1.062-1.683m6.587 2.345 5.907 5.907m-5.907-5.907L8.898 8.898M2.991 2.99 8.898 8.9"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M19.892 4.09a3.75 3.75 0 0 0-5.303 0l-4.5 4.5c-.074.074-.144.15-.21.229l4.965 4.966a3.75 3.75 0 0 0-1.986-4.428.75.75 0 0 1 .646-1.353 5.253 5.253 0 0 1 2.502 6.944l5.515 5.515a.75.75 0 0 1-1.061 1.06l-18-18.001A.75.75 0 0 1 3.521 2.46l5.294 5.295a5.31 5.31 0 0 1 .213-.227l4.5-4.5a5.25 5.25 0 1 1 7.425 7.425l-1.757 1.757a.75.75 0 1 1-1.06-1.06l1.756-1.757a3.75 3.75 0 0 0 0-5.304ZM5.846 11.773a.75.75 0 0 1 0 1.06l-1.757 1.758a3.75 3.75 0 0 0 5.303 5.304l3.129-3.13a.75.75 0 1 1 1.06 1.061l-3.128 3.13a5.25 5.25 0 1 1-7.425-7.426l1.757-1.757a.75.75 0 0 1 1.061 0Zm2.401.26a.75.75 0 0 1 .957.458c.18.512.474.992.885 1.403.31.311.661.555 1.035.733a.75.75 0 0 1-.647 1.354 5.244 5.244 0 0 1-1.449-1.026 5.232 5.232 0 0 1-1.24-1.965.75.75 0 0 1 .46-.957Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M2.22 2.22a.75.75 0 0 1 1.06 0l4.46 4.46c.128-.178.272-.349.432-.508l3-3a4 4 0 0 1 5.657 5.656l-1.225 1.225a.75.75 0 1 1-1.06-1.06l1.224-1.225a2.5 2.5 0 0 0-3.536-3.536l-3 3a2.504 2.504 0 0 0-.406.533l2.59 2.59a2.49 2.49 0 0 0-.79-1.254.75.75 0 1 1 .977-1.138 3.997 3.997 0 0 1 1.306 3.886l4.871 4.87a.75.75 0 1 1-1.06 1.061l-5.177-5.177-.006-.005-4.134-4.134a.65.65 0 0 1-.005-.006L2.22 3.28a.75.75 0 0 1 0-1.06Zm3.237 7.727a.75.75 0 0 1 0 1.06l-1.225 1.225a2.5 2.5 0 0 0 3.536 3.536l1.879-1.879a.75.75 0 1 1 1.06 1.06L8.83 16.83a4 4 0 0 1-5.657-5.657l1.224-1.225a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path d="M3.28 2.22a.75.75 0 0 0-1.06 1.06l10.5 10.5a.75.75 0 1 0 1.06-1.06l-2.999-3a3.5 3.5 0 0 0-.806-3.695.75.75 0 0 0-1.06 1.061c.374.374.569.861.584 1.352L7.116 6.055l1.97-1.97a2 2 0 0 1 3.208 2.3.75.75 0 0 0 1.346.662 3.501 3.501 0 0 0-5.615-4.022l-1.97 1.97L3.28 2.22ZM3.705 9.616a.75.75 0 0 0-1.345-.663 3.501 3.501 0 0 0 5.615 4.022l.379-.379a.75.75 0 0 0-1.061-1.06l-.379.378a2 2 0 0 1-3.209-2.298Z"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
   Renders the `gif` icon.
 
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
@@ -5888,6 +6338,51 @@ defmodule Heroicons do
   end
 
   @doc """
+  Renders the `arrow_turn_up_right` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.arrow_turn_up_right />
+  <Heroicons.arrow_turn_up_right class="w-4 h-4" />
+  <Heroicons.arrow_turn_up_right solid />
+  <Heroicons.arrow_turn_up_right mini />
+  <Heroicons.arrow_turn_up_right micro />
+  <Heroicons.arrow_turn_up_right outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def arrow_turn_up_right(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="m16.49 12 3.75-3.751m0 0-3.75-3.75m3.75 3.75H3.74V19.5"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M3.74 20.25a.75.75 0 0 0 .75-.75V8.999h13.938l-2.47 2.47a.75.75 0 0 0 1.061 1.06l3.75-3.75a.75.75 0 0 0 0-1.06l-3.75-3.75a.75.75 0 0 0-1.06 1.06l2.47 2.47H3.738a.75.75 0 0 0-.75.75V19.5c0 .414.336.75.75.75Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M3.75 17a.75.75 0 0 0 .75-.75v-7.5h10.94l-1.97 1.97a.75.75 0 1 0 1.06 1.06l3.25-3.25a.75.75 0 0 0 0-1.06l-3.25-3.25a.75.75 0 1 0-1.06 1.06l1.97 1.97H3.75A.75.75 0 0 0 3 8v8.25c0 .414.336.75.75.75Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M2.75 14a.75.75 0 0 0 .75-.75v-6.5h7.94l-.97.97a.75.75 0 0 0 1.06 1.06l2.25-2.25a.75.75 0 0 0 0-1.06l-2.25-2.25a.75.75 0 1 0-1.06 1.06l.97.97H2.75A.75.75 0 0 0 2 6v7.25c0 .414.336.75.75.75Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
   Renders the `battery_100` icon.
 
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
@@ -6068,6 +6563,51 @@ defmodule Heroicons do
   end
 
   @doc """
+  Renders the `divide` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.divide />
+  <Heroicons.divide class="w-4 h-4" />
+  <Heroicons.divide solid />
+  <Heroicons.divide mini />
+  <Heroicons.divide micro />
+  <Heroicons.divide outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def divide(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M4.499 11.998h15m-7.5-6.75h.008v.008h-.008v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM12 18.751h.007v.007H12v-.007Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M10.874 5.248a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Zm-7.125 6.75a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75Zm7.125 6.753a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path d="M11.25 4a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0ZM3 10a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 10ZM10 17.25a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M2 8a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 8Z" clip-rule="evenodd"/><path d="M9 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 13a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
   Renders the `trash` icon.
 
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
@@ -6197,6 +6737,51 @@ defmodule Heroicons do
             ~S|<path fill-rule="evenodd" d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm8 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm-3-1a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm7 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd"/>|,
           micro:
             ~S|<path fill-rule="evenodd" d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0ZM8 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM5.5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm6 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
+  Renders the `document_currency_pound` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.document_currency_pound />
+  <Heroicons.document_currency_pound class="w-4 h-4" />
+  <Heroicons.document_currency_pound solid />
+  <Heroicons.document_currency_pound mini />
+  <Heroicons.document_currency_pound micro />
+  <Heroicons.document_currency_pound outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def document_currency_pound(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m6.621 9.879a3 3 0 0 0-5.02 2.897l.164.609a4.5 4.5 0 0 1-.108 2.676l-.157.439.44-.22a2.863 2.863 0 0 1 2.185-.155c.72.24 1.507.184 2.186-.155L15 18M8.25 15.75H12m-1.5-13.5H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M3.75 3.375c0-1.036.84-1.875 1.875-1.875H9a3.75 3.75 0 0 1 3.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 0 1 3.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 0 1-1.875-1.875V3.375Zm10.5 1.875a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 16.5 7.5h-1.875a.375.375 0 0 1-.375-.375V5.25Zm-3.674 9.583a2.249 2.249 0 0 1 3.765-2.174.75.75 0 0 0 1.06-1.06A3.75 3.75 0 0 0 9.076 15H8.25a.75.75 0 0 0 0 1.5h1.156a3.75 3.75 0 0 1-.206 1.559l-.156.439a.75.75 0 0 0 1.042.923l.439-.22a2.113 2.113 0 0 1 1.613-.115 3.613 3.613 0 0 0 2.758-.196l.44-.22a.75.75 0 1 0-.671-1.341l-.44.22a2.113 2.113 0 0 1-1.613.114 3.612 3.612 0 0 0-1.745-.134c.048-.341.062-.686.042-1.029H12a.75.75 0 0 0 0-1.5h-1.379l-.045-.167Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5Zm5 7a1.5 1.5 0 0 1 2.56-1.06.75.75 0 1 0 1.062-1.061A3 3 0 0 0 8 9v1.25H6.75a.75.75 0 0 0 0 1.5H8v1a.75.75 0 0 1-.75.75h-.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 1 0 0-1.5H9.372c.083-.235.128-.487.128-.75v-1h1.25a.75.75 0 0 0 0-1.5H9.5V9Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M2.5 3.5A1.5 1.5 0 0 1 4 2h4.879a1.5 1.5 0 0 1 1.06.44l3.122 3.12a1.5 1.5 0 0 1 .439 1.061V12.5A1.5 1.5 0 0 1 12 14H4a1.5 1.5 0 0 1-1.5-1.5v-9Zm5.44 3.44a1.5 1.5 0 0 1 2.12 0 .75.75 0 1 0 1.061-1.061A3 3 0 0 0 6 7.999H4.75a.75.75 0 0 0 0 1.5h1.225c-.116.571-.62 1-1.225 1a.75.75 0 1 0 0 1.5h5.5a.75.75 0 0 0 0-1.5H7.2c.156-.304.257-.642.289-1H9.25a.75.75 0 0 0 0-1.5H7.5c0-.384.146-.767.44-1.06Z" clip-rule="evenodd"/>|
         }
       )
     )
@@ -6512,6 +7097,51 @@ defmodule Heroicons do
             ~S|<path fill-rule="evenodd" d="M4.25 2A2.25 2.25 0 0 0 2 4.25v11.5A2.25 2.25 0 0 0 4.25 18h11.5A2.25 2.25 0 0 0 18 15.75V4.25A2.25 2.25 0 0 0 15.75 2H4.25ZM15 5.75a.75.75 0 0 0-1.5 0v8.5a.75.75 0 0 0 1.5 0v-8.5Zm-8.5 6a.75.75 0 0 0-1.5 0v2.5a.75.75 0 0 0 1.5 0v-2.5ZM8.584 9a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5a.75.75 0 0 1 .75-.75Zm3.58-1.25a.75.75 0 0 0-1.5 0v6.5a.75.75 0 0 0 1.5 0v-6.5Z" clip-rule="evenodd"/>|,
           micro:
             ~S|<path fill-rule="evenodd" d="M4 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4Zm.75 7a.75.75 0 0 0-.75.75v1.5a.75.75 0 0 0 1.5 0v-1.5A.75.75 0 0 0 4.75 9Zm2.5-1.75a.75.75 0 0 1 1.5 0v4a.75.75 0 0 1-1.5 0v-4Zm4-3.25a.75.75 0 0 0-.75.75v6.5a.75.75 0 0 0 1.5 0v-6.5a.75.75 0 0 0-.75-.75Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
+  Renders the `arrow_turn_down_left` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.arrow_turn_down_left />
+  <Heroicons.arrow_turn_down_left class="w-4 h-4" />
+  <Heroicons.arrow_turn_down_left solid />
+  <Heroicons.arrow_turn_down_left mini />
+  <Heroicons.arrow_turn_down_left micro />
+  <Heroicons.arrow_turn_down_left outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def arrow_turn_down_left(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="m7.49 12-3.75 3.75m0 0 3.75 3.75m-3.75-3.75h16.5V4.499"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M20.239 3.749a.75.75 0 0 0-.75.75V15H5.549l2.47-2.47a.75.75 0 0 0-1.06-1.06l-3.75 3.75a.75.75 0 0 0 0 1.06l3.75 3.75a.75.75 0 1 0 1.06-1.06L5.55 16.5h14.69a.75.75 0 0 0 .75-.75V4.5a.75.75 0 0 0-.75-.751Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M16.25 3a.75.75 0 0 0-.75.75v7.5H4.56l1.97-1.97a.75.75 0 0 0-1.06-1.06l-3.25 3.25a.75.75 0 0 0 0 1.06l3.25 3.25a.75.75 0 0 0 1.06-1.06l-1.97-1.97h11.69A.75.75 0 0 0 17 12V3.75a.75.75 0 0 0-.75-.75Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M13.25 2a.75.75 0 0 0-.75.75v6.5H4.56l.97-.97a.75.75 0 0 0-1.06-1.06L2.22 9.47a.75.75 0 0 0 0 1.06l2.25 2.25a.75.75 0 0 0 1.06-1.06l-.97-.97h8.69A.75.75 0 0 0 14 10V2.75a.75.75 0 0 0-.75-.75Z" clip-rule="evenodd"/>|
         }
       )
     )
@@ -6917,6 +7547,51 @@ defmodule Heroicons do
             ~S|<path d="m5.433 13.917 1.262-3.155A4 4 0 0 1 7.58 9.42l6.92-6.918a2.121 2.121 0 0 1 3 3l-6.92 6.918c-.383.383-.84.685-1.343.886l-3.154 1.262a.5.5 0 0 1-.65-.65Z"/><path d="M3.5 5.75c0-.69.56-1.25 1.25-1.25H10A.75.75 0 0 0 10 3H4.75A2.75 2.75 0 0 0 2 5.75v9.5A2.75 2.75 0 0 0 4.75 18h9.5A2.75 2.75 0 0 0 17 15.25V10a.75.75 0 0 0-1.5 0v5.25c0 .69-.56 1.25-1.25 1.25h-9.5c-.69 0-1.25-.56-1.25-1.25v-9.5Z"/>|,
           micro:
             ~S|<path d="M13.488 2.513a1.75 1.75 0 0 0-2.475 0L6.75 6.774a2.75 2.75 0 0 0-.596.892l-.848 2.047a.75.75 0 0 0 .98.98l2.047-.848a2.75 2.75 0 0 0 .892-.596l4.261-4.262a1.75 1.75 0 0 0 0-2.474Z"/><path d="M4.75 3.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h6.5c.69 0 1.25-.56 1.25-1.25V9A.75.75 0 0 1 14 9v2.25A2.75 2.75 0 0 1 11.25 14h-6.5A2.75 2.75 0 0 1 2 11.25v-6.5A2.75 2.75 0 0 1 4.75 2H7a.75.75 0 0 1 0 1.5H4.75Z"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
+  Renders the `arrow_turn_right_down` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.arrow_turn_right_down />
+  <Heroicons.arrow_turn_right_down class="w-4 h-4" />
+  <Heroicons.arrow_turn_right_down solid />
+  <Heroicons.arrow_turn_right_down mini />
+  <Heroicons.arrow_turn_right_down micro />
+  <Heroicons.arrow_turn_right_down outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def arrow_turn_right_down(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="m11.99 16.5 3.75 3.75m0 0 3.75-3.75m-3.75 3.75V3.75H4.49"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M3.738 3.75c0 .414.336.75.75.75H14.99v13.939l-2.47-2.47a.75.75 0 0 0-1.06 1.061l3.75 3.75a.75.75 0 0 0 1.06 0l3.751-3.75a.75.75 0 0 0-1.06-1.06l-2.47 2.469V3.75a.75.75 0 0 0-.75-.75H4.487a.75.75 0 0 0-.75.75Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M3 3.75c0 .414.336.75.75.75h7.5v10.94l-1.97-1.97a.75.75 0 0 0-1.06 1.06l3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06l-1.97 1.97V3.75A.75.75 0 0 0 12 3H3.75a.75.75 0 0 0-.75.75Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M2 2.75c0 .414.336.75.75.75h6.5v7.94l-.97-.97a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.06 0l2.25-2.25a.75.75 0 1 0-1.06-1.06l-.97.97V2.75A.75.75 0 0 0 10 2H2.75a.75.75 0 0 0-.75.75Z" clip-rule="evenodd"/>|
         }
       )
     )
@@ -7373,6 +8048,51 @@ defmodule Heroicons do
   end
 
   @doc """
+  Renders the `document_currency_bangladeshi` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.document_currency_bangladeshi />
+  <Heroicons.document_currency_bangladeshi class="w-4 h-4" />
+  <Heroicons.document_currency_bangladeshi solid />
+  <Heroicons.document_currency_bangladeshi mini />
+  <Heroicons.document_currency_bangladeshi micro />
+  <Heroicons.document_currency_bangladeshi outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def document_currency_bangladeshi(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 8.25.22-.22a.75.75 0 0 1 1.28.53v6.441c0 .472.214.934.64 1.137a3.75 3.75 0 0 0 4.994-1.77c.205-.428-.152-.868-.627-.868h-.507m-6-2.25h7.5M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M3.75 3.375c0-1.036.84-1.875 1.875-1.875H9a3.75 3.75 0 0 1 3.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 0 1 3.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 0 1-1.875-1.875V3.375Zm10.5 1.875a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 16.5 7.5h-1.875a.375.375 0 0 1-.375-.375V5.25Zm-3.75 5.56c0-1.336-1.616-2.005-2.56-1.06l-.22.22a.75.75 0 0 0 1.06 1.06l.22-.22v1.94h-.75a.75.75 0 0 0 0 1.5H9v3c0 .671.307 1.453 1.068 1.815a4.5 4.5 0 0 0 5.993-2.123c.233-.487.14-1-.136-1.37A1.459 1.459 0 0 0 14.757 15h-.507a.75.75 0 0 0 0 1.5h.349a2.999 2.999 0 0 1-3.887 1.21c-.091-.043-.212-.186-.212-.46v-3h5.25a.75.75 0 1 0 0-1.5H10.5v-1.94Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5Zm1.97 4.53a.75.75 0 0 0 .78.178V8h-1.5a.75.75 0 1 0 0 1.5h1.5v3.098c0 .98.571 2.18 1.837 2.356a4.751 4.751 0 0 0 5.066-2.92.75.75 0 0 0-.695-1.031H11.75a.75.75 0 0 0 0 1.5h.343a3.241 3.241 0 0 1-2.798.966c-.25-.035-.545-.322-.545-.87V9.5h5.5a.75.75 0 0 0 0-1.5h-5.5V6.415c0-1.19-1.439-1.786-2.28-.945a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M2.5 3.5A1.5 1.5 0 0 1 4 2h4.879a1.5 1.5 0 0 1 1.06.44l3.122 3.12a1.5 1.5 0 0 1 .439 1.061V12.5A1.5 1.5 0 0 1 12 14H4a1.5 1.5 0 0 1-1.5-1.5v-9ZM6 5.207a.75.75 0 0 1-.585-1.378A1.441 1.441 0 0 1 7.5 5.118V6h3.75a.75.75 0 0 1 0 1.5H7.5v3.25c0 .212.089.39.2.49.098.092.206.12.33.085.6-.167 1.151-.449 1.63-.821H9.5a.75.75 0 1 1 0-1.5h1.858a.75.75 0 0 1 .628 1.16 6.26 6.26 0 0 1-3.552 2.606 1.825 1.825 0 0 1-1.75-.425A2.17 2.17 0 0 1 6 10.75V7.5H4.75a.75.75 0 0 1 0-1.5H6v-.793Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
   Renders the `heart` icon.
 
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
@@ -7412,6 +8132,51 @@ defmodule Heroicons do
             ~S|<path d="m9.653 16.915-.005-.003-.019-.01a20.759 20.759 0 0 1-1.162-.682 22.045 22.045 0 0 1-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 0 1 8-2.828A4.5 4.5 0 0 1 18 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 0 1-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 0 1-.69.001l-.002-.001Z"/>|,
           micro:
             ~S|<path d="M2 6.342a3.375 3.375 0 0 1 6-2.088 3.375 3.375 0 0 1 5.997 2.26c-.063 2.134-1.618 3.76-2.955 4.784a14.437 14.437 0 0 1-2.676 1.61c-.02.01-.038.017-.05.022l-.014.006-.004.002h-.002a.75.75 0 0 1-.592.001h-.002l-.004-.003-.015-.006a5.528 5.528 0 0 1-.232-.107 14.395 14.395 0 0 1-2.535-1.557C3.564 10.22 1.999 8.558 1.999 6.38L2 6.342Z"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
+  Renders the `arrow_turn_left_down` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.arrow_turn_left_down />
+  <Heroicons.arrow_turn_left_down class="w-4 h-4" />
+  <Heroicons.arrow_turn_left_down solid />
+  <Heroicons.arrow_turn_left_down mini />
+  <Heroicons.arrow_turn_left_down micro />
+  <Heroicons.arrow_turn_left_down outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def arrow_turn_left_down(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="m11.99 16.5-3.75 3.75m0 0L4.49 16.5m3.75 3.75V3.75h11.25"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M20.24 3.75a.75.75 0 0 1-.75.75H8.989v13.939l2.47-2.47a.75.75 0 1 1 1.06 1.061l-3.75 3.75a.75.75 0 0 1-1.06 0l-3.751-3.75a.75.75 0 1 1 1.06-1.06l2.47 2.469V3.75a.75.75 0 0 1 .75-.75H19.49a.75.75 0 0 1 .75.75Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M16 3.75a.75.75 0 0 1-.75.75h-7.5v10.94l1.97-1.97a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0l-3.25-3.25a.75.75 0 1 1 1.06-1.06l1.97 1.97V3.75A.75.75 0 0 1 7 3h8.25a.75.75 0 0 1 .75.75Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M5.47 2.22A.75.75 0 0 1 6 2h7.25a.75.75 0 0 1 0 1.5h-6.5v7.94l.97-.97a.75.75 0 0 1 1.06 1.06l-2.25 2.25a.75.75 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l.97.97V2.75a.75.75 0 0 1 .22-.53Z" clip-rule="evenodd"/>|
         }
       )
     )
@@ -7502,6 +8267,51 @@ defmodule Heroicons do
             ~S|<path fill-rule="evenodd" d="M.99 5.24A2.25 2.25 0 0 1 3.25 3h13.5A2.25 2.25 0 0 1 19 5.25l.01 9.5A2.25 2.25 0 0 1 16.76 17H3.26A2.267 2.267 0 0 1 1 14.74l-.01-9.5Zm8.26 9.52v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 0 0 .627-.74Zm1.5 0a.75.75 0 0 0 .627.74h5.373a.75.75 0 0 0 .75-.75v-.615a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625Zm6.75-3.63v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75Zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75ZM17.5 7.5v-.625a.75.75 0 0 0-.75-.75H11.5a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 0 0 .75-.75Zm-8.25 0v-.625a.75.75 0 0 0-.75-.75H3.25a.75.75 0 0 0-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 0 0 .75-.75Z" clip-rule="evenodd"/>|,
           micro:
             ~S|<path fill-rule="evenodd" d="M15 11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6ZM7.25 7.5a.5.5 0 0 0-.5-.5H3a.5.5 0 0 0-.5.5V8a.5.5 0 0 0 .5.5h3.75a.5.5 0 0 0 .5-.5v-.5Zm1.5 3a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 .5.5v.5a.5.5 0 0 1-.5.5H9.25a.5.5 0 0 1-.5-.5v-.5ZM13.5 8v-.5A.5.5 0 0 0 13 7H9.25a.5.5 0 0 0-.5.5V8a.5.5 0 0 0 .5.5H13a.5.5 0 0 0 .5-.5Zm-6.75 3.5a.5.5 0 0 0 .5-.5v-.5a.5.5 0 0 0-.5-.5H3a.5.5 0 0 0-.5.5v.5a.5.5 0 0 0 .5.5h3.75Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
+  Renders the `document_currency_rupee` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.document_currency_rupee />
+  <Heroicons.document_currency_rupee class="w-4 h-4" />
+  <Heroicons.document_currency_rupee solid />
+  <Heroicons.document_currency_rupee mini />
+  <Heroicons.document_currency_rupee micro />
+  <Heroicons.document_currency_rupee outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def document_currency_rupee(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 9h3.75m-4.5 2.625h4.5M12 18.75 9.75 16.5h.375a2.625 2.625 0 0 0 0-5.25H9.75m.75-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M3.75 3.375c0-1.036.84-1.875 1.875-1.875H9a3.75 3.75 0 0 1 3.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 0 1 3.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 0 1-1.875-1.875V3.375Zm10.5 1.875a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 16.5 7.5h-1.875a.375.375 0 0 1-.375-.375V5.25Zm-4.5 5.25a.75.75 0 0 0 0 1.5h.375c.769 0 1.43.463 1.719 1.125H9.75a.75.75 0 0 0 0 1.5h2.094a1.875 1.875 0 0 1-1.719 1.125H9.75a.75.75 0 0 0-.53 1.28l2.25 2.25a.75.75 0 0 0 1.06-1.06l-1.193-1.194a3.382 3.382 0 0 0 2.08-2.401h.833a.75.75 0 0 0 0-1.5h-.834A3.357 3.357 0 0 0 12.932 12h1.318a.75.75 0 0 0 0-1.5H10.5c-.04 0-.08.003-.12.01a3.425 3.425 0 0 0-.255-.01H9.75Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 0 0 3 3.5v13A1.5 1.5 0 0 0 4.5 18h11a1.5 1.5 0 0 0 1.5-1.5V7.621a1.5 1.5 0 0 0-.44-1.06l-4.12-4.122A1.5 1.5 0 0 0 11.378 2H4.5ZM6 5.75A.75.75 0 0 1 6.75 5h6.5a.75.75 0 0 1 0 1.5h-2.127c.4.5.683 1.096.807 1.75h1.32a.75.75 0 0 1 0 1.5h-1.32a4.003 4.003 0 0 1-3.404 3.216l1.754 1.754a.75.75 0 0 1-1.06 1.06l-3-3a.75.75 0 0 1 .53-1.28H8c1.12 0 2.067-.736 2.386-1.75H6.75a.75.75 0 0 1 0-1.5h3.636A2.501 2.501 0 0 0 8 6.5H6.75A.75.75 0 0 1 6 5.75Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M2.5 3.5A1.5 1.5 0 0 1 4 2h4.879a1.5 1.5 0 0 1 1.06.44l3.122 3.12a1.5 1.5 0 0 1 .439 1.061V12.5A1.5 1.5 0 0 1 12 14H4a1.5 1.5 0 0 1-1.5-1.5v-9ZM5.75 5a.75.75 0 0 0 0 1.5c.698 0 1.3.409 1.582 1H5.75a.75.75 0 0 0 0 1.5h1.582c-.281.591-.884 1-1.582 1a.75.75 0 0 0-.53 1.28l1.5 1.5a.75.75 0 0 0 1.06-1.06l-.567-.567A3.256 3.256 0 0 0 8.913 9h1.337a.75.75 0 0 0 0-1.5H8.913a3.232 3.232 0 0 0-.424-1h1.761a.75.75 0 0 0 0-1.5h-4.5Z" clip-rule="evenodd"/>|
         }
       )
     )
@@ -8138,6 +8948,51 @@ defmodule Heroicons do
   end
 
   @doc """
+  Renders the `italic` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.italic />
+  <Heroicons.italic class="w-4 h-4" />
+  <Heroicons.italic solid />
+  <Heroicons.italic mini />
+  <Heroicons.italic micro />
+  <Heroicons.italic outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def italic(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M5.248 20.246H9.05m0 0h3.696m-3.696 0 5.893-16.502m0 0h-3.697m3.697 0h3.803"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M10.497 3.744a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-3.275l-5.357 15.002h2.632a.75.75 0 1 1 0 1.5h-7.5a.75.75 0 1 1 0-1.5h3.275l5.357-15.002h-2.632a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M8 2.75A.75.75 0 0 1 8.75 2h7.5a.75.75 0 0 1 0 1.5h-3.215l-4.483 13h2.698a.75.75 0 0 1 0 1.5h-7.5a.75.75 0 0 1 0-1.5h3.215l4.483-13H8.75A.75.75 0 0 1 8 2.75Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M6.25 2.75A.75.75 0 0 1 7 2h6a.75.75 0 0 1 0 1.5h-2.483l-3.429 9H9A.75.75 0 0 1 9 14H3a.75.75 0 0 1 0-1.5h2.483l3.429-9H7a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
   Renders the `receipt_refund` icon.
 
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
@@ -8177,6 +9032,51 @@ defmodule Heroicons do
             ~S|<path fill-rule="evenodd" d="M4.93 2.31a41.401 41.401 0 0 1 10.14 0C16.194 2.45 17 3.414 17 4.517V17.25a.75.75 0 0 1-1.075.676l-2.8-1.344-2.8 1.344a.75.75 0 0 1-.65 0l-2.8-1.344-2.8 1.344A.75.75 0 0 1 3 17.25V4.517c0-1.103.806-2.068 1.93-2.207Zm4.822 3.997a.75.75 0 1 0-1.004-1.114l-2.5 2.25a.75.75 0 0 0 0 1.114l2.5 2.25a.75.75 0 0 0 1.004-1.114L8.704 8.75h1.921a1.875 1.875 0 0 1 0 3.75.75.75 0 0 0 0 1.5 3.375 3.375 0 1 0 0-6.75h-1.92l1.047-.943Z" clip-rule="evenodd"/>|,
           micro:
             ~S|<path fill-rule="evenodd" d="M5.25 2A2.25 2.25 0 0 0 3 4.25v9a.75.75 0 0 0 1.183.613l1.692-1.195 1.692 1.195a.75.75 0 0 0 .866 0l1.692-1.195 1.693 1.195A.75.75 0 0 0 13 13.25v-9A2.25 2.25 0 0 0 10.75 2h-5.5Zm3.03 3.28a.75.75 0 0 0-1.06-1.06L4.97 6.47a.75.75 0 0 0 0 1.06l2.25 2.25a.75.75 0 0 0 1.06-1.06l-.97-.97h1.315c.76 0 1.375.616 1.375 1.375a.75.75 0 0 0 1.5 0A2.875 2.875 0 0 0 8.625 6.25H7.311l.97-.97Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
+  Renders the `arrow_turn_down_right` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.arrow_turn_down_right />
+  <Heroicons.arrow_turn_down_right class="w-4 h-4" />
+  <Heroicons.arrow_turn_down_right solid />
+  <Heroicons.arrow_turn_down_right mini />
+  <Heroicons.arrow_turn_down_right micro />
+  <Heroicons.arrow_turn_down_right outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def arrow_turn_down_right(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="m16.49 12 3.75 3.75m0 0-3.75 3.75m3.75-3.75H3.74V4.499"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M3.74 3.749a.75.75 0 0 1 .75.75V15h13.938l-2.47-2.47a.75.75 0 0 1 1.061-1.06l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 0 1-1.06-1.06l2.47-2.47H3.738a.75.75 0 0 1-.75-.75V4.5a.75.75 0 0 1 .75-.751Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M3.75 3a.75.75 0 0 1 .75.75v7.5h10.94l-1.97-1.97a.75.75 0 0 1 1.06-1.06l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 1 1-1.06-1.06l1.97-1.97H3.75A.75.75 0 0 1 3 12V3.75A.75.75 0 0 1 3.75 3Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M2.75 2a.75.75 0 0 1 .75.75v6.5h7.94l-.97-.97a.75.75 0 0 1 1.06-1.06l2.25 2.25a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 1 1-1.06-1.06l.97-.97H2.75A.75.75 0 0 1 2 10V2.75A.75.75 0 0 1 2.75 2Z" clip-rule="evenodd"/>|
         }
       )
     )
@@ -8537,6 +9437,51 @@ defmodule Heroicons do
             ~S|<path d="M5.75 3a.75.75 0 0 0-.75.75v12.5c0 .414.336.75.75.75h1.5a.75.75 0 0 0 .75-.75V3.75A.75.75 0 0 0 7.25 3h-1.5ZM12.75 3a.75.75 0 0 0-.75.75v12.5c0 .414.336.75.75.75h1.5a.75.75 0 0 0 .75-.75V3.75a.75.75 0 0 0-.75-.75h-1.5Z"/>|,
           micro:
             ~S|<path d="M4.5 2a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-11a.5.5 0 0 0-.5-.5h-1ZM10.5 2a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-11a.5.5 0 0 0-.5-.5h-1Z"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
+  Renders the `arrow_turn_left_up` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.arrow_turn_left_up />
+  <Heroicons.arrow_turn_left_up class="w-4 h-4" />
+  <Heroicons.arrow_turn_left_up solid />
+  <Heroicons.arrow_turn_left_up mini />
+  <Heroicons.arrow_turn_left_up micro />
+  <Heroicons.arrow_turn_left_up outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def arrow_turn_left_up(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M11.99 7.5 8.24 3.75m0 0L4.49 7.5m3.75-3.75v16.499h11.25"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M20.24 20.249a.75.75 0 0 0-.75-.75H8.989V5.56l2.47 2.47a.75.75 0 0 0 1.06-1.061l-3.75-3.75a.75.75 0 0 0-1.06 0l-3.75 3.75a.75.75 0 1 0 1.06 1.06l2.47-2.469V20.25c0 .414.335.75.75.75h11.25a.75.75 0 0 0 .75-.75Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M16 16.25a.75.75 0 0 0-.75-.75h-7.5V4.56l1.97 1.97a.75.75 0 1 0 1.06-1.06L7.53 2.22a.75.75 0 0 0-1.06 0L3.22 5.47a.75.75 0 0 0 1.06 1.06l1.97-1.97v11.69c0 .414.336.75.75.75h8.25a.75.75 0 0 0 .75-.75Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M14 13.25a.75.75 0 0 0-.75-.75h-6.5V4.56l.97.97a.75.75 0 0 0 1.06-1.06L6.53 2.22a.75.75 0 0 0-1.06 0L3.22 4.47a.75.75 0 0 0 1.06 1.06l.97-.97v8.69c0 .414.336.75.75.75h7.25a.75.75 0 0 0 .75-.75Z" clip-rule="evenodd"/>|
         }
       )
     )
@@ -9398,6 +10343,96 @@ defmodule Heroicons do
   end
 
   @doc """
+  Renders the `bold` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.bold />
+  <Heroicons.bold class="w-4 h-4" />
+  <Heroicons.bold solid />
+  <Heroicons.bold mini />
+  <Heroicons.bold micro />
+  <Heroicons.bold outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def bold(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linejoin="round" d="M6.75 3.744h-.753v8.25h7.125a4.125 4.125 0 0 0 0-8.25H6.75Zm0 0v.38m0 16.122h6.747a4.5 4.5 0 0 0 0-9.001h-7.5v9h.753Zm0 0v-.37m0-15.751h6a3.75 3.75 0 1 1 0 7.5h-6m0-7.5v7.5m0 0v8.25m0-8.25h6.375a4.125 4.125 0 0 1 0 8.25H6.75m.747-15.38h4.875a3.375 3.375 0 0 1 0 6.75H7.497v-6.75Zm0 7.5h5.25a3.75 3.75 0 0 1 0 7.5h-5.25v-7.5Z"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M5.246 3.744a.75.75 0 0 1 .75-.75h7.125a4.875 4.875 0 0 1 3.346 8.422 5.25 5.25 0 0 1-2.97 9.58h-7.5a.75.75 0 0 1-.75-.75V3.744Zm7.125 6.75a2.625 2.625 0 0 0 0-5.25H8.246v5.25h4.125Zm-4.125 2.251v6h4.5a3 3 0 0 0 0-6h-4.5Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M4 3a1 1 0 0 1 1-1h6a4.5 4.5 0 0 1 3.274 7.587A4.75 4.75 0 0 1 11.25 18H5a1 1 0 0 1-1-1V3Zm2.5 5.5v-4H11a2 2 0 1 1 0 4H6.5Zm0 2.5v4.5h4.75a2.25 2.25 0 0 0 0-4.5H6.5Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M3 3a1 1 0 0 1 1-1h5a3.5 3.5 0 0 1 2.843 5.541A3.75 3.75 0 0 1 9.25 14H4a1 1 0 0 1-1-1V3Zm2.5 3.5v-2H9a1 1 0 0 1 0 2H5.5Zm0 2.5v2.5h3.75a1.25 1.25 0 1 0 0-2.5H5.5Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
+  Renders the `underline` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.underline />
+  <Heroicons.underline class="w-4 h-4" />
+  <Heroicons.underline solid />
+  <Heroicons.underline mini />
+  <Heroicons.underline micro />
+  <Heroicons.underline outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def underline(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M17.995 3.744v7.5a6 6 0 1 1-12 0v-7.5m-2.25 16.502h16.5"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M5.995 2.994a.75.75 0 0 1 .75.75v7.5a5.25 5.25 0 1 0 10.5 0v-7.5a.75.75 0 0 1 1.5 0v7.5a6.75 6.75 0 1 1-13.5 0v-7.5a.75.75 0 0 1 .75-.75Zm-3 17.252a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5h-16.5a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M4.75 2a.75.75 0 0 1 .75.75V9a4.5 4.5 0 1 0 9 0V2.75a.75.75 0 0 1 1.5 0V9A6 6 0 0 1 4 9V2.75A.75.75 0 0 1 4.75 2ZM2 17.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M4.75 2a.75.75 0 0 1 .75.75V7a2.5 2.5 0 0 0 5 0V2.75a.75.75 0 0 1 1.5 0V7a4 4 0 0 1-8 0V2.75A.75.75 0 0 1 4.75 2ZM2 13.25a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
   Renders the `wifi` icon.
 
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
@@ -9893,6 +10928,51 @@ defmodule Heroicons do
   end
 
   @doc """
+  Renders the `slash` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.slash />
+  <Heroicons.slash class="w-4 h-4" />
+  <Heroicons.slash solid />
+  <Heroicons.slash mini />
+  <Heroicons.slash micro />
+  <Heroicons.slash outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def slash(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="m9 20.247 6-16.5"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M15.256 3.042a.75.75 0 0 1 .449.962l-6 16.5a.75.75 0 1 1-1.41-.513l6-16.5a.75.75 0 0 1 .961-.449Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M12.528 3.047a.75.75 0 0 1 .449.961L8.433 16.504a.75.75 0 1 1-1.41-.512l4.544-12.496a.75.75 0 0 1 .961-.449Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M10.074 2.047a.75.75 0 0 1 .449.961L6.705 13.507a.75.75 0 0 1-1.41-.513L9.113 2.496a.75.75 0 0 1 .961-.449Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
   Renders the `academic_cap` icon.
 
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
@@ -10343,6 +11423,51 @@ defmodule Heroicons do
   end
 
   @doc """
+  Renders the `h3` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.h3 />
+  <Heroicons.h3 class="w-4 h-4" />
+  <Heroicons.h3 solid />
+  <Heroicons.h3 mini />
+  <Heroicons.h3 micro />
+  <Heroicons.h3 outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def h3(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M20.905 14.626a4.52 4.52 0 0 1 .738 3.603c-.154.695-.794 1.143-1.504 1.208a15.194 15.194 0 0 1-3.639-.104m4.405-4.707a4.52 4.52 0 0 0 .738-3.603c-.154-.696-.794-1.144-1.504-1.209a15.19 15.19 0 0 0-3.639.104m4.405 4.708H18M2.243 4.493v7.5m0 0v7.502m0-7.501h10.5m0-7.5v7.5m0 0v7.501"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M12.749 3.743a.75.75 0 0 1 .75.75v15.002a.75.75 0 1 1-1.5 0v-6.75H2.997v6.75a.75.75 0 0 1-1.5 0V4.494a.75.75 0 1 1 1.5 0v6.75H12v-6.75a.75.75 0 0 1 .75-.75ZM18.75 10.5c-.727 0-1.441.055-2.139.16a.75.75 0 1 1-.223-1.483 15.87 15.87 0 0 1 3.82-.11c.95.088 1.926.705 2.168 1.794a5.265 5.265 0 0 1-.579 3.765 5.265 5.265 0 0 1 .578 3.765c-.24 1.088-1.216 1.706-2.167 1.793a15.942 15.942 0 0 1-3.82-.109.75.75 0 0 1 .223-1.483 14.366 14.366 0 0 0 3.46.099c.467-.043.773-.322.84-.624a3.768 3.768 0 0 0-.413-2.691H18a.75.75 0 0 1 0-1.5h2.498a3.768 3.768 0 0 0 .413-2.69c-.067-.303-.373-.582-.84-.625-.435-.04-.876-.06-1.321-.06Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M2.75 4a.75.75 0 0 1 .75.75v4.5h5v-4.5a.75.75 0 0 1 1.5 0v10.5a.75.75 0 0 1-1.5 0v-4.5h-5v4.5a.75.75 0 0 1-1.5 0V4.75A.75.75 0 0 1 2.75 4ZM15 9.5c-.73 0-1.448.051-2.15.15a.75.75 0 1 1-.209-1.485 16.886 16.886 0 0 1 3.476-.128c.985.065 1.878.837 1.883 1.932V10a6.75 6.75 0 0 1-.301 2A6.75 6.75 0 0 1 18 14v.031c-.005 1.095-.898 1.867-1.883 1.932a17.018 17.018 0 0 1-3.467-.127.75.75 0 0 1 .209-1.485 15.377 15.377 0 0 0 3.16.115c.308-.02.48-.24.48-.441L16.5 14c0-.431-.052-.85-.15-1.25h-2.6a.75.75 0 0 1 0-1.5h2.6c.098-.4.15-.818.15-1.25v-.024c-.001-.201-.173-.422-.481-.443A15.485 15.485 0 0 0 15 9.5Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M1.75 3a.75.75 0 0 1 .75.75v3.5h4v-3.5a.75.75 0 0 1 1.5 0v8.5a.75.75 0 0 1-1.5 0v-3.5h-4v3.5a.75.75 0 0 1-1.5 0v-8.5A.75.75 0 0 1 1.75 3ZM12.5 7.5c-.558 0-1.107.04-1.642.119a.75.75 0 0 1-.217-1.484 12.851 12.851 0 0 1 2.856-.097c.696.054 1.363.561 1.464 1.353a4.805 4.805 0 0 1-.203 2.109 4.745 4.745 0 0 1 .203 2.109c-.101.792-.768 1.299-1.464 1.353a12.955 12.955 0 0 1-2.856-.097.75.75 0 0 1 .217-1.484 11.351 11.351 0 0 0 2.523.085.14.14 0 0 0 .08-.03c.007-.006.01-.012.01-.012l.002-.003v-.003a3.29 3.29 0 0 0-.06-1.168H11.75a.75.75 0 0 1 0-1.5h1.663a3.262 3.262 0 0 0 .06-1.168l-.001-.006-.01-.012a.14.14 0 0 0-.08-.03c-.291-.023-.585-.034-.882-.034Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
   Renders the `scale` icon.
 
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
@@ -10562,6 +11687,51 @@ defmodule Heroicons do
             ~S|<path fill-rule="evenodd" d="M10 2c-1.716 0-3.408.106-5.07.31C3.806 2.45 3 3.414 3 4.517V17.25a.75.75 0 0 0 1.075.676L10 15.082l5.925 2.844A.75.75 0 0 0 17 17.25V4.517c0-1.103-.806-2.068-1.93-2.207A41.403 41.403 0 0 0 10 2Z" clip-rule="evenodd"/>|,
           micro:
             ~S|<path d="M3.75 2a.75.75 0 0 0-.75.75v10.5a.75.75 0 0 0 1.28.53L8 10.06l3.72 3.72a.75.75 0 0 0 1.28-.53V2.75a.75.75 0 0 0-.75-.75h-8.5Z"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
+  Renders the `arrow_turn_right_up` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.arrow_turn_right_up />
+  <Heroicons.arrow_turn_right_up class="w-4 h-4" />
+  <Heroicons.arrow_turn_right_up solid />
+  <Heroicons.arrow_turn_right_up mini />
+  <Heroicons.arrow_turn_right_up micro />
+  <Heroicons.arrow_turn_right_up outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def arrow_turn_right_up(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="m11.99 7.5 3.75-3.75m0 0 3.75 3.75m-3.75-3.75v16.499H4.49"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M3.738 20.249a.75.75 0 0 1 .75-.75H14.99V5.56l-2.47 2.47a.75.75 0 0 1-1.06-1.061l3.75-3.75a.75.75 0 0 1 1.06 0l3.751 3.75a.75.75 0 0 1-1.06 1.06L16.49 5.56V20.25a.75.75 0 0 1-.75.75H4.487a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M3 16.25a.75.75 0 0 1 .75-.75h7.5V4.56L9.28 6.53a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1-1.06 1.06l-1.97-1.97v11.69A.75.75 0 0 1 12 17H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M2 13.25a.75.75 0 0 1 .75-.75h6.5V4.56l-.97.97a.75.75 0 0 1-1.06-1.06l2.25-2.25a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1-1.06 1.06l-.97-.97v8.69A.75.75 0 0 1 10 14H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>|
         }
       )
     )
@@ -12638,6 +13808,51 @@ defmodule Heroicons do
   end
 
   @doc """
+  Renders the `strikethrough` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.strikethrough />
+  <Heroicons.strikethrough class="w-4 h-4" />
+  <Heroicons.strikethrough solid />
+  <Heroicons.strikethrough mini />
+  <Heroicons.strikethrough micro />
+  <Heroicons.strikethrough outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def strikethrough(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M12 12a8.912 8.912 0 0 1-.318-.079c-1.585-.424-2.904-1.247-3.76-2.236-.873-1.009-1.265-2.19-.968-3.301.59-2.2 3.663-3.29 6.863-2.432A8.186 8.186 0 0 1 16.5 5.21M6.42 17.81c.857.99 2.176 1.812 3.761 2.237 3.2.858 6.274-.23 6.863-2.431.233-.868.044-1.779-.465-2.617M3.75 12h16.5"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M9.657 4.728c-1.086.385-1.766 1.057-1.979 1.85-.214.8.046 1.733.81 2.616.746.862 1.93 1.612 3.388 2.003.07.019.14.037.21.053h8.163a.75.75 0 0 1 0 1.5h-8.24a.66.66 0 0 1-.02 0H3.75a.75.75 0 0 1 0-1.5h4.78a7.108 7.108 0 0 1-1.175-1.074C6.372 9.042 5.849 7.61 6.229 6.19c.377-1.408 1.528-2.38 2.927-2.876 1.402-.497 3.127-.55 4.855-.086A8.937 8.937 0 0 1 16.94 4.6a.75.75 0 0 1-.881 1.215 7.437 7.437 0 0 0-2.436-1.14c-1.473-.394-2.885-.331-3.966.052Zm6.533 9.632a.75.75 0 0 1 1.03.25c.592.974.846 2.094.55 3.2-.378 1.408-1.529 2.38-2.927 2.876-1.402.497-3.127.55-4.855.087-1.712-.46-3.168-1.354-4.134-2.47a.75.75 0 0 1 1.134-.982c.746.862 1.93 1.612 3.388 2.003 1.473.394 2.884.331 3.966-.052 1.085-.384 1.766-1.056 1.978-1.85.169-.628.046-1.33-.381-2.032a.75.75 0 0 1 .25-1.03Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M11.617 3.963c-1.186-.318-2.418-.323-3.416.015-.992.336-1.49.91-1.642 1.476-.152.566-.007 1.313.684 2.1.528.6 1.273 1.1 2.128 1.446h7.879a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5h3.813a5.976 5.976 0 0 1-.447-.456C5.18 7.479 4.798 6.231 5.11 5.066c.312-1.164 1.268-2.055 2.61-2.509 1.336-.451 2.877-.42 4.286-.043.856.23 1.684.592 2.409 1.074a.75.75 0 1 1-.83 1.25 6.723 6.723 0 0 0-1.968-.875Zm1.909 8.123a.75.75 0 0 1 1.015.309c.53.99.607 2.062.18 3.01-.421.94-1.289 1.648-2.441 2.038-1.336.452-2.877.42-4.286.043-1.409-.377-2.759-1.121-3.69-2.18a.75.75 0 1 1 1.127-.99c.696.791 1.765 1.403 2.952 1.721 1.186.318 2.418.323 3.416-.015.853-.288 1.34-.756 1.555-1.232.21-.467.205-1.049-.136-1.69a.75.75 0 0 1 .308-1.014Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M9.165 3.654c-.95-.255-1.921-.273-2.693-.042-.769.231-1.087.624-1.173.947-.087.323-.008.822.543 1.407.389.412.927.77 1.55 1.034H13a.75.75 0 0 1 0 1.5H3A.75.75 0 0 1 3 7h1.756l-.006-.006c-.787-.835-1.161-1.849-.9-2.823.26-.975 1.092-1.666 2.191-1.995 1.097-.33 2.36-.28 3.512.029.75.2 1.478.518 2.11.939a.75.75 0 0 1-.833 1.248 5.682 5.682 0 0 0-1.665-.738Zm2.074 6.365a.75.75 0 0 1 .91.543 2.44 2.44 0 0 1-.35 2.024c-.405.585-1.052 1.003-1.84 1.24-1.098.329-2.36.279-3.512-.03-1.152-.308-2.27-.897-3.056-1.73a.75.75 0 0 1 1.092-1.029c.552.586 1.403 1.056 2.352 1.31.95.255 1.92.273 2.692.042.55-.165.873-.417 1.038-.656a.942.942 0 0 0 .13-.803.75.75 0 0 1 .544-.91Z" clip-rule="evenodd"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
   Renders the `folder_minus` icon.
 
   By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
@@ -12722,6 +13937,51 @@ defmodule Heroicons do
             ~S|<path d="M7 3.5A1.5 1.5 0 0 1 8.5 2h3.879a1.5 1.5 0 0 1 1.06.44l3.122 3.12A1.5 1.5 0 0 1 17 6.622V12.5a1.5 1.5 0 0 1-1.5 1.5h-1v-3.379a3 3 0 0 0-.879-2.121L10.5 5.379A3 3 0 0 0 8.379 4.5H7v-1Z"/><path d="M4.5 6A1.5 1.5 0 0 0 3 7.5v9A1.5 1.5 0 0 0 4.5 18h7a1.5 1.5 0 0 0 1.5-1.5v-5.879a1.5 1.5 0 0 0-.44-1.06L9.44 6.439A1.5 1.5 0 0 0 8.378 6H4.5Z"/>|,
           micro:
             ~S|<path d="M5.5 3.5A1.5 1.5 0 0 1 7 2h2.879a1.5 1.5 0 0 1 1.06.44l2.122 2.12a1.5 1.5 0 0 1 .439 1.061V9.5A1.5 1.5 0 0 1 12 11V8.621a3 3 0 0 0-.879-2.121L9 4.379A3 3 0 0 0 6.879 3.5H5.5Z"/><path d="M4 5a1.5 1.5 0 0 0-1.5 1.5v6A1.5 1.5 0 0 0 4 14h5a1.5 1.5 0 0 0 1.5-1.5V8.621a1.5 1.5 0 0 0-.44-1.06L7.94 5.439A1.5 1.5 0 0 0 6.878 5H4Z"/>|
+        }
+      )
+    )
+  end
+
+  @doc """
+  Renders the `h1` icon.
+
+  By default, the outlined (24x24) component is used, but the `solid`, `mini` or `micro`
+  attributes can be provided for alternative styles.
+
+  You may also pass arbitrary HTML attributes to be applied to the svg tag.
+
+  ## Examples
+
+  ```heex
+  <Heroicons.h1 />
+  <Heroicons.h1 class="w-4 h-4" />
+  <Heroicons.h1 solid />
+  <Heroicons.h1 mini />
+  <Heroicons.h1 micro />
+  <Heroicons.h1 outline />
+  ```
+  """
+  attr :rest, :global,
+    doc: "the arbitrary HTML attributes for the svg container",
+    include: ~w(fill stroke stroke-width)
+
+  attr :outline, :boolean, default: true
+  attr :solid, :boolean, default: false
+  attr :mini, :boolean, default: false
+  attr :micro, :boolean, default: false
+
+  def h1(assigns) do
+    svg(
+      assign(assigns,
+        paths: %{
+          outline:
+            ~S|<path stroke-linecap="round" stroke-linejoin="round" d="M2.243 4.493v7.5m0 0v7.502m0-7.501h10.5m0-7.5v7.5m0 0v7.501m4.501-8.627 2.25-1.5v10.126m0 0h-2.25m2.25 0h2.25"/>|,
+          solid:
+            ~S|<path fill-rule="evenodd" d="M2.243 3.743a.75.75 0 0 1 .75.75v6.75h9v-6.75a.75.75 0 1 1 1.5 0v15.002a.75.75 0 1 1-1.5 0v-6.751h-9v6.75a.75.75 0 1 1-1.5 0v-15a.75.75 0 0 1 .75-.75Zm17.605 4.964a.75.75 0 0 1 .396.661v9.376h1.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5h1.5V10.77l-1.084.722a.75.75 0 1 1-.832-1.248l2.25-1.5a.75.75 0 0 1 .77-.037Z" clip-rule="evenodd"/>|,
+          mini:
+            ~S|<path fill-rule="evenodd" d="M2.75 4a.75.75 0 0 1 .75.75v4.5h5v-4.5a.75.75 0 0 1 1.5 0v10.5a.75.75 0 0 1-1.5 0v-4.5h-5v4.5a.75.75 0 0 1-1.5 0V4.75A.75.75 0 0 1 2.75 4ZM13 8.75a.75.75 0 0 1 .75-.75h1.75a.75.75 0 0 1 .75.75v5.75h1a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1 0-1.5h1v-5h-1a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>|,
+          micro:
+            ~S|<path fill-rule="evenodd" d="M1.75 3a.75.75 0 0 1 .75.75v3.5h4v-3.5a.75.75 0 0 1 1.5 0v8.5a.75.75 0 0 1-1.5 0v-3.5h-4v3.5a.75.75 0 0 1-1.5 0v-8.5A.75.75 0 0 1 1.75 3ZM10 6.75a.75.75 0 0 1 .75-.75h1.75a.75.75 0 0 1 .75.75v4.75h1a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1 0-1.5h1v-4h-1a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/>|
         }
       )
     )

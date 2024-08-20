@@ -112,7 +112,7 @@ defmodule Heroicons do
     """
   end
 
-  <%= for  {func, [outline, solid, mini, micro]} = icon when not is_nil(micro) <- @icons do %>
+  <%= for  {func, [outline, solid, mini, micro]} = _icon when not is_nil(micro) <- @icons do %>
   @doc """
   Renders the `<%= func %>` icon.
 
@@ -143,7 +143,7 @@ defmodule Heroicons do
   end
   <% end %>
 
-  <%= for  {func, [outline, solid, mini]} = icon  <- @icons do %>
+  <%= for  {func, [outline, solid, mini]} = _icon  <- @icons do %>
   @doc """
   Renders the `<%= func %>` icon.
 
