@@ -1,6 +1,6 @@
 defmodule Heroicons do
   @moduledoc """
-  Provides precompiled icon compiles from [heroicons.com v<%= @vsn %>](heroicons.com).
+  Provides precompiled icon compiles from [heroicons.com v<%= @vsn %>](https://heroicons.com).
 
   Heroicons are designed by [Steve Schoger](https://twitter.com/steveschoger)
 
