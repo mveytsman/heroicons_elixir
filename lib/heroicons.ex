@@ -56,16 +56,16 @@ defmodule Heroicons do
     Map.merge(%{micro: false}, assigns)
     |> case do
       %{mini: false, solid: false, micro: false} ->
-        ~H"<.svg_outline {@rest}><%= {:safe, @paths[:outline]} %></.svg_outline>"
+        ~H"<.svg_outline {@rest}>{{:safe, @paths[:outline]}}</.svg_outline>"
 
       %{solid: true, mini: false, micro: false} ->
-        ~H"<.svg_solid {@rest}><%= {:safe, @paths[:solid]} %></.svg_solid>"
+        ~H"<.svg_solid {@rest}>{{:safe, @paths[:solid]}}</.svg_solid>"
 
       %{mini: true, solid: false, micro: false} ->
-        ~H"<.svg_mini {@rest}><%= {:safe, @paths[:mini]} %></.svg_mini>"
+        ~H"<.svg_mini {@rest}>{{:safe, @paths[:mini]}}</.svg_mini>"
 
       %{micro: true, solid: false, mini: false} ->
-        ~H"<.svg_micro {@rest}><%= {:safe, @paths[:micro]} %></.svg_micro>"
+        ~H"<.svg_micro {@rest}>{{:safe, @paths[:micro]}}</.svg_micro>"
 
       %{} ->
         raise ArgumentError, "expected either mini or solid, but got both."
@@ -86,7 +86,7 @@ defmodule Heroicons do
   defp svg_outline(assigns) do
     ~H"""
     <svg xmlns="http://www.w3.org/2000/svg" {@rest}>
-      <%= render_slot(@inner_block) %>
+      {render_slot(@inner_block)}
     </svg>
     """
   end
@@ -99,33 +99,31 @@ defmodule Heroicons do
   defp svg_solid(assigns) do
     ~H"""
     <svg xmlns="http://www.w3.org/2000/svg" {@rest}>
-      <%= render_slot(@inner_block) %>
+      {render_slot(@inner_block)}
     </svg>
     """
   end
 
-  attr :rest, :global,
-    default: %{"aria-hidden": "true", viewBox: "0 0 20 20", fill: "currentColor"}
+  attr :rest, :global, default: %{"aria-hidden": "true", viewBox: "0 0 20 20", fill: "currentColor"}
 
   slot :inner_block, required: true
 
   defp svg_mini(assigns) do
     ~H"""
     <svg xmlns="http://www.w3.org/2000/svg" {@rest}>
-      <%= render_slot(@inner_block) %>
+      {render_slot(@inner_block)}
     </svg>
     """
   end
 
-  attr :rest, :global,
-    default: %{"aria-hidden": "true", viewBox: "0 0 16 16", fill: "currentColor"}
+  attr :rest, :global, default: %{"aria-hidden": "true", viewBox: "0 0 16 16", fill: "currentColor"}
 
   slot :inner_block, required: true
 
   defp svg_micro(assigns) do
     ~H"""
     <svg xmlns="http://www.w3.org/2000/svg" {@rest}>
-      <%= render_slot(@inner_block) %>
+      {render_slot(@inner_block)}
     </svg>
     """
   end
