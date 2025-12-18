@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.7
+
+### Enhancements
+
+- Update heroicons to 2.2.0
+- Add support for Phoenix Liveview 1.1 (https://github.com/mveytsman/heroicons_elixir/pull/42)
+
 ## 0.5.6
 
 ### Enhancements
