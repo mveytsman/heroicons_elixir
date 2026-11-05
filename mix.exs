@@ -13,7 +13,7 @@ defmodule HeroiconsElixir.MixProject do
       description: "Phoenix components for Heroicons!",
       docs: docs(),
       package: package(),
-      xref: [exclude: [:httpc, :public_key]]
+      elixirc_options: [no_warn_undefined: [:httpc, :public_key]]
     ]
   end
 
